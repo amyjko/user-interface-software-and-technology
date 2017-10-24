@@ -22,16 +22,58 @@
 
 		<p><a href="index.html">Back to table of contents</a></p>
 
-		<img src="images/process.png" class="img-responsive" />		
-		<small>Credit: Jacobito Design</small>
+		<img src="images/mouse.jpg" class="img-responsive" />
+		<small>Credit: Michael Hicks, St. Paul, MN, USA</small>
 		
 		<h1>A history of user interfaces</h1>
 		<div class="lead">Andrew J. Ko</div>
 
+		<p>History? Really? In a rapidly evolving field of augmented reality, driverless cars, and rich social media, is there any more mundane way to start a book on user interfaces? Probably not. And yet, for a medium that is invented entirely from imagination, the history of user interfaces is reminder that the interactive world we experience today didn't have to be. Files, keyboards, mice, and touchscreens&mdash;all of these concepts were invented to solve very real challenges with interacting with computers, and but for a few important people and places in the 20th century, we might have invented entirely different ways of interacting with computers.</p>
+
+		<p><img src="images/punchcards.jpg" class="img-responsive" /></p>
+		
+		<p>In the beginning of digital computing, all computers were programmed, meaning that <em>all</em> user interfaces were programming interfaces. If you used a computer, it meant constructing programs out of individual machine instructions like add, subtract, or conditional jump, or early higher order programming languages like FORTRAN. The experience of using these was not pointing, clicking, and typing, but rather punching cards to encode instructions for computers to execute. Once one secured some time on the mainframe, it would crunch through the punchcard's instructions, computing a result. This interaction paradigm captured the early visions of computing as essentially calculation automation, freeing humans from the burden of arithmetic.</p>
+
+		<p>In the 1940's, some found this vision too limiting. Most notably, <a href="https://en.wikipedia.org/wiki/Vannevar_Bush">Vannevar Bush</a>, a science administrator who headed the U.S. Office of Scientific Research and Development, wrote a 1945 article in The Atlantic Monthly, called "As We May Think," envisioning a device called the "memex," in which people could store all of their information, including books, records, communications, and access them with speed and flexibility (<a href="#bush">Bush 1945</a>). Notably, Bush imagined the Memex as an "enlarged intimate supplement to one's memory." This vision, which directly inspired hypertext and the Internet, didn't anticipate everything (there was no search or metadata), but it forcefully conveyed an alternative vision of computers as purely automated calculation machines, and instead as a form of <em>human augmentation</em>.</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/USyoT_Ha_bA" frameborder="0" allowfullscreen></iframe>
+		</p>
+		
+		<p>One person this article influenced was MIT computer scientist <a href="https://en.wikipedia.org/wiki/Ivan_Sutherland">Ivan Sutherland</a>. He followed this vision of human augmentation by exploring interactive sketching on computers, working on a system called Sketchpad, which allowed drawing of segments, arcs, and constraints between shapes. Shapes could be transformed, resized, repositioned, and clipped, and a notion of windowing allowed zooming and panning. The entire interactive experience was stylus-based and the implementation paradigm was object-based. This was the first system to ever demonstrate an interactive dialog with a computer, rather than a "batch processing" programming-based interaction. You can see Sketchpad in action in the video above.</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/yJDv-zdhzMY?rel=0" frameborder="0" allowfullscreen></iframe>
+		</p>
+
+		<p>Sketchpad, and Bush's article, inspired Douglas Engelbart to found the <a href="https://en.wikipedia.org/wiki/Augmentation_Research_Center">Augmentation Research Center</a> at the Stanford Research Institute (SRI) in the early 1960's. Over the course of about six years, with funding from NASA and the U.S. Defense Department's Advanced Research Projects Agency (known today as DARPA), Engelbart and his team prototyped the "oN-Line System" (or the NLS), which attempted to engineer much of Bush's vision. NLS had networking, windows, hypertext, graphics, command input, video conferencing, the computer mouse, word progressing, file version control, text editing, and numerous other features of modern computing. Engelbart himself demoed the system to a live audience. You can see the entire demonstration in the video above.</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/9H79_kKzmFs" frameborder="0" allowfullscreen></iframe>
+		</p>				
+				
+		<p>Engelbart's research team eventually disbanded, and many of them ended up at the Xerox Palo Alto Research Center (Xerox PARC). Many were truly inspired by the demo, and wanted to use the freedom Xerox had given them to make the NLS prototype a reality. One of the key members of this team was <a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a>, who had worked with Ivan Sutherland and seen Engelbart's demo. Kay was interested in ideas of objects, object-oriented programming, and windowing systems, and created the programming language and environment Smalltalk. He was a key member of team at PARC that developed the Alto in the mid 1970's, which included the first operating system based on a graphical user interface with a desktop metaphor, and included WYSIWYG word processing, an email client, a vector graphics editor, a painting program, and a multi-player networked video game.</p>
+		
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/VtvjbmoDx-I" frameborder="0" allowfullscreen></iframe>
+		</p>				
+	
+		<p>Now, these were richly envisioned prototypes, but they were not products. You couldn't buy an Alto at a store. This changed when Steve Jobs visited Xerox PARC in 1979, where he saw a demo of the Alto's GUI, it's Smalltalk-based programming environment, and it's networking. Jobs was particularly excited about the GUI, and recruited several of the Xerox PARC researchers to join Apple, leading to the Lisa and later Macintosh computers, which offered the first mass market graphical user interfaces. Apple famously marketed the Macintosh in it's 1984 advertisement, framing the GUI the first salvo in a war against Big Brother, a reference to the book, <a href="https://en.wikipedia.org/wiki/Nineteen_Eighty-Four">1984</a>.</p>
+
+		<p>Since the release of the Macintosh, companies like Apple, Microsoft, and now Google, have driven much of the engineering of user interfaces, deviating little from the original visions inspired by Bush, Sutherland, Engelbart, and Kay, but continuing to harvest basic research for new paradigms of interaction, including the rapid proliferation of capacitive touch screens in the early 2000's in smartphones. But research has continued. Around the same time as the release of the Macintosh, many computer scientists who had worked in computer graphics (a field started by Sutherland), spun off a new conference in 1988, the ACM Symposium on User Interface Software and Technology. This community brought together computer scientists interested in not only the useful <em>output</em> that computers could produce, but also the novel forms of <em>input</em>, and the interaction paradigms that combinations of input and output could produce, and the programming abstractions necessary for engineering them. This community has since worked alongside industry, continuing to invent new ways of interacting with computers, including paradigms such as augmented reality, touchscreens, more efficient text entry, and animation. The rest of this book covers many of these innovations in detail.</p>
+		
+		<p>One of the most remarkable things about this history is how powerful one vision was to catalyze an entire world's experience with computers. Is there something inherently fundamental about networked computers, graphical user interfaces, and the internet, or if someone else had written an alternative vision for computing, would we be have different interactions with computers, and therefore different interactions with each other through computing? This history is a reminder that nothing about our interactions with computing are necessarily "true" or "right": they're just ideas that we've collectively built, shared, and learned, and they can change. In the coming chapters, we'll uncover what <em>is</em> fundamental about user interfaces, and explore alternative visions of interacting with computers.</p>		
 
 		<center class="lead"><a href="theory.html">Next chapter: A theory of user interfaces</a></center>
 	
 		<h2>Further reading</h2>
+
+		<p id="bush">Bush, Vannevar (1945). As we may think. The Atlantic Monthly, 176(1), 101-108.</p>
+		
+		<p>Brad Myers, Scott E. Hudson, and Randy Pausch (2000). <a href="https://doi.org/10.1145/344949.344959">Past, Present and Future of User Interface Software Tools</a>. ACM Transactions on Computer-Human Interaction, 7(1), 3-28.</p>
+		
+        <p>Stuart K. Card, Thomas P. Moran (1986). <a href="https://doi.org/10.1145/61975.66925">User Technology: From Pointing to Pondering</a>. ACM Conference on the History of Personal Workstations 1986.</p>
+        
 
 	
 	</body>
