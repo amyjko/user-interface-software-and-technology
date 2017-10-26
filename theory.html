@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>A theory of user interfaces</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/architecture.jpg" class="img-responsive" />
+		<small>Credit: CC0 License, public domain</small>
+		
+		<h1>A theory of user interfaces</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>First <a href="history.html">history</a> and now theory? What a way to start a practical book about user interfaces. But as social psychologist Kurt Lewin said, "There's nothing as practical as a good theory" (<a href="#lewin">Lewin 1943</a>).</p>
+		
+		<p>Let's start with <em>why</em> theories are practical. Theories, in essence, are <em>explanations</em> for what something is and how something works. These explanatory models of phenomena in the world help us not only comprehend the phenomena, but also predict what will happen in the future with some confidence, and perhaps more importantly, they give us a conceptual vocabulary to exchange ideas about the phenomena. A good theory about user interfaces would be practical because it would help explain what user interface are, and what governs whether they are usable, learnable, efficient, error-prone, etc.</p>
+		
+		<p>HCI researchers have written a lot about theory, including theories from other disciplines, and new theories specific to HCI (<a href="#rogers">Rogers 2012</a>, <a href="#jacko">Jacko 2012</a>). There are theories of activities, conceptual models, design processes, experiences, information seeking, work, symbols, communication, and countless other phenomena in which people interact with computers. Most of these are theories, however, about people and their behavior, where computers are critical, but secondary focus. The theory I want to share, however, is about user interfaces at the center, and the human world at the periphery.</p>
+
+		<h2>A Theory of User Interfaces</h2>
+
+		<p>Let's begin with what I think user interfaces <em>are</em>. <em>User interfaces are software that bridges the world of human action and computer action</em>. The first world is the natural world of matter, motion, sensing, action, reaction, and cognition, in which people (and other living things) build models of the things around them in order to make predictions about the effects of their actions. For example, when an infant is learning to walk, they're constantly engaged in perceiving the world, taking a step, and experiencing things like gravity and pain, all of which refine a model of locomotion that prevents pain and helps achieve other objectives. Our human ability to model and then shape the world around us is what makes us so adaptive to environmental change. It's the learning we do about the world that allows us to survive and thrive in it.</p>
+		
+		<p>The other world is the world of computing. This is a world ultimately defined by a small set of arithmetic operations such as adding, multiplying, and dividing, and an even smaller set of operations that control which operations happen next, some that inspect data to decide what to do next (conditional jumps), and some that move directly to a new instruction (unconditional jumps). These instructions, combined with data storage, input devices to acquire data, and output devices to share the results of computation, are a world in which there is only forward motion: doing what the next instruction says to do, whether that's reading input, writing output, computing something, or making a decision. Sitting atop these instructions are <em>functions</em>, which take input and produce output using algorithms. Essentially all computer behavior leverages this idea, and the result is that all computer programs (and all software) are essentially collections of functions that humans can invoke to compute things and have effects on data. All of this functional behavior is fundamentally deterministic; it is data from the world (content, clocks, sensors, network traffic, etc.), and increasingly, data that models the world and the people in it, that gives it its unpredictable, sometimes magical or intelligent qualities.</p>
+		
+		<p>Now, both of the above are basic theories of people and computers. In light of this, what are user interfaces? <em>User interfaces are a <strong>mapping</strong> from the human world to these collections of functions exposed by a computer program</em>. User interfaces offer <em>learnable representations</em> of these functions, their inputs, their algorithms, and their outputs, so that a person can build mental models of this representations that allow them to sense, take action, and achieve their goals, as they do with anything in the natural world. Now, the natural world provides many interfaces for people to act in the natural world. We use perception to interface with matter and language to interface with other people. Some of these are interfaces we're born to understand, but most of them are learned. User interfaces in computers are not too different from these other types of interfaces: they leverage our senses too. However, because user interfaces are entirely artificial, <em>all</em> of them must be learned. Once we learn them, we can act upon a user interface, perceive its reaction, and productively achieve our goals, as we do with the natural world.</p>
+		
+		<p>Don Norman, in his book "The Design of Everyday Things" (<a href="#norman">Norman 2013</a>) does a nice job giving labels to some of the challenges that arise in this learning. One of his first big ideas is the <strong>gulf of execution</strong>. This gulf describes the massive knowledge gap that a person has when trying to learn what actions they can perform on an interface that will allow them to achieve their goal. To illustrate, see if you can think back to the first time you used a computer mouse and a graphical user interface and wanted to learn to play a game or learn something on the internet. In that moment, you experienced a gulf of execution: what did you have to do with the mouse to achieve those goals? What concepts did you have to learn to understand that the internet is accessed by launching an "application" and providing a "query"? You didn't know that massive space of possible actions. You didn't have the concepts to even imagine those actions. Someone or something had to "bridge" that gulf of execution, teaching you some of the actions that were possible and how those actions mapped onto your goals. (They probably also had to teach you the goals, but that's less about user interfaces and more about culture). Learning is therefore at the heart of both using user interfaces and designing them (<a href="#grossman">Grossman et al. 2009</a>).</p>
+
+		<h2>Bridging the Gulfs of Execution and Evaluation</h2>
+
+		<p>What is it that people need to learn to take action on an interface? Norman (and later <a href="#gaver">Gaver 1991</a>, <a href="#hartson">Hartson 2003</a>), argued that what we're really learning is <strong>affordances</strong>. Hartson breaks down affordances into four distinct types:</p>
+		
+		<ul>
+			<li><strong>Cognitive affordances</strong> are aspects of a user interface that aid, support, facilitate, or enable <em>thinking</em> about what potential for action a user interface is exposing. A simple example would be a label on a button in a user interface that says "Add to cart": it conveys what action the button will take and invokes a metaphor of the implications of that action.</li>
+			<li><strong>Physical affordances</strong> are aspects of a user interface that aid, support, facilitate, or enable physically doing something to a computer. For example, a physical button on a mouse is a physical affordance. When pressed, it transmits input to a computer. Nothing about a physical affordance guarantees anything useful will happen: the affordance is just the conduit for communication with a computer, not any guarantee of utility.</li>
+			<li><strong>Functional affordances</strong> are aspects of a user interface that actually respond to input to effect some useful effect on the world. For example, clicking a physical mouse button (physical affordance) within the boundaries of a virtual mouse button (cognitive affordance) will add the item to your car (functional affordance).</li>
+			<li><strong>Sensory affordances</strong> are aspects of both cognitive and physical affordances that aid, support, facilitate, or enable the user in sensing the presence of cognitive and physical affordances. For example, if a button where labeled "Add to cart" but both the button and the text were colored white, or were in a tiny font, or did not look different from other text in a user interface, there would be no sensory affordance to indicate a cognitive affordance for action.</li>
+		</ul>
+		
+		<p>Combining the concepts of gulf of execution and affordance, we can see that part of the challenge of designing a user interface is creating one in which all affordances are discoverable, comprehensible, and ultimately learnable.</p>
+		
+		<p>But <em>execution</em> is only half of the equation. Norman also discussed <strong>gulfs of evaluation</strong>. This is the idea that once a person has performed some action on a user interface via some functional affordance, the computer will take that input and do something with it. Then what? How does the person know what the computer did? How does the person know that the action resulted in progress toward the person's goal? For a person to "cross" this gulf of evaluation, they must understand enough about how the user interface processed their action to comprehend the effects of their action, the new state of the computer, and the new space of affordances now available.</p>
+
+		<p>In designing user interfaces, there are many ways to bridge gulfs of execution and evaluation. One is to just teach people all of these affordances and help them understand all of the user interface's feedback. A person might take a class, learning the range of tasks that can be accomplished with a user interface, steps to accomplish those tasks, concepts required to understand those steps, and deeper models of the interface that can help them potentially devise their own procedures for accomplishing goals. Alternatively, one can write tutorials, tooltips, help, and other content to take the place of human teacher, trying to approximate the same kinds of instruction a person might give.</p>
+
+		<p>To many user interface designers, the need to explicitly teach a user interface is a sign of design failure. There is a belief that designs should be "self-explanatory" or "intuitive." What these phrases actually mean are that the <em>interface</em> is doing the teaching rather than a person or content that is a proxy for a person. To bridge gulfs of <em>execution</em>, a user interface designer might conceive of physical, cognitive, and sensory affordances that are quickly learnable, for example. One way to make them quickly learnable is to leverage <strong>conventions</strong>, which are essentially user interface design patterns that people have already learned by learning other user interfaces. Want to make it easy to learn how to tell a computer add something to your cart on a website? Use a button labeled "Add to cart," which most people will have already learned from using other e-commerce sites. Or, leverage natural language, allowing people to say, "Alexa, order me more tissues." From a design perspective, there's nothing inherently wrong with learning, it's just a cost that a designer may or may not want to impose on a new user. (Perhaps learning a new interface affords new power not possible with old conventions, and so the cost is justified).</p>
+		
+		<p>To bridge gulfs of <em>evaluation</em>, a user interface needs to provide <strong>feedback</strong> that explains what effect the person's action had on the computer. Some feedback is <em>explicit instruction</em> essentially teaching the person what functional affordances exist, what their effects are, what their limitations are, how to invoke them in other ways, what new functional affordances are now available and where to find them, what to do if the effect of the action wasn't desired, and so on. Clicking the "Add to cart" button, for example, should result in some message to the user that says, "I added this item to your cart. You can look at your cart over there. If you didn't mean to add that to your cart, you can take it out like this. If you're ready to buy everything in your cart, you can go here. Don't know what a cart is? Read this." Some feedback is <em>implicit instruction</em>, suggesting the effect of an action, but not explaining it explicitly. For example, after pressing "Add to cart," there might be an icon showing an abstract icon of an item being added to a cart, with some kind of animation to capture the person's attention. Whether implicit or explicit, all of this feedback is still contextual instruction on the specific effect of the user's input (and optionally more general instruction about other affordances in the user interface that will help a user accomplish their goal).</p>
+
+		<p>The result of all of this learning is a <strong>mental model</strong> (<a href="#carroll">Carroll and Anderson 1987</a>) in a person's head of what inputs are possible, what outputs those result in, and how all of those inputs and outputs are related to various goals that person might have. However, because human learning is probabilistic, and all of the instruction given by people and user interfaces <em>about</em> user interfaces is imperfect, people's mental models about user interfaces are nearly always flawed. People end up with brittle, fragile, partially correct predictive models of what effect their actions in user interfaces will have, and this results in unintended effects, and confusion. If there's no one around to correct the person's mental model, or the user interface itself isn't a very good teacher, the person will fail to learn, and get confused and probably frustrated. These episodes of user interface failure, which we can also describe as <strong>errors</strong> or <strong>breakdowns</strong>, are signs that a user's mental model is inconsistent with the actual behavior of some software system. In HCI, we blame these breakdowns on designers rather than users, and so we try to maximize the learnability and minimize the error-proneness of user interfaces designs using usability evaluation methods.</p>
+		
+		<p>Note that in this entire discussion, we've said little about tasks or goals. The broader HCI literature theorizes about those broadly (<a href="#rogers">Rogers 2012</a>, <a href="#jacko">Jacko 2012</a>), and the gist is this: rarely does a person have such a well-defined goal in their head that tasks can be perfectly define to fit them. You can have a seamless, well-defined interaction flow for adding tissues to carts, and checking out with carts, but if a person's goal was vaguely "get some tissues that don't hurt my skin, but also don't cost much," the breakdown in your user interface may occur long after a person has used your user interface, after a few days of actually using the tissues, finding them uncomfortable, and therefore not worth the cost. Getting the low-level details of user interface design to be learnable is one challenge&mdash;designing experiences that support vague, shifting, unobservable human goals is an entirely different one.</p>
+		
+		<h2>You said theory was useful...</h2>
+		
+		<p>You have some new concepts about user interfaces, and an underlying theoretical sense about what user interfaces are and why designing them is hard. What do you do with this knowledge? Well, given that the world is <em>constantly</em> designing new user interfaces, and the HCI research community believes these ideas about user interfaces are fundamental to all user interfaces, not just the 2D graphical user interfaces we've lived with since 1960, every single time you design a user interface, you'll have to solve these problems. Starting from this theoretical view of user interfaces allows you to ask the right questions. For example, rather than trying to vaguely identify the most "intuitive" experience, you can systematically ask: "Exactly how will our software behave and how will our user interface effectively teach this behavior?" Approaching user interface design and evaluation from this perspective will help you identify major gaps in your user interface design analytically and systematically, rather than relying only on observations of someone struggling to use an interface.</p>
+		
+		<p>In the rest of this book, I'll use the theoretical ideas above to explain how different types of user interface paradigms work, and why they need to work that way.</p>
+
+		<center class="lead"><a href="mediation.html">Next chapter: How user interfaces mediate</a></center>
+	
+		<h2>Further reading</h2>
+        
+		<p id="carroll">Carroll, J. M., Anderson, N. S., & National Research Council. (1987). Mental models in human-computer interaction: Research issues about what the user of software knows (No. 12). National Academies.</p>
+
+		<p id="hartson">Hartson, R. (2003). Cognitive, physical, sensory, and functional affordances in interaction design. Behaviour & Information Technology, 22(5), 315-338.</p>
+
+        <p id="gaver">Gaver, W.W. (1991). Technology affordances. Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI '91). New Orleans, Louisiana (April 27-May 2, 1991). New York: ACM Press, pp. 79-84.</p>
+
+		<p id="grossman">Grossman, T., Fitzmaurice, G., & Attar, R. (2009, April). A survey of software learnability: metrics, methodologies and guidelines. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (pp. 649-658). ACM.</p>
+	
+		<p id="jacko">Jacko, J. A. (Ed.). (2012). Human computer interaction handbook: Fundamentals, evolving technologies, and emerging applications. CRC Press.</p>
+	
+		<p id="lewin">Lewin (1943, 118), as cited in Karl E. Weick, "Theory and practice in the real world." in: The Oxford Handbook of Organization Theory, Tsoukas et al. (eds.), ?Oxford University Press, 2003, p. 460; Also in Lewin, K. (1951). Field theory in social science: Selected theoretical papers (D. Cartwright, Ed.). New York, NY: Harper & Row</p>
+
+		<p id="norman">Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic Books (AZ).</p>
+				
+		<p id="rogers">Rogers, Y. (2012). HCI theory: classical, modern, and contemporary. Synthesis Lectures on Human-Centered Informatics, 5(2), 1-129.</p>
+		
+	</body>
+	
+</html>
+
