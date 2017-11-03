@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>What interfaces mediate</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/library.jpg" class="img-responsive" />
+		<small>Credit: Marcus Hansson, Goteborg Sweden</small>
+		
+		<h1>What interfaces mediate</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>In the last two chapters, we considered two fundamental perspectives on user interface software and technology: a historical one, which framed user interfaces as a form of human augmentation, and a theoretical one, which framed interfaces as a bridge between sensory worlds and computational world of functions and state. A third and equally important perspective on interfaces is what role interfaces play in society. While user interfaces are inherently computational artifacts, they are also inherently sociocultural entities.</p>
+
+		<p>Broadly, I view the sociocultural role of interfaces as a <em>mediating</em> role. Mediation is the idea that rather than two entities interacting directly, something controls, filters, transacts, or interprets interaction between two entities. For example, one can think of human to human interactions as mediated, in that our thoughts, ideas, and motivations are mediated by language. In that same sense, user interfaces can mediate human interaction with many things. Mediation is important, because, as Marshall McLuhan argued, media can lead to subtle, sometimes invisible structural changes in society's values, norms, and institutions (<a href="#mcluhan">McLuhan 1994</a>). In other words, how you <em>design</em> a user interface can change society, in addition to providing functionality. Apple's Face ID, for example, may be a convenient alternative to passwords, but it may also lead to transformations in how society thinks of privacy and identity.</p>
+
+		<p>In this chapter, we will discuss how user interfaces mediate access to three things: automation, information, and other humans.</p>
+
+		<h2>Mediating computation</h2>
+
+		<p>One of the primary things that interfaces mediate is computation. Whether it's calculating trajectories in World War II or detecting faces in a collection of photos, the vast range of algorithms from computer science that process, compute, filter, sort, search, and classify information provide real value to the world, and interfaces are how people access that value.</p>
+		
+		<p>What is this access exactly? One can think of interfaces to computation as APIs&mdash;application programming interfaces&mdash;organized collections of functionality and data structures that encapsulate computational automation. For example, think about what you're using when you're operating a calculator app on your phone: it's really a way of asking a computer to performing basic arithmetic operations on your behalf: addition, subtraction, division, multiplication. Each operation is a function that takes some arguments (addition, for example, is a function that takes two numbers and returns their sum). In this example, the calculator is <em>literally</em> an interface to an API of of mathematical functions that compute things for a person. But consider a very different example, such as the camera application on a smartphone. This is <em>also</em> an API, with a single function that takes as input all of the light into a camera sensor, a dozen or so configuration options for focus, white balance, orientation, etc., and returns a compressed image file that captures that moment in space and time. The calculator and the camera are really both just APIs that expose a set of computations.</p>
+		
+		<p>From this API perspective then, user interfaces mediate access to APIs, and interaction with an interface is really identical, from a computational perspective, as executing a program that uses those APIs to compute. In the calculator, when you press the sequence of buttons "1", "+", "1", "=", you just wrote a program <code>add(1,1)</code> and get the value <code>2</code> in return. When you open the camera app, point it at your face for a selfie, and tap on the screen to focus, you're writing the program <code>capture(focusPoint, sensorData)</code> and getting the image file in return. From this perspective, interacting with user interfaces is really about executing "one-time use" programs that compute something on demand.</p>
+		
+		<p>How is this mediation? Well, the most direct way to access computation would be to write these programs in a computer's assembly language and then execute them. That's what people did in the 1960's before there were user interfaces, but even those were mediated by punchcards, levers, and other mechanical controls. Our more modern interfaces are better because don't have to learn as much to communicate to a computer what computation we want.</p>
+
+		<h2>Mediating information</h2>
+
+		<p>Interfaces aren't just about automation and computation, however. They're also about accessing information. Before software, other <em>humans</em> mediated our access to information. We asked friends for advice, we sought experts for wisdom, and when we couldn't find people to inform us, we consulted librarians to help us find recorded knowledge, written by experts we didn't have access to. Searching and browsing for information was always an essential human activity.</p>
+		
+		<p>Computing changed this. Because computers allow us to store information and access it much more quickly than we could access information through people or documents, we started to build systems for storing, curating, and provisioning information on computers and access it through user interfaces. We took all of the old ideas from information science such as documents, metadata, searching, browsing, indexing, and other knowledge organization ideas, and imported those ideas into computing. Most notably, the <a href="https://en.wikipedia.org/wiki/Stanford_Digital_Library_Project">Stanford Digital Library Project</a> leveraged all of these old ideas from information science and brought them to computers. This inadvertently led to Google, which still views its core mission as organizing the world's information, which is what libraries were originally envisioned to do. Where human beings used to mediate our access to information, now user interfaces do too, and increasingly so.</p>
+		
+		<p>The study of how to design user interfaces to optimally mediate access to information is usually called <strong>information architecture</strong> (<a href="#rosenfeld">Rosenfeld and Morville 2002</a>). Accessing information is different from accessing computation in that rather than invoking functions to compute results, we're <em>specifying information needs</em>, which facilitates information retrieval or browsing. Information architecture is therefore about defining metadata on data and documents that can map information needs onto information. That might mean defining data structures, meta data, tagging systems, controlled vocabularies, thesauri, indices, hierarchies, classifications, and other data structures that facilitate searching and browsing. User interfaces rely on all of these data structures to seamlessly mediate access to information, just as librarians do.</p>
+		
+		<p>In practice, user interfaces for information technologies can be quite simple. They might be a programming language, like Google's query language, in which you specify an information need, and it is satisfied with retrieval algorithms, and systems for automatically building user interfaces that present the retrieved results. Or, it might be browsing-oriented, exposing metadata about information, facilitating navigation through an interface. For example, when you open the settings application on a smartphone, all of the labels that describe categories of settings, and the hierarchy in which those settings are arranged, are a carefully designed information architecture to facilitate your search for a control. Whether an interface is optimized for searching, browsing, or both, all forms of information mediation require metadata.</p>
+
+		<h2>Mediating communication</h2>
+
+		<p>While computation and information are useful, most of our truly meaningful interactions still occur with other people. That said, more of these interactions than ever are mediated by user interfaces. Every form of social media&mdash;messaging apps, email, Slack, video chat, discussion boards, chat rooms, blogs, wikis, social networks, virtual worlds, and so on&mdash;is a form of <strong>computer-mediated communication</strong> (<a href="#fussell">Fussell and Setlock 2014</a>). <strong>Social computing</strong> is the study of user interfaces that mediate human communication.</p>
+		
+		<p>What makes user interfaces that mediate communication different from those that mediate automation and information? Whereas mediating automation requires clarity about what API a user is accessing, and mediating information requires metadata, mediating communication requires <strong>social context</strong>. For example, in their seminal paper, Gary and Judy Olson discussed the vast array of social context present in collocated synchronous interactions that have to be reified in computer-mediated communication (<a href="#olson">Olson and Olson 2000</a>). This includes multiple channels of communication, identity, shared local context, non-verbal cues through gaze, gesture, and non-verbal speech, and spatial reference. For example, think about what Facebook has to do to replicate collocated communication: it needs to make identity clear, provide context for a conversation, and offer multiple channels, such as replies, likes, and edited status. Now think about what Facebook is missing: no non-verbal cues, few signals of emotion, no sense of space or context. It's this missing social context that usually leads computer-mediated communication to be more dysfunctional. Many researchers in the field of computer-supported collaborative work have sought to find designs that better support social processes, including ideas of "social translucence," which achieves similar context as collocation, but through new forms of visibility, awareness, and accountability (<a href="erickson">Erickson and Kellogg 2000</a>)
+
+		<hr>
+		
+		<p>These three types of mediation each require different architectures, different affordances, and different feedback to achieve their goals. Interfaces for computation have to teach a user about what computation is possible and how to interpret it's results. Interfaces for information have to teach a user about what information exists and what other information needs could be satisfied. Interfaces for communication have to teach a user about new cues for social context that mirror or replace those in the real world. Because of each of these are different, one must know foundations of <em>what</em> is being mediated to design effective interfaces. Throughout the rest of this book, we'll review both the foundations of user interface implementation, but also how the subject of mediation constrains and influences what we implement.</p>
+
+		<center class="lead"><a href="declarative.html">Next chapter: Declarative interaction paradigms</a></center>
+	
+		<h2>Further reading</h2>
+
+		<p id="erickson">Erickson, T., & Kellogg, W. A. (2000). Social translucence: an approach to designing systems that support social processes. ACM transactions on computer-human interaction (TOCHI), 7(1), 59-83.</p>
+		
+		<p id="fussel">Fussell, S. R., & Setlock, L. D. (2014). Computer-mediated communication. Handbook of Language and Social Psychology. Oxford University Press, Oxford, UK, 471-490.</p>
+		        
+        <p id="mcluhan">McLuhan, M. (1994). Understanding media: The extensions of man. MIT press.</p>
+
+		<p id="olson">Olson, G. M., & Olson, J. S. (2000). Distance matters. Human-computer interaction, 15(2), 139-178.</p>
+		
+		<p id="rosenfeld">Rosenfeld, L., & Morville, P. (2002). Information architecture for the world wide web. O'Reilly Media, Inc.</p>		
+
+	</body>
+	
+</html>
+
