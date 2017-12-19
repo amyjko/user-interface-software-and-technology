@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>Pointing</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/wearable.jpg" class="img-responsive" alt="A photograph of a person touching an Apple Watch screen" />
+		<small>A wearable device with particularly small targets. Credit: fancycrave1, Pixabay</small>
+		
+		<h1>Pointing</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>
+			<em>
+			Thus far, we have focused on universal issues in user interface design and implementation.
+			This chapter will be the first in which we discuss specific paradigms of interaction and the specific theory that underlies them.
+			</em>
+		</p>
+
+		<p>
+			Our fingers are pretty handy.
+			(Sorry for the pun, I couldn't resist!).
+			We use them to grasp things nearly everything.
+			We use them to communicate through signs and gesture.
+			And at a surprisingly frequent rate each day, we use them to <em>point</em>, in order to indicate, as precisely as we can, the identity of something (that person, that table, this picture, those flowers).
+			As a nearly universal form of non-verbal communication, it's not surprising then that pointing has been such a powerful paradigm of interaction with user interfaces (that icon, that button, this text, etc.).
+		</p>
+		
+		<p>
+			Pointing is not strictly related to interface design.
+			In fact, back in the early 1950's, Paul M. Fitt's was very interested in modeling human performance of pointing.
+			He began developing predictive models about pointing in order to help design dashboards, cockpits, and other industrial designs for manufacturing.
+			His focus was on "aimed" movements, in which a person has a <strong>target</strong> they want to indicate and must move their pointing device (originally, their hand) to indicate that target.
+			This is an example of a "closed loop" motion, in which a system can react to the evolving state of a system.
+			The system in this case is a human, perceiving their motion toward a target, and their reaction is the continuous correction of their trajectory as they move toward a target.
+			Fitts began measuring this closed loop movement toward targets, searching for a pattern that fit the data, and eventually found this law, which we call <strong>Fitt's Law</strong>:
+		</p>
+		
+		<p>
+			<img src="images/fitts.jpg" class="img-responsive center-block" alt="A diagram of Fitt's law, showing A, the distance to target, and W, the size of the target, and the formula MT = a + b * log(A/W + 1)" />
+			<center><em>Fitt's Law. Credit: Jacob Wobbrock</em></center>
+		</p>
+
+		<p>
+			Let's deconstruct this equation.
+			The formula computes the time to reach a target (<strong>MT</strong> refers to "motion time").
+			The <strong>A</strong> in the figure is how far one must move to reach the target (e.g. how far your finger has to move from where it is to reach a target on your phone's touch screen.
+			The <strong>W</strong> is the size (or width) of the target (e.g., the physical length of an icon on your smartphone's user interface).
+			The units on these two measures don't really matter as long as they're the same, because the formula above computes the ratio between the two, canceling the units out.
+			The <strong>a</strong> and <strong>b</strong> coefficients are user- and device-specific constants, where <strong>a</strong> is some fixed constant minimum time to move and <strong>b</strong> is like throughput measure of how efficiently movement occurs.
+			Each of these coefficients differ by user and device.
+		</p>
+		
+		<p>
+			So what does the formula <em>mean</em>?
+			Let's play with the algebra. When <strong>A</strong> (distance to target) goes up, time to reach the target increases.
+			That makes sense, right?
+			If you're using a touch screen and your finger is far from the target, it will take longer to reach the target.
+			What about <strong>W</strong> (size of target)?
+			When that goes up, the movement time goes <em>down</em>.
+			That also makes sense, because easier targets (e.g., bigger icons) are easier to reach.
+			The implications of this are quite simple: the closer and bigger the target, the faster it will be to point to.
+		</p>
+		
+		<p>
+			But there are some other interesting implications for user interface design in the algebraic extremes.
+			For example, what if the target size is <em>infinite</em>?
+			An example of this is the command menu in Apple OS X applications, which is always placed at the very top of a screen.
+			The target in this case is the top of the screen, which is effectively infinite in size, because no matter how far past the top of the screen you point with a mouse, the operating system always constrains the mouse position to be within the screen boundaries.
+			This makes the top of the screen (and really any side of the screen) a target of infinite size.
+			And according to Fitt's Law, infinite target size means effectively zero movement time.
+			That's why it's so quick to reach the command menu on OS X: you can't miss, at least on the vertical axis.
+		</p>
+		
+		<p>
+			<img src="images/infinite-target.png" class="img-responsive center-block" alt="A screenshot of the OS X application menu at the top of a screen." />
+			<center><em>Apple's menu bar has infinite size, making it quick to reach. Credit: Andrew J. Ko</em></center>
+		</p>
+
+		<p>
+			What's suprising about Fitts' Law is that, as far as we know, it applies to any kind of pointing: using a mouse, using a touch screen, using a trackball, using a trackpad, or reaching for an object in the physical world.
+			That's conceptually powerful because it means that you can use the idea of large targets and short distance to design interfaces that are efficient to use.
+			As an mathematical model used for prediction, it's less powerful: to really predict exactly how long a motion will take, you'd need to estimate a distribution of those <strong>a</strong> and <strong>b</strong> coefficients for a large group of possible users and devices.
+			Researchers carefully studying motion might use it to do precise modeling, but for designers, the concepts it uses are more important.
+		</p>
+
+		<p>
+			Now that we have Fitts' law as a conceptual foundation for design, let's consider some concrete design ideas for pointing in interfaces.
+			There are so many kinds: mice, styluses, touch screens, touch pads, joysticks, trackballs, and many other devices.
+			Some of these devices are <strong>direct pointing</strong> devices (e.g., touch screens), in which input and output occur in the same physical place (e.g., a screen or some other surface).
+			In contrast, <strong>indirect pointing</strong> devices (e.g., a mouse, a touch pad, a trackball) provide input in a different physical place from where output occurs (e.g., input on a device, output on a non-interactive screen).
+			Each has their limitations: direct pointing results in <strong>occlusion</strong>, where a person's hand obscures output, and indirect pointing requires a person to attend to two different places.
+		</p>
+			
+		<p>
+			There's also a difference between <strong>absolute</strong> and <strong>relative</strong> pointing.
+			Absolute pointing includes input devices where the physical place one provides input is mapped directly onto action in the user interface.
+			This is how touch screens work: interfaces where the input and output occur in the same physical dimensions.
+			In contrast, relative pointing reads <em>changes</em> in a person's pointing.
+			For example, moving a mouse left an inch is translated to moving a virtual cursor some number of pixels left.
+		</p>
+				
+		<p>
+			When you think about these two dimensions from a Fitts' law perspective, making input more efficient is partly about inventing input devices that minimize the <strong>a</strong> and <strong>b</strong> coefficients.
+			For example, researchers have invented new kinds of mice that have multi-touch on them, allowing users to more easily provide input during pointing movements (<a href="https://doi.org/10.1145/1622176.1622184">Villar et al. 2009</a>).
+			Other research has explored taking normal pointing devices and preserving the physical measurements of input rather than mapping them to integer number spaces, enabling	sub-pixel precision in mouse movement for tasks like minute-level precision in calendar event creation, pixel-level image cropping, and precise video frame selection (<a href="https://doi.org/10.1145/2380116.2380162">Roussel et al. 2012</a>).
+			Others have invented new types of pointing devices altogether, such as the LightRing (see in the video below), which involves sensing of infrared proximity between a finger and a surface to point (<a href="https://doi.org/10.1145/2642918.2647376">Kienzle and Hinckley 2014</a>).
+			Some devices have been invented for 3D pointing using magnetic field sensing (<a href="http://dx.doi.org/10.1145/2501988.2502035">Chen et al. 2013</a>).
+			Other techniques have tried to detect individual fingers on touchscreens, enabling multiple independent streams of pointing input (<a href="https://doi.org/10.1145/2984511.2984557">Gupta et al. 2016</a>).
+			All of these device manipulations seek to decrease pointing time by increasing throughput and reducing the time to start a motion.
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/3_GbVIo6iq0" frameborder="0" allowfullscreen></iframe>
+			<center><em>LightRing, from Microsoft Research.</em></center>
+		</p>
+
+		<p>
+			Other innovations focus on software, and aim to increase target size or reduce travel distance.
+			Many of these ideas are <strong>target-agnostic</strong> approaches that have no awareness about what a user might be pointing <em>to</em>.
+			Some target-agnostic techniques include things like mouse pointer acceleration, which is a feature that makes the pointer move faster if it determines the user is trying to travel a large distance (<a href="http://www.tandfonline.com/doi/abs/10.1080/07370020802278163">Casiez 2008</a>).
+			Another example is the Angle Mouse, which analyzes the angles of movement trajectory, reducing gain when a user is trying to "turn," effectively making the target larger by slowing down the mouse, making it easier to reach (<a href="https://doi.org/10.1145/1518701.1518912">Wobbrock et al. 2009</a>).
+			These ideas are powerful because the operating system does not need any awareness of the targets on the screen, making it easier to implement user interfaces.
+		</p>
+		
+		<p>
+			Other pointing innovations are <strong>target-aware</strong>, in that the technique needs to know the location of things that a user might be pointing to so that it can adapt based on target locations.
+			For example, area cursors are the idea of having a mouse cursor represent an entire two-dimensional space rather than a single point, reducing the distance to targets.
+			These have been applied to help users with motor impairments (<a href="https://doi.org/10.1145/1866029.1866055">Findlater et al. 2010</a>).
+			The Bubble Cursor is an area cursor that dynamically resizing a cursor's activation area based on proximity to a target, growing it to the maximum possible size based on the surrounding targets (<a href="http://dx.doi.org/10.1145/1054972.1055012">Grossman and Balakrishnan 2005</a>).
+			You can see one improvement to the Bubble Cursor, the Bubble Lens, in the video below, showing how the Lens magnifies content in target-dense spaces (<a href="https://doi.org/10.1145/2556288.2557410">Mott and Wobbrock 2014</a>).
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/9b8QqLungzc" frameborder="0" allowfullscreen></iframe>
+			<center><em>The Bubble Lens, a target-aware pointing technique.</em></center>
+		</p>
+		
+		<p>
+			Snapping is another target-aware technique similar idea commonly found in graphic design tools, in which a mouse cursor is constrained to a location based on nearby targets, reducing target distance.
+			Researchers have made snapping work across multi-dimensions simultaneously (<a href="https://doi.org/10.1145/2984511.2984577">Felice et al. 2016</a>) and have even applied it to things like scrolling, snapping to interesting content areas (<a href="https://doi.org/10.1145/2642918.2647401">Kim et al. 2014</a>).
+			Another clever idea is the notion of <em>crossing</em>, which, instead of pointing and clicking, involves moving across a "goal line" (<a href="http://dx.doi.org/10.1145/1029632.1029635">Apitz and Guimbretière 2004</a>).
+			Shown in the image below, crossing can allow for fluid movements through commands and controls without ever clicking.
+		</p>
+
+		<p>
+			<img src="images/CrossY.png" class="img-responsive center-block" alt="A screenshot of CrossY, showing the motion of a mouse cursor through three controls, all selected without clicking" />
+			<center><em>CrossY uses a goal crossing interaction to avoid the need to click to select targets.</em></center>
+		</p>
+
+		<p>
+			While target-aware techniques can be even more efficient that target-agnostic ones, making an operating system aware of targets can be hard, because user interfaces can be architected to process pointing input in such a variety of ways.
+			Some research has focused on overcoming this challenge.
+			For example, one approach reverse-engineered the widgets on a screen by analyzing the rendered pixels to identify targets, then applied targeted-aware pointing techniques like the bubble cursor (<a href="http://dx.doi.org/10.1145/2207676.2208734">Dixon et al. 2012</a>. 
+			Another technique used a data-driven technique, monitoring where in a window users typically point, and then assuming targets are there, applying target-aware pointing techniques (<a href="https://doi.org/10.1145/1294211.1294242">Hurst et al. 2007</a>).
+			Some have gone as far as using brain-sensing techniques to detect when a person is perceiving being near a target, and then having the system dynamically slow down pointer movement to increase the size of the target (<a href="https://doi.org/10.1145/2642918.2647414">Afergan et al. 2014</a>).
+		</p>
+		
+		<p>
+			You might be wondering: all this work for faster pointing?
+			Fitts' law and it's focus on speed <em>is</em> a very narrow way to think about the experience of pointing to computers.
+			And yet, it is such a fundamental and frequent part of how we interact with computers, making pointing fast and smooth is key to allowing a person to focus on their task and not on the low-level act of pointing.
+			This is particularly true of people with motor impairments, which interfere with their ability to precisely point: every incremental improvement in one's ability to precisely point to a target might amount to hundreds or thousands of easier interactions a day, especially for people who depend on computers to communicate and connect with the world.
+		</p>
+
+		<center class="lead"><a href="text-entry.html">Next chapter: Text entry</a></center>
+	
+		<h2>Further reading</h2>
+
+		<p>Daniel Afergan, Tomoki Shibata, Samuel W. Hincks, Evan M. Peck, Beste F. Yuksel, Remco Chang, and Robert J.K. Jacob. 2014. <a href="https://doi.org/10.1145/2642918.2647414">Brain-based target expansion</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 583-593.</p>
+
+		<p>Georg Apitz and François Guimbretière. 2004. <a href="http://dx.doi.org/10.1145/1029632.1029635">CrossY: a crossing-based drawing application</a>. In Proceedings of the 17th annual ACM symposium on User interface software and technology (UIST '04). ACM, New York, NY, USA, 3-12.</p>
+
+		<p>Casiez, G., Vogel, D., Balakrishnan, R., & Cockburn, A. (2008). <a href="http://www.tandfonline.com/doi/abs/10.1080/07370020802278163">The impact of control-display gain on user performance in pointing tasks</a>. Human–Computer Interaction, 23(3), 215-250.</p>
+
+		<p>Ke-Yu Chen, Kent Lyons, Sean White, and Shwetak Patel. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502035">uTrack: 3D input using two magnetic sensors</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 237-244.</p>
+		
+		<p>Marianela Ciolfi Felice, Nolwenn Maudet, Wendy E. Mackay, and Michel Beaudouin-Lafon. 2016. <a href="https://doi.org/10.1145/2984511.2984577">Beyond Snapping: Persistent, Tweakable Alignment and Distribution with StickyLines</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 133-144.</p>
+
+		<p>Morgan Dixon, James Fogarty, and Jacob Wobbrock. 2012. <a href="http://dx.doi.org/10.1145/2207676.2208734">A general-purpose target-aware pointing enhancement using pixel-level analysis of graphical interfaces</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '12). ACM, New York, NY, USA, 3167-3176.</p>
+
+		<p>Leah Findlater, Alex Jansen, Kristen Shinohara, Morgan Dixon, Peter Kamb, Joshua Rakita, and Jacob O. Wobbrock. 2010. <a href="https://doi.org/10.1145/1866029.1866055">Enhanced area cursors: reducing fine pointing demands for people with motor impairments</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 153-162.</p>
+
+		<p>Tovi Grossman and Ravin Balakrishnan. 2005. <a href="http://dx.doi.org/10.1145/1054972.1055012">The bubble cursor: enhancing target acquisition by dynamic resizing of the cursor's activation area</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '05). ACM, New York, NY, USA, 281-290.</p>
+
+		<p>Aakar Gupta, Muhammed Anwar, and Ravin Balakrishnan. 2016. <a href="https://doi.org/10.1145/2984511.2984557">Porous Interfaces for Small Screen Multitasking using Finger Identification</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 145-156.</p>
+
+		<p>Amy Hurst, Jennifer Mankoff, Anind K. Dey, and Scott E. Hudson. 2007. <a href="https://doi.org/10.1145/1294211.1294242">Dirty desktops: using a patina of magnetic mouse dust to make common interactor targets easier to select</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 183-186.</p>
+
+		<p>Wolf Kienzle and Ken Hinckley. 2014. <a href="https://doi.org/10.1145/2642918.2647376">LightRing: always-available 2D input on any surface</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 157-160.</p>
+
+		<p>Juho Kim, Amy X. Zhang, Jihee Kim, Robert C. Miller, and Krzysztof Z. Gajos. 2014. <a href="https://doi.org/10.1145/2642918.2647401">Content-aware kinetic scrolling for supporting web page navigation</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 123-127.</p>
+
+		<p>Martez E. Mott and Jacob O. Wobbrock. 2014. <a href="https://doi.org/10.1145/2556288.2557410">Beating the bubble: using kinematic triggering in the bubble lens for acquiring small, dense targets</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '14). ACM, New York, NY, USA, 733-742.</p>
+		
+		<p>Nicolas Roussel, Géry Casiez, Jonathan Aceituno, and Daniel Vogel. 2012. <a href="https://doi.org/10.1145/2380116.2380162">Giving a hand to the eyes: leveraging input accuracy for subpixel interaction</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 351-358.</p>
+
+		<p>Nicolas Villar, Shahram Izadi, Dan Rosenfeld, Hrvoje Benko, John Helmes, Jonathan Westhues, Steve Hodges, Eyal Ofek, Alex Butler, Xiang Cao, and Billy Chen. 2009. <a href="https://doi.org/10.1145/1622176.1622184">Mouse 2.0: multi-touch meets the mouse</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 33-42.</p>
+		
+		<p>Jacob O. Wobbrock, James Fogarty, Shih-Yen (Sean) Liu, Shunichi Kimuro, and Susumu Harada. 2009. <a href="https://doi.org/10.1145/1518701.1518912">The angle mouse: target-agnostic dynamic gain adjustment based on angular deviation</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '09). ACM, New York, NY, USA, 1401-1410.</p>
+		
+	</body>
+	
+</html>
+
