@@ -22,7 +22,7 @@
 
 		<p><a href="index.html">Back to table of contents</a></p>
 
-		<img src="images/commandline.png" class="img-responsive" />
+		<img src="images/commandline.png" class="img-responsive" alt="An icon of a command line interface." />
 		<small>Credit: CC0 Creative Commons</small>
 		
 		<h1>Declarative interfaces</h1>
@@ -53,28 +53,28 @@
 		<p>While there is a vast literature on programming languages and tools, and much of focuses on bridging gulfs of execution and evaluation, in this chapter, we'll focus on the contributions that HCI researchers have made to solving these problems, as they demonstrate the rich, under-explored design space of ways that people can program computers beyond using general purpose languages. Much of this work can be described as supporting <em>end-user programming</em>, which is any programming that someone does as a means to accomplishing some other goal (<a href="#ko">Ko et al. 2011</a>). For example, a teacher writing formulas in a spreadsheet to compute grades, a child using <a href="https://scratch.mit.edu/">Scratch</a> to create an animation, or a data scientist writing a Python script to wrangle some data&mdash;none of these people are writing code for the code itself (as professional software engineers do), they're writing code for the output their program will produce (the teacher wants the grades, the child wants the animation, the data scientist wants the wrangled data).</p>
 		
 		<p>
-			<img class="img-responsive center-block" src="images/sikuli.png" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/sikuli.png" class="img-responsive center-block" alt="A screenshot of the Sikuli system, showing a loop that waits for a particular image to appear on a map before showing a popup that says the bus has arrived">
 			<center><em>Sikuli</em></center>	
 		</p>
 
 		<p>This vast range of domains in which programming interfaces can be applied has lead to an abundance of unique programming interfaces. For example, several researchers have explored ways to automate interaction with user interfaces, to take repetitive tasks an automate them. One such system is Sikuli (above), which allows users to use screenshots of user interfaces to write scripts that automate interactions (<a href="#yeh">Yeh et al. 2009</a>). Similar systems have used similar ideas to allow users to write simple programs to automate web tasks. CoScripter (<a href="#leshed">Leshed et al. 2008</a>) allowed a user to demonstrate an interaction with an interface, which generated a program in a natural-language like syntax that could then be executed to replay that action. CoCo (<a href="#lau">Lau et al. 2010</a>) allowed a user to write a command like ""get road conditions for highway 88," which the system then translates into operations on a web site using the user's previous browsing history and previously recorded web scripts. Two related contributions used the metaphor of a command line interface for the web and desktop applications, one taking natural language descriptions of task and recommending commands (<a href="#miller">Miller et al. 2008</a>) and the other using a "sloppy" syntax of keywords to recommend commands within an application (<a href="#little">Little and Miller 2006</a>). All of this ideas bridge the gulf of execution, helping a user express their goal in terms they understand such as demonstrating an action, selecting part of an interface, or describing their goal, then having the system translate these into an executable program.</p>
 
 		<p>
-			<img class="img-responsive center-block" src="images/vega.png" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/vega.png" class="img-responsive center-block" alt="A screenshot of a Vega program, which declares a scatterplot with brushing and linking features.">
 			<center><em>Vega</em></center>
 		</p>
 
 		<p>Another major focus has been supporting people interacting with data. Some systems like Vega above have offered new programming languages for declaratively specifying data visualizations (<a href="#satyanarayan">Satyanarayan et al. 2014</a>). Others have provided programmatic means for wrangling and transforming data with interactive support for previewing the effects of candidate transformation programs (<a href="#guo">Guo et al. 2011</a>, (<a href="#mayer">Mayer et al. 2015</a>). One system looked at interactive ways of helping users search and filter data with regular expressions by identifying examples of outlier data (<a href="#miller2">Miller and Myers 2001</a>), whereas other systems have helped translate examples of desired database queries into SQL queries (<a href="#abouzied">Abouzied et al. 2012</a>). Again, a major goal of all of these systems is to help bridge the gulf of evaluation between a user's goal with data, and the program necessary to achieve it.</p>
 		
 		<p>
-			<img class="img-responsive center-block" src="images/mavo.png" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/mavo.png" class="img-responsive center-block" alt="A screenshot of the Mavo system, showing a simple HTML body with attribute annotations and the corresponding to do list application the annotations specify." >
 			<center><em>Mavo</em></center>
 		</p>
 
 		<p>Some systems have attempted to support more ambitious automation, empowering users to create entire applications that better support their personal information needs. For example, many systems have combined spreadsheets with other simple scripting languages to enable users to write simple web applications with rich interfaces, using the spreadsheet as a database (<a href="#chang">Chang and Myers 2014</a>), <a href="#benson">Benson et al. 2014</a>. Other systems like Mavo above and Dido have encapsulated the entire application writing process to just editing HTML by treating HTML as a specification for both the layout of a page but also the layout of data (<a href="#verou">Verou et al. 2016</a>, <a href="karger">Karger et al. 2009</a>).</p>
 		
 		<p>
-			<img class="img-responsive center-block" src="images/hands.jpg" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/hands.jpg" class="img-responsive center-block" alt="A screenshot of the Hands system, showing a program that animates bees, and a card with bee properties.">
 			<center><em>Hands</em></center>
 		</p>
 
