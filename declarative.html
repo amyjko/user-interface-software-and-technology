@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
+
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		
+
 		<link rel="stylesheet" href="style.css" />
-		
+
 		<title>Declarative interfaces</title>
-		
+
 	</head>
 	<body>
 
@@ -24,21 +24,21 @@
 
 		<img src="images/commandline.png" class="img-responsive" />
 		<small>Credit: CC0 Creative Commons</small>
-		
+
 		<h1>Declarative interfaces</h1>
 		<div class="lead">Andrew J. Ko</div>
 
 		<p>If you don't know the history of computing, it's easy to overlook the fact that all of the interfaces that people used to control computers before the graphical user interface were <em>programming</em> interfaces. The distinction between programming interfaces and interactive interfaces comes down to three critical attributes of programming (<a href="#blackwell">Blackwell 2002</a>):</p>
-		
+
 		<ul>
 			<li><strong>No direct manipulation</strong>. In direct manipulation, concrete actions on data result in concrete, immediate feedback about the effect of those actions. Dragging a file from one folder to another immediately moves the file, both visually, and on disk. In programming, nothing is immediate: one <em>declares</em> what action they want to occur, and then at some later point in the future when the program is executed, that effect occurs.</li>
-			<li><strong>Use of notation</strong>. In order to declare what future behavior a computer should do when programming, one must use notations to represent those future actions. In the same way that English is a notation for expressing action, "can you bring me that book?", programming languages use notation to symbolically refer to computer action.</p>			
-			<li><strong>Use of abstraction</strong>. An inherent side effect of using notations is that one must also use <em>abstractions</em> to refer to a computers actions. For example, when one uses the Unix command line program "mv file.txt ../" (which moves file.txt to it's parent directory), they are using a command, a file name, and a symbolic reference "../"  to refer to the parent directory of the current directory. Commands, names, and relative path references are all <em>abstractions</em> in that they remove detail, allowing a user to interact with the <em>ideas</em> of files and file movement, rather than interacting with the files and directories themselves, on concrete visual representations of files such as icons.</li>
+			<li><strong>Use of notation</strong>. In order to declare what future behavior a computer should do when programming, one must use notations to represent those future actions. In the same way that English is a notation for expressing action, "can you bring me that book?", programming languages use notation to symbolically refer to computer action.</li>
+			<li><strong>Use of abstraction</strong>. An inherent side effect of using notations is that one must also use <em>abstractions</em> to refer to a computer's actions. For example, when one uses the Unix command line program "mv file.txt ../" (which moves file.txt to it's parent directory), they are using a command, a file name, and a symbolic reference "../"  to refer to the parent directory of the current directory. Commands, names, and relative path references are all <em>abstractions</em> in that they remove detail, allowing a user to interact with the <em>ideas</em> of files and file movement. Visual icons that represent files are also abstractions, but they support direct manipulation, such as moving files from one folder to another.</li>
 		</ul>
-		
-		<p>Because of the indirection, notation, and abstract inherent to programming interfaces, I will refer to them as "declarative" interfaces from here on, in which a user declares to computer what it wants, and then the computer compiles (rather than acting directly on data).</p>
-		
-		<p>Why are we talking about programming in a book about user interfaces? Well, programming interfaces <em>are</em> user interfaces. They're just user interfaces that have very different properties than the interactive user interfaces we're all familiar with. Clearly, all of the properties above come with great cost: no immediate feedback, having to learn a programming language, and having to think abstractly are all much more difficult than having to learn a graphical user interface. But with all of that additional learning also comes great power. People can use programming languages to get computers to do entirely new things, to control their behavior more precisely, and more importantly, to automate tasks that might humans can't do or can't do nearly as quickly.</p>
+
+		<p>Because of the indirection, notation, and abstraction inherent to programming interfaces, I will refer to them as "declarative" interfaces from here on. In these interfaces, a user declares to the computer what it wants, and then the computer compiles and executes the instructions (rather than acting directly on data).</p>
+
+		<p>Why are we talking about programming in a book about user interfaces? Well, programming interfaces <em>are</em> user interfaces. They're just user interfaces that have very different properties than the interactive user interfaces we're all familiar with. Clearly, all of the properties above come with great cost: no immediate feedback, having to learn a programming language, and having to think abstractly are all much more difficult than having to learn a graphical user interface. But with all of that additional learning also comes great power. People can use programming languages to get computers to do entirely new things, to control their behavior more precisely, and more importantly, to automate tasks that humans can't do or can't do nearly as quickly.</p>
 
 		<p class="embed-responsive embed-responsive-16by9">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/OVTu4XcmnwE" frameborder="0" allowfullscreen></iframe>
@@ -46,55 +46,55 @@
 		</p>
 
 
-		<p>What are programming interfaces? Ultimately, they're software that <em>translates</em> some expression of a program (a text file with code in it, or a hierarchical tree of language constructs in <a href="https://developers.google.com/blockly/">block-based editor</a>) into a representation a computer can execute, usually some series of instructions that consist of low level operations such as arithmetic, reading and writing data values in memory, and jumping to other instructions. In textual languages, there are lexers, which decompose code into <em>tokens</em>, which are then parsed according to a formal grammar into an <em>abstract syntax tree</em>. In the case of block-based editors, users use an editor to directly manipulate an abstract syntax tree. Abstract syntax trees are them <em>compiled</em> into instructions, which the program can then later execute. Sometimes the instructions are  "interpreted," in that they are executed by another program, and some are not, in that they are executed by a physical CPU. This translation process is both what makes programming languages so hard to learn: they create great distance between notational expressions of what a user wants, and the eventual behavior of the compiled program and it's output.</p>
+		<p>What are programming interfaces? Ultimately, they're software that <em>translate</em> some expression of a program (a text file with code in it, or a hierarchical tree of language constructs in <a href="https://developers.google.com/blockly/">block-based editor</a>) into a representation a computer can execute, usually some series of instructions that consist of low level operations such as arithmetic, reading and writing data values in memory, and jumping to other instructions. In textual languages, there are lexers, which decompose code into <em>tokens</em>, which are then parsed according to a formal grammar into an <em>abstract syntax tree</em>. In the case of block-based editors, users use an editor to directly manipulate an abstract syntax tree. Abstract syntax trees are them <em>compiled</em> into instructions, which the program can then later execute. Sometimes the instructions are  "interpreted," in that they are executed by another program, and some are directly executed by a physical CPU. This translation process is what makes programming languages so hard to learn: it creates great distance between notational expressions of what a user wants and the eventual behavior of the compiled program and its output.</p>
 
-		<p>This distance, conceptually, however, is no different from any other user interface. Because programming interfaces are user interfaces, they also have <a href="theory.html">gulfs of evaluation and execution, and affordances and feedback that bridge them</a>. Their gulfs are just much larger because of transation. Because textual programs are parsed according to a formal grammar, there are numerous ways to violate the grammar, requiring a user to know the rules of the grammar to write correct programs. Because the functional affordances in a programming language can be combined in infinite ways, there are an <em>infinite</em> number of programs can exist. How can one figure out which program will achieve a user's goal? Code examples, documentation, Stack Overflow, design patterns, software architecture skills, and other media are key to bridging this gulf. Similarly, because programs can execute hundreds, thousands, even billions of instructions per second, and even simple programs can execute in a multitude of different ways depending on the input they receive, there's a really big space of possible program outputs that a user might need to understand. That's a big gulf of evaluation, and programs mostly provide no feedback about <em>how</em> they execute. Testing, debugging, and monitoring tools help bridge this gulf by providing data and explanations about how a program executed in response to input.</p>
-		
-		<p>While there is a vast literature on programming languages and tools, and much of focuses on bridging gulfs of execution and evaluation, in this chapter, we'll focus on the contributions that HCI researchers have made to solving these problems, as they demonstrate the rich, under-explored design space of ways that people can program computers beyond using general purpose languages. Much of this work can be described as supporting <em>end-user programming</em>, which is any programming that someone does as a means to accomplishing some other goal (<a href="#ko">Ko et al. 2011</a>). For example, a teacher writing formulas in a spreadsheet to compute grades, a child using <a href="https://scratch.mit.edu/">Scratch</a> to create an animation, or a data scientist writing a Python script to wrangle some data&mdash;none of these people are writing code for the code itself (as professional software engineers do), they're writing code for the output their program will produce (the teacher wants the grades, the child wants the animation, the data scientist wants the wrangled data).</p>
-		
+		<p>However, this distance, conceptually, is no different from any other user interface. Because programming interfaces are user interfaces, they also have <a href="theory.html">gulfs of evaluation and execution, and affordances and feedback that bridge them</a>. Their gulfs are just much larger because of translation. Because textual programs are parsed according to a formal grammar, there are numerous ways to violate the grammar, requiring a user to know the rules of the grammar to write correct programs. Because the functional affordances in a programming language can be combined in infinite ways, there are an <em>infinite</em> number of programs can exist. How can one figure out which program will achieve a user's goal? Code examples, documentation, Stack Overflow, design patterns, software architecture skills, and other media are key to bridging this gulf. Similarly, because programs can execute hundreds, thousands, even billions of instructions per second, and even simple programs can execute in a multitude of different ways depending on the input they receive, there's a really big space of possible program outputs that a user might need to understand. That's a big gulf of evaluation, and programs mostly provide no feedback about <em>how</em> they execute. Testing, debugging, and monitoring tools help bridge this gulf by providing data and explanations about how a program executed in response to input.</p>
+
+		<p>While there is a vast literature on programming languages and tools, and much of it focuses on bridging gulfs of execution and evaluation, in this chapter, we'll focus on the contributions that HCI researchers have made to solving these problems, as they demonstrate the rich, under-explored design space of ways that people can program computers beyond using general purpose languages. Much of this work can be described as supporting <em>end-user programming</em>, which is any programming that someone does as a means to accomplishing some other goal (<a href="#ko">Ko et al. 2011</a>). For example, a teacher writing formulas in a spreadsheet to compute grades, a child using <a href="https://scratch.mit.edu/">Scratch</a> to create an animation, or a data scientist writing a Python script to wrangle some data&mdash;none of these people are writing code for the code itself (as professional software engineers do), they're writing code for the output their program will produce (the teacher wants the grades, the child wants the animation, the data scientist wants the wrangled data).</p>
+
 		<p>
-			<img class="img-responsive center-block" src="images/sikuli.png" class="img-responsive center-block">
-			<center><em>Sikuli</em></center>	
+			<img class="img-responsive center-block" src="images/sikuli.png">
+			<center><em>Sikuli</em></center>
 		</p>
 
-		<p>This vast range of domains in which programming interfaces can be applied has lead to an abundance of unique programming interfaces. For example, several researchers have explored ways to automate interaction with user interfaces, to take repetitive tasks an automate them. One such system is Sikuli (above), which allows users to use screenshots of user interfaces to write scripts that automate interactions (<a href="#yeh">Yeh et al. 2009</a>). Similar systems have used similar ideas to allow users to write simple programs to automate web tasks. CoScripter (<a href="#leshed">Leshed et al. 2008</a>) allowed a user to demonstrate an interaction with an interface, which generated a program in a natural-language like syntax that could then be executed to replay that action. CoCo (<a href="#lau">Lau et al. 2010</a>) allowed a user to write a command like ""get road conditions for highway 88," which the system then translates into operations on a web site using the user's previous browsing history and previously recorded web scripts. Two related contributions used the metaphor of a command line interface for the web and desktop applications, one taking natural language descriptions of task and recommending commands (<a href="#miller">Miller et al. 2008</a>) and the other using a "sloppy" syntax of keywords to recommend commands within an application (<a href="#little">Little and Miller 2006</a>). All of this ideas bridge the gulf of execution, helping a user express their goal in terms they understand such as demonstrating an action, selecting part of an interface, or describing their goal, then having the system translate these into an executable program.</p>
+		<p>This vast range of domains in which programming interfaces can be applied has lead to an abundance of unique programming interfaces. For example, several researchers have explored ways to automate interaction with user interfaces, to take repetitive tasks and automate them. One such system is Sikuli (above), which allows users to use screenshots of user interfaces to write scripts that automate interactions (<a href="#yeh">Yeh et al. 2009</a>). Similar systems have used similar ideas to allow users to write simple programs to automate web tasks. CoScripter (<a href="#leshed">Leshed et al. 2008</a>) allowed a user to demonstrate an interaction with an interface, which generated a program in a natural-language-like syntax that could then be executed to replay that action. CoCo (<a href="#lau">Lau et al. 2010</a>) allowed a user to write a command like "get road conditions for highway 88," which the system then translates into operations on a website using the user's previous browsing history and previously recorded web scripts. Two related contributions used the metaphor of a command line interface for the web and desktop applications, one taking natural language descriptions of task and recommending commands (<a href="#miller">Miller et al. 2008</a>) and the other using a "sloppy" syntax of keywords to recommend commands within an application (<a href="#little">Little and Miller 2006</a>). All of these ideas bridge the gulf of execution, helping a user express their goal in terms they understand such as demonstrating an action, selecting part of an interface, or describing their goal, then having the system translate these into an executable program.</p>
 
 		<p>
-			<img class="img-responsive center-block" src="images/vega.png" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/vega.png">
 			<center><em>Vega</em></center>
 		</p>
 
-		<p>Another major focus has been supporting people interacting with data. Some systems like Vega above have offered new programming languages for declaratively specifying data visualizations (<a href="#satyanarayan">Satyanarayan et al. 2014</a>). Others have provided programmatic means for wrangling and transforming data with interactive support for previewing the effects of candidate transformation programs (<a href="#guo">Guo et al. 2011</a>, (<a href="#mayer">Mayer et al. 2015</a>). One system looked at interactive ways of helping users search and filter data with regular expressions by identifying examples of outlier data (<a href="#miller2">Miller and Myers 2001</a>), whereas other systems have helped translate examples of desired database queries into SQL queries (<a href="#abouzied">Abouzied et al. 2012</a>). Again, a major goal of all of these systems is to help bridge the gulf of evaluation between a user's goal with data, and the program necessary to achieve it.</p>
-		
+		<p>Another major focus has been supporting people interacting with data. Some systems like Vega above have offered new programming languages for declaratively specifying data visualizations (<a href="#satyanarayan">Satyanarayan et al. 2014</a>). Others have provided programmatic means for wrangling and transforming data with interactive support for previewing the effects of candidate transformation programs (<a href="#guo">Guo et al. 2011</a>, <a href="#mayer">Mayer et al. 2015</a>). One system looked at interactive ways of helping users search and filter data with regular expressions by identifying examples of outlier data (<a href="#miller2">Miller and Myers 2001</a>), whereas other systems have helped translate examples of desired database queries into SQL queries (<a href="#abouzied">Abouzied et al. 2012</a>). Again, a major goal of all of these systems is to help bridge the gulf of evaluation between a user's goal and the program necessary to achieve it.</p>
+
 		<p>
-			<img class="img-responsive center-block" src="images/mavo.png" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/mavo.png">
 			<center><em>Mavo</em></center>
 		</p>
 
-		<p>Some systems have attempted to support more ambitious automation, empowering users to create entire applications that better support their personal information needs. For example, many systems have combined spreadsheets with other simple scripting languages to enable users to write simple web applications with rich interfaces, using the spreadsheet as a database (<a href="#chang">Chang and Myers 2014</a>), <a href="#benson">Benson et al. 2014</a>. Other systems like Mavo above and Dido have encapsulated the entire application writing process to just editing HTML by treating HTML as a specification for both the layout of a page but also the layout of data (<a href="#verou">Verou et al. 2016</a>, <a href="karger">Karger et al. 2009</a>).</p>
-		
+		<p>Some systems have attempted to support more ambitious automation, empowering users to create entire applications that better support their personal information needs. For example, many systems have combined spreadsheets with other simple scripting languages to enable users to write simple web applications with rich interfaces, using the spreadsheet as a database (<a href="#chang">Chang and Myers 2014</a>, <a href="#benson">Benson et al. 2014</a>). Other systems like Mavo above and Dido have encapsulated the entire application writing process to just editing HTML by treating HTML as a specification for both the layout of a page and the layout of data (<a href="#verou">Verou et al. 2016</a>, <a href="karger">Karger et al. 2009</a>).</p>
+
 		<p>
-			<img class="img-responsive center-block" src="images/hands.jpg" class="img-responsive center-block">
+			<img class="img-responsive center-block" src="images/hands.jpg">
 			<center><em>Hands</em></center>
 		</p>
 
-		<p>Perhaps the richest category of end-user programming systems are those supporting the creation of games. Hundreds of systems have provided custom programming languages and development environments for authoring games, ranging from simple game mechanics to entire general purpose programming languages to support games (<a href="#kelleher">Kelleher and Pausch 2005</a>). For example, the system above, called Hands, carefully studied how children express computation with natural language, and designed a programming language inspired by the computational ideas inherent in children's reasoning about game behavior (<a href="#pane">Pane and Myers 2002</a>). Other systems, most notably Gamut (<a href="mcdaniel">McDaniel and Myers 1997</a>), used a technique called <em>programming by demonstration</em>, in which users demonstrate the behavior they want the computer to perform, and the computer generalizes that into a program that can be executed later on a broader range of situations than the original demonstration. Gamut was notable for it's ability to support the construction of an <em>entire</em> application by demonstration, unlike many of the systems discussed above, which only partially used demonstration.</p>
-		
+		<p>Perhaps the richest category of end-user programming systems are those supporting the creation of games. Hundreds of systems have provided custom programming languages and development environments for authoring games, ranging from simple game mechanics to entire general purpose programming languages to support games (<a href="#kelleher">Kelleher and Pausch 2005</a>). For example, the system above, called Hands, carefully studied how children express computation with natural language, and designed a programming language inspired by the computational ideas inherent in children's reasoning about game behavior (<a href="#pane">Pane and Myers 2002</a>). Other systems, most notably Gamut (<a href="mcdaniel">McDaniel and Myers 1997</a>), used a technique called <em>programming by demonstration</em>, in which users demonstrate the behavior they want the computer to perform, and the computer generalizes that into a program that can be executed later on a broader range of situations than the original demonstration. Gamut was notable for its ability to support the construction of an <em>entire</em> application by demonstration, unlike many of the systems discussed above, which only partially used demonstration.</p>
+
 		<p class="embed-responsive embed-responsive-16by9">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/wcy4JEmiQzI" frameborder="0" allowfullscreen></iframe>
 			<center><em>Whyline for Alice</em></center>
 		</p>
-		
-		<p>The vast majority of innovations for programming interfaces have focused on bridging the gulf of execution. Fewer systems have focused on gulfs of evaluation by supporting and testing and debugging of behavior a user is trying to understand. One from my own research was a system called the Whyline (see in the video above), which allowed users to ask "why" and "why not" questions when their program did something they didn't expect, bridging a gulf of evaluation. It identified questions by scanning the user's program for all possible program outputs, and answered questions by precisely trying the cause of every operation in the program, reasoning backwards about the chain of causality that caused an unwanted behavior or prevented a desired behavior. More recent systems have provided similar debugging and program comprehension support for understanding web pages (<a href="#burg">Burg et la. 2015</a>, <a href="#hibschman">Hibschman and Zhang 2015</a>) and even machine learned classifiers (<a href="#patel">Patel et al. 2010</a>, <a href="#kulesza">Kulesza et al. 2009</a>).</p>
+
+		<p>The vast majority of innovations for programming interfaces have focused on bridging the gulf of execution. Fewer systems have focused on bridging gulfs of evaluation by supporting, testing, and debugging behaviors a user is trying to understand. One from my own research was a system called the Whyline (see the video above), which allowed users to ask "why" and "why not" questions when their program did something they didn't expect, bridging a gulf of evaluation. It identified questions by scanning the user's program for all possible program outputs, and answered questions by precisely trying the cause of every operation in the program, reasoning backwards about the chain of causality that caused an unwanted behavior or prevented a desired behavior. More recent systems have provided similar debugging and program comprehension support for understanding web pages (<a href="#burg">Burg et al. 2015</a>, <a href="#hibschman">Hibschman and Zhang 2015</a>), machine learned classifiers (<a href="#patel">Patel et al. 2010</a>, <a href="#kulesza">Kulesza et al. 2009</a>), and even embedded systems that use a combination of hardware and software to define a user interface (<a href="#strasnick">Strasnick et al. 2017</a>, <a href="#mcgrath">McGrath et al. 2017</a>).</p>
 
 		<p>One way to think about all of these innovations is as trying to bring all of the benefits of graphical user interfaces&mdash;immediate feedback, direct manipulation, and concreteness&mdash;to notations that inherently don't have those properties, by augmenting programming <em>environments</em> with these features. This progress is blurring the distinction between declarative interfaces and interactive interfaces, bringing the power of programming to broader and more diverse audiences.</p>
-		
+
 		<center class="lead"><a href="interactive.html">Next chapter: Interactive mediation</a></center>
-	
+
 		<h2>Further reading</h2>
 
 		<p id="abouzied">Azza Abouzied, Joseph Hellerstein, and Avi Silberschatz. 2012. <a href="https://doi.org/10.1145/2380116.2380144">DataPlay: interactive tweaking and example-driven correction of graphical database queries</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 207-218.</p>
-		
+
 		<p id="ahmad">Salman Ahmad and Sepandar Kamvar. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502026">The dog programming language</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 463-472.</p>
 
 		<p id="blackwell">Blackwell, A. F. (2002). <a href="https://doi.org/10.1109/HCC.2002.1046334">First steps in programming: A rationale for attention investment models</a>. In Human Centric Computing Languages and Environments, 2002. Proceedings. IEEE 2002 Symposia on (pp. 2-10). IEEE.</p>
@@ -104,7 +104,7 @@
 		<p id="burg">Brian Burg, Andrew J. Ko, and Michael D. Ernst. 2015. <a href="https://doi.org/10.1145/2807442.2807473">Explaining Visual Changes in Web Interfaces</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 259-268.</p>
 
 		<p id="chang">Kerry Shih-Ping Chang and Brad A. Myers. 2014. <a href="https://doi.org/10.1145/2642918.2647371">Creating interactive web data applications with spreadsheets</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 87-96.</p>
-		
+
 		<p id="mcdaniel">Richard G. McDaniel and Brad A. Myers. 1997. <a href="http://dx.doi.org/10.1145/263407.263515">Gamut: demonstrating whole applications</a>. In Proceedings of the 10th annual ACM symposium on User interface software and technology (UIST '97). ACM, New York, NY, USA, 81-82.</p>
 
 		<p id="guo">Philip J. Guo, Sean Kandel, Joseph M. Hellerstein, and Jeffrey Heer. 2011. <a href="https://doi.org/10.1145/2047196.2047205">Proactive wrangling: mixed-initiative end-user programming of data transformation scripts</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 65-74.</p>
@@ -116,16 +116,18 @@
 		<p id="kelleher">Caitlin Kelleher and Randy Pausch. 2005. <a href="http://dx.doi.org/10.1145/1089733.1089734">Lowering the barriers to programming: A taxonomy of programming environments and languages for novice programmers</a>. ACM Comput. Surv. 37, 2 (June 2005), 83-137.</p>
 
 		<p id="ko">Andrew J. Ko, Robin Abraham, Laura Beckwith, Alan Blackwell, Margaret Burnett, Martin Erwig, Chris Scaffidi, Joseph Lawrance, Henry Lieberman, Brad Myers, Mary Beth Rosson, Gregg Rothermel, Mary Shaw, and Susan Wiedenbeck. 2011. <a href="http://dx.doi.org/10.1145/1922649.1922658">The state of the art in end-user software engineering</a>. ACM Comput. Surv. 43, 3, Article 21 (April 2011), 44 pages.</p>
-		
+
 		<p id="kulesza">Todd Kulesza, Weng-Keen Wong, Simone Stumpf, Stephen Perona, Rachel White, Margaret M. Burnett, Ian Oberst, and Andrew J. Ko. 2009. <a href="http://dx.doi.org/10.1145/1502650.1502678">Fixing the program my computer learned: barriers for end users, challenges for the machine</a>. In Proceedings of the 14th international conference on Intelligent user interfaces (IUI '09). ACM, New York, NY, USA, 187-196.</p>
 
 		<p id="lau">Tessa Lau, Julian Cerruti, Guillermo Manzato, Mateo Bengualid, Jeffrey P. Bigham, and Jeffrey Nichols. 2010. <a href="https://doi.org/10.1145/1866029.1866067">A conversational interface to web automation</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 229-238.</p>
 
-		<p id="leshed">Gilly Leshed, Eben M. Haber, Tara Matthews, and Tessa Lau. 2008. <p id="https://doi.org/10.1145/1357054.1357323">CoScripter: automating & sharing how-to knowledge in the enterprise</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '08). ACM, New York, NY, USA, 1719-1728.</p>
+		<p id="leshed">Gilly Leshed, Eben M. Haber, Tara Matthews, and Tessa Lau. 2008. <a href="https://doi.org/10.1145/1357054.1357323">CoScripter: automating & sharing how-to knowledge in the enterprise</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '08). ACM, New York, NY, USA, 1719-1728.</p>
 
 		<p id="little">Greg Little and Robert C. Miller. 2006. <a href="https://doi.org/10.1145/1166253.1166275">Translating keyword commands into executable code</a>. In Proceedings of the 19th annual ACM symposium on User interface software and technology (UIST '06). ACM, New York, NY, USA, 135-144.</p>
 
-		<p id="mayer">Mika�l Mayer, Gustavo Soares, Maxim Grechkin, Vu Le, Mark Marron, Oleksandr Polozov, Rishabh Singh, Benjamin Zorn, and Sumit Gulwani. 2015. <a href="https://doi.org/10.1145/2807442.2807459">User Interaction Models for Disambiguation in Programming by Example</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 291-301.</p>
+		<p id="mayer">Mikaël Mayer, Gustavo Soares, Maxim Grechkin, Vu Le, Mark Marron, Oleksandr Polozov, Rishabh Singh, Benjamin Zorn, and Sumit Gulwani. 2015. <a href="https://doi.org/10.1145/2807442.2807459">User Interaction Models for Disambiguation in Programming by Example</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 291-301.</p>
+
+		<p id="mcgrath">Will McGrath, Daniel Drew, Jeremy Warner, Majeed Kazemitabaar, Mitchell Karchemsky, David Mellis, and Björn Hartmann. 2017. <a href="https://doi.org/10.1145/3126594.3126658">Bifröst: Visualizing and checking behavior of embedded systems across hardware and software</a>. In Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology (UIST '17). ACM, New York, NY, USA, 299-310.</p>
 
 		<p id="miller">Robert C. Miller, Victoria H. Chou, Michael Bernstein, Greg Little, Max Van Kleek, David Karger, and mc schraefel. 2008. <a href="https://doi.org/10.1145/1449715.1449737">Inky: a sloppy command line for the web with rich visual feedback</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 131-140.</p>
 
@@ -137,11 +139,12 @@
 
 		<p id="satyanarayan">Arvind Satyanarayan, Kanit Wongsuphasawat, and Jeffrey Heer. 2014. <a href="https://doi.org/10.1145/2642918.2647360">Declarative interaction design for data visualization</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 669-678.</p>
 
+		<p id="strasnick">Evan Strasnick, Maneesh Agrawala, and Sean Follmer. 2017. <a href="https://doi.org/10.1145/3126594.3126618">Scanalog: Interactive design and debugging of analog circuits with programmable hardware</a>. In Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology (UIST '17). ACM, New York, NY, USA, 321-330.</p>
+
 		<p id="verou">Lea Verou, Amy X. Zhang, and David R. Karger. 2016. <a href="https://doi.org/10.1145/2984511.2984551">Mavo: Creating Interactive Data-Driven Web Applications by Authoring HTML</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 483-496.</p>
 
 		<p id="yeh">Tom Yeh, Tsung-Hsiang Chang, and Robert C. Miller. 2009. <a href="https://doi.org/10.1145/1622176.1622213">Sikuli: using GUI screenshots for search and automation</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 183-192.</p>
 
 	</body>
-	
-</html>
 
+</html>
