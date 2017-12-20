@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>Text entry</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/keyboard.jpg" class="img-responsive" alt="A photograph of a kitten sitting on a computer keyboard." />
+		<small>A standard text entry device and it's avid user. Credit: Flickr/dougewoods</small>
+		
+		<h1>Text entry</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>
+			Just as pointing is a nearly ubiquitous form of <em>non-verbal</em> communication, text is a ubiquitous form of <em>verbal</em> communication.
+			Every single character we communicate to friends, family, coworkers, and computers&mdash;every tweet, every Facebook post, every email&mdash;leverages some form of text-entry user interface.
+			These interfaces have one simple challenge: support a person in translating the verbal ideas in their head into a sequence of characters that are stored, processed, and transmitted by a computer.
+		</p>
+		
+		<p>
+			If you're reading this, you're already familiar with common text-entry interfaces.
+			You've almost certainly used a physical keyboard, arranged with physical keys labeled with letters and punctuation.
+			You've probably also used a virtual on-screen keyboard, like those in smartphones and tablets.
+			You might even occasionally use a digital assistant's speech recognition as a form of text entry.
+			And because text-entry is so frequent a task with computers, you probably also have very strong opinions about what kinds of text-entry you prefer: some hate talking to Siri, some love it.
+			Some still stand by their physical Blackberry keyboards, others type lightning fast on their Android phone's virtual on-screen keyboard.
+			And some like big bulky clicky keys, while others are fine with the low travel of most thin modern laptop keyboards.
+		</p>
+		
+		<p>
+			What underlies these strong opinions?
+			A large set of hidden complexities.
+			Text entry needs to support letters, numbers, and symbols across nearly all of human civilization.
+			In <a href="http://www.unicode.org/versions/Unicode6.0.0/">Unicode 6.0</a>, there are 109,384 distinct symbols that people can enter into a computer.
+			It needs to be fast enough to move at the speed of thought.
+			It needs to be error-free, and when errors do occur, it needs to help a user rapidly recover from and correct them, so they can focus on what they're saying, not on the low-level mechanics of fixing a character.
+			People also need to <em>learn</em> text entry interfaces, just like they learn handwriting, keyboarding, speech, and other forms of verbal communication.
+			But people also need to be comfortable while they're entering text: it shouldn't hurt, it shouldn't cause fatigue, and most importantly it should be <em>possible</em>.
+			Many people with injuries or disabilities (e.g., someone who is fully paralyzed) may find it excruciatingly difficult to enter text.
+			The ever-smaller devices in our pockets and on our wrists only make this harder, reducing the usable surfaces for comfortable text entry.
+		</p>
+
+		<p>
+			<img src="images/typewriter.jpg" class="img-responsive center-block" alt="A photograph of a Jewett No. 4 typewriter." />
+			<center><em>A Jewett No. 4 typewriter from 1894. Credit: unknown</em></center>
+		</p>
+
+		<p>
+			The history of text entry interfaces predates computers (Silfverberg 2007).
+			For example, typewriters like the Jewett No. 4 shown above had to solve the same problem as with computers, but rather than storing the sequence of characters in computer memory, they were stored on a piece of paper with ink.
+			It was during the industrial revolution when the demand for more text increased and devices like typewriters, and their QWERTY keyboard layout, emerged.
+		</p>
+			
+		<p>
+			Of course, the difference between mechanical text entry and computer text entry is that computers can do so much more to ensure fast, accurate, and comfortable experiences.
+			Researchers have spent several decades exploiting computing to do exactly this.
+			This research generally falls into three categories: techniques that leverage <strong>discrete</strong> input, like the pressing of a physical or virtual key, techniques that leverage <strong>continuous</strong> input, like gestures or speech, and statistical techniques that attempt to <strong>predict</strong> the text someone is typing to <em>automate</em> text entry.
+		</p>
+		
+		<p>
+			<img src="images/keyboards.jpg" class="img-responsive center-block" alt="A photograph of many piles of many computer keyboards." />
+			<center><em>Standard keyboards. Credit: Zinneke [CC BY-SA 3.0]</em></center>
+		</p>
+
+		<h2>Discrete input</h2>
+		
+		<p>
+			The most common and familiar forms of discrete text entry are keyboards.
+			Keyboards come in numerous shapes and sizes, both physical and virtual, and these properties shape the speed, accuracy, learnability, and comfort of each.
+		</p>
+		
+		<p>
+			Keyboards can be as simple as 1-dimensional layouts of characters, navigated with a left, right, and select key. These are common on small devices where physical space is scarce. Multiple versions of the iPod, for example, used 1-dimensional text entry keyboards because of it's one dimensional click wheel.
+		</p>
+		
+		<p>
+			Two-dimensional keyboards like the familiar QWERTY layout are more common. And layout matters. The original QWERTY layout, for example, was designed to minimize mechanical failure, not speed or accuracy. The Dvorak layout was designed for speed, placing the most common letters in the home row and to maximize alternation between hands (Dvorak and Dealey 1936):
+		</p>
+
+		<p>
+			<img src="images/dvorak.png" class="img-responsive center-block" alt="The Dvorak keyboard layout" />
+			<center><em>The Dvorak keyboard layout. Credit: Tiki katin [CC0], via Wikimedia Commons</em></center>
+		</p>
+		
+		<p>
+			Not all two-dimensional keyboards have a 1-to-1 mapping from key to character. Some keyboards are virtual, with physical keys for moving an on-screen cursor:
+		</p>
+
+		<p>
+			<img src="images/glenayre.jpg" class="img-responsive center-block" alt="An on-screen keyboard on a pager." />
+			<center><em>An on-screen keyboard on a pager.</em></center>
+		</p>
+
+		<p>
+			Cell phones in the early 21st century used a <strong>multitap</strong> method in which each key on a numeric keyboard mapped to three or four letters, and to select the letter you wanted, you would press a key multiple times to reach the letter you wanted.
+			After a 1.5 second timeout, the letter would be selected.
+			Some researchers sped up multitap techniques like this by using other sensors, such as tilt sensors, making it faster to indicate a character (<a href="https://doi.org/10.1145/964696.964705">Wigdor and Balakrishnan 2003</a>).
+			Other researchers explored even more efficient forms of text entry with minimal keys, including one with only <em>4</em> keys, where characters are uniquely encoded as sequences of presses of those four keys (<a href="https://doi.org/10.1145/2047196.2047258">MacKenzie et al. 2011</a>).
+			On particularly small devices like smartwatches, some researchers have explored having the user move the <em>keyboard</em> to select the character they want (<a href="https://doi.org/10.1145/2984511.2984591">Shibata et al. 2016</a>):
+		</p>
+		
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/mPfktzYsVZI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<center><em>DriftBoard</em></center>
+		</p>
+
+		<p>
+			Some keyboards are eyes-free.
+			For example, long used in courtrooms, stenographers who transcribe human speech in shorthand have used chorded keyboards called stenotypes:
+			</p>
+		
+		<p>
+			<img src="images/stenotype.jpg" class="img-responsive center-block" alt="An on-screen keyboard on a pager." />
+			<center><em>An on-screen keyboard on a pager.</em></center>
+		</p>
+
+		<p>
+			With 2-4 years of training, some stenographers can reach 225 words per minute.
+			Researchers have adapted these techniques to other encodings, such as braille, to support non-visual text entry for people who are blind or low-vision (<a href="https://dl.acm.org/citation.cfm?id=2305297">Zenkot et al. 2012</a>:
+		</p>
+		
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Ot8_lObS1Lc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<center><em>Perkinput</em></center>
+		</p>
+
+		<p>
+			On-screen virtual keyboards like those found in modern smartphones introduce some degree of ambiguity into the notion of a discrete set of keys, because touch input can be ambiguous.
+			Some researchers have leveraged additional sensor data to disambiguate which key is being typed, such as which finger is typically used to type a key (<a href="https://doi.org/10.1145/2807442.2807491">Choi et al. 2015</a>).
+		</p>
+
+		<h2>Continuous input</h2>
+
+		<p>
+			The primary benefit of the discrete input techniques above is that they can achieve relatively fast speeds and low errors because input is reliable: when someone presses a key, they probably meant to.
+			But this is not always true, especially for people with motor impairments that reduce stability of motion.
+			Moreover, there are many people that cannot operate a keyboard comfortably or at all, many contexts in which there simply isn't physical or virtual space for keys, and many people who do not want to learn an entire new encoding for entering text.
+		</p>
+		
+		<p>
+			Continuous input can avoid some of these limitations, at the expense of speed or accuracy.
+			For example, popular in the late 1990's, the Palm Pilot used a unistroke gesture alphabet for text entry.
+			It did not require a physical keyboard, nor did it require space on screen for a virtual keyboard.
+			Instead, users learned a set of gestures for typing letters, numbers, and punctuation.
+		</p>
+
+		<p>
+			<img src="images/graffiti.png" class="img-responsive center-block" alt="A diagrm of the Palm Pilot's Graffiti 2 gesture set." />
+			<center><em>The Palm Pilot's Graffiti 2 gesture set.</em></center>
+		</p>
+
+		<p>
+			This wasn't particularly fast or error-free, but it was relatively learnable and kept the Palm Pilot small.
+		</p>
+		
+		<p>
+			Researchers envisioned other improved unistroke alphabets.
+			Most notably, the EdgeWrite system was designed to stabilize the motion of people with motor impairments by defining gestures that traced around the edges and diagonals of a square (<a href="https://doi.org/10.1145/964696.964703">Wobbrock et al. 2003</a>).
+			This way, even if someone had motor tremors that prevented fine motor control, they could still accurately enter text.
+			EdgeWrite has been tested on desktops, mobile devices, joysticks, and even tiny vibrotactile displays like smartwatches (<a href="https://doi.org/10.1145/2984511.2984522">Liao et al. 2016</a>).
+		</p>
+
+		<p>
+			Whereas the unistroke techniques focus on entering one character at a time, others have explored strokes that compose entire words. 
+			Most notably, the SHARK technique allowed users to trace across multiple letters in a virtual keyboard layout, spelling entire words in one large stroke (<a href="http://dx.doi.org/10.1145/1029632.1029640">Kristensson and Zhai 2004</a>):
+		</p>
+		
+		<p>
+			<img src="images/shark.png" class="img-responsive center-block" alt="An example of a word stroke in the SHARK system, spelling the word system.." />
+			<center><em>An example of a word stroke in the SHARK system, spelling the word system.</em></center>
+		</p>
+
+		<p>
+			Researchers have built upon this basic idea, allowing users to use two hands instead of one for tablets (<a href="https://doi.org/10.1145/2380116.2380136">Bi et al. 2012</a>), allowing unused parts of the gesture space for creative expression (<a href="https://doi.org/10.1145/2984511.2984560">Alvina et al. 2016</a>), and optimizing the layout of keyboards using Fitts' law for speed (<a href="https://doi.org/10.1145/1866029.1866043">Rick 2010</a>).
+		</p>
+
+		<p>
+			As interfaces move increasingly away from desktops, laptops, and even devices, researchers have investigated forms of text-entry that involve no direct interaction with a device at all.
+			This includes techniques for tracking the position and movement of fingers in space for text entry (<a href="https://doi.org/10.1145/2807442.2807504">Yi et al. 2015</a>):
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/gYkSOzKY1LQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<center><em>ATK freehand typing.</em></center>
+		</p>
+				
+		<p>
+			Other techniques leveraging spatial memory of keyboard layout for accurate text input on devices with no screens (<a href="https://doi.org/10.1145/2642918.2647354">Chen et al. 2014</a>), and eyes-free entry of numbers (<a href="http://dx.doi.org/10.1145/2501988.2502056">Azenkot et al. 2013</a>).
+		</p>
+		
+		<p>
+			Handwriting and speech recognition have also long been a goal in research and industry.
+			While both continue to improve, and speech recognition in particular becomes ubiquitous, both continue to be plagued by recognition errors.
+			People are finding many settings in which these errors are tolerable (or even fun!), but they have yet to reach levels of accuracy to be universal, preferred methods for text entry.
+		</p>
+		
+		<h2>Predictive input</h2>
+		
+		<p>
+			The third major approach to text entry has been predictive input, in which a system simply guesses what a user wants to type based on some initial information.
+			This technique has been used in both discrete and continuous input, and is relatively ubiquitous.
+			For example, before smartphones and their virtual keyboards, most cellphones offered a scheme called T9, which would use a dictionary and word frequencies to predict the most likely word you were trying to type. When it was right, it was quite helpful, but it was frequently wrong.
+		</p>
+		
+		<p>
+			These techniques leverage Zipf's law, an empirical observation that the most frequent words in human language are exponentially more frequent than the less frequent words.
+			The most frequent word in English ("the") accounts for about 7% of all words in a document, and the second most frequent word ("of") is about 3.5% of words. Most words rarely occur, forming a long tail of low frequencies.
+		</p>
+		
+		<p>
+			This law is valuable because it allows techniques like T9 to make predictions about word likelihood.
+			Researchers have exploited it, for example, to increase the relevance of autocomplete predictions (<a href="http://dx.doi.org/10.1145/502348.502365">MacKenzie et al. 2001</a>), and even to recommend entire phrases rather than just words (<a href="https://doi.org/10.1145/2984511.2984584">Arnold et al. 2016</a>).
+			These techniques are widely used in speech and handwriting recognition to increase accuracy, and are now ubiquitous in smartphone keyboards.
+		</p>
+
+		<h2>The future of text entry</h2>
+			
+		<p>
+			Our brief tour through the history of text entry reveals a few important trends.
+			First, there are <em>many</em> ways to enter text into computers and they all have speed accuracy tradeoffs.
+			Second, the vast majority of techniques focus on speed and accuracy, and not on the other experiential factors in text entry, such as comfort or accessibility.
+			As the world continues to age, and computing moves into every context of our lives, text entry will have to adapt to these shifting contexts and abilities.
+		</p>
+
+		<center class="lead"><a href="text-entry.html">Next chapter: Text entry</a></center>
+	
+		<h2>Further reading</h2>
+
+		<p>Jessalyn Alvina, Joseph Malloch, and Wendy E. Mackay. 2016. <a href="https://doi.org/10.1145/2984511.2984560">Expressive Keyboards: Enriching Gesture-Typing on Mobile Devices</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 583-593.</p>
+
+		<p>Kenneth C. Arnold, Krzysztof Z. Gajos, and Adam T. Kalai. 2016. <a href="https://doi.org/10.1145/2984511.2984584">On Suggesting Phrases vs. Predicting Words for Mobile Text Composition</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 603-608.</p>
+
+		<p>Shiri Azenkot, Cynthia L. Bennett, and Richard E. Ladner. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502056">DigiTaps: eyes-free number entry on touchscreens with minimal audio feedback</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 85-90.</p>
+
+		<p>Shiri Azenkot, Jacob O. Wobbrock, Sanjana Prasain, and Richard E. Ladner. 2012. <a href="https://dl.acm.org/citation.cfm?id=2305297">Input finger detection for nonvisual touch screen text entry in Perkinput</a>. In Proceedings of Graphics Interface 2012 (GI '12). Canadian Information Processing Society, Toronto, Ont., Canada, Canada, 121-129.</p>
+
+		<p>Xiaojun Bi, Ciprian Chelba, Tom Ouyang, Kurt Partridge, and Shumin Zhai. 2012. <a href="https://doi.org/10.1145/2380116.2380136">Bimanual gesture keyboard</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 137-146.</p>
+
+		<p>Xiang 'Anthony' Chen, Tovi Grossman, and George Fitzmaurice. 2014. <a href="https://doi.org/10.1145/2642918.2647354">Swipeboard: a text entry technique for ultra-small interfaces that supports novice to expert transitions</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 615-620.</p>
+		
+		<p>Daewoong Choi, Hyeonjoong Cho, and Joono Cheong. 2015. <a href="https://doi.org/10.1145/2807442.2807491">Improving Virtual Keyboards When All Finger Positions Are Known</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 529-538.</p>
+
+		<p>Dvorak, A., Merrick, N. L., Dealey, W. L., & Ford, G. C. (1936). Typewriting behavior. New York: American Book Company, 1(6).</p>
+
+		<p>Per-Ola Kristensson and Shumin Zhai. 2004. <a href="http://dx.doi.org/10.1145/1029632.1029640">SHARK2: a large vocabulary shorthand writing system for pen-based computers</a>. In Proceedings of the 17th annual ACM symposium on User interface software and technology (UIST '04). ACM, New York, NY, USA, 43-52.</p>
+
+		<p>Yi-Chi Liao, Yi-Ling Chen, Jo-Yu Lo, Rong-Hao Liang, Liwei Chan, and Bing-Yu Chen. 2016. <a href="https://doi.org/10.1145/2984511.2984522">EdgeVib: Effective Alphanumeric Character Output Using a Wrist-Worn Tactile Display</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 595-601.</p>
+
+		<p>I. Scott MacKenzie, Hedy Kober, Derek Smith, Terry Jones, and Eugene Skepner. 2001. <a href="http://dx.doi.org/10.1145/502348.502365">LetterWise: prefix-based disambiguation for mobile text input</a>. In Proceedings of the 14th annual ACM symposium on User interface software and technology (UIST '01). ACM, New York, NY, USA, 111-120.</p>
+
+		<p>I. Scott MacKenzie, R. William Soukoreff, and Joanna Helga. 2011. <a href="https://doi.org/10.1145/2047196.2047258">1 thumb, 4 buttons, 20 words per minute: design and evaluation of H4-writer</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 471-480.</p>
+
+		<p>Jochen Rick. 2010. <a href="https://doi.org/10.1145/1866029.1866043">Performance optimizations of virtual keyboards for stroke-based text entry on a touch-based tabletop</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 77-86.</p>
+		
+		<p>Silfverberg, M. (2007). Historical overview of consumer text entry technologies. Chapter 1 in Text Entry Systems: Mobility, Accessibility, Universality, I. S. MacKenzie and K. Tanaka-Ishii (eds). San Francisco: Morgan Kaufmann, pp. 3-25.</p>
+		
+		<p>Tomoki Shibata, Daniel Afergan, Danielle Kong, Beste F. Yuksel, I. Scott MacKenzie, and Robert J.K. Jacob. 2016. <a href="https://doi.org/10.1145/2984511.2984591">DriftBoard: A Panning-Based Text Entry Technique for Ultra-Small Touchscreens</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 575-582.</p>
+
+		<p>Xin Yi, Chun Yu, Mingrui Zhang, Sida Gao, Ke Sun, and Yuanchun Shi. 2015. <a href="https://doi.org/10.1145/2807442.2807504">ATK: Enabling Ten-Finger Freehand Typing in Air Based on 3D Hand Tracking Data</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 539-548.</p>
+		
+		<p>Daniel Wigdor and Ravin Balakrishnan. 2003. <a href="https://doi.org/10.1145/964696.964705">TiltText: using tilt for text input to mobile phones</a>. In Proceedings of the 16th annual ACM symposium on User interface software and technology (UIST '03). ACM, New York, NY, USA, 81-90.</p>
+		
+		<p>Jacob O. Wobbrock, Brad A. Myers, and John A. Kembel. 2003. <a href="https://doi.org/10.1145/964696.964703">EdgeWrite: a stylus-based text entry method designed for high accuracy and stability of motion</a>. In Proceedings of the 16th annual ACM symposium on User interface software and technology (UIST '03). ACM, New York, NY, USA, 61-70.</p>
+		
+	</body>
+	
+</html>
+
