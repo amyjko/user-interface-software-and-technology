@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Latest compiled and minified CSS -->
@@ -36,7 +36,7 @@
 		<p>
 			I argue yes.
 			First, a precise understanding of user interface implementation allows designers to have a precise understanding of user interface behavior.
-			This helps designers and engineers who think of user interface components as the building blocks of a user interface can analyze limitations of interfaces, predict edge cases in their behavior, and discuss their behavior precisely.
+			This helps designers and engineers who think of user interface components as the building blocks of a user interface to analyze limitations of interfaces, predict edge cases in their behavior, and discuss their behavior precisely.
 			Knowing, for example, that a button only invokes its command <em>after</em> the mouse button is released allows one to reason about the assumptions a button makes about <em>ability</em>.
 			The ability to hold a mouse button down, for example, isn't something that all people have, whether due to limited finger strength, motor tremors that lead to accidental button releases, or other motor-physical limitations.
 			A user interface designer or engineer knowing these low-level implementation details is like violinist knowing whether a bow's strings are made from synthetic materials or Siberian horse tail.
@@ -54,14 +54,14 @@
 		<p>
 			Precise technical knowledge of user interface implementation also allows designers and engineers to have a shared vocabulary to <em>communicate</em> about interfaces.
 			Designers should feel empowered to converse about interface implementation with engineers, knowing enough to critique designs and convey alternatives.
-			Without this vocabulary and concepts, engineers retain power over user interface design, even though they aren't trained to design interfaces.
+			Without this vocabulary and a grasp of these concepts, engineers retain power over user interface design, even though they aren't trained to design interfaces.
 		</p>
 
 		<h2>Architecture</h2>
 		
 		<p>
 			What is this knowledge of implementation?
-			I'm not proposing that everyone memorize and understand, for example, the source code implementations of all of Windows or OS X's widgets.
+			I'm not proposing that everyone memorize and understand, for example, the source code implementations of all of Windows or macOS's widgets.
 			I'm talking about a level of knowledge at the <strong>architectural</strong> level, which involves understandings patterns of control and data flow that govern user interface behavior.
 		</p>
 		
@@ -76,7 +76,7 @@
 		<p>
 			This is a simple <strong>state machine</strong> with two states: <em>mouse up</em> (on the left) and <em>mouse down</em> (on the right).
 			<em>Events</em> cause the machine to transition between states: when the button receives a <em>mouse down</em> event, it transitions to the down state. 
-			When it receives a <em>mouse up</em> event, it transitions to the up state, and also executes its command. 
+			When it receives a <em>mouse up</em> event, it transitions to the up state and also executes its command. 
 			This is about as simple as buttons get.
 		</p>
 		
@@ -103,7 +103,7 @@
 		<ul>
 			<li>
 				The <strong>model</strong> stores the <em>data</em> that a user interface is presenting.
-				For example, a scroll bar's data is it's position within a window of content that is currently visible, a Facebook post's data is the text you're typing into it's text box, and a bar chart's data is its underlying data set.
+				For example, a scroll bar's data is its position within a window of content that is currently visible, a Facebook post's data is the text you're typing into it's text box, and a bar chart's data is its underlying data set.
 			</li>
 			<li>
 				The <strong>view</strong> visualizes the data in the model.
@@ -136,12 +136,12 @@
 			Each of these are essentially containers that group components together.
 			This brings us to the second big idea of <strong>layout</strong>, in which the children of each component are organized spatially according to some layout rule.
 			For example, the special input widgets are laid out in a horizontal row within the special inputs container and the special inputs container itself is laid out right aligned in the "editor" container.
-			Each component has it's own layout rules that govern the display of it's children.
+			Each component has its own layout rules that govern the display of its children.
 		</p>
 		
 		<p>
 			Finally, <strong>event propagation</strong> is the process by which user interface events move from a physical device to a particular user interface component.
-			Each device has it's own process, because it has it's own semantics. For instance:
+			Each device has its own process, because it has its own semantics. For instance:
 		</p>
 		
 		<ul>
@@ -152,7 +152,7 @@
 				When the operating system receives them, it first decides which window will receive those events by comparing the position of the mouse to the position and layering of the windows, finding the topmost window that contains the mouse position.
 				Then, the window decides which component will handle the event by finding the topmost component whose spatial boundaries contain the mouse.
 				That event is then sent to that component.
-				If the component doesn't handle the event (e.g., someone clicks on some text in a web browser that doesn't respond to clicks), the event may be <em>propagated</em> to it's parent, and to it's parent's parent, etc, seeing if any of the ancestors in the component hierarchy want to handle the event.
+				If the component doesn't handle the event (e.g., someone clicks on some text in a web browser that doesn't respond to clicks), the event may be <em>propagated</em> to its parent, and to it's parent's parent, etc, seeing if any of the ancestors in the component hierarchy want to handle the event.
 				Every user interface framework handles this propagation slightly differently, but most follow this basic pattern.
 			</li>
 			<li>
@@ -160,7 +160,7 @@
 				As with a mouse, sequences are synthesized into other events (e.g., a key down followed by a key up with the same key is a key "press").
 				Whereas a mouse has a position, a keyboard does not, and so operating systems maintain a notion of <em>window focus</em> to determine which window is receiving key events, and then each window maintains a notion of <em>keyboard focus</em> to determine which component receives key events.
 				Operating systems are then responsible for providing a visible indicator of which component has keyboard focus (perhaps giving it a border highlight and showing a blinking text caret).
-				As with mouse events, if the component with focus does not handle a keyboard event, it may be propagated to it's ancestors and handled by one of them.
+				As with mouse events, if the component with focus does not handle a keyboard event, it may be propagated to its ancestors and handled by one of them.
 				For example, when you press the escape key when a confirmation dialog is in focus, the button that has focus will ignore it, but the dialog window may interpret the escape key press as a "cancel".
 			</li>
 		</ul>
@@ -196,7 +196,7 @@
 			For example, one line of work has explored how to express interfaces abstractly, so these abstract specifications can be used to generate many possible interfaces depending on which device is being used (<a href="http://dx.doi.org/10.1145/192426.192443">Edwards and Mynatt 1994</a>, <a href="https://doi.org/10.1145/571985.572008">Nichols et al. 2002</a>, <a href="https://doi.org/10.1145/1166253.1166298">Nichols et al. 2006</a>).
 			Other systems have invented ways to modify interface behavior by intercepting events at runtime and forcing applications to handle them differently (<a href="https://doi.org/10.1145/2047196.2047226">Eagan et al. 2011</a>).
 			Some systems have explored ways of directly manipulating interface layout during use (<a href="https://doi.org/10.1145/1166253.1166301">Stuerzlinger et al. 2006</a>) and transforming interface presentation (<a href="http://dx.doi.org/10.1145/263407.263537">Edwards et al. 1997</a>).
-			More recent techniques have taken interfaces as implemented, reverse engineered their underlying commands, and generated new, more accessible, more usable, and more powerful interfaces based on these reverse engineered models (<a href-"https://doi.org/10.1145/3025453.3025506">Swearngin et al. 2017</a>).
+			More recent techniques have taken interfaces as implemented, reverse engineered their underlying commands, and generated new, more accessible, more usable, and more powerful interfaces based on these reverse engineered models (<a href="https://doi.org/10.1145/3025453.3025506">Swearngin et al. 2017</a>).
 		</p>
 
 		<p>
@@ -211,14 +211,14 @@
 			</p>
 		
 		<ul>
-			<li>Model-view-controller is a fundamental and ubiquitous architectural style in user interface implementation.</li>
+			<li>Model-view-controller is a ubiquitous architectural style in user interface implementation.</li>
 			<li>User interface toolkits are essential to making it easy to implement interfaces.</li>
 			<li>New input techniques require new user interface architectures, and therefore new user interface toolkits.</li>
 			<li>Interfaces can automatically generated, manipulated, inspected, and transformed, but only within the limits of the architecture in which they are implemented.</li>
 			<li>The architecture an interface is built in determines what is difficult to test and debug.</li>
 		</ul>
 
-		<p>These "laws" of user interface implementation can be useful for making predictions about the future. For example, if someone proposes incorporating a new sensor in a device, it will necessarily require new architectures, new forms of testing and debugging, and new toolkits. That's a powerful prediction to be able to make and one that many organizations overlook when they ship new devices.</p>
+		<p>These "laws" of user interface implementation can be useful for making predictions about the future. For example, if someone proposes incorporating a new sensor in a device, subtle details in the sensor's interactive potential may require new forms of testing and debugging, new architectures, and potentially new toolkits to fully leverage its potential. That's a powerful prediction to be able to make and one that many organizations overlook when they ship new devices.</p>
 
 		<center class="lead"><a href="accessibility.html">Next chapter: Accessibility</a></center>
 	
@@ -254,9 +254,9 @@
 
 		<p>Scott E. Hudson, Roy Rodenstein, and Ian Smith. 1997. <a href="http://dx.doi.org/10.1145/263407.263542">Debugging lenses: a new class of transparent tools for user interface debugging</a>. In Proceedings of the 10th annual ACM symposium on User interface software and technology (UIST '97). ACM, New York, NY, USA, 179-187.</p>
 
-		<p>Stéphane Huot, Cédric Dumas, Pierre Dragicevic, Jean-Daniel Fekete, and Gérard Hégron. 2004. <a href="http://dx.doi.org/10.1145/1029632.1029677">The MaggLite post-WIMP toolkit: draw it, connect it and run it</a>. In Proceedings of the 17th annual ACM symposium on User interface software and technology (UIST '04). ACM, New York, NY, USA, 257-266.</p>
+		<p>Stï¿½phane Huot, Cï¿½dric Dumas, Pierre Dragicevic, Jean-Daniel Fekete, and Gï¿½rard Hï¿½gron. 2004. <a href="http://dx.doi.org/10.1145/1029632.1029677">The MaggLite post-WIMP toolkit: draw it, connect it and run it</a>. In Proceedings of the 17th annual ACM symposium on User interface software and technology (UIST '04). ACM, New York, NY, USA, 257-266.</p>
 
-		<p>Kenrick Kin, Björn Hartmann, Tony DeRose, and Maneesh Agrawala. 2012. <a href="https://doi.org/10.1145/2380116.2380176">Proton++: a customizable declarative multitouch framework</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 477-486.</p>
+		<p>Kenrick Kin, Bjï¿½rn Hartmann, Tony DeRose, and Maneesh Agrawala. 2012. <a href="https://doi.org/10.1145/2380116.2380176">Proton++: a customizable declarative multitouch framework</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 477-486.</p>
 
 		<p>Scott R. Klemmer, Jack Li, James Lin, and James A. Landay. 2004. <a href="http://dx.doi.org/10.1145/985692.985743">Papier-Mache: toolkit support for tangible input</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '04). ACM, New York, NY, USA, 399-406.</p>
 
@@ -288,7 +288,7 @@
 
 		<p>Julia Schwarz, Scott Hudson, Jennifer Mankoff, and Andrew D. Wilson. 2010. <a href="https://doi.org/10.1145/1866029.1866039">A framework for robust and flexible handling of inputs with uncertainty</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 47-56.</p>
 
-		<p>Wolfgang Stuerzlinger, Olivier Chapuis, Dusty Phillips, and Nicolas Roussel. 2006. <a href="https://doi.org/10.1145/1166253.1166301">User interface façades: towards fully adaptable user interfaces</a>. In Proceedings of the 19th annual ACM symposium on User interface software and technology (UIST '06). ACM, New York, NY, USA, 309-318.</p>
+		<p>Wolfgang Stuerzlinger, Olivier Chapuis, Dusty Phillips, and Nicolas Roussel. 2006. <a href="https://doi.org/10.1145/1166253.1166301">User interface faï¿½ades: towards fully adaptable user interfaces</a>. In Proceedings of the 19th annual ACM symposium on User interface software and technology (UIST '06). ACM, New York, NY, USA, 309-318.</p>
 
 		<p>Amanda Swearngin, Andrew J. Ko, and James Fogarty. 2017. <a href="https://doi.org/10.1145/3025453.3025506">Genie: Input Retargeting on the Web through Command Reverse Engineering</a>. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17). ACM, New York, NY, USA, 4703-4714.</p>
 
