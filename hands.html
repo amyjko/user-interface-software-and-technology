@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>Hands</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/human-hands.jpg" class="img-responsive" alt="Two human hands in the sun facing a blue sky" />
+		<small>Hands are a versatile tool for input. Credit: Luisfi (Own work) [CC BY-SA 3.0] via Wikimedia Commons</small>
+		
+		<h1>Hands</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>
+			Thus far, we have discussed two ubiquitous forms of input to computers: <a href="pointing.html">pointing</a> and <a href="text-entry.html">text entry</a>.
+			Both utilize human hands.
+			It's not surprising then that most of the innovation beyond pointing and text has continued to mine the versatility of human hands for input. In this chapter we'll discuss three uses of the hand for input: physically touching a surface, using a pen-shaped object to touch a surface, and moving the hand or wrist to convey a gesture.
+		</p>
+
+		<center>
+			<img src="images/touchscreen.png" class="img-responsive" alt="A diagram of a finger touching a touch screen surface." />
+			<small>How many touchscreens sense a position. Credit: Mercury13 [CC BY-SA 3.0]</small>
+		</center>
+
+		<h2>Touch</h2>
+
+		<p>
+			Perhaps the most ubiquitous and familiar form of hand-based input is using our fingers to touch screens.
+			The first touch screens originated in the mid-1960's.
+			They worked like modern touchscreens worked: they consisted of an insulator panel with a resistive coating.
+			When a conductive surface such as a finger made contact, it closed a circuit, flipping a binary input from off to on. It didn't read position, pressure, or other features of a touch, just that the surface was being touched.
+			Resistive touch screens came next, and rather than using capacitance to close a circuit, it relied on pressure to measure voltage flow between X wires and Y wires, allowing a position to be read.
+			In the 1980's, HCI researcher <a href="https://www.billbuxton.com/">Bill Buxton</a> (my academic grandfather it turns out) invented the first multi-touch screen while at the University of Toronto, placing a camera behind a frosted glass panel, and using machine vision to detect different black spots from finger occlusion.
+			This led to several other advancements in sensing technologies that did not require a camera, and in the 1990's, multi-touch screens launched on consumer devices, including the handheld devices like the Apple Newton and the Palm Pilot.
+			The 2000's brought even more innovation in sensing technology, eventually making multi-touch screens small enough to embed in the smartphones we use today.
+			(You can see a more detailed history in this <a target="_blank" href="https://arstechnica.com/gadgets/2013/04/from-touch-displays-to-the-surface-a-brief-history-of-touchscreen-technology/">nice ArsTechnica feature on the history of multi-touch</a>.)
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/lNCPY4gBam4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<center><em>Spherical multitouch, from Microsoft Research (<a href="https://doi.org/10.1145/1449715.1449729">Benko et al. 2008</a>).</em></center>
+		</p>
+
+		<p>
+			The HCI research community was not only central in advancing multi-touch technology to commercial readiness, but it has also been responsible for pushing touch further.
+			Some of this work has invented new types of touch sensors.
+			For example, researchers have worked on materials that allow touch surfaces to be cut into arbitrary shapes and sizes other than rectangles (<a href="http://dx.doi.org/10.1145/2501988.2502048">Olberding et al. 2013</a>).
+			Some have worked on touch surfaces made of foil and magnets that can sense bending and pressure (<a href="https://doi.org/10.1145/2380116.2380180">Rendl et al. 2012</a>), or thin, stretchable, transparent surfaces that can detect force, pinching, and dragging (<a href="https://doi.org/10.1145/2380116.2380182">Sugiura et al. 2012</a>).
+			Others have made 3-dimensional spherical touch surfaces (<a href="https://doi.org/10.1145/1449715.1449729">Benko et al. 2008</a>) and explored using <em>any</em> surface as a touch screen using depth-sensing cameras and projectors (<a href="https://doi.org/10.1145/2047196.2047255">Harrison et al. 2011a</a>).
+		</p>
+
+		<p>
+			Other researchers have explored ways of more precise sensing of <em>how</em> a touch screen is touched.
+			Some have added speakers to detect how something was grasped or touched (<a href="http://dx.doi.org/10.1145/2501988.2501989">Ono et al. 2013</a>), or leveraged variations in the resonance of people's finger anatomy to recognize different fingers and parts of different fingers (<a href="https://doi.org/10.1145/2047196.2047279">Harrison et al. 2011b</a>), or used the resonance of surfaces to detect and classify different types of surface scratching (<a href="https://doi.org/10.1145/1449715.1449747">Harrison and Hudson 2008</a>), including through fabric (<a href="https://doi.org/10.1145/2047196.2047235">Saponas et al. 2011</a>).
+			Depth cameras can also be used to detect the posture and handedness of touch (<a href="https://doi.org/10.1145/2380116.2380177">Murugappan et al. 2012</a>).
+			All of these represent new channels of input that go beyond position, allowing for new, richer, more powerful interfaces.
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/EwRjb4fNWAI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<center><em>Multi-user multi-touch, by MERL (<a href="http://dx.doi.org/10.1145/502348.502389">Dietz and Leigh 2001</a>).</em></center>
+		</p>
+
+		<p>
+			Modern touch screens still focus on single-user interface, only allowing one person at a time to touch a screen. Research has explored many ways to differentiate between multiple people using a single touch-screen.
+			One approach is to have users sit on a surface that determines their identity, differentiating touch input (<a href="http://dx.doi.org/10.1145/502348.502389">Dietz and Leigh 2001</a>).
+			Another approach uses wearables to differentiate users (<a href="https://doi.org/10.1145/2984511.2984564">Webb et al. 2016</a>).
+			Less obtrusive techniques have successfully used variation in user bone-density, muscle mass, and footwear (<a href="https://doi.org/10.1145/2380116.2380183">Harrison et al. 2012</a>), or fingerprint detection embedded in a display (<a href="https://doi.org/10.1145/2501988.2502021">Holtz and Baudisch 2013</a>).
+		</p>
+
+
+		<center>
+			<img src="images/pencil.jpg" class="img-responsive" alt="An Apple Pencil input device." />
+			<small>The Apple Pencil. Credit: Brett Jordan (https://flic.kr/p/BHRaD1) [CC BY 2.0]</small>
+		</center>
+
+		<h2>Pens</h2>
+
+		<p>
+			In addition to fingers, many researchers have explored the unique benefits of pen-based interactions to support handwriting, sketching, diagramming, or touch-based interactions.
+			These leverage the skill of grasping a pen or pencil that many are familiar with from manual writing, which is often taught in school.
+		</p>
+		
+		<p>
+			Some of these pen-based interactions are simply replacements for fingers.
+			For example, the Palm Pilot, popular in the 1990's, required the use of a stylus for it's resistive touch-screen, but the pens themselves were plastic.
+			They merely served to prevent fatigue from applying pressure to the screen with a finger and to increase the precision of touch during handwriting or interface interactions.
+		</p>
+			
+		<p>
+			Researchers have explored new types of pen interactions that go beyond more precise touching.
+			For example, some techniques explore a user using touch input with a non-dominant hand, and pen with a dominant hand (<a href="https://doi.org/10.1145/1866029.1866036">Hinkley et al. 2010</a>, <a href="https://doi.org/10.1145/2380116.2380156">Hamilton et al. 2012</a>), affording new forms of bi-manual input that have higher throughput than just one hand.
+			Others have investigated ways of using the size of a pen's head to add another channel of input (<a href="https://doi.org/10.1145/1449715.1449745">Bi et al. 2008</a>), or even using a physical pen barrel, but with a virtual head, allowing for increased efficiency through software-based precision and customization (<a href="https://doi.org/10.1145/2380116.2380159">Lee et al. 2012</a>).
+		</p>
+
+		<p>
+			Other pen-based innovations are purely software based.
+			For example, some interactions improve handwriting recognition by allowing users to correct recognition errors while writing (<a href="https://doi.org/10.1145/1166253.1166304">Shilman et al. 2006</a>).
+			Others have explored techniques for interacting with large displays for sketching and brainstorming activities (<a href="http://dx.doi.org/10.1145/502348.502353">Guimbretière et al. 2001</a>).
+			Researchers have developed interactions for particular sketching media, such as algorithms that allow painting that respects edges within images (<a href="https://doi.org/10.1145/1449715.1449742">Olsen, Jr. and Harris 2008</a>) and diagramming tools that follow the paradigms of pencil-based architectural sketching (<a href="https://doi.org/10.1145/1449715.1449741">Zelenik et al. 2008</a>).
+		</p>
+
+		<center>
+			<img src="images/gestures.jpg" class="img-responsive" alt="Sixteen unistroke gestures." />
+			<small>Sixteen unistroke gestures. Credit: (<a href="https://doi.org/10.1145/1294211.1294238">Wobbrock et al. 2007</a>)</small>
+		</center>
+
+		<h2>Gestures</h2>
+
+		<p>
+			Whereas touch and pens involve traditional <a href="pointing.html">pointing</a>, gesture-based interactions involve recognizing patterns in hand position or movement. 
+			Some gestures still recognize a gesture from a time-series of points in a 2-dimensional plane, such as the type of multi-touch gestures such as pinching and dragging on a touchscreen, or symbol recognition in handwriting or text entry.
+			This type of gesture recognition can be done with a relatively simple recognition algorithm (<a href="https://doi.org/10.1145/1294211.1294238">Wobbrock et al. 2007</a>).
+		</p>
+		
+		<p>
+			Other gestures rely on 3-dimensional input about the position of fingers and hands in space.
+			Some recognition algorithms seek to recognize single hand positions, such as when the user brings their thumb and forefinger together (a pinch gesture) (<a href="https://doi.org/10.1145/1166253.1166292">Wilson 2006</a>).
+			Other techniques try to model more complex sets of hand gestures using techniques such as Electrical Impedance Tomography (EIT) to recover the geometry of a user's arm (<a href="https://doi.org/10.1145/2807442.2807480">Zhang and Harrison 2015</a>), the electromagnetic field pulsed by GSM in a phone (<a href="https://doi.org/10.1145/2642918.2647380">Zhao et al. 2014</a>,  or full machine vision of in-air hand gestures (<a href="https://doi.org/10.1145/2642918.2647373">Colaço et al. 2013</a>, <a href="https://doi.org/10.1145/2642918.2647373">Song et al. 2014</a>).
+			Some researchers have leveraged wearables to simplify recognition and increase it's accuracy. These have included sensors mounted on fingers (<a href="https://doi.org/10.1145/2984511.2984558">Gupta et al. 2016</a>), movement of a smartwatch through wrist rotations (<a href="https://doi.org/10.1145/2984511.2984574">Zhang et al. 2016</a>), while walking (<a href="ttps://doi.org/10.1145/2984511.2984563">Gong et al. 2016</a>), or while being tapped or scratched (<a href="https://doi.org/10.1145/2984511.2984582">Laput et al. 2016</a>).
+		</p>
+
+		<hr/>
+		
+		<p>
+			Because all of these input techniques use hands, few are accessible to people with severe motor impairments in their hands or people lacking hands altogether.
+			In the next chapter, we will discuss techniques that rely on other parts of a human body for input, and therefore can be more accessible to people with motor impairments.
+		</p>
+
+		<center><p class="lead"><a href="body.html">Next chapter: Body</a></p></center>
+
+
+		<h2>Further reading</h2>
+		
+		<p>Hrvoje Benko, Andrew D. Wilson, and Ravin Balakrishnan. 2008. <a href="https://doi.org/10.1145/1449715.1449729">Sphere: multi-touch interactions on a spherical display</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 77-86.</p>
+
+		<p>Xiaojun Bi, Tomer Moscovich, Gonzalo Ramos, Ravin Balakrishnan, and Ken Hinckley. 2008. <a href="https://doi.org/10.1145/1449715.1449745">An exploration of pen rolling for pen-based interaction</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 191-200.</p>
+		
+		<p>Xiaojun Bi and Shumin Zhai. 2016. <a href="https://doi.org/10.1145/2984511.2984546">Predicting Finger-Touch Accuracy Based on the Dual Gaussian Distribution Model</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 313-319.</p>
+
+		<p>		Andrea Colaço, Ahmed Kirmani, Hye Soo Yang, Nan-Wei Gong, Chris Schmandt, and Vivek K. Goyal. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502042">Mime: compact, low power 3D gesture sensing for interaction with head mounted displays</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 227-236.</p>
+
+		<p>Paul Dietz and Darren Leigh. 2001. <a href="http://dx.doi.org/10.1145/502348.502389">DiamondTouch: a multi-user touch technology</a>. In Proceedings of the 14th annual ACM symposium on User interface software and technology (UIST '01). ACM, New York, NY, USA, 219-226.</p>
+		
+		<p>Jun Gong, Xing-Dong Yang, and Pourang Irani. 2016. <a href="https://doi.org/10.1145/2984511.2984563">WristWhirl: One-handed Continuous Smartwatch Input using Wrist Gestures</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 861-872.</p>
+		
+		<p>François Guimbretière, Maureen Stone, and Terry Winograd. 2001. <a href="http://dx.doi.org/10.1145/502348.502353">Fluid interaction with high-resolution wall-size displays</a>. In Proceedings of the 14th annual ACM symposium on User interface software and technology (UIST '01). ACM, New York, NY, USA, 21-30.</p>
+		
+		<p>Aakar Gupta, Antony Irudayaraj, Vimal Chandran, Goutham Palaniappan, Khai N. Truong, and Ravin Balakrishnan. 2016. <a href="https://doi.org/10.1145/2984511.2984558">Haptic Learning of Semaphoric Finger Gestures</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 219-226.</p>
+		
+		<p>William Hamilton, Andruid Kerne, and Tom Robbins. 2012. <a href="https://doi.org/10.1145/2380116.2380156">High-performance pen + touch modality interactions: a real-time strategy game eSports context</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 309-318.</p>
+			
+		<p>Chris Harrison and Scott E. Hudson. 2008. <a href="https://doi.org/10.1145/1449715.1449747">Scratch input: creating large, inexpensive, unpowered and mobile finger input surfaces</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 205-208.</p>
+		
+		<p>Chris Harrison, Hrvoje Benko, and Andrew D. Wilson. 2011a. <a href="https://doi.org/10.1145/2047196.2047255">OmniTouch: wearable multitouch interaction everywhere</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 441-450.</p>
+		
+		<p>Chris Harrison, Julia Schwarz, and Scott E. Hudson. 2011b. <a href="https://doi.org/10.1145/2047196.2047279">TapSense: enhancing finger interaction on touch surfaces</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 627-636.</p>
+		
+		<p>Chris Harrison, Munehiko Sato, and Ivan Poupyrev. 2012. <a href="https://doi.org/10.1145/2380116.2380183">Capacitive fingerprinting: exploring user differentiation by sensing electrical properties of the human body</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 537-544.</p>
+		
+		<p>Ken Hinckley, Koji Yatani, Michel Pahud, Nicole Coddington, Jenny Rodenhouse, Andy Wilson, Hrvoje Benko, and Bill Buxton. 2010. <a href="https://doi.org/10.1145/1866029.1866036">Pen + touch = new tools</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 27-36.</p>
+		
+		<p>Christian Holz and Patrick Baudisch. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502021">Fiberio: a touchscreen that senses fingerprints</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 41-50.</a>
+		
+		<p>Gierad Laput, Robert Xiao, and Chris Harrison. 2016. <a href="https://doi.org/10.1145/2984511.2984582">ViBand: High-Fidelity Bio-Acoustic Sensing Using Commodity Smartwatch Accelerometers</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 321-333.</p>
+		
+		<p>David Lee, KyoungHee Son, Joon Hyub Lee, and Seok-Hyung Bae. 2012. <a href="https://doi.org/10.1145/2380116.2380159">PhantomPen: virtualization of pen head for digital drawing free from pen occlusion & visual parallax</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 331-340.</p>
+		
+		<p>Mathieu Le Goc, Pierre Dragicevic, Samuel Huron, Jeremy Boy, and Jean-Daniel Fekete. 2015. <a href="https://doi.org/10.1145/2807442.2807488">SmartTokens: Embedding Motion and Grip Sensing in Small Tangible Objects</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 357-362.</p>
+		
+		<p>Tomer Moscovich. 2009. <a href="https://doi.org/10.1145/1622176.1622181">Contact area interaction with sliding widgets</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 13-22.</p>
+		
+		<p>Sundar Murugappan, Vinayak, Niklas Elmqvist, and Karthik Ramani. 2012. <a href="https://doi.org/10.1145/2380116.2380177">Extended multitouch: recovering touch posture and differentiating users using a depth camera</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 487-496.</p>
+		
+		<p>Simon Olberding, Nan-Wei Gong, John Tiab, Joseph A. Paradiso, and Jürgen Steimle. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502048">A cuttable multi-touch sensor</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 245-254.</p>
+
+		<p>Dan R. Olsen, Jr. and Mitchell K. Harris. 2008. <a href="https://doi.org/10.1145/1449715.1449742">Edge-respecting brushes</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 171-180.</p>
+
+		<p>Makoto Ono, Buntarou Shizuki, and Jiro Tanaka. 2013. <a href="http://dx.doi.org/10.1145/2501988.2501989">Touch & activate: adding interactivity to existing objects using active acoustic sensing</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 31-40.</p>
+				
+		<p>Patrick Paczkowski, Julie Dorsey, Holly Rushmeier, and Min H. Kim. 2014. <a href="https://doi.org/10.1145/2642918.2647416">Paper3D: bringing casual 3D modeling to a multi-touch interface</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 23-32.</p>
+
+		<p>Christian Rendl, Patrick Greindl, Michael Haller, Martin Zirkl, Barbara Stadlober, and Paul Hartmann. 2012. <a href="https://doi.org/10.1145/2380116.2380180">PyzoFlex: printed piezoelectric pressure sensing foil</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12).</p>
+
+		<p>T. Scott Saponas, Chris Harrison, and Hrvoje Benko. 2011. <a href="https://doi.org/10.1145/2047196.2047235">PocketTouch: through-fabric capacitive touch input</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 303-308.</p>
+
+		<p>Michael Shilman, Desney S. Tan, and Patrice Simard. 2006. <a href="https://doi.org/10.1145/1166253.1166304">CueTIP: a mixed-initiative interface for correcting handwriting errors</a>. In Proceedings of the 19th annual ACM symposium on User interface software and technology (UIST '06). ACM, New York, NY, USA, 323-332.</p>
+
+		<p>		Jie Song, Gábor Sörös, Fabrizio Pece, Sean Ryan Fanello, Shahram Izadi, Cem Keskin, and Otmar Hilliges. 2014. <a href="https://doi.org/10.1145/2642918.2647373">In-air gestures around unmodified mobile devices</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 319-329.</p>
+
+		<p>Yuta Sugiura, Masahiko Inami, and Takeo Igarashi. 2012. <a href="https://doi.org/10.1145/2380116.2380182">A thin stretchable interface for tangential force measurement</a>. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 529-536.</p>
+
+		<p>Andrew M. Webb, Michel Pahud, Ken Hinckley, and Bill Buxton. 2016. <a href="https://doi.org/10.1145/2984511.2984564">Wearables as Context for Guiard-abiding Bimanual Touch</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 287-300.</p>
+
+		<p>Andrew D. Wilson. 2006. <a href="https://doi.org/10.1145/1166253.1166292">Robust computer vision-based detection of pinching for one and two-handed gesture input</a>. In Proceedings of the 19th annual ACM symposium on User interface software and technology (UIST '06). ACM, New York, NY, USA, 255-258.</p>
+
+		<p>Jacob O. Wobbrock, Andrew D. Wilson, and Yang Li. 2007. <a href="https://doi.org/10.1145/1294211.1294238">Gestures without libraries, toolkits or training: a $1 recognizer for user interface prototypes</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 159-168.</p>
+
+		<p>Robert C. Zeleznik, Andrew Bragdon, Chu-Chi Liu, and Andrew Forsberg. 2008. <a href="https://doi.org/10.1145/1449715.1449741">Lineogrammer: creating diagrams by drawing</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 161-170.</p>
+		
+		<p>Yang Zhang and Chris Harrison. 2015. <a href="https://doi.org/10.1145/2807442.2807480">Tomo: Wearable, Low-Cost Electrical Impedance Tomography for Hand Gesture Recognition</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 167-173.</p>
+
+		<p>Yang Zhang, Robert Xiao, and Chris Harrison. 2016. <a href="https://doi.org/10.1145/2984511.2984574">Advancing Hand Gesture Recognition with High Resolution Electrical Impedance Tomography</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 843-850.</p>
+
+		<p>Chen Zhao, Ke-Yu Chen, Md Tanvir Islam Aumi, Shwetak Patel, and Matthew S. Reynolds. 2014. <a href="https://doi.org/10.1145/2642918.2647380">SideSwipe: detecting in-air gestures around mobile devices using actual GSM signal</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 527-534.</p>
+
+	</body>
+	
+</html>
+
