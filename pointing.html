@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Latest compiled and minified CSS -->
@@ -36,9 +36,9 @@
 		</p>
 
 		<p>
-			Our fingers are pretty handy.
+			Fingers can be pretty handy.
 			(Sorry for the pun, I couldn't resist!).
-			We use them to grasp things nearly everything.
+			When able, we use them to grasp nearly everything.
 			We use them to communicate through signs and gesture.
 			And at a surprisingly frequent rate each day, we use them to <em>point</em>, in order to indicate, as precisely as we can, the identity of something (that person, that table, this picture, those flowers).
 			As a nearly universal form of non-verbal communication, it's not surprising then that pointing has been such a powerful paradigm of interaction with user interfaces (that icon, that button, this text, etc.).
@@ -46,17 +46,18 @@
 		
 		<p>
 			Pointing is not strictly related to interface design.
-			In fact, back in the early 1950's, Paul M. Fitt's was very interested in modeling human performance of pointing.
+			In fact, back in the early 1950's, Paul M. Fitts was very interested in modeling human performance of pointing.
 			He began developing predictive models about pointing in order to help design dashboards, cockpits, and other industrial designs for manufacturing.
 			His focus was on "aimed" movements, in which a person has a <strong>target</strong> they want to indicate and must move their pointing device (originally, their hand) to indicate that target.
-			This is an example of a "closed loop" motion, in which a system can react to the evolving state of a system.
-			The system in this case is a human, perceiving their motion toward a target, and their reaction is the continuous correction of their trajectory as they move toward a target.
-			Fitts began measuring this closed loop movement toward targets, searching for a pattern that fit the data, and eventually found this law, which we call <strong>Fitt's Law</strong>:
+			This is an example of a "closed loop" motion, in which a system can react to its evolving state.
+			The system in this case is a human, perceiving their motion toward a target. 
+			Their reaction is the continuous correction of their trajectory as they move toward a target.
+			Fitts began measuring this closed loop movement toward targets, searching for a pattern that fit the data, and eventually found this law, which we call <strong>Fitts' Law</strong>:
 		</p>
 		
 		<p>
 			<img src="images/fitts.jpg" class="img-responsive center-block" alt="A diagram of Fitt's law, showing A, the distance to target, and W, the size of the target, and the formula MT = a + b * log(A/W + 1)" />
-			<center><em>Fitt's Law. Credit: Jacob Wobbrock</em></center>
+			<center><em>Fitts' Law. Credit: Jacob Wobbrock</em></center>
 		</p>
 
 		<p>
@@ -65,7 +66,7 @@
 			The <strong>A</strong> in the figure is how far one must move to reach the target (e.g. how far your finger has to move from where it is to reach a target on your phone's touch screen.
 			The <strong>W</strong> is the size (or width) of the target (e.g., the physical length of an icon on your smartphone's user interface).
 			The units on these two measures don't really matter as long as they're the same, because the formula above computes the ratio between the two, canceling the units out.
-			The <strong>a</strong> and <strong>b</strong> coefficients are user- and device-specific constants, where <strong>a</strong> is some fixed constant minimum time to move and <strong>b</strong> is like throughput measure of how efficiently movement occurs.
+			The <strong>a</strong> and <strong>b</strong> coefficients are user- and device-specific constants, where <strong>a</strong> is some fixed constant minimum time to move and <strong>b</strong> is a measure of how efficiently movement occurs.
 			Each of these coefficients differ by user and device.
 		</p>
 		
@@ -86,7 +87,7 @@
 			An example of this is the command menu in Apple OS X applications, which is always placed at the very top of a screen.
 			The target in this case is the top of the screen, which is effectively infinite in size, because no matter how far past the top of the screen you point with a mouse, the operating system always constrains the mouse position to be within the screen boundaries.
 			This makes the top of the screen (and really any side of the screen) a target of infinite size.
-			And according to Fitt's Law, infinite target size means effectively zero movement time.
+			And according to Fitts' Law, infinite target size means effectively zero movement time.
 			That's why it's so quick to reach the command menu on OS X: you can't miss, at least on the vertical axis.
 		</p>
 		
@@ -96,7 +97,7 @@
 		</p>
 
 		<p>
-			What's suprising about Fitts' Law is that, as far as we know, it applies to any kind of pointing: using a mouse, using a touch screen, using a trackball, using a trackpad, or reaching for an object in the physical world.
+			What's surprising about Fitts' Law is that, as far as we know, it applies to any kind of pointing: using a mouse, using a touch screen, using a trackball, using a trackpad, or reaching for an object in the physical world.
 			That's conceptually powerful because it means that you can use the idea of large targets and short distance to design interfaces that are efficient to use.
 			As an mathematical model used for prediction, it's less powerful: to really predict exactly how long a motion will take, you'd need to estimate a distribution of those <strong>a</strong> and <strong>b</strong> coefficients for a large group of possible users and devices.
 			Researchers carefully studying motion might use it to do precise modeling, but for designers, the concepts it uses are more important.
@@ -106,16 +107,19 @@
 			Now that we have Fitts' law as a conceptual foundation for design, let's consider some concrete design ideas for pointing in interfaces.
 			There are so many kinds: mice, styluses, touch screens, touch pads, joysticks, trackballs, and many other devices.
 			Some of these devices are <strong>direct pointing</strong> devices (e.g., touch screens), in which input and output occur in the same physical place (e.g., a screen or some other surface).
-			In contrast, <strong>indirect pointing</strong> devices (e.g., a mouse, a touch pad, a trackball) provide input in a different physical place from where output occurs (e.g., input on a device, output on a non-interactive screen).
-			Each has their limitations: direct pointing results in <strong>occlusion</strong>, where a person's hand obscures output, and indirect pointing requires a person to attend to two different places.
+			In contrast, <strong>indirect pointing</strong> devices (e.g., a mouse, a touchpad, a trackball) provide input in a different physical place from where output occurs (e.g., input on a device, output on a non-interactive screen).
+			Each has their limitations: direct pointing results in <strong>occlusion</strong> where a person's hand obscures output, and indirect pointing requires a person to attend to two different places.
 		</p>
 			
 		<p>
 			There's also a difference between <strong>absolute</strong> and <strong>relative</strong> pointing.
-			Absolute pointing includes input devices where the physical place one provides input is mapped directly onto action in the user interface.
-			This is how touch screens work: interfaces where the input and output occur in the same physical dimensions.
-			In contrast, relative pointing reads <em>changes</em> in a person's pointing.
+			Absolute pointing includes input devices where the physical coordinate space of input is mapped directly onto the coordinate space in the interface.
+			This is how touch screens work (bottom left of the touch screen is bottom left of the interface).
+			In contrast, relative pointing maps <em>changes</em> in a person's pointing to changes in the interface's coordinate space.
 			For example, moving a mouse left an inch is translated to moving a virtual cursor some number of pixels left.
+			That’s true regardless of where the mouse is in physical space.
+			Relative pointing allows for variable <strong>gain</strong>, meaning that mouse cursors can move faster or slower depending on a user’s preferences.
+			In contrast, absolute pointing cannot have variable gain, since the speed of interface motion is tied to the speed of a user’s physical motion.
 		</p>
 				
 		<p>
@@ -145,7 +149,7 @@
 			Other pointing innovations are <strong>target-aware</strong>, in that the technique needs to know the location of things that a user might be pointing to so that it can adapt based on target locations.
 			For example, area cursors are the idea of having a mouse cursor represent an entire two-dimensional space rather than a single point, reducing the distance to targets.
 			These have been applied to help users with motor impairments (<a href="https://doi.org/10.1145/1866029.1866055">Findlater et al. 2010</a>).
-			The Bubble Cursor is an area cursor that dynamically resizing a cursor's activation area based on proximity to a target, growing it to the maximum possible size based on the surrounding targets (<a href="http://dx.doi.org/10.1145/1054972.1055012">Grossman and Balakrishnan 2005</a>).
+			The Bubble Cursor is an area cursor that dynamically resizes a cursor's activation area based on proximity to a target, growing it to the maximum possible size based on the surrounding targets (<a href="http://dx.doi.org/10.1145/1054972.1055012">Grossman and Balakrishnan 2005</a>).
 			You can see one improvement to the Bubble Cursor, the Bubble Lens, in the video below, showing how the Lens magnifies content in target-dense spaces (<a href="https://doi.org/10.1145/2556288.2557410">Mott and Wobbrock 2014</a>).
 		</p>
 
@@ -155,8 +159,8 @@
 		</p>
 		
 		<p>
-			Snapping is another target-aware technique similar idea commonly found in graphic design tools, in which a mouse cursor is constrained to a location based on nearby targets, reducing target distance.
-			Researchers have made snapping work across multi-dimensions simultaneously (<a href="https://doi.org/10.1145/2984511.2984577">Felice et al. 2016</a>) and have even applied it to things like scrolling, snapping to interesting content areas (<a href="https://doi.org/10.1145/2642918.2647401">Kim et al. 2014</a>).
+			Snapping is another target-aware technique commonly found in graphic design tools, in which a mouse cursor is constrained to a location based on nearby targets, reducing target distance.
+			Researchers have made snapping work across multiple dimensions simultaneously (<a href="https://doi.org/10.1145/2984511.2984577">Felice et al. 2016</a>) and have even applied it to things like scrolling, snapping to interesting content areas (<a href="https://doi.org/10.1145/2642918.2647401">Kim et al. 2014</a>).
 			Another clever idea is the notion of <em>crossing</em>, which, instead of pointing and clicking, involves moving across a "goal line" (<a href="http://dx.doi.org/10.1145/1029632.1029635">Apitz and Guimbretière 2004</a>).
 			Shown in the image below, crossing can allow for fluid movements through commands and controls without ever clicking.
 		</p>
@@ -167,7 +171,7 @@
 		</p>
 
 		<p>
-			While target-aware techniques can be even more efficient that target-agnostic ones, making an operating system aware of targets can be hard, because user interfaces can be architected to process pointing input in such a variety of ways.
+			While target-aware techniques can be even more efficient than target-agnostic ones, making an operating system aware of targets can be hard, because user interfaces can be architected to process pointing input in such a variety of ways.
 			Some research has focused on overcoming this challenge.
 			For example, one approach reverse-engineered the widgets on a screen by analyzing the rendered pixels to identify targets, then applied targeted-aware pointing techniques like the bubble cursor (<a href="http://dx.doi.org/10.1145/2207676.2208734">Dixon et al. 2012</a>. 
 			Another technique used a data-driven technique, monitoring where in a window users typically point, and then assuming targets are there, applying target-aware pointing techniques (<a href="https://doi.org/10.1145/1294211.1294242">Hurst et al. 2007</a>).
@@ -176,8 +180,8 @@
 		
 		<p>
 			You might be wondering: all this work for faster pointing?
-			Fitts' law and it's focus on speed <em>is</em> a very narrow way to think about the experience of pointing to computers.
-			And yet, it is such a fundamental and frequent part of how we interact with computers, making pointing fast and smooth is key to allowing a person to focus on their task and not on the low-level act of pointing.
+			Fitts' law and its focus on speed <em>is</em> a very narrow way to think about the experience of pointing to computers.
+			And yet, it is such a fundamental and frequent part of how we interact with computers; making pointing fast and smooth is key to allowing a person to focus on their task and not on the low-level act of pointing.
 			This is particularly true of people with motor impairments, which interfere with their ability to precisely point: every incremental improvement in one's ability to precisely point to a target might amount to hundreds or thousands of easier interactions a day, especially for people who depend on computers to communicate and connect with the world.
 		</p>
 
