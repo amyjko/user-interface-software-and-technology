@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Latest compiled and minified CSS -->
@@ -32,23 +32,23 @@
 			As I've noted in past chapters, nothing about the user interface designs we use today is fundamental.
 			When interacting with a computer meant <em>programming</em> a computer, there were no notions of scroll bars, icons, or checkboxes.
 			Instead, there were quirky experiments in interactive interfaces.
-			Sutherland's Sketchpad envisioned pen-based interactions with constrained graphical objects. Englebart's NLS envisioned commands, data hierarchies, mice and keyboards.
+			Sutherland's Sketchpad envisioned pen-based interactions with constrained graphical objects. Englebart's NLS envisioned commands, data hierarchies, mice, and keyboards.
 			Kay envisioned graphical objects playing in virtual windowed worlds.
 			These were all very different visions for how people would engage computing interactively, and elements of each of these systems emerged as the core components of modern graphical user interfaces.
 		</p>
 		
 		<p>
-			Where most of these ideas came together was Xerox PARC in its design and development of the Star.
+			Most of these ideas came together at Xerox PARC during the design and development of the Star.
 			It's interface, shown above, contained all of the elements you're familiar with today.
 			These elements are typically referred to with the acronym <strong>WIMP</strong>, which stands for Windows, Icons, Menus, and Pointer.
 			This general paradigm, which leveraged a desktop metaphor full of files, programs, and interactive widgets such as buttons, scroll bars, toggles, and other controls, became the dominant paradigm for desktop computing.
-			And the paradigm persists: little has changed, even in the newest smartphone, tablet, and AR/VR operating systems: we still interact with windows, icons, menus and other widgets in nearly identical ways.
+			And the paradigm persists: even in the newest smartphone, tablet, and AR/VR operating systems, we still interact with windows, icons, menus and other widgets in nearly identical ways.
 			We may use multi-touch or gesture interactions, but these are just other ways of pointing.
 		</p>
 		
 		<p>
 			Because of their ubiquity, it's important to understand what problems WIMP was trying to solve, what big ideas emerged to solve these problems, and how researchers have built upon these big ideas to address their limitations.
-			This chapter will focus deeply on these interactive interface basics before we dive more deeply into their implementation, and then explore alternatives to WIMP.
+			This chapter will focus deeply on these interactive interface basics before we dive more deeply into their implementation and explore alternatives to WIMP.
 		</p>
 
 		<p class="embed-responsive embed-responsive-16by9">
@@ -76,10 +76,10 @@
 		<p>
 			Closely related to windows are <strong>window managers</strong>.
 			If you're going to have windows that arrange content, how should the windows themselves be arranged?
-			There are been countless ideas for this.
+			There have been countless ideas for this.
 			The Star had windows that could be resized, dragged, and overlapped, just like the original Macintosh.
 			Early versions of Windows had <em>tiled</em> windows (as shown above), which were non-overlapping grids of windows.
-			Mac OS X has many advanced window management features, allowing the user to see a zoomed out view with all active windows, moving them to different virtual desktops.
+			Windows, macOS, and Ubuntu have many advanced window management features, allowing the user to see a zoomed out view with all active windows and move them to different virtual desktops.
 			Modern mobile operating systems such as iOS, Android, and Windows Phone all eschewed multiple windows for a paradigm of one full-screen window at a time with navigation features for moving between full-screen applications.
 			Researchers in the 1980's were behind many of these innovations (<a href="myers">Myers 1988</a>), and researchers continue to innovate. 
 			For example, some have explored windows that are organized by tasks (<a href="#tashman">Tashman 2006</a>).
@@ -87,13 +87,13 @@
 
 		<p>
 			Another big idea from WIMP was <strong>icons</strong>.
-			Icons solve the problem of providing visual access to programs and documents on a computer and their locations.
-			Before icons, the way to access programs and documents was through command line operations, navigating from one directory to another, moving files from one directly to another, and launching programs by passing filenames as arguments.
-			With icons, all of these operations could be mapped to a pointing device instead of a keyboard, double-clicking on a program to launch it, double-clicking on a document to open it, and using menus to perform operations on a program or document.
+			Icons solve the problem of providing visual access to programs and documents on a computer.
+			Before icons, the way to access programs and documents was through command line operations: navigating from one directory to another, moving files from one directory to another, and launching programs by passing filenames as arguments.
+			With icons, all of these operations could be mapped to a pointing device instead of a keyboard: double-clicking on a program to launch it, double-clicking on a document to open it, and using menus to perform operations on a program or document.
 			This also necessitated some notion of a "desktop," on which program and document icons would be stored, providing a convenient place to start work.
 			Again, none of these ideas <em>had</em> to work this way, and in fact, newer operating systems don't: iOS does not expose a concept of files, documents, or icons that represent them, nor does it have a desktop.
 			Instead, there are only icons for programs, and data is presented as living only "inside" that application.
-			Of course, there are still files stored on the devices, they are just managed by the application instead of by the user.
+			Of course, there are still files stored on the device, they are just managed by the application instead of by the user.
 		</p>
 
 		<center>
@@ -106,10 +106,10 @@
 			But how can those commands be executed without requiring a user to learn a command line syntax for invoking those commands?
 			<strong>Menus</strong> solve this problem by providing visual lists of available commands.
 			The earliest menus were simple lists of commands that could be selected with a pointing device.
-			Some menus were attached to the border of a window, others were anchored to the top of the screen, and others still were <em>contextual</em>, and attached to a specific icon or object representing some data, document, or program.
-			You see all of these different types of menus in modern interfaces, with still wide variation in where a menu is invoked. 
+			Some menus were attached to the border of a window, others were anchored to the top of the screen, and others still were <em>contextual</em> and attached to a specific icon or object representing some data, document, or program.
+			You see all of these different types of menus in modern interfaces, with wide variation in where a menu is invoked. 
 			Researchers have long studied more effective menus than linear lists of labels, including things like <em>hierarchical marking menus</em> that are radial, can be moved through without clicking, and can result in a memory for pointing trajectories for rapid selection of items (<a href="#zhao">Zhao & Balakrishnan 2004</a>).
-			Other ideas have included menus that follow the mouse for quick access to contextual functionality (<a href="#fitzmaurice">Fitzmaurice et al. 2003</a>) and fisheye menus that scale the size of command descriptions to fit in larger numbers of commands in the same amount of space.
+			Other ideas have included menus that follow the mouse for quick access to contextual functionality (<a href="#fitzmaurice">Fitzmaurice et al. 2003</a>) and fisheye menus that scale the size of command descriptions to fit larger numbers of commands in the same amount of space.
 		</p>
 		
 		<p>
@@ -130,8 +130,8 @@
 			Text boxes provide strings.
 			Radio buttons and drop down menus provide categorical values.
 			Each one of these widgets, as portrayed in the "All the widgets" video earlier, has been carefully designed to allow rapid, error-free input of each of these data types.
-			Of course, since these early widgets were invented, researchers have discovered many other times of widgets designed for data types that don't map well onto this small set of primitive widgets.
-			For example, some of designed widgets for selecting time values on non-linear scales (<a href="#koike">Koike et al. 1997</a>).
+			Of course, since these early widgets were invented, researchers have discovered many other types of widgets designed for data types that don't map well onto this small set of primitive widgets.
+			For example, some researchers have designed widgets for selecting time values on non-linear scales (<a href="#koike">Koike et al. 1997</a>).
 		</p>
 
 		<p>
@@ -148,8 +148,8 @@
 		<p>
 			Direct manipulation interfaces, which include things like drag and drop interactions and operations in drawing and painting programs, can be learned quickly, can be efficient to use, can prevent errors, and, because they are reversible, can support rapid error recovery. 
 			Because of these benefits, many researchers have tried to translate tasks that traditionally require programming or other complex sequences of operations into direct manipulation interfaces.
-			Early work explored things like alignments guides in drawing programs (<a href="#raisamo">Raisamo & R‰ih‰ 1996</a>), now popular in most graphic design software.
-			Others have explored extensions of drag and drop to multiple devices, or more complex data manipulations (<a href="#kobayashi">Kobayashi & Igarashi 2007</a>).
+			Early work explored things like alignment guides in drawing programs (<a href="#raisamo">Raisamo &amp; R√§ih√§ 1996</a>), now popular in most graphic design software.
+			Others have explored extensions of drag and drop to multiple devices, or more complex data manipulations (<a href="#kobayashi">Kobayashi &amp; Igarashi 2007</a>).
 			More recently, researchers have applied techniques from programming languages and machine learning to support automatically converting sketches into scalable vector graphics suitable for the web (<a href="#hempel">Hempel & Chugh 2017</a>), to define the layout of data visualizations (<a href="#hottelier">Hottelier et al. 2014</a>), and to manipulate speech music and other audio more directly (<a href="#rubin">Rubin et al. 2013.</a>).
 			All of these leverage the same basic paradigm of explicit representation and manipulation of an object.
 		</p>
@@ -160,7 +160,7 @@
 			As you probably know, copy and paste is actually one of the most critical features of user interfaces, allowing users to move information regardless of where it comes from.
 			Researchers have explored many ways to improve the power of this feature, including techniques that have greater semantic awareness of the content being copied, allowing it to be parsed and pasted in more intelligent ways (<a href="#stylos">Stylos et al. 2004</a>).
 			Others have explored ways of moving data between different machines by giving copied data identity (<a href="#rekimoto">Rekimoto 1997</a>) or by synchronizing clipboards across devices (<a href="#miller">Miller & Myers 1999</a>).
-			Some of these features are now mainstream; for example, iOS supports a cloud-based synchronized keyboard, supporting pasting between different devices logged into the same iCloud account.
+			Some of these features are now mainstream; for example, iOS supports a cloud-based synchronized keyboard that enables pasting content between different devices logged into the same iCloud account.
 		</p>
 
 		<p>
@@ -168,7 +168,7 @@
 			They are entirely invented, artificial designs that solve very specific problems of presenting information to users, getting data from users, and supporting command invocation.
 			The only reason they <em>feel</em> natural is because we practice using them so frequently.
 			In designing interfaces, it's reasonable to leverage everyone's long history of practice with these old ideas.
-			However, it's s also reasonable to question  them when dealing with new types of data or interaction.</p>
+			However, it's also reasonable to question  them when dealing with new types of data or interaction.</p>
 
 		<center class="lead"><a href="architecture.html">Next chapter: Architecture</a></center>
 	
@@ -178,15 +178,15 @@
 
 		<p href="bederson">Benjamin B. Bederson. 2000. <a href="http://dx.doi.org/10.1145/354401.354782">Fisheye menus</a>. In Proceedings of the 13th annual ACM symposium on User interface software and technology (UIST '00). ACM, New York, NY, USA, 217-225.</p>
 		
-		<p href-"michel">Michel Beaudouin-Lafon. 2001. Novel interaction techniques for overlapping windows. In Proceedings of the 14th annual ACM symposium on User interface software and technology (UIST '01). ACM, New York, NY, USA, 153-154.
+		<p href="michel">Michel Beaudouin-Lafon. 2001. Novel interaction techniques for overlapping windows. In Proceedings of the 14th annual ACM symposium on User interface software and technology (UIST '01). ACM, New York, NY, USA, 153-154.</p>
 
-		<p href="fitzmaurice">George Fitzmaurice, Azam Khan, Robert PiekÈ, Bill Buxton, and Gordon Kurtenbach. 2003. <a href="https://doi.org/10.1145/964696.964704">Tracking menus</a>. In Proceedings of the 16th annual ACM symposium on User interface software and technology (UIST '03). ACM, New York, NY, USA, 71-79.</p>
+		<p href="fitzmaurice">George Fitzmaurice, Azam Khan, Robert Piek√©, Bill Buxton, and Gordon Kurtenbach. 2003. <a href="https://doi.org/10.1145/964696.964704">Tracking menus</a>. In Proceedings of the 16th annual ACM symposium on User interface software and technology (UIST '03). ACM, New York, NY, USA, 71-79.</p>
 
 		<p href="hempel">Brian Hempel and Ravi Chugh. 2016. <a href="https://doi.org/10.1145/2984511.2984575">Semi-Automated SVG Programming via Direct Manipulation</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 379-390.</p>
 		
 		<p href="hottelier">Thibaud Hottelier, Ras Bodik, and Kimiko Ryokai. 2014. <a href="https://doi.org/10.1145/2642918.2647378">Programming by manipulation for layout</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 231-241.</p>
 
-		<p href="hutchins">Hutchins, E. L., Hollan, J. D., & Norman, D. A. (1985). <a href="http://dx.doi.org/10.1207/s15327051hci0104_2">Direct manipulation interfaces</a>. Human-Computer Interaction, 1(4), 311-338.</p>
+		<p href="hutchins">Hutchins, E. L., Hollan, J. D., &amp; Norman, D. A. (1985). <a href="http://dx.doi.org/10.1207/s15327051hci0104_2">Direct manipulation interfaces</a>. Human-Computer Interaction, 1(4), 311-338.</p>
 
 		<p href="ishak">Edward W. Ishak and Steven K. Feiner. 2006. <a href="https://doi.org/10.1145/1166253.1166277">Content-aware scrolling</a>. In Proceedings of the 19th annual ACM symposium on User interface software and technology (UIST '06). ACM, New York, NY, USA, 155-158.</p>
 
@@ -206,7 +206,7 @@
 		
 		<p href="rekimoto">Jun Rekimoto. 1997. <a href="http://dx.doi.org/10.1145/263407.263505">Pick-and-drop: a direct manipulation technique for multiple computer environments</a>. In Proceedings of the 10th annual ACM symposium on User interface software and technology (UIST '97). ACM, New York, NY, USA, 31-39.</p>
 		
-		<p href="raisamo">Roope Raisamo and Kari-Jouko R‰ih‰. 1996. <a href="http://dx.doi.org/10.1145/237091.237113">A new direct manipulation technique for aligning objects in drawing programs</a>. In Proceedings of the 9th annual ACM symposium on User interface software and technology (UIST '96). ACM, New York, NY, USA, 157-164.</p>
+		<p href="raisamo">Roope Raisamo and Kari-Jouko R√§ih√§. 1996. <a href="http://dx.doi.org/10.1145/237091.237113">A new direct manipulation technique for aligning objects in drawing programs</a>. In Proceedings of the 9th annual ACM symposium on User interface software and technology (UIST '96). ACM, New York, NY, USA, 157-164.</p>
 
 		<p href="rubin">Steve Rubin, Floraine Berthouzoz, Gautham J. Mysore, Wilmot Li, and Maneesh Agrawala. 2013. <a href="http://dx.doi.org/10.1145/2501988.2501993">Content-based tools for editing audio stories</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 113-122.</p>
 
