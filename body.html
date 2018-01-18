@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>Bodies</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/kinect.jpg" class="img-responsive" alt="A man and a woman playing XBox Kinect game." />
+		<small>A man and a woman playing XBox Kinect game with their bodies. Credit: Sergey Galyonkin, Flickr</small>
+		
+		<h1>Bodies</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>
+			In the <a href="hands.html">last chapter</a>, I introduced Weiser's vision of ubiquitous computing, and argued that part of fulfilling it was fully exploiting the versatility of our hands.
+			In this chapter, we explore all of the sources of human action other than hands and the range of ways this action has been channeled as input to computers.
+		</p>
+			
+		<p>
+			If you think about what we use to act in the world, every overt action is driven by our <strong>muscles</strong>.
+			When we speak or make other sounds, we use the muscles in our throat, mouth, and face.
+			When we look with our eyes, we use muscles to shift our gaze, to blink, to squint, and keep our eyes closed.
+			We use our muscles to move and arrange our limbs.
+			Perhaps the only action we perform that isn't driven by muscles is our brain, which is driving our muscles: it can convey information through detectable electrical signals through our skin.
+			All of these forms of action are central to our existence in a physical world.
+			Researchers have explored how to leverage these muscle-based signals to act in virtual worlds.
+		</p>
+
+		<h2>Speech</h2>
+
+		<p>
+			Aside from our hands, one of the most versatile set of muscles we use is our voice.
+			We use it to speak, to hum, to sing, and to make other non-verbal auditory sounds to communicate with humans and other living things.
+			Why not computers?
+			Voice-based interactions have been a dream for decades, and long-imagined in science fiction.
+			Only after decades of progress on speech recognition, spanning the early 1950's at Bell Labs, to continued research today in academia, did voice interfaces become reliable enough for interaction.
+			Before the ubiquitous digital voice assistants on smartphones and smartspeakers, there were speech recognition programs that dictated text, and phone-based interfaces that listened to basic commands and numbers.
+		</p>
+		
+		<p>
+			Early HCI research explored how to translate graphical user interfaces into speech-based interfaces to make GUIs accessible to people who were blind or low vision (<a href="https://doi.org/10.1145/142621.142629">Mynatt and Edwards 1992</a>).
+			The project that finally pushed voice interactions into the mainstream was the DARPA-funded <a href="http://www.ai.sri.com/project/CALO">CALO research project</a>, which, as described by it's acronym, "Cognitive Assistant that Learns and Organizes," sought to create intelligent digital assistants using the latest advances in artificial intelligence.
+			One branch of this project at SRI International spun out some of the speech recognition technology, building upon decades of advances to support real-time speech command recognition.
+			The result was assistants like Siri, Alexa, and OK Google, which offer simple command libraries, much like a menu in a graphical user interface, but accessed with voice instead of a pointing device.
+		</p>
+
+		<p>
+			Of course, voice is useful far beyond giving simple commands.
+			Researchers have explored it's use in multi-modal contexts, a user both points and gives speech commands to control complex interfaces (<a href="http://dx.doi.org/10.1145/800250.807503">Bolt 1980</a>, <a href="https://doi.org/10.1145/2984511.2984588">Setler et al. 2016</a>).
+			Some have applied voice interactions to support more rapid data exploration by using natural language queries and "ambiguity widgets" to show ranges of possible queries (<a href="https://doi.org/10.1145/2807442.2807478">Gao et al. 2015</a>).
+			Others have used non-verbal voice humming to offer hands free interaction with creative tools, like drawing applications (<a href="http://dx.doi.org/10.1145/1296843.1296850">Harada et al. 2007</a>).
+		</p>
+		
+		<p>
+			Of course, in all of these voice interactions, there are fundamental challenges to design around.
+			Early work on speech interfaces (<a href="http://dx.doi.org/10.1145/223904.223952">Yankelovich et al. 1995</a>) found that users expected conversational fluency in machines, that they struggled to overcome recognition errors, and that the design of commands for GUIs often did not translate well to speech interfaces.
+			They also found that speech itself poses cognitive demands on working memory to form correct commands, retain the state of the machine, and anticipate the behavior of the conversational agent.
+			These all further aggravate recognition errors.
+			All of these problems persist in modern speech interfaces, though to a lesser extent as speech recognition has improved.
+		</p>
+
+		<h2>Gaze</h2>
+		
+		<p>
+			Another useful muscle in our bodies are those that control our gaze.
+			Gaze is inherently social information that refers to inferences about where someone is looking based on the position of their pupils relative to targets in a space.
+			Gaze tracking technology usually involves machine vision techniques, using infrared illumination of pupils, then time series analysis and individual calibration to track pupil movements over time.
+		</p>
+		
+		<p>
+			Researchers have exploited gaze detection as a form of hands-free interaction, usually discriminating between looking and acting with <em>dwell-times</em>: if someone looks at something long enough, it is interpreted as an interaction.
+			For example, some work has used dwell times and the top and bottom of a window to support gaze-controlled scrolling through content (<a href="https://doi.org/10.1145/1294211.1294249">Kumar and Winograd 2007</a>).
+			Other techniques analyze the targets in an interface (e.g., links in a web browser) and make them controllable through gaze and dwell (<a href="https://doi.org/10.1145/2807442.2807461">Lutteroth et al. 2015</a>).
+			Some researchers have even extended this to multiple displays, making it easier to quickly interact with different devices at a distance (<a href="https://doi.org/10.1145/2807442.2807479">Lander et al. 2015</a>).
+			One way to avoid waiting for dwell times is to combine gaze with other interaction.
+			For example, some systems have combined gaze and touch, as in the video below, to use gaze for pointing and touch for action (<a href="https://doi.org/10.1145/2984511.2984514">Pfeuffer and Gellersen 2016</a>):
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/K_BzewnB06c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>Combining gaze and touch for multimodal interactions.</center>
+		</p>
+		
+		<p>
+			Designing for gaze can require sophisticated knowledge of constraints on human-perception.
+			For example, one effort to design a hands-free, gaze-based drawing tool for people with motor disabilities ended up requiring the careful of commands to avoid frustrating error handling and disambiguation controls (<a href="http://dx.doi.org/10.1145/1054972.1054995">Hornof and Cavender 2005</a>).
+		</p>
+
+		<h2>Muscles</h2>
+		
+		<p>
+			Whereas our hands, voices, and eyes are all very specialized for social interaction, the other muscles in our limbs are more for movement. 
+			That said, they also offer rich opportunities for interaction.
+			For example, early feasibility studies of the ability to sense muscle movement with  low-cost off-the-shelf electroencephalographs (EEG) showed that it is possible to discriminate between basic tasks and intents (<a href="https://doi.org/10.1145/1166253.1166268">Lee and Tan 2006</a>). 
+			This feasibility evidence led to a whole sequence of interaction ideas.
+			For example, this technique senses the motor actions in the forearm, discriminating between different grips to support applications like "air guitar hero" (<a href="https://doi.org/10.1145/1622176.1622208">Saponas et al. 2009</a>):
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pktVSTwC8qo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>Sensing forearm grip.</center>
+		</p>
+
+		<p>
+			Other ideas focused on the movement of the tongue muscles using optical sensors and a mouth retainer (<a href="https://doi.org/10.1145/1622176.1622209">Saponas et al. 2009</a>) and tongue joysticks for menu navigation (<a href="https://doi.org/10.1145/2047196.2047210">Slyper et al. 2011</a>).
+			Some focused the breath, localizing where a person was blowing at a microphone installed on a laptop or computer screen (<a href="https://doi.org/10.1145/1294211.1294250">Patel and Abowd 2007</a>).
+		</p>
+                       
+		<h2>Body</h2>
+
+		<p>
+			Other applications have moved beyond specific muscles to the entire body.
+			For example, researches have explored whole body gestures, allowing for hands-free interactions.
+			This technique uses the human body as an antenna for sensing, requiring no instrumentation to the environment, and only a little instrumentation of the user (<a href="http://dx.doi.org/10.1145/2207676.2208330">Cohn et al. 2012</a>):
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/7lRnm2oFGdc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>Humantenna's whole body gestures.</center>
+		</p>
+
+		<p>
+			Similar techniques sense a person tapping patterns on their body (<a href="https://doi.org/10.1145/2984511.2984541">Chen and Li 2016</a>), sensing skin deformation through a band that also provide tactile feedback (<a href="https://doi.org/10.1145/2501988.2502039">Ogata et al. 2013</a>), and the detection of entire human bodies through electric field distortion requiring no instrumentation of the user (<a href="https://doi.org/10.1145/2501988.2502031">Mujibiya and Rekimoto 2013</a>).
+			Even more extreme ideas include entirely imaginary interfaces, in which users perform spatial gestures with no device and no visual feedback, relying on machine vision techniques to map movement to action (<a href="https://doi.org/10.1145/1866029.1866033">Gustafson et al. 2010</a>)
+		</p>
+
+		<hr/>
+
+		<p>
+			All of these techniques essentially aim to further Weiser's vision of ubiquitous computing.
+			However, they also further the feasibility of universal design by adding a greater range of viable modes of interaction.
+			All of this work, however, is very much at the level of feasibility assessments.
+			Few of these techniques have been explored as ways to build real applications, and so we know little about the affordances and feedback necessary to help people successfully use them to work and play.
+		</p>
+
+		<center><p class="lead"><a href="static.html">Next chapter: Static visual output</a></p></center>
+
+		<h2>Further reading</h2>
+		
+		<p>Richard A. Bolt. 1980. <a href="http://dx.doi.org/10.1145/800250.807503">"Put-that-there": Voice and gesture at the graphics interface</a>. In Proceedings of the 7th annual conference on Computer graphics and interactive techniques (SIGGRAPH '80). ACM, New York, NY, USA, 262-270.</p>
+		
+		<p>Xiang 'Anthony' Chen and Yang Li. 2016. <a href="https://doi.org/10.1145/2984511.2984541">Bootstrapping User-Defined Body Tapping Recognition with Offline-Learned Probabilistic Representation</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 359-364.</p>
+		
+		<p>Gabe Cohn, Daniel Morris, Shwetak Patel, and Desney Tan. 2012. <a href="http://dx.doi.org/10.1145/2207676.2208330">Humantenna: using the body as an antenna for real-time whole-body interaction</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '12). ACM, New York, NY, USA, 1901-1910.</p>
+		
+		<p>Tong Gao, Mira Dontcheva, Eytan Adar, Zhicheng Liu, and Karrie G. Karahalios. 2015. <a href="https://doi.org/10.1145/2807442.2807478">DataTone: Managing Ambiguity in Natural Language Interfaces for Data Visualization</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 489-500.</p>
+		
+		<p>Sean Gustafson, Daniel Bierwirth, and Patrick Baudisch. 2010. <a href="https://doi.org/10.1145/1866029.1866033">Imaginary interfaces: spatial interaction with empty hands and without visual feedback</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 3-12.</p>
+
+		<p>Susumu Harada, Jacob O. Wobbrock, and James A. Landay. 2007. <a href="http://dx.doi.org/10.1145/1296843.1296850">Voicedraw: a hands-free voice-driven drawing application for people with motor impairments</a>. In Proceedings of the 9th international ACM SIGACCESS conference on Computers and accessibility (Assets '07). ACM, New York, NY, USA, 27-34.</p>
+
+		<p>Anthony J. Hornof and Anna Cavender. 2005. <a href="http://dx.doi.org/10.1145/1054972.1054995">EyeDraw: enabling children with severe motor impairments to draw with their eyes</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '05). ACM, New York, NY, USA, 161-170.</p>
+
+		<p>Manu Kumar and Terry Winograd. 2007. <a href="https://doi.org/10.1145/1294211.1294249">Gaze-enhanced scrolling techniques</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 213-216.</p>
+
+		<p>Christian Lander, Sven Gehring, Antonio Krüger, Sebastian Boring, and Andreas Bulling. 2015. <a href="https://doi.org/10.1145/2807442.2807479">GazeProjector: Accurate Gaze Estimation and Seamless Gaze Interaction Across Multiple Displays</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 395-404.</p>
+
+		<p>Christof Lutteroth, Moiz Penkar, and Gerald Weber. 2015. <a href="https://doi.org/10.1145/2807442.2807461">Gaze vs. Mouse: A Fast and Accurate Gaze-Only Click Alternative</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 385-394.</p>
+
+		<p>Elizabeth D. Mynatt and W. Keith Edwards. 1992. <a href="https://doi.org/10.1145/142621.142629">Mapping GUIs to auditory interfaces</a>. In Proceedings of the 5th annual ACM symposium on User interface software and technology (UIST '92). ACM, New York, NY, USA, 61-70.</p>
+
+		<p>Masa Ogata, Yuta Sugiura, Yasutoshi Makino, Masahiko Inami, and Michita Imai. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502039">SenSkin: adapting skin as a soft interface</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 539-544.</p>
+		
+		<p>Shwetak N. Patel and Gregory D. Abowd. 2007. <a href="https://doi.org/10.1145/1294211.1294250">Blui: low-cost localized blowable user interfaces</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 217-220.</p>
+		
+		<p>Ken Pfeuffer and Hans Gellersen. 2016. <a href="https://doi.org/10.1145/2984511.2984514">Gaze and Touch Interaction on Tablets</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 301-311.</p>
+		
+		<p>T. Scott Saponas, Daniel Kelly, Babak A. Parviz, and Desney S. Tan. 2009. <a href="https://doi.org/10.1145/1622176.1622209">Optically sensing tongue gestures for computer input</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 177-180.</p>
+		
+		<p>T. Scott Saponas, Desney S. Tan, Dan Morris, Ravin Balakrishnan, Jim Turner, and James A. Landay. 2009. <a href="https://doi.org/10.1145/1622176.1622208">Enabling always-available input with muscle-computer interfaces</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 167-176.</p>
+		
+		<p>Vidya Setlur, Sarah E. Battersby, Melanie Tory, Rich Gossweiler, and Angel X. Chang. 2016. <a href="https://doi.org/10.1145/2984511.2984588">Eviza: A Natural Language Interface for Visual Analysis</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 365-377.</p>
+
+		<p>Ronit Slyper, Jill Lehman, Jodi Forlizzi, and Jessica Hodgins. 2011. <a href="https://doi.org/10.1145/2047196.2047210">A tongue input device for creating conversations</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 117-126.</p>
+
+		<p>Nicole Yankelovich, Gina-Anne Levow, and Matt Marx. 1995. <a href="http://dx.doi.org/10.1145/223904.223952">Designing SpeechActs: issues in speech user interfaces</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '95), Irvin R. Katz, Robert Mack, Linn Marks, Mary Beth Rosson, and Jakob Nielsen (Eds.). ACM Press/Addison-Wesley Publishing Co., New York, NY, USA, 369-376.</p>
+
+	</body>
+	
+</html>
+
