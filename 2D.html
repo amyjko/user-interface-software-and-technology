@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>Dynamic Output</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/TODO.jpg" class="img-responsive" alt="TODO" />
+		<small>TODO</small>
+		
+		<h1>2D Output</h1>
+
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>TODO</p>		
+	
+		<h2>Animation</h2>
+		
+		<p>
+			Some of the first efforts to create animated computer graphics were 40's, 50's, and 60's, just as digital computers were being invented (Sito 2013).
+			As computers become more ubiquitous, researchers began to explore digital animation in film, which eventually led to the ACM SIGGRAPH conference on computer graphics.
+			This academic community, joining forces with the rising interest in computer graphics, generated decades of discoveries creating ever more realistic animations, and eventually led to our modern industry of 3D animated films.
+		</p>
+		
+		<p>
+			As graphical user interfaces emerged in the 1980's, animation of interfaces became a significant topic of research.
+			An early work investigated foundations of animation that might be brought from film animation, including principles of <strong>solidity</strong>, <strong>exaggeration</strong>, and <strong>reinforcement</strong>, which were long used to give life to static images (<a href="https://doi.org/10.1145/168642.168647">Chang and Ungar 1993</a>).
+			These principles were tied to specific time-based visual ideas such as arcs, follow-through, slow in/slow out, anticipation, arrivals and departures, and motion blur, all of which are now ubiquitous in things like presentation software and modern graphical user interfaces.
+			Just as these types of motion are used in movies to convey information about action, they are now used in user interfaces to convey information, as in this animation in OS X that simulates a head shaking "no":
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/W_WRCMGs1f0?controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>A shaking animation, conveying an incorrect password.</center>
+		</p>
+
+		<p>
+			While this basic idea of animating interfaces was straightforward, finding ways to seamlessly implement animation into interfaces was not. 
+			Having parts of interfaces move required careful management of the position of interface elements over time, and these were incompatible with the notion of view hierarchies determining element positions at all times.
+			Some of the earliest ideas involved defining <strong>constraints</strong>, and letting those constraints determining position over time (<a href="https://doi.org/10.1145/237091.237109">Myers et al. 1996</a>): for example, a developer might say that an element should be at position A at time t, then at position B at time t+1, and then let the user interface toolkit decide precisely where to render the element between those two times.
+			This same idea could be used to animate any visual property of an element, such as its color, transparency, size, and so on.
+			These same ideas eventually led to more sophisticated animations of direct manipulation interfaces (<a href="https://doi.org/10.1145/215585.215628">Thomas and Calder 1995</a>), of icons (<a href="https://doi.org/10.1145/1978942.1979232">Harrison et al. 2011</a>), of typography engine (<a href="https://doi.org/10.1145/571985.571997">Lee et al. 2002</a>).
+			These ideas coalesced into well-defined transition abstractions that made it easier to express a range of "emotions" through transitions, such as urgency, delay, and confidence (<a href="https://doi.org/10.1145/168642.168648">Hudson and Stasko 1993</a>).
+		</p>
+		
+		<p>
+			All of these research ideas are now ubiquitous in toolkits like Apple's <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html">Core Animation</a>, which make it easy to express animation states without having to manage low-level details of user interface rendering.
+		</p>
+		
+		<center><p class="lead"><a href="3D.html">Next chapter: 3D output</a></p></center>
+
+		<h2>Further reading</h2>
+		
+		<p>Bay-Wei Chang and David Ungar. 1993. <a href="https://doi.org/10.1145/168642.168647">Animation: from cartoons to the user interface</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 45-55.</p>
+
+		<p>Chris Harrison, Gary Hsieh, Karl D.D. Willis, Jodi Forlizzi, and Scott E. Hudson. 2011. <a href="https://doi.org/10.1145/1978942.1979232">Kineticons: using iconographic motion in graphical user interface design</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '11). ACM, New York, NY, USA, 1999-2008.</p>
+		
+		<p>Scott E. Hudson and John T. Stasko. 1993. <a href="https://doi.org/10.1145/168642.168648">Animation support in a user interface toolkit: flexible, robust, and reusable abstractions</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 57-67.</p>
+
+		<p>Johnny C. Lee, Jodi Forlizzi, and Scott E. Hudson. 2002. <a href="https://doi.org/10.1145/571985.571997">The kinetic typography engine: an extensible system for animating expressive text</a>. In Proceedings of the 15th annual ACM symposium on User interface software and technology (UIST '02). ACM, New York, NY, USA, 81-90.</p>
+
+		<p>Brad A. Myers, Robert C. Miller, Rich McDaniel, and Alan Ferrency. 1996. <a href="http://dx.doi.org/10.1145/237091.237109">Easily adding animations to interfaces using constraints</a>. In Proceedings of the 9th annual ACM symposium on User interface software and technology (UIST '96). ACM, New York, NY, USA, 119-128.</p>
+
+		<p>Sito, T. (2013). Moving innovation: a history of computer animation. MIT Press.</p>
+
+		<p>Bruce H. Thomas and Paul Calder. 1995. <a href="http://dx.doi.org/10.1145/215585.215628">Animating direct manipulation interfaces</a>. In Proceedings of the 8th annual ACM symposium on User interface and software technology (UIST '95). ACM, New York, NY, USA, 3-12.</p>
+
+	</body>
+	
+</html>
+
