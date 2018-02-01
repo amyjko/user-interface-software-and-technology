@@ -202,16 +202,25 @@
 			For example, Microsoft, including researches from Microsoft Research, developed a sub-pixel font rendering algorithm called ClearType, which they found significantly increased average reading time (<a href="https://doi.org/10.1145/1124772.1124849">Dillon et al. 2006</a>).
 		</p>
 
-<!--
 		<h2>Data</h2>
 		
-		<p>In our modern age of massive data sets, and our keen interest in using that data to answer questions, data visualization has become nearly important as graphics, images, and text. This is provoked questions about how to best render and interact with data sets. The field of data visualization (also known as information visualization) has explored these questions, building upon data visualization efforts in print.</p>
+		<p>In our modern age of massive data sets, and our keen interest in using that data to answer questions, data visualization has become nearly important as graphics, images, and text. This is provoked questions about how to best render and interact with data sets. The field of data visualization (also known as information visualization) has explored these questions, building upon data visualization efforts in print (<a href=" https://doi.org/10.1007/s00371-013-0892-3">Liu et al. 2014</a>).</p>
 		
-		Optional Protovis: A Graphical Toolkit for Visualization. Michael Bostock, Jeffrey Heer. IEEE TVCG 2009. pdf
-		Other Jeff Heer stuff
+		<p>The foundations of data visualization are relatively stable:</p>
 		
-		TODO Basic lit review of data viz.		
--->
+		<center>
+			<img src="images/viz-pipeline.png" class="img-responsive" alt="A flow from data collection, to data transformation and analsysis, filtering, mapping, rendering, and user interaction through UI controls." />
+			The visualization pipline. Credit: <a href="https://doi.org/10.1007/s00371-013-0892-3">Liu et al. 2014</a>).
+		</center>
+		
+		<p>Each of these phases has it's own interactive complexities. Data transformation often requires interaction in order to "wrangle" data into a structure suitable for visualization (<a href="http://journals.sagepub.com/doi/abs/10.1177/1473871611415994">Kandel et al. 2011)</a>. Filtering is involves selecting data for view. Mapping involves taking data values and translating them into things like color, shape, space, size, proximity, and other features of visual information. And then there are a wide array of interaction techniques for seeing relationships between data, including selection, filtering, brushing, linking, focus, and facets.</p>
+		
+		<p>Because of the complexity of this pipeline, actually rendering data visualizations has required more direct toolkit support for abstracting away some of the low-level complexities of these phases. Toolkits like <a href="http://mbostock.github.io/protovis/">Protovis</a> (<a href="https://doi.org/10.1109/TVCG.2009.174">Bostock and Heer 2009</a>), <a href="https://d3js.org/">D3</a> (<a href="https://doi.org/10.1109/TVCG.2011.185">Bostock et al. 2011</a>), and <a href="https://vega.github.io/vega/">Vega</a> (<a href="https://doi.org/10.1109/TVCG.2016.2599030">Satyanarauyan et al. 2017</a>) all offer abstractions that reduce this complexity, making it easier to create both static and interactive data visualizations.</p>
+
+		<center>
+			<img src="images/d3example.png" class="img-responsive" alt="A grid of factorization visualizations, showing groups and sets of circles of different combinations." />
+			A <a href="https://d3js.org/">D3</a> example. Credit: <a href="https://www.jasondavies.com/factorisation-diagrams/">Jason Davies</a>).
+		</center>
 
 		<h2>Animation</h2>
 				
@@ -248,6 +257,10 @@
 
 		<h2>Further reading</h2>
 
+		<p>Michael Bostock and Jeffrey Heer 2009. <a href="https://doi.org/10.1109/TVCG.2009.174">Protovis: A Graphical Toolkit for Visualization</a>. IEEE Transactions on Visualizations and Computer Graphics. pdf</p>
+
+		<p>Michael Bostock, Vadim Ogievetsky, and Jeffrey Heer. <a href="https://doi.org/10.1109/TVCG.2011.185">D³ data-driven documents</a>. IEEE transactions on visualization and computer graphics 17, no. 12 (2011): 2301-2309.</p>
+
 		<p>Xiang Cao, Clifton Forlines, and Ravin Balakrishnan. 2007. <a href="https://doi.org/10.1145/1294211.1294220">Multi-user interaction using handheld projectors</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 43-52.</p>
 		
 		<p>Bay-Wei Chang and David Ungar. 1993. <a href="https://doi.org/10.1145/168642.168647">Animation: from cartoons to the user interface</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 45-55.</p>
@@ -262,11 +275,17 @@
 			
 		<p>Scott E. Hudson and John T. Stasko. 1993. <a href="https://doi.org/10.1145/168642.168648">Animation support in a user interface toolkit: flexible, robust, and reusable abstractions</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 57-67.</p>
 
+		<p>Sean Kandel, Jeffrey Heer, Catherine Plaisant, Jessie Kennedy, Frank van Ham, Nathalie Henry Riche, Chris Weaver, Bongshin Lee, Dominique Brodbeck, and Paolo Buono. 2011. <a href="http://journals.sagepub.com/doi/abs/10.1177/1473871611415994">Research directions in data wrangling: Visualizations and transformations for usable and credible data</a>. Information Visualization 10, no. 4: 271-288.</p>
+
 		<p>Johnny C. Lee, Scott E. Hudson, Jay W. Summet, and Paul H. Dietz. 2005. <a href="http://dx.doi.org/10.1145/1095034.1095045">Moveable interactive projected displays using projector based tracking</a>. In Proceedings of the 18th annual ACM symposium on User interface software and technology (UIST '05). ACM, New York, NY, USA, 63-72.</p>
 			
 		<p>Johnny C. Lee, Scott E. Hudson, and Edward Tse. 2008. <a href="https://doi.org/10.1145/1449715.1449763">Foldable interactive displays</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 287-290.</p>
 
 		<p>David Lindlbauer, Toru Aoki, Robert Walter, Yuji Uema, Anita Höchtl, Michael Haller, Masahiko Inami, and Jörg Müller. 2014. <a href="https://doi.org/10.1145/2642918.2647350">Tracs: transparency-control for see-through displays</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 657-661.</p>
+
+		<p>Arvind Satyanarayan, Dominik Moritz, Kanit Wongsuphasawat, and Jeffrey Heer. 2017. <a href="https://doi.org/10.1109/TVCG.2016.2599030">Vega-lite: A grammar of interactive graphics</a>. IEEE Transactions on Visualization and Computer Graphics 23, no. 1 (2017): 341-350.</p>
+
+		<p>Liu, Shixia, Weiwei Cui, Yingcai Wu, and Mengchen Liu. 2014. <a href="https://doi.org/10.1007/s00371-013-0892-3">A survey on information visualization: recent advances and challenges</a>. The Visual Computer 30, no. 12 (2014): 1373-1393.</p>
 
 		<p>Kent Lyons, Seung Wook Kim, Shigeyuki Seko, David Nguyen, Audrey Desjardins, Mélodie Vidal, David Dobbelstein, and Jeremy Rubin. 2014. <a href="https://doi.org/10.1145/2642918.2647361">Loupe: a handheld near-eye display</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 351-354.</p>
 
