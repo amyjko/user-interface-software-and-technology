@@ -29,147 +29,195 @@
 
 		<div class="lead">Andrew J. Ko</div>
 
-		<p>It's easy to forget that computers didn't always have screens. The original format for computer output was actually printed, not rendered, and as with even modern printers, printing was slow. It wasn't until Ivan Sutherland integrated a CRT screen with a computer that screens enabled interactive, immediate feedback experiences.</p>
+		<p>
+			It's easy to forget that computers didn't always have screens.
+			The original format for computer output was actually printed, not rendered, and as with even modern printers, printing was slow.
+			It wasn't until <a href="history.html">Ivan Sutherland integrated a CRT screen with a computer in Sketchpad</a> that screens enabled interactive, immediate feedback experiences.
+		</p>
 		
-		<p>But screens alone were not enough. There was an entire set of new concepts that needed to be invented to make use of screens, ranging from graphics, typography, images, visualization, and animated versions of all of these media. And researchers continue to innovate in these spaces, including in screen technology itself. In this chapter, we'll review screen technology, and then discuss these media.</p>
+		<p>
+			But screens alone were not enough.
+			There was an entire set of new concepts that needed to be invented to make use of screens, ranging from graphics, typography, images, visualization, and animated versions of all of these media.
+			And researchers continue to innovate in these spaces, including in screen technology itself.
+			In this chapter, we'll review screen technology, and then discuss how these media were translated to computer screens and further enhanced.
+		</p>
 
-		<p>Screens</p>
+		<h2>Screens</h2>
 
-		* CRT, LCD, LED		
-        * Low-energy wireless, batteryless display <a href="https://doi.org/10.1145/2984511.2984513">Grosse-Puppendahl et al. 2016</a>
-        * Bendable 3D parallax display: <a href="https://doi.org/10.1145/2984511.2984524">Gotsch et al. 2016</a>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mGJe0AdszJg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        * A small near-eye display with input capabilities. (<a href="https://doi.org/10.1145/2642918.2647361">Lyons et al. 2014</a>)
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0-LZOil6UE8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        * Transparent displays with control to remove barriers while preserving privacy (<a href="https://doi.org/10.1145/2642918.2647350">Lindlbauer et al. 2014</a>)
-        * Moveable interactive displays with image projection (<a href="https://doi.org/10.1145/1095034.1095045">Lee et al. 2005</a>)
-        * Foldable interactive displays with image projection (<a href="https://doi.org/10.1145/1449715.1449763">Lee et al. 2008</a>)
-        * Multi-user handheld projector interaction <a href="https://doi.org/10.1145/1294211.1294220">Cao et al. 2007</a>	
+		<p>
+			To begin, let's consider screens themselves.
+			Some of the earliest screen technology used something called a CRT (Cathode Ray Tube).
+			This was a vacuum tube with an electron gun and a phosphorescent screen.
+			The device moves the electron gun in a repetitive pattern called a "raster" scan across the two dimensions of the screen, causing the phosphorescent material to glow at whatever points it was active.
+			To make color CRTs, three electron guns are used, one for red, green, and blue color.
+			To determine what to draw on screen, computers stored in memory a long list of color values, and then hardware translated those color values at high frequency during the raster to determine when the electron guns were on and off.
+			When this happens at a high frequency (generally 24 times a second or faster), we get the interactive screens we're used to today.
+		</p>
+		
+		<p>
+			<img src="images/crt.jpg" class="img-responsive" alt="A cathode ray tube emitter." />
+			<center>A cathode ray tube emitter. Credit: MaxPixel.</center>
+		</p>
 
+		<p>
+			The problem with CRTs was that they were <em>huge and heavy</em>, making them practical only for desktop use.
+			Display technology evolved to solve these problems, with liquid crystal displays (LCDs) making the next leap.
+			LCDs, which are still quite common in devices today, are big grids of red, green, and blue <em>liquid crystals</em>.
+			Liquid crystals are a state of matter between liquid and solid with varying optical qualities.
+			By placing this grid of liquid crystals on top of a big backlight, these crystals filter light in red, green, and blue at different intensities based on the current running through the liquid.
+			These crystals are tiny, allowing for screens that were flat and with much lower energy consumption than CRTs.
+			This allowed for entirely new mobile devices like laptops and phones.
+		</p>
+		
+		<p>
+			The latest technology, <strong>light emitting diode</strong> displays, are grids of diodes that individually emit their own light when activated.
+			By not requiring a backlight, they can be even thinner and use even less energy, making them practical for even tinier devices, such as smartwatches and other things with small, battery-powered displays.
+		</p>
+		
+		<p>
+			While all of these advances in display quality might appear only to effect the quality of a picture, they have had dramatic effects on user interfaces.
+			For example, none of the mobile devices in use today would be possible with CRT technology.
+			Screens would be far too big and far to inefficient to make mobile interaction possible.
+			And some sizes of devices, like smartwatches, are only possible with LEDs: their thinness and energy efficiency make room for more battery, which is the critical limiting factor for such small devices.
+		</p>
+
+		<p>
+			Researchers continue to innovate in display technology, especially with new forms of interaction in mind.
+			For example, researchers have enhanced existing display technologies by making them transparent, allowing for new collaboration opportunities while managing privacy (<a href="https://doi.org/10.1145/2642918.2647350">Lindlbauer et al. 2014</a>).
+			Others have played with new bendable displays that allow for depth and parallax in images (<a href="https://doi.org/10.1145/2984511.2984524">Gotsch et al. 2016</a>):
+		</p>
+		
+		<p class="embed-responsive embed-responsive-16by9">
+	        <iframe width="560" height="315" src="https://www.youtube.com/embed/mGJe0AdszJg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>A bendable 3D parallax display.</center>
+		</p>
+			
+		<p>
+			Other researchers have experimented with projectors, making them track the movement of projection surfaces (<a href="https://doi.org/10.1145/1095034.1095045">Lee et al. 2005</a>), and even allowing projection surfaces to bend (<a href="https://doi.org/10.1145/1449715.1449763">Lee et al. 2008</a>).
+			Some have experimented with having multiple users interact with portable projectors, using projection as both a source of output, but also input (<a href="https://doi.org/10.1145/1294211.1294220">Cao et al. 2007</a>).
+		</p>
+		
+		<p>
+			Some have experimented with even smaller displays, such as low-energy displays without batteries (<a href="https://doi.org/10.1145/2984511.2984513">Grosse-Puppendahl et al. 2016</a>) or tiny displays intended to view near eyes (<a href="https://doi.org/10.1145/2642918.2647361">Lyons et al. 2014</a>):
+		</p>
+		
+		<p class="embed-responsive embed-responsive-16by9">
+	        <iframe width="560" height="315" src="https://www.youtube.com/embed/0-LZOil6UE8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>A near-eye display.</center>
+		</p>
+
+		<p>
+			These innovations promise to lead to entirely new product categories, just as all prior screen innovations have.
+		</p>
 
 		<h2>Graphics</h2>
 
-Origin
-Typically 0,0 in top left
-Comes from text handling and raster scan
-Java 2D allows customization
-Different from conventional axes
-Coordinates of pixels:
-Center of pixel?
-Corner of pixel?
-Matters for lines
-
-Drawing Objects:
-Graphics, graphics2D java APIs: http://docs.oracle.com/javase/7/docs/api/ 
-P1 and P2 or P1 and W/H?
-void  graphics.drawRect (int x, int y, int width, int height)Draws the outline of the specified rectangle. (also fillRect)
-Inclusive or exclusive?
-Which pixels are turned on for DrawRectangle (2,2, 8,8)? 
-Suppose you draw another rectangle next to it? 
-Suppose draw filled and outline rectangle with the same coordinates?
-What about for ellipse?
-
-Double buffering
-Save an extra picture offscreen 
-Smoother animations 
-Save hidden parts of windows 
-= “Backing store” 
-Use two buffers for special effects, faster refresh 
-“Save-under” for pop-ups 
-
-Color models		
-RGB -- Additive color primaries 
-CMY --  Cyan, Magenta, Yellow 
-complements of red, green, blue; subtractive primaries 
-colors are specified that are removed from white light, instead of added to black (no light) as in RGB      
-YIQ  -- used in color TVs in US (NTSC) 
-Y is luminance, what is shown on black and white TVs 
-I and Q encode chromaticity  
-HSV -- Hue, Saturation and Value (brightness) or HSL (Luminance)
-user oriented, intuitive appear of artist's hint, shade, tone 
-simple algorithm in text to convert, but not a linear mapping 
-Interpolating between colors can be done using different models, with different resulting intermediate colors
+		<p>
+			While screens themselves can allow for new form factors, and therefore new experiences, the content on that screen is just as important (if not more).
+			One fundamental type of content is computer graphics. Graphics can be anything from basic graphical primitives like lines, rectangles, circles, polygons, and other shapes, to as sophisticated as entire simulations like the ones you see in 3D animated movies.
+		</p>
 		
-		Pictures created externally
-“Bitmaps”, “Pixmaps”
-Various encodings
-bmp, pict, gif, tiff, jpeg, png, …
-Issues:
-Origin for when used as a cursor
-Encodings for transparency
-Windows cursors and gif files
-Java uses alpha compositing
-Java drawImage
+		<p>
+			Despite all of this complexity, computer graphics have simple foundations.
+			Because screens are organized as 2-dimensional arrays of pixels, graphical rendering is all about <strong>coordinate systems</strong>, just like in math.
+			There's an x-axis, a y-axis, and at each point in a matrix of pixels, a color.
+			Rendering a graphical primitive means specifying a location and color for that shape (and often whether that shape should be filled, or just an outline).
+		</p>
+		
+		<p>
+			<img src="images/shapes.png" class="img-responsive" alt="An assortment of circles, ellipses, rectangles, and polygons of different colors." />
+			<center>An assortment of graphical primitives, the building blocks of computer graphics. Credit: Wikimedia.</center>
+		</p>
+		
+		<p>
+			Where this gets interesting is in <em>sequences</em> of graphical operations that are overlaid on top of each other.
+			By composing shapes together, and rendering them in a particular order, we can get buttons with backgrounds, scroll bars with depth and texture, windows with drop shadows.
+			All of this graphical <strong>compositing</strong> is what allows us to create entire virtual worlds such as desktop interfaces or interactive 3D worlds.
+		</p>
+		
+		<p>
+			Just as important as shapes are images.
+			Just like the screen itself, images are represented by 2-dimensional grids of pixels.
+			As most computer users know, there are countless ways of storing and compressing this pixel data (bmp, pict, gif, tiff, jpeg, png).
+			In the 1980's and 90's, these formats mattered for experience, especially on the web: if you stored pixels in order, uncompressed, an image in a browser would be rendered line by line, as it downloaded, but if you stored it out of order, you could render low-resolution versions of a picture as the entire image downloaded.
+			The internet is fast enough today that these format differences don't effect user experience as much.
+		</p>
 
+		<p>
+			There are many techniques from computer graphics that ensure a high-level of graphical fidelity.
+			Color models, transparency, anti-aliasing, sub-pixels, double-buffering, interpolation, GPUs, or other strategies for ensuring precise, high-fidelity, high-performance of rendering of graphics ultimately help people focus on content rather than pixels.
+			These concepts do become important, however, if you're responsible for the graphic design portion of a user interface.
+		</p>
+
+		<center>
+			<img src="images/anti-aliasing.jpg" class="img-responsive" alt="A side-by-side comparison of a line with and without antialising, showing smoothing of sharp pixel corners." />
+			Anti-aliasing in action. Credit: Wikimedia.
+		</center>		
 
 		<h2>Typography</h2>
 		
-		Font provides description of the shape of a collection of chars
-Shapes are called “glyphs”
-Plus information e.g. about how to advance after drawing a glyph
-And aggregate info for the whole collection
-
-Fonts
-Typically specified by:
-A family or typeface
-e.g., courier, helvetica, times roman
-A size (normally in “points”)
-A style
-e.g., plain, italic, bold, bold & italic
-other possibles (from mac): underline, outline, shadow
-
-An odd and archaic unit of measurement
-72.27 points per inch
-Origin: 72 per French inch (!)
-Postscript rounded to 72/inch
-Most have followed
-Early Macintosh: point==pixel (1/75th)
-
-baseline
-ascent
-descent
-Glyphs are drawn both above and below baseline
-Distance below: “decent” of glyph
-Distance above: “ascent” of glyph
-
-Kerning: overlapping of characters: VA, ff, V.
-Stroke: Element of a character that would have originally been created with a single pen stroke
-Em: Equal to the font's point size. So an "Em-dash" in a 18 point font is 18points wide: (option-shift-underline on Mac)
-En: Half font's point size. "En-dash" is 9 points wide in 18 point font: (Mac: option-underline)
-DASHES – DASHES—DASHES
-
-Conventional ASCII
-One byte per character
-Various special characters in lower and upper part of fonts
-Depends on OS, font, etc.
-Unicode: http://www.unicode.org
-16 bits per character
-All the world’s languages
-Java uses Unicode
+		<p>
+			While graphics matter, text might matter more, as a huge part of even being able to operate user interfaces are the words we use to explain the semantics of user interface behavior.
+			In the early days of command line interfaces, typography was rudimentary: just like screens were grids of pixels, text was presented as a grid of characters.
+			This meant that the entire visual language of print, such as fonts, font size, and other dimensions of typography, were fixed and inflexible:
+		</p>
 		
-		<h2>Images</h2>
+		<center>
+			<img src="images/monochrome.jpg" class="img-responsive" alt="An IBM PC with a green monochrome screen and a grid of fixed-width font." />
+			A monochrome, single font display. Credit: Max Naylor, Wikimedia.
+		</center>
+		
+		<p>
+			Two things changed this.
+			First, Xerox PARC, in its envisioning of graphical user interfaces, brought typography to the graphical user interface.
+			The conduit for this was primarily its vision of word processing, which attempted to translate the ideas from print to the screen, bringing fonts, font families, font sizes, font weights, font styles, ligature, kerning, baselines, ascents, descents, and other ideas to graphical user interfaces.
+			These concepts from typography had been long developed in print, and were directly adapted to screen.
+			This required answering questions about how take ideas optimized for ink and paper and translate them to discrete 2-dimensional grids of pixels. Ideas like anti-aliasing and sub-pixel rendering mentioned above, which smooth the harsh edges of pixels, were key to achieving readability.
+		</p>
 
+		<center>
+			<img src="images/typography.png" class="img-responsive" alt="The word sphinx with annotations of baseline, median, ascent, descent, and other dimensions of typography." />
+			Common dimensions of typography. Credit: I, Boffy b (CC-BY-SA).
+		</center>
+			
+		<p>
+			The second decision that helped bring typography to user interfaces was Steve jobs taking a calligraphy course at Reed College (calligraphy is like typography, but by hand).
+			He saw that text could be art, that it could be expressive, and that it was central to differentiating the Mac from the full-text horrors of command lines. 
+			And so when he saw Xerox PARC's use of typography and envisioned the Mac, type was at the center of his vision.]
+		</p>
+		
+		<center>
+			<img src="images/mac-fonts.png" class="img-responsive" alt="The original Mac fonts, including Chicago, Monaco, Geneva, Los Angeles, New York, San Francisco, Toronto, Venice, Geneva, and Chicago." />
+			The original Mac fonts. Credit: Unknown.
+		</center>
+		
+		<p>
+			Parallel to these efforts was the need to represent all of the symbols in natural language.
+			One of the first standards was ASCII, which represented the Roman characters and Arabic numbers in English, but nothing else.
+			<a href="https://unicode.org/">Unicode</a> brought nearly the entire spectrum of symbols and characters to computing, supporting communication within and between every country on Earth.
+		</p>
+
+		<p>
+			Research on the <em>technology</em> of typography often focuses on readability.
+			For example, Microsoft, including researches from Microsoft Research, developed a sub-pixel font rendering algorithm called ClearType, which they found significantly increased average reading time (<a href="https://doi.org/10.1145/1124772.1124849">Dillon et al. 2006</a>).
+		</p>
+
+<!--
 		<h2>Data</h2>
+		
+		<p>In our modern age of massive data sets, and our keen interest in using that data to answer questions, data visualization has become nearly important as graphics, images, and text. This is provoked questions about how to best render and interact with data sets. The field of data visualization (also known as information visualization) has explored these questions, building upon data visualization efforts in print.</p>
 		
 		Optional Protovis: A Graphical Toolkit for Visualization. Michael Bostock, Jeffrey Heer. IEEE TVCG 2009. pdf
 		Other Jeff Heer stuff
 		
-		
+		TODO Basic lit review of data viz.		
+-->
 
-
-	
-	
 		<h2>Animation</h2>
-		
+				
 		<p>
-			Some of the first efforts to create animated computer graphics were 40's, 50's, and 60's, just as digital computers were being invented (Sito 2013).
-			As computers become more ubiquitous, researchers began to explore digital animation in film, which eventually led to the ACM SIGGRAPH conference on computer graphics.
-			This academic community, joining forces with the rising interest in computer graphics, generated decades of discoveries creating ever more realistic animations, and eventually led to our modern industry of 3D animated films.
-		</p>
-		
-		<p>
-			As graphical user interfaces emerged in the 1980's, animation of interfaces became a significant topic of research.
-			An early work investigated foundations of animation that might be brought from film animation, including principles of <strong>solidity</strong>, <strong>exaggeration</strong>, and <strong>reinforcement</strong>, which were long used to give life to static images (<a href="https://doi.org/10.1145/168642.168647">Chang and Ungar 1993</a>).
+			While all of the static forms we've discussed above are powerful on their own, efforts to animate these forms offered to increase the expressive power of digital media.
+			One early work investigated foundations of animation that might be brought from film animation, including principles of <strong>solidity</strong>, <strong>exaggeration</strong>, and <strong>reinforcement</strong>, which were long used to give life to static images (<a href="https://doi.org/10.1145/168642.168647">Chang and Ungar 1993</a>).
 			These principles were tied to specific time-based visual ideas such as arcs, follow-through, slow in/slow out, anticipation, arrivals and departures, and motion blur, all of which are now ubiquitous in things like presentation software and modern graphical user interfaces.
 			Just as these types of motion are used in movies to convey information about action, they are now used in user interfaces to convey information, as in this animation in OS X that simulates a head shaking "no":
 		</p>
@@ -187,25 +235,14 @@ Java uses Unicode
 			These same ideas eventually led to more sophisticated animations of direct manipulation interfaces (<a href="https://doi.org/10.1145/215585.215628">Thomas and Calder 1995</a>), of icons (<a href="https://doi.org/10.1145/1978942.1979232">Harrison et al. 2011</a>), of typography engine (<a href="https://doi.org/10.1145/571985.571997">Lee et al. 2002</a>).
 			These ideas coalesced into well-defined transition abstractions that made it easier to express a range of "emotions" through transitions, such as urgency, delay, and confidence (<a href="https://doi.org/10.1145/168642.168648">Hudson and Stasko 1993</a>).
 		</p>
-
-	    * Typography
-            * Describes a way of structuring dynamic, interactive typography (<a href="https://doi.org/10.1145/320719.322594">Lewis and Weyers</a>)
-            * Kinetic typography engine: a toolkit for generating animated typography, small set of abstractions, large expressivity (<a href="https://doi.org/10.1145/571985.571997">Lee et al. 2002</a>)
-
-		Kinetic typography example.
 		
 		<p>
 			All of these research ideas are now ubiquitous in toolkits like Apple's <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html">Core Animation</a>, which make it easy to express animation states without having to manage low-level details of user interface rendering.
 		</p>
 		
+		<hr>
 		
-			
-		
-		
-		
-		
-		
-		
+		<p>While the 2000's saw 3D begin to dominate games and movies, 2D rendering is still at the heart of interactions with user interfaces. While much of the research in this space has moved on to interactive 3D experiences, the foundations built over the past fifty years remain with us, sitting out the foundation of operating systems, graphic design, and the internet.</p>
 		
 		<center><p class="lead"><a href="3D.html">Next chapter: 3D output</a></p></center>
 
@@ -215,6 +252,8 @@ Java uses Unicode
 		
 		<p>Bay-Wei Chang and David Ungar. 1993. <a href="https://doi.org/10.1145/168642.168647">Animation: from cartoons to the user interface</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 45-55.</p>
 
+		<p>Andrew Dillon, Lisa Kleinman, Gil Ok Choi, and Randolph Bias. 2006. <a href="http://dx.doi.org/10.1145/1124772.1124849">Visual search and reading tasks using ClearType and regular displays: two experiments</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '06), Rebecca Grinter, Thomas Rodden, Paul Aoki, Ed Cutrell, Robin Jeffries, and Gary Olson (Eds.). ACM, New York, NY, USA, 503-511.</p>
+
 		<p>Chris Harrison, Gary Hsieh, Karl D.D. Willis, Jodi Forlizzi, and Scott E. Hudson. 2011. <a href="https://doi.org/10.1145/1978942.1979232">Kineticons: using iconographic motion in graphical user interface design</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '11). ACM, New York, NY, USA, 1999-2008.</p>
 
 		<p>Tobias Grosse-Puppendahl, Steve Hodges, Nicholas Chen, John Helmes, Stuart Taylor, James Scott, Josh Fromm, and David Sweeney. 2016. <p>Exploring the Design Space for Energy-Harvesting Situated Displays</p>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 41-48.</p>
@@ -223,15 +262,9 @@ Java uses Unicode
 			
 		<p>Scott E. Hudson and John T. Stasko. 1993. <a href="https://doi.org/10.1145/168642.168648">Animation support in a user interface toolkit: flexible, robust, and reusable abstractions</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 57-67.</p>
 
-		<p>Johnny C. Lee, Jodi Forlizzi, and Scott E. Hudson. 2002. <a href="https://doi.org/10.1145/571985.571997">The kinetic typography engine: an extensible system for animating expressive text</a>. In Proceedings of the 15th annual ACM symposium on User interface software and technology (UIST '02). ACM, New York, NY, USA, 81-90.</p>
-
-		<p>Johnny C. Lee, Jodi Forlizzi, and Scott E. Hudson. 2002. <a href="https://doi.org/10.1145/571985.571997">The kinetic typography engine: an extensible system for animating expressive text</a>. In Proceedings of the 15th annual ACM symposium on User interface software and technology (UIST '02). ACM, New York, NY, USA, 81-90.</p>
-
 		<p>Johnny C. Lee, Scott E. Hudson, Jay W. Summet, and Paul H. Dietz. 2005. <a href="http://dx.doi.org/10.1145/1095034.1095045">Moveable interactive projected displays using projector based tracking</a>. In Proceedings of the 18th annual ACM symposium on User interface software and technology (UIST '05). ACM, New York, NY, USA, 63-72.</p>
 			
 		<p>Johnny C. Lee, Scott E. Hudson, and Edward Tse. 2008. <a href="https://doi.org/10.1145/1449715.1449763">Foldable interactive displays</a>. In Proceedings of the 21st annual ACM symposium on User interface software and technology (UIST '08). ACM, New York, NY, USA, 287-290.</p>
-
-		<p>Jason E. Lewis and Alex Weyers. 1999. <a href="http://dx.doi.org/10.1145/320719.322594">ActiveText: a method for creating dynamic and interactive texts</a>. In Proceedings of the 12th annual ACM symposium on User interface software and technology (UIST '99). ACM, New York, NY, USA, 131-140.</p>
 
 		<p>David Lindlbauer, Toru Aoki, Robert Walter, Yuji Uema, Anita Höchtl, Michael Haller, Masahiko Inami, and Jörg Müller. 2014. <a href="https://doi.org/10.1145/2642918.2647350">Tracs: transparency-control for see-through displays</a>. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 657-661.</p>
 
