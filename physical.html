@@ -15,7 +15,7 @@
 		
 		<link rel="stylesheet" href="style.css" />
 		
-		<title>3D Visual Output</title>
+		<title>Physical output</title>
 		
 	</head>
 	<body>
@@ -29,41 +29,87 @@
 
 		<div class="lead">Andrew J. Ko</div>
 		
-		<p>Whereas the three-dimensional output we discussed in <a href="3D.html">the previous chapter</a> can create entirely new virtual worlds, or enhanced versions of our own world, it's equally important that software be able to interface with the <strong>physical world</strong>. In some sense, all output from computers is physical: the screens, holograms, and other light-based output from previous chapters are one class of output. The forms of output we discuss in this chapter just exploit <em>matter</em> instead of <em>light</em>.</p>
+		<p>
+			Whereas the three-dimensional output we discussed in <a href="3D.html">the previous chapter</a> can create entirely new virtual worlds, or enhanced versions of our own world, it's equally important that software be able to interface with the <strong>physical world</strong>.
+			In some sense, all output from computers is physical: the screens, holograms, and other light-based output from previous chapters are one class of output. The forms of output we discuss in this chapter just exploit <em>matter</em> instead of <em>light</em>.
+		</p>
 		
-		<p>But matter matters. After all, the material world is the one are bodies live in, and so the information in the virtual world sometimes needs to be part of the physical world. In the seminal paper, "Tangible Bits: Towards Seamless Interfaces between People, Bits and Atoms", Hiroshi Ishii and rygg Ullmer argued (<a href="TODO">2006</a>):</p>
+		<p>
+			But matter matters. 
+			After all, the material world is the one are bodies live in, and so the information in the virtual world sometimes needs to be part of the physical world.
+			In the seminal paper, <em>Tangible Bits: Towards Seamless Interfaces between People, Bits and Atoms</em>, Hiroshi Ishii and Brygg Ullmer argued (<a href="https://doi.org/10.1145/258549.258715">2006</a>):</p>
 		
 		<blockquote>
 			We live between two realms: our physical environment and cyberspace. Despite our dual citizenship, the absence of seamless couplings between these parallel existences leaves a great divide between the worlds of bits and atoms. At the present, we are torn between these parallel but disjoint spaces... Streams of bits leak out of cyberspace through a myriad of rectangular screens into the physical world as photon beams. However, the interactions between people and cyberspace are now largely confined to traditional GUI (Graphical User Interface)-based boxes sitting on desktops or laptops. The interactions with these GUIs are separated from the ordinary physical environment within which we live and interact. Although we have developed various skills and work practices for processing information through haptic interactions with physical objects (e.g., scribbling messages on Post-It&trade; notes and spatially manipulating them on a wall) as well as peripheral senses (e.g., being aware of a change in weather through ambient light), most of these practices are neglected in current HCI design because of the lack of diversity of input/output media, and too much bias towards graphical output at the expense of input from the real world.
 		</blockquote>
 		
-		<p>This basic idea, that the massive rift between our physical and digital worlds should be bridged by a diversity of new input and output media, dovetailed Weiser's vision of ubiquitous computing, but emphasizing our embodied experiences with physical objects.</p>
+		<p>
+			This basic idea, that the massive rift between our physical and digital worlds should be bridged by a diversity of new input and output media, dovetailed Weiser's vision of ubiquitous computing (<a href="http://www.jstor.org/stable/24938718">Weiser 1991</a>). However, rather than envisioning a world of embedded computing, it focused on our embodied experiences with physical objects.</p>
 		
-		<p>The result of these ideas was an explosion of research to create more physical, tangible input and output. In this chapter, we'll focus on output, discussing printing, haptics, and other forms of actuation from computers.</p>
+		<p>
+			The imapct of this vision was an explosion of research to create more physical, tangible input and output.
+			In this chapter, we'll focus on output, discussing printing, haptics, and other forms of actuation from computers.
+		</p>
 
 		<h2>Printing</h2>
 
-		<p>Most people who've interacted with computers have used a printer at some point in their life to turn bits into atoms. The basic principle is simple: take a digital document and create a facsimile with paper and some kind of mark, such as spraying ink (inkjets), burning the paper (laser printers), or one of a variety of other approaches.</p>
+		<p>
+			Most people who've interacted with computers have used a printer at some point in their life to turn bits into atoms.
+			The basic principle is simple: take a digital document and create a facsimile with paper and some kind of mark, such as spraying ink (inkjets), burning the paper (laser printers), or one of a variety of other approaches.
+		</p>
 
-		TODO Write ticker-tape section, include a photo.
+		<p>
+			One of the earliest forms of digital printing was the <strong>stock ticker machine</strong>, which used ticker tape to stream text:
+		</p>
 
-		TODO Write printer paragraph, include a photo.
+		<p>
+			<center>
+				<img src="images/tickertape.jpg" class="img-responsive" alt="Two women reading ticker tape at the New York Stock Exchange." />
+				<small>Two women at the Waldorf-Astoria Hotel in 1918 operating the ticker machines and stock exchange boards. Credit: U.S. War Department.</small>
+			</center>
+		</p>
+
+		<p>
+			While ticker tape was the most ubiquitous before the advent of digital computers, printing devices had long been in the imagination of early computer scientists. 
+			<a href="https://de.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a>, for example, the English mathematician and philosopher who first imagined the concept of a programmable digital computer in 1822, also imagined a mechanical printing device that could print the results of his imagined differencing machine.
+			The diversity of computer printing technology we have today, including machines that use toner, liquid ink, solid ink, dye-sublimation, come directly from these imagined futures of physical computer output.
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/u8I6qt_Z0Cg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>Dot matrix printers can also be used to play inspiring montage music.</center>
+		</p>
 		
-		<p>All of these approaches have focused on 2-dimensional output, primarily because the media we've made easy to create on computers has been 2-dimensional. However, as the plastics industry evolved, 3D plastic extruders reshaped manufacturing. We began to be surrounded by objects of all shapes and sizes made of plastic, each printed from a mold. While this has created a literal tons of non-biodegradable waste, it also created the urge to democratize plastics manufacturing. This led to the first personal 3D printers (TODO), allowing people to create digital documents that represented 3D forms, and then print them using new forms of plastic extrusion.</p>
+		<p>
+			Most of these printing technologies have focused on 2-dimensional output because the documents we create on computers are primarily 2-dimensional.
+			However, as the plastics industry evolved, and plastic extruders reshaped manufacturing, interest in democratizing access to 3D fabrication expanded. This led to the first 3D printer, described in a U.S. patent in 1984, which described a process for generating 3D objects by creating cross-sectional patterns of an object (<a href="https://www.google.com/patents/US4575330">Hull 1984</a>).
+			These early visions for personal 3D printing, combined with decades of research on the basic technologies required to manufacture printers at scale, eventually led to a new market for 3D printing, including companies like <a href="https://www.makerbot.com/">MakerBot</a>.
+			These printers also required the creation of new software to model printable 3D forms.
+		</p>
 
-		<img src="images/TODO.jpg" class="img-responsive" alt="TODO" />
-		<small>The first 3D printer</small>
-
-		<p>While the basic idea of 3D printing is now well established, and the market for 3D printers is expanding, researchers have gone well beyond the original premise. Much of this exploration has been in exploring materials other than plastic. One example of this is an approach to printing <em>interactive electromechanical objects with wound in place coils</em> (<a href="https://doi.org/10.1145/2984511.2984523">Peng et al. 2016</a>). These objects, made of copper wire, and structural plastic elements, allows for the printing of objects like actuated arms of toys, electric motors, and electronic displays:</p>
+		<p>
+			While the basic idea of 3D printing is now well established, and the market for 3D printers is expanding, researchers have gone well beyond the original premise.
+			Much of this exploration has been in exploring materials other than plastic.
+			One example of this is an approach to printing <em>interactive electromechanical objects with wound in place coils</em> (<a href="https://doi.org/10.1145/2984511.2984523">Peng et al. 2016</a>).
+			These objects, made of copper wire, and structural plastic elements, allows for the printing of objects like actuated arms of toys, electric motors, and electronic displays:
+		</p>
 
 		<p class="embed-responsive embed-responsive-16by9">
 	        <iframe width="560" height="315" src="https://www.youtube.com/embed/5MEYe-z9GKo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			<center>Printing electromagnetic objects.</center>
 		</p>
 
-		<p>Another project explored printing with wool and wool blend yarn to create soft felt objects rather than just rigid plastic objects (<a href="https://doi.org/10.1145/2556288.2557338">Hudson 2014</a>). Techniques like this and the one above simultaneously innovate in printing techniques, but also in exploring the possibilities of new media for bridging the digital and physical world.</p>
+		<p>
+			Another project explored printing with wool and wool blend yarn to create soft felt objects rather than just rigid plastic objects (<a href="https://doi.org/10.1145/2556288.2557338">Hudson 2014</a>).
+			Techniques like this and the one above simultaneously innovate in printing techniques, but also in exploring the possibilities of new media for bridging the digital and physical world.
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YhXIWyfI7Cw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>Printing with felt.</center>
+		</p>		
 		
-		<p>Of course, new media also pose new challenges. For example, trying to create 3D models for printing requires understanding the limitation of printing methods. This lack of understanding can lead to failed prints, which can be frustrating and expensive.	Some researchers have explored "patching" 3D objects, calculating additional parts that must be printed and mounted onto an existing failed print to create the desired shape (<a href="https://doi.org/10.1145/2807442.2807467">Teubrich et al. 2015</a>). Other research has investigated new software tools for extending, repairing, or modifying everyday objects by modeling those objects and streamlining the creation of attachment objects (<a href="https://doi.org/10.1145/2807442.2807498">Chen et al. 2015</a>):</p>
+		<p>These new forms of printing pose new challenges in authoring. One can't print arbitrary 3D shapes with 3D printers, and so this requires authors to understand the limitation of printing methods. This lack of understanding can lead to failed prints, which can be frustrating and expensive.	Some researchers have explored "patching" 3D objects, calculating additional parts that must be printed and mounted onto an existing failed print to create the desired shape (<a href="https://doi.org/10.1145/2807442.2807467">Teubrich et al. 2015</a>). Other research has investigated new software tools for extending, repairing, or modifying everyday objects by modeling those objects and streamlining the creation of attachment objects (<a href="https://doi.org/10.1145/2807442.2807498">Chen et al. 2015</a>):</p>
 
 		<p class="embed-responsive embed-responsive-16by9">
 	        <iframe width="560" height="315" src="https://www.youtube.com/embed/obui6I2dzxk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -72,13 +118,18 @@
 		
 		<p>These techniques, while not advancing <em>how</em> objects are printed, innovate in how we author objects to print, much like research innovations in word processing software from the 1980's and 1990's.</p>
 
-		<h2>Flexible interfaces</h2>
+		<h2>Morphing</h2>
 		
-		<p>One of the defining characteristics of screens is their rigidity. Their fixed shape and size constrain everything else about an experience. Consider playful Nintendo's Labo, for example, which takes the Switch screen and wraps a wild array of cardboard around it to create new experiences:</p>
+		<p>One of the defining characteristics of screens is their rigidity. Their fixed shape and size constrain everything else about an experience. Consider playful Nintendo's Labo, for example, which takes the rigid Switch screen and wraps a wild array of cardboard around it to create new experiences:</p>
 		
-		TODO Labo video
-		
-		<p>Notice how everything is physical except for the screen.</p>
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/P3Bd3HUMkyU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<center>Programmable, shape-changing materials.</center>
+		</p>
+				
+		<p>
+			While Labo doesn't change the screen itself, the composition of cardboard around the screen and the controllers effectively create new physical forms of input and output.
+		</p>
 		
 		<p>Researchers have worked hard to make interactive objects themselves more physical by making them flexible and bendable. For example, One technique takes paper, plastics, and fabrics, and makes it easy to create programmable shape-changing behaviors with those materials (<a href="https://doi.org/10.1145/2984511.2984520">Ou et al. 2016</a>):</p>
 
@@ -103,11 +154,11 @@
 
 		<p>This research innovates in both the industrial forms that interfaces take, while offering new possibilities for how they are manipulated physically.</p>
         
-		<h2>Haptic feedback</h2>
+		<h2>Haptics</h2>
         
         <p>Whereas flexible interfaces change the <em>structural</em> properties of the interface forms, others have focused on offering physical, tangible feedback. This is called <strong>haptic</strong> feedback, because it leverages people's perception of touch and sense of where their body is in space (known as proprioception).</p>
         
-        <p>Haptic feedback varies in its goals. For instance, some haptic feedback operates at a low level of human performance, such as this idea, which recreates the physical sensation of writing on paper with a pencil, ball-point pen or marker pen, but with a stylus (<a href="https://doi.org/10.1145/2984511.2984550">Cho et al. 2016</a>:</p>
+        <p>Haptic feedback varies in its goals. For instance, some haptic feedback operates at a low level of human performance, such as this idea, which recreates the physical sensation of writing on paper with a pencil, ball-point pen or marker pen, but with a stylus (<a href="https://doi.org/10.1145/2984511.2984550">Cho et al. 2016</a>):</p>
         
 		<p class="embed-responsive embed-responsive-16by9">
 	        <iframe width="560" height="315" src="https://www.youtube.com/embed/RNn0_rkFXkw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -121,7 +172,7 @@
 			<center>Feedback with airflow.</center>
 		</p>
 
-		<p>Many projects have used haptics to communicate detailed shape information, helping to bring tactile information to visual virtual worlds. Some have used ultrasound to project specific points of feedback onto hands in midair (<a href="https://doi.org/10.1145/2501988.2502018">Carter et al. 2013</a>). Others used electrovibration, integrated with touch input, enabling the design interfaces that allow users to feel virtual elements (<a href="https://doi.org/10.1145/1866029.1866074">Bau et al. 2010</a>). Some projects have used physical forms to provide shape information, such as this gel-based surface imposed on a multi-touch sensor allowing for freely morphed arbitrary shapes (<a href="https://doi.org/10.1145/2807442.2807487">Miruchna et al. 2015</a>:</p>
+		<p>Many projects have used haptics to communicate detailed shape information, helping to bring tactile information to visual virtual worlds. Some have used ultrasound to project specific points of feedback onto hands in midair (<a href="https://doi.org/10.1145/2501988.2502018">Carter et al. 2013</a>). Others used electrovibration, integrated with touch input, enabling the design interfaces that allow users to feel virtual elements (<a href="https://doi.org/10.1145/1866029.1866074">Bau et al. 2010</a>). Some projects have used physical forms to provide shape information, such as this gel-based surface imposed on a multi-touch sensor allowing for freely morphed arbitrary shapes (<a href="https://doi.org/10.1145/2807442.2807487">Miruchna et al. 2015</a>):</p>
 		
 		<p class="embed-responsive embed-responsive-16by9">
 	        <iframe width="560" height="315" src="https://www.youtube.com/embed/o8W6qbwPhwU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -139,7 +190,7 @@
 
 		<hr/>
 		
-		<p>While this exploration of media for bridging bits and atoms has been quite broad, it is not yet deep. Many of these techniques are only just barely feasible, and we still know little about what we might do with these techniques, how useful or valued these applications might be, or what it would take to manufacture and maintain the hardware they require. Nevertheless, it's clear that the tangible bits that Ishii and Ullmer envisioned in 2006 are not only possible, but rich, under-explored, and potentially transformative.</p>
+		<p>While this exploration of media for bridging bits and atoms has been quite broad, it is not yet deep. Many of these techniques are only just barely feasible, and we still know little about what we might do with these techniques, how useful or valued these applications might be, or what it would take to manufacture and maintain the hardware they require. Nevertheless, it's clear that the tangible bits that Ishii and Ullmer envisioned are not only possible, but rich, under-explored, and potentially transformative.</p>
 		
 		<center><p class="lead"><a href="help.html">Next chapter: Help</a></p></center>
 
@@ -157,7 +208,7 @@
 
 		<p>Scott E. Hudson. 2014. <a href="https://doi.org/10.1145/2556288.2557338">Printing teddy bears: a technique for 3D printing of soft interactive objects</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '14). ACM, New York, NY, USA, 459-468.</p>
 
-		<p>Hiroshi Ishii and Brygg Ullmer. (1997). <a href="TODO">Tangible bits: Towards seamless interfaces between people, bit, and atoms</a>. Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI ’97). Atlanta, Georgia (March 22-27, 1997). New York: ACM Press, pp. 234-241.</p>
+		<p>Hiroshi Ishii and Brygg Ullmer. (1997). <a href="https://doi.org/10.1145/258549.258715">Tangible bits: Towards seamless interfaces between people, bit, and atoms</a>. Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI ’97). Atlanta, Georgia (March 22-27, 1997). New York: ACM Press, pp. 234-241.</p>
 
 		<p>Jaeyeon Lee and Geehyuk Lee. 2016. <a href="https://doi.org/10.1145/2984511.2984583">Designing a Non-contact Wearable Tactile Display Using Airflows</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 183-194.</p>
 
