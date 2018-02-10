@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<title>Help</title>
+		
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/TODO" class="img-responsive" alt="TODO" />
+		<small>TODO</small>
+		
+		<h1>Help</h1>
+		<div class="lead">Andrew J. Ko</div>
+
+		<p>
+			In our <a href="theory.html">discussion of theory</a> at the beginning of this book, I made the case that a precondition of <em>using</em> an interface is <em>learning</em> the interface.
+			One way to make this required learning seamless is to minimize gulfs of execution and evaluation.
+			A good designer ensures this by understanding what people want and need to do with interfaces, and making the mapping between those things and interface action as tight as possible.
+			Another way that designers achieve this is by simplifying designs, so there's simply less to learn.
+		</p>
+		
+		<p>
+			Sometimes, however&mdash;let's be honest, most of the time&mdash;the mapping from goals to action in interfaces isn't so tight.
+			Interfaces introduce new concepts and users have to learn them.
+			Sometimes things go wrong, and to recover from an error, users need to acquire a more nuanced model of how the interface works.
+			And sometimes, interfaces are just irreducibly complex, offering great power that requires instruction and practice to fully harness.
+			3D printing, tangible interfaces, sensor-based interactions, new techniques for pointing and text, and the countless other paradigms we've discussed all require some learning to use successfully.
+		</p>
+		
+		<p>
+			One way to support this learning is to <strong>train</strong> people.
+			Apple Stores offer classes on how to use Apple software.
+			Purveyors of augmented and virtual reality offer demos that help people acclimate to gestures and heads up displays.
+			Community colleges offer classes on ubiquitous software programs, helping people who aren't comfortable tinkering with interfaces to get explicit guidance on their use.
+			YouTube is now full of millions of tutorial videos demonstrating how to use interfaces.
+		</p>
+		
+		<p>
+			The holy grail of interface learning, however, is for interfaces to <em>teach themselves</em> to users.
+			What kinds of help interfaces can be layered on to interfaces to facilitate rapid independent learning of an interface?
+			From tooltips to tutorials, in this chapter we'll discuss these approaches, and speculate about the future of help.
+		</p>
+
+		<h2>Theories of help</h2>
+		
+		<p>
+			There are several basic concepts in software help that are&hellip;helpful&hellip;to know about when understanding the vast range of ideas that have been explored.
+			For instance, applications need to help with many distinct things (<a href="TODO">Grossman et al. 2009</a>):
+		</p>
+		
+		<ul>
+			<li>Improving users' understanding of task flow in an application</li>
+			<li>Providing awareness of available functionality</li>
+			<li>Helping users locate functionality</li>
+			<li>Teaching users how to use functionality they have located</li>
+			<li>Facilitating transitions from novice to expert user (learning)</li>
+		</ul>
+		
+		<p>
+			Norman's concept of a breakdown (<a href="TODO">Norman 2013</a>) is a useful shorthand for when any of the above five tasks fail to result in learning.
+			Users might self-diagnose the problem, or they might ask for help in an interface or from someone else.
+			This is either resolved, or ultimately results the user abandoning the interface.
+		</p>
+
+		<p>Breakdowns are usually followed by a question. There are many types of questions, each corresponding to the help above (<a href="TODO">Sellen and Nicol 1995</a>):</p>
+		
+		<ul>
+			<li>What kinds of things can I do with this application?</li>
+			<li>What is this?</li>
+			<li>How do I achieve this goal?</li>
+			<li>What does this output mean?</li>
+			<li>Where am I?</li>
+		</ul>
+		
+		<p>
+			Actually providing answers to these questions usually requires natural language.
+			For example, labeling a button appropriately can help a user learn what a button does or adding a header might help a learner understand the flow of interaction in an application.
+			Choosing good words and phrases is therefore key to learnability.
+			There's just one problem: research shows that there is rarely a best word or phrase.
+			This is called the <strong>vocabulary problem</strong>.
+			This is the empirical observation that there is extreme variability in the words that people choose to express a need, and so the single word that a designer chooses for a feature very rarely corresponds to the words that users choose.
+			In fact, to get queries to successfully recall the desired functionality for 90% of users, features need to have nearly <em>20 aliases</em> for a piece of functionality.
+			This means that most naive text-based help search mechanisms will either have extremely low recall, or if many aliases have been provided, very low precision.
+			You can see the data here:
+		</p>
+		
+		<p>
+			<img src="images/vocabulary.jpg" class="img-responsive center-block" alt="A plot showing that the number of words needed per object to result in users guessing the same word ranges wildly." />
+			<center><em>The vocabulary problem in HCI (<a href="TODO">Furnas et al. 1987</a>)</em></center>
+		</p>
+
+		<p>
+			This trend of high variability of expected words suggests that any <em>one</em> rarely going to be sufficient for learning, and therefore interfaces will have to do a lot more than just label things to help users learn.
+		</p>
+
+		<h2>Searching for help</h2>
+
+		<p>
+			Perhaps the earliest form of user interface help was to write technical documentation and interface for browsing it.
+			This approach involves titled articles, help topics, or question and answer pairs.
+			In modern technical support platforms, you might find them called knowledge bases or technical support forums.
+			These platforms vary in whether the <em>designer</em> authors the content or whether the content is <em>crowdsourced</em> from users of the software.
+			For example, a typical support knowledge base might be entirely written by technical writers working for the company that created the software.
+			In contrast, large companies might instead (or in addition to) create question and answer forums in which users ask and answer questions.
+		</p>
+		
+		<p>
+			While the content that these media contain can often provide assistance for many of the breakdowns a user might have, they have many limitations:
+		</p>
+		
+		<ul>
+			<li>They require users to leave the interface they are learning and interact with a separate help interface.</li>
+			<li>They require a user to express a query or browse, requiring them to know the right terminology to find help. This imposes the vocabulary problem described earlier.</li>
+			<li>The answer may not have been written yet.</li>
+			<li>With user-generated content, answers may be wrong or out of date</p>
+		</ul>
+		
+		<p>
+			Some research has tried to tackle these problems by providing more sophisticated representations of help content.
+			For example, the Answer Garden system (<a href="TODO">Ackerman 1998</a>) stored Q&A in a graph, allowing users to find Q&A by either playing a game of "diagnostic twenty questions" or viewing the entire graph of questions.
+			Users could ask questions if they don't find theirs, routing it to an expert, who can add it to the graph of Q&A.
+			An evaluation of the system showed that users loved it when they got answers quickly; they didn’t care where the answer came from.
+			They hated having to wade through every question only to find out the answer wasn't present and they disliked expert's long answers, which experts wrote to appear knowledgeable to superiors.
+		</p>
+
+		<p>
+			<img src="images/answergarden.jpg" class="img-responsive center-block" alt="Examples of browsing and searching the graph of Q&A." />
+			<center><em>AnswerGarden (<a href="TODO">Ackerman et al. 1998</a>)</em></center>
+		</p>
+
+		<p>
+			Other approaches focused on contextualizing help in the form of tooltips, providing documents where the user was having trouble rather than requiring them to navigate elsewhere to find an answer.
+			Balloon help, for example, first appeared on Macintosh System 7, and is now ubiquitous in the form of tooltips:
+		</p>
+		
+		<p>
+			<img src="images/balloonhelp.jpg" class="img-responsive center-block" alt="Tooltips in ballons next to the element they are providing help about." />
+			<center><em>Balloon help, otherwise known as tooltips</em></center>
+		</p>
+
+		<p>
+			Tooltips can help with simple tasks, but failed to support long, complex procedures, and rely heavily on designers to anticipate help needs, since they are written at design time (<a href="TODO">Farkas 1993</a>).
+		</p>
+		
+		<p>
+			My lab worked on a variation on contextual help that tried to address the problem of static tooltip content.
+			Instead of attaching fixed content to an element, the <strong>Lemonaid</strong> system allowed users to click on an arbitrary element in a user interface to identify the <em>subject</em> of help (<a href="TODO">Chilana et al. 2012</a>).
+			It then extracted features of the selection such as its labels, position, and current interface state as a query into a database of Q&A that was indexed by these features.
+			This retrieval algorithm returned multiple possible Q&A related to the element, each with an answer authored by the designer.
+			Over time, the system learned associations between which help content was relevant to which elements of a user interface based on what questions users viewed.
+			It also allowed users to submit questions when they could not find a relevant want, crowdsourcing a mapping between user interface elements and questions:
+		</p>
+			
+		<p>
+			<img src="images/lemonaid.jpg" class="img-responsive center-block" alt="Clicking on an object, retrieving questions related to the object, and viewing an answer." />
+			<center><em>Lemonaid's selection-based help.</em></center>
+		</p>
+
+		<p>
+			I helped commercialize this system as a company called <a href="http://answerdash.com">AnswerDash</a>, which uses the technology to offer contextual help to websites experiencing high numbers of support requests.
+		</p>
+
+		<h2>Recommending help</h2>
+
+		<p>
+			Whereas the systems in the previous section required the user to proactively seek help, there have been several attempts to automatically detect when a user needs help.
+			For example, many rudimentary techniques in help chat clients on the web use simple rules, such as "if the user takes no action on a page for 1 minute, offer to chat".
+			Another basic example is simply providing explanations of how to use a feature in the interface itself, rather than waiting for a user to seek help.
+		</p>
+		
+		<p>
+			More intelligent techniques monitor activity more systematically, trying to build a more precise model of what a user needs, so it only helps when necessary.
+			For example, the Lumiere system attempted to infer user goals from a history of their actions (<a href="TODO">Horvitz et al. 1998</a>):
+		</p>
+		
+		<p>
+			<img src="images/clippy.jpg" class="img-responsive center-block" alt="A set of recommended help articles in a spreadsheet application." />
+			<center><em>Lumiere's recommended help (<a href="TODO">Horvitz et al. 1998</a>)</em></center>
+		</p>
+		
+		<p>
+			This research was the inspiration for the much-derided <a href="TODO">Microsoft Clippy</a>, which tried to help in the same way, but did not use any of the sophisticated inferencing techniques.
+			This resulted in Clippy interrupting at unwanted times, offering unwanted help.
+		</p>
+		
+		<p>
+			Another potentially useful signal of a need for help is when users undo or erase actions they have just performed.
+			One project showed that these events can indicate confusion about how to use a feature, where 90% of the undo and erase episodes indicated severe breakdowns in user’s ability to progress on a task (<a href="TODO">Akers et al. 2009</a>).
+		</p>
+
+		<p>
+			Another approach is targeting proactive help was to classify users by their expertise.
+			For example, one system tracked low-level mouse movements and menu navigation behaviors and found they are strong indicators of application expertise (<a href="TODO">Hurst et al. 2007</a>).
+			This system used a machine learned classifier to predict level of expertise during application use using features of these input streams with 91% accuracy.
+		</p>
+
+		<p>
+			Not all techniques for offering help proactively interrupt.
+			For example, the CommunityCommands system embedded data about feature usage in the interface, passively suggesting to users what features they might find useful based on a user's prior usage history (<a href="TODO">Matejska et al. 2009</a>):
+		</p>
+
+		<p>
+			<img src="images/communitycommands.jpg" class="img-responsive center-block" alt="Visualizations of feature usage frequency embedded in a command menu." />
+			<center><em>CommunityCommands</em></center>
+		</p>
+
+		<h2>Generating answers</h2>
+
+		<p>
+			While all of the systems above are ultimately driven by content written by humans, some systems assist in streamlining help content generation or generating help content automatically.
+			For example, the MixT system allowed a content author to simply demonstrate an interaction with an application to quickly generate an interactive step-by-step tutorial superior to a screen recording (<a href="TODO">Chi et al. 2012</a>):
+		</p>
+			
+		<p>
+			<img src="images/mixt.jpg" class="img-responsive center-block" alt="Four panels showing the step by step creation of a MixT tutorial." />
+			<center><em>MixT tutorial capture.</em></center>
+		</p>
+
+		<p>
+			The Crystal system, which I helped invent, created fully automated help content on demand (<a href="TODO">Myers et al. 2006</a>). 
+			It allowed users to click on anything in a word processor and ask "why" questions about it.
+			The system would answer the why question by analyzing the entire history of interactions with the application, along with the application's own independent actions (such as autocomplete or defaults) to generate answers.
+			This example explains why a word was auto-corrected to a user surprised when "teh" was corrected to "the":
+		</p>
+		
+		<p>
+			<img src="images/crystal.jpg" class="img-responsive center-block" alt="A Crystal answer, highlighting the autocorrect checkbox as the cause of a word being auto-corrected." />
+			<center><em>A Crystal explanation.</em></center>
+		</p>
+
+		
+		<hr/>
+		
+		<p>
+			Despite the diversity of help interfaces that try to enable interfaces to teach themselves, there's still a lingering question about whether just how good a help interface can be.
+			Will the gold standard always be having another person&mdash;a teacher, essentially&mdash;to explain how an interface works?
+			Or is this moot, because there are never enough people with the right expertise at the right time? Or is it possible to just design interfaces that are so learnable, separate help interfaces won't be necessary?
+		</p>
+		
+		<p>
+			I suspect that interfaces will always require help systems.
+			They are too artificial and change to much to ever eliminate the need for learning, and that means that something or someone will have to do the teaching.
+			If anything, it's people that will adapt, becoming more accustomed to the constant learning necessary to use new interfaces.
+		</p>
+		
+		<center><p class="lead"><a href="property.html">Next chapter: Intellectual property</a></p></center>
+
+		<h2>Further reading</h2>
+
+		<p>TODO: Ackerman, M. S. (1998). Augmenting organizational memory: a field study of answer garden. ACM Transactions on Information Systems (TOIS), 16(3), 203-224.</p>
+
+		<p>TODO: David Akers, Matthew Simpson, Robin Jeffries, and Terry Winograd. 2009. Undo and erase events as indicators of usability problems</p>
+
+		<p>TODO: LemonAid: Selection-Based Crowdsourced Contextual Help for Web Applications. Chilana, P.K., Ko, A.J., Wobbrock, J. (2012) ACM Conference on Human Factors in Computing Systems, 1549-1558.</p>
+
+		<p>TODO: Farkas, D. K. (1993). The role of balloon help. ACM SIGDOC Asterisk Journal of Computer Documentation, 17(2), 3-19.</p>
+
+		<p>Furnas, G. W., Landauer, T. K., Gomez, L. M., & Dumais, S. T. (1987). <a href="TODO">The vocabulary problem in human-system communication</a>. Communications of the ACM, 30(11), 964-971.</p>
+
+		<p>Grossman, T., Fitzmaurice, G., & Attar, R. (2009). <a href="TODO">A survey of software learnability: metrics, methodologies and guidelines</a>. CHI '09: Proceedings of the 27th International Conference on Human Factors in Computing Systems.
+
+		<p>TODO: Eric Horvitz, Jack Breese, David Heckerman, David Hovel, and Koos Rommelse. 1998. The lumière project: Bayesian user modeling for inferring the goals and needs of software users</p>
+
+		<p>TODO: Justin Matejka, Wei Li, Tovi Grossman, and George Fitzmaurice. 2009. CommunityCommands: command recommendations for software applications</p>
+
+		<p>TODO: Myers, B. A., Weitzman, D. A., Ko, A. J., & Chau, D. H. (2006, April). Answering why and why not questions in user interfaces. In Proceedings of the SIGCHI conference on Human Factors in computing systems (pp. 397-406). ACM.</p>
+
+		<p>Norman, D. A. (2013). The design of everyday things: Revised and expanded edition. Basic books.</p>
+
+		<p>Sellen, A., & Nicol, A. (1995). <a href="TODO">Building User-centered on-line help</a>. In Human-computer interaction.</p>
+		
+	</body>
+	
+</html>
+
