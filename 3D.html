@@ -6,17 +6,17 @@
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
+
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		
+
 		<link rel="stylesheet" href="style.css" />
-		
+
 		<title>3D Visual Output</title>
-		
+
 	</head>
 	<body>
 
@@ -24,70 +24,72 @@
 
 		<img src="images/hololens.jpg" class="img-responsive" alt="A screenshot of Microsoft's Hololens Minecraft experience" />
 		<small>Microsoft's HoloLens</small>
-		
+
 		<h1>3D Visual Output</h1>
 
-		<div class="lead">Andrew J. Ko</div>
-		
-		<p>
-			In the last chapter, we discussed how human perception has been exploited to allow interfaces to communicate data, content, and even art. 
-			However, human perception is not static: it's built to respond not just to static visual imagery, but also information over time, not just visual information.
-			Objects moving over time grab our attention.
-			Physical sensation over time allows us to feel texture, surface, and shape.
-			Moving through physical environments allow us to reconstruct mental models of a space and its contents, allowing us to interface with the physical world.
-		</p>
-		
-		<p>
-			Computing as brought opportunities to create dynamic virtual worlds, but with this has come the need to properly map those virtual worlds onto our ability to perceive worlds over time.
-			Researchers have investigated three major areas of dynamic output interfaces: animation, virtual reality, and augmented reality.
-		</p>
-	
-		<h2>Animation</h2>
-		
-		<p>
-			Some of the first efforts to create animated computer graphics were 40's, 50's, and 60's, just as digital computers were being invented (Sito 2013).
-			As computers become more ubiquitous, researchers began to explore digital animation in film, which eventually led to the ACM SIGGRAPH conference on computer graphics.
-			This academic community, joining forces with the rising interest in computer graphics, generated decades of discoveries creating ever more realistic animations, and eventually led to our modern industry of 3D animated films.
-		</p>
-		
-		<p>
-			As graphical user interfaces emerged in the 1980's, animation of interfaces became a significant topic of research.
-			An early work investigated foundations of animation that might be brought from film animation, including principles of <strong>solidity</strong>, <strong>exaggeration</strong>, and <strong>reinforcement</strong>, which were long used to give life to static images (<a href="https://doi.org/10.1145/168642.168647">Chang and Ungar 1993</a>).
-			These principles were tied to specific time-based visual ideas such as arcs, follow-through, slow in/slow out, anticipation, arrivals and departures, and motion blur, all of which are now ubiquitous in things like presentation software and modern graphical user interfaces.
-			Just as these types of motion are used in movies to convey information about action, they are now used in user interfaces to convey information, as in this animation in OS X that simulates a head shaking "no":
-		</p>
+		<div class="lead">Eric Whitmire and Andrew J. Ko</div>
 
-		<p class="embed-responsive embed-responsive-16by9">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/W_WRCMGs1f0?controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			<center>A shaking animation, conveying an incorrect password.</center>
+		<p>
+			In the last chapter, we discussed how interfaces communicate data, content, and animations on two-dimensional screens.
+			However, human visual perception is not limited to two dimensions: we spend most of our lives interacting in three-dimensional space.
+			The prevalence of flat screens on our computers, smartwatches, and smartphones is primarily due to limitations in the technology.
+			However, with advances in 3D graphics, display technology, and sensors, we’ve been able to build virtual and augmented reality systems that allow us to interact with technology in immersive 3D environments.
+			Moving through physical environments allows us to reconstruct mental models of a space and its contents, allowing us to interface with the physical world.
 		</p>
 
 		<p>
-			While this basic idea of animating interfaces was straightforward, finding ways to seamlessly implement animation into interfaces was not. 
-			Having parts of interfaces move required careful management of the position of interface elements over time, and these were incompatible with the notion of view hierarchies determining element positions at all times.
-			Some of the earliest ideas involved defining <strong>constraints</strong>, and letting those constraints determining position over time (<a href="https://doi.org/10.1145/237091.237109">Myers et al. 1996</a>): for example, a developer might say that an element should be at position A at time t, then at position B at time t+1, and then let the user interface toolkit decide precisely where to render the element between those two times.
-			This same idea could be used to animate any visual property of an element, such as its color, transparency, size, and so on.
-			These same ideas eventually led to more sophisticated animations of direct manipulation interfaces (<a href="https://doi.org/10.1145/215585.215628">Thomas and Calder 1995</a>), of icons (<a href="https://doi.org/10.1145/1978942.1979232">Harrison et al. 2011</a>), of typography engine (<a href="https://doi.org/10.1145/571985.571997">Lee et al. 2002</a>).
-			These ideas coalesced into well-defined transition abstractions that made it easier to express a range of "emotions" through transitions, such as urgency, delay, and confidence (<a href="https://doi.org/10.1145/168642.168648">Hudson and Stasko 1993</a>).
+			Computing has brought opportunities to create dynamic virtual worlds, but with this has come the need to properly map those virtual worlds onto our ability to perceive our environment.
+			This poses a number of interdisciplinary research challenges that has seen renewed interest over the last decade.
+			In this chapter, we’ll explore some of the current research trends and challenges in building virtual reality and augmented reality systems.
 		</p>
-		
-		<p>
-			All of these research ideas are now ubiquitous in toolkits like Apple's <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html">Core Animation</a>, which make it easy to express animation states without having to manage low-level details of user interface rendering.
-		</p>
+
+
 
 		<h2>Virtual reality</h2>
 
 		<p>
 			The goal of VR has always been consistent with these other forms of virtual realities: <strong>immersion</strong>.
 			Graphical user interfaces, while not intended to be immersive, can result in a degree of immersive flow when well designed.
-			Movies, when viewed in movie theaters, are already quite good at achieving immersion. Virtual reality aims for <em>total</em> immersion, while integrating interactivity.
+			Movies, when viewed in movie theaters, are already quite good at achieving immersion.
+			Virtual reality aims for <em>total</em> immersion, while integrating interactivity.
+			Moreover, the user should feel a sense of <strong>presence</strong>.
+			Not only should a VR system make you perceive the visual sensations of being in a virtual environment, but it should make you feel that you’re actually engaged and psychologically present in the environment.
 		</p>
-		
+
 		<p>
-			Jaron Lanier, one of the first people to write and speak about VR in it's modern incarnation, originally viewed VR as an empathy machine capable of helping humanity have experiences that they could not have otherwise.
+			One of the core concepts behind VR is enabling the perception of 3D graphics by presenting a different image to each eye using stereo displays.
+			By manipulating subtle differences between the image in each eye, it is possible to make objects appear at a particular depth.
+			An early example using this technique was the View-Master, a popular toy developed in the 1930s that showed a static 3D scene using transparencies on a wheel.
+		</p>
+
+		<center>
+			<img src="images/viewmaster.jpg" class="img-responsive" alt="A View-Master toy that showed a static 3D scene using stereo images" />
+			<small>A View-Master toy which let’s users view static images in 3D, using a similar principle to today’s VR headsets. Credit: <a href="https://en.wikipedia.org/wiki/View-Master#/media/File:View-Master_Model_E.JPG">Wikipedia</a></small>
+		</center>
+
+		<p>
+			In the 1990s, researchers developed CAVE systems (cave automatic virtual environments) to explore fully immersive virtual reality.
+			These systems used multiple projectors with polarized light and special 3D glasses to control the image seen by each eye.
+			After careful calibration, a CAVE user will perceive a fully 3D environment with a wide field of view.
+		<p>
+
+		<center>
+			<img src="images/cave.jpg" class="img-responsive" alt="A View-Master toy that showed a static 3D scene using stereo images" />
+			<small>A CAVE allows users to explore a virtual environment without a head-mounted display. Credit: <a href="https://upload.wikimedia.org/wikipedia/commons/6/6d/CAVE_Crayoland.jpg">Wikipedia</a></small>
+		</center>
+
+		<p>
+			One of the first head-mounted VR systems was made by Ivan Sutherland in the 1960s.
+			Though it was large and contained only wireframe graphics, it contained many of the same fundamental concepts that are present in modern VR systems.
+			As the smartphone market drove improvements in display technologies, head-mounted displays (HMDs) with sufficient resolution made VR compelling for consumer use.
+			Modern VR headsets use specialized hardware (Oculus Rift, HTC Vive) or use a smartphone.
+		</p>
+
+		<p>
+			Jaron Lanier, one of the first people to write and speak about VR in its modern incarnation, originally viewed VR as an empathy machine capable of helping humanity have experiences that they could not have otherwise.
 			In <a href="https://www.theverge.com/2017/12/8/16751596/jaron-lanier-dawn-of-the-new-everything-vr-interview">an interview with the Verge in 2017</a>, he lamented how much of this vision was lost in the modern efforts to engineer VR platforms:
 		</p>
-		
+
 		<blockquote>
 			If you were interviewing my 20-something self, I'd be all over the place with this very eloquent and guru-like pitch that VR was the ultimate empathy machine&mdash;that through VR we’d be able to experience a broader range of identities and it would help us see the world in a broader way and be less stuck in our own heads.
 
@@ -97,27 +99,34 @@ That rhetoric has been quite present in recent VR culture, but there are no guar
 		<p>
 			While modern VR efforts have often been motivated by ideas of empathy, most of the research and development investment has focused on fundamental engineering and design challenges over content:
 		</p>
-		
+
 		<ul>
 			<li>Making hardware light enough to fit comfortably on someone's head</li>
 			<li>Untethering a user from cables, allowing freedom of movement</li>
 			<li>Sensing movement at a fidelity to mirror movement in virtual space</li>
 			<li>Ensuring users don't hurt themselves in the physical world because of total immersion</li>
 			<li>Devising new forms of input that work when a user cannot even see their hands</li>
+			<li>Improving display technology to reduce simulator sickness</li>
+			<li>Adding haptic feedback to further improve as sense of immersion</li>
 		</ul>
-				
+
 		<p>
-			Most HCI research on these problems have focused on new forms of input and output.
-			For example, researchers have considered ways of using the backside of a VR headset as touch input (<a href="https://doi.org/10.1145/2984511.2984576">Gugenheimer et al. 2016a</a>), placing a flywheel on the headset to simulate inertia (<a href="https://doi.org/10.1145/2984511.2984535">Gugenheimer et al. 2016b</a>), or providing haptic feedback for virtual 3D surfaces (<a href="https://doi.org/10.1145/2984511.2984526">Benko et al. 2016</a>), as in this demo:
+			Most HCI research on these problems has focused on new forms of input and output.
+			For example, researchers have considered ways of using the backside of a VR headset as touch input (<a href="https://doi.org/10.1145/2984511.2984576">Gugenheimer et al. 2016a</a>, <a href="https://doi.org/10.1145/2971763.2971787">Lyons et al. 2016</a>), sensing finger input with gloves (Hseih et al. 2016, Whitmire et al. 2017), and the use of pens or other tools for sketching in VR (Arora et al. 2017).
+			Researches have also investigated the use of haptics to allow the user to feel aspects of the virtual environment.
+			Recent examples of advances in haptics includeplacing a flywheel on the headset to simulate inertia (<a href="https://doi.org/10.1145/2984511.2984535">Gugenheimer et al. 2016b</a>), using ultrasound to deliver feedback to the hands (<a href="https://doi.org/10.1145/2661229.2661257">Long et al. 2014</a>) or rendering shear forces on the fingertips with wearable devices (<a href="https://doi.org/10.1145/3025453.3025744">Schorr et al. 2017</a>).
+			Another class of haptic devices rely on handheld controllers.
+			Researchers have explored ways to extending the traditional VR controller to add the ability to render the sensation of weight (<a href="https://doi.org/10.1109/TVCG.2017.2656978">Zenner et al. 2017</a>), grasping an object (<a href="https://doi.org/10.1145/3126594.3126599">Choi et al. 2017</a>) or exploring virtual 3D surfaces (<a href="https://doi.org/10.1145/2984511.2984526">Benko et al. 2016</a>), as in this demo:
 		</p>
-        
+
 		<p class="embed-responsive embed-responsive-16by9">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/KhbUg3_3T0I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			<center>An approach to providing haptic feedback with an extrudable surface.</center>
 		</p>
 
 		<p>
-			Some approaches to VR content have focused on somewhat creepy ways of exploiting immersion, such as this system, which nudges humans to walk in a direction under someone else's control by shifting the user's field of view (<a href="https://doi.org/10.1145/2984511.2984545">Ishii et al. 2016</a>):
+			Some approaches to VR content have focused on somewhat creepy ways of exploiting immersion to steer users’ attention or physical direction of motion.
+			Examples include using a haptic reflex on the head to steer users (<a href="https://doi.org/10.1145/3084822.3084842">Kon et al. 2017</a>), or this system, which nudges humans to walk in a direction under someone else's control by shifting the user's field of view (<a href="https://doi.org/10.1145/2984511.2984545">Ishii et al. 2016</a>):
 		</p>
 
 		<p class="embed-responsive embed-responsive-16by9">
@@ -126,24 +135,31 @@ That rhetoric has been quite present in recent VR culture, but there are no guar
 		</p>
 
 		<p>
-			Other more mainstream applications have of included training simulations and games (<a href="https://doi.org/10.1109/MC.2005.297">Zyda 2005</a>) to some educational applications (<a href="https://doi.org/10.1016/j.cag.2005.10.004">Pan et al. 2006</a>), but designers are still very much learning about how to exploit the unique properties of the medium in search of killer apps.
+			Other more mainstream applications have included training simulations and games (<a href="https://doi.org/10.1109/MC.2005.297">Zyda 2005</a>) and some educational applications (<a href="https://doi.org/10.1016/j.cag.2005.10.004">Pan et al. 2006</a>), but designers are still very much learning about how to exploit the unique properties of the medium in search of killer apps.
+			Beyond gaming, the industry has also explored VR as a storytelling medium.
+			For example, <a href="https://www.oculus.com/story-studio/films/henry/">Henry</a> is a short story designed by Oculus Story Studio that won the first Emmy award for a VR short.
+			Because of VR’s roots in the video game industry, designers and storytellers have made use of game engines for storytelling, but custom design tools for storytelling will likely evolve over time.
 		</p>
 
 		<h2>Augmented reality</h2>
 
 		<p>
-			Augmented reality (AR), in contrast to virtual reality, does not aim for immersion, but altered reality, to support human augmentation.
+			Augmented reality (AR), in contrast to virtual reality, does not aim for complete immersion in a virtual environment, but to alter reality to support human augmentation.
 			This vision for AR goes back to Ivan Sutherland (of <a href="history.html">Sketchpad</a>) in the 1960's, who dabbled with head mounted displays for augmentation.
 			Only in the late 1990's did the hardware and software sufficient for augmented reality begin to emerge, leading to research innovation in displays, projection, sensors, tracking, and, of course, interaction design (<a href="https://doi.org/10.1109/38.963459">Azuma et al. 2001</a>).
 			This has culminated in a range of commercially available techniques and toolkits for AR, most notably Apple's <a href="https://developer.apple.com/arkit/">ARKit</a>, which is the most ubiquitous deployment of a mixed reality platform to date, and Microsoft's <a href="https://www.microsoft.com/en-us/hololens">Hololens</a>.
 			Both are heavily informed by academic research and by Microsoft Research in particular.
 		</p>
-		
+
 		<p>
+			Research problems in AR are similar to those in VR, but with a set of additional challenges and constraints.
+			For one, the requirements of tracking accuracy and latency are much stricter, since any errors in rendering virtual content will be made more obvious by the physical background.
+			For head-mounted AR systems, the design of displays and optics are challenging, since they must be able to render content without obscuring the user’s view of the real world.
+			When placing virtual objects in a physical space, researchers have looked at how to match the lighting of the physical space so virtual objects look believable (<a href="https://doi.org/10.1109/ISMAR.2012.6402547">Lensing et al, 2012</a>, <a href="https://doi.org/10.1109/ISMAR.2016.18">Richter-Trummer et al, 2016</a>).
 			HCI contributions to AR have focused primarily on how to coordinate input and output in mixed reality applications.
 			For example, one application envisioned a method for remote participants using VR, with others using AR to view the remote participant as teleported into a target environment (<a href="https://doi.org/10.1145/2984511.2984517">Orts-Escolano et al. 2016</a>):
 		</p>
-		
+
 		<p class="embed-responsive embed-responsive-16by9">
 	        <iframe width="560" height="315" src="https://www.youtube.com/embed/o00mn1XbClg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			<center>3D teleportation via augmented reality</center>
@@ -158,25 +174,27 @@ That rhetoric has been quite present in recent VR culture, but there are no guar
 			For example, one way for remote participants to interact with a shared object is to make one of them virtual, tracking the real one in 3D (<a href="https://doi.org/10.1145/2807442.2807497">Oda et al. 2015</a>).
 			Another project provided an overview of the physical space and the objects in it, helping to facilitate interaction with virtual objects (<a href="https://doi.org/10.1145/571985.572017">Bell et al. 2002</a>).
 			Research has also dealt with how to annotate physical scenes without occluding important objects, requiring some notion of what is and is not important in a scene (<a href="https://doi.org/10.1145/502348.502363">Bell et al. 2001</a>).
+			Other researchers have looked at how to use physical objects to interact with virtual characters. (<a href="https://www.disneyresearch.com/publication/interacting-intelligent-characters-ar/">Cimen et al. 2017</a>)
 		</p>
 
 		<p>
-			Some interaction design issues are even lower-level.
+			Some interaction research attempts to solve lower-level challenges.
 			For example, many AR glasses have narrow field of view, limiting immersion, but adding further ambient projections can widen the viewing angle (<a href="https://doi.org/10.1145/2807442.2807493">Benko et al. 2015</a>).
 			There are also other geometric limitations in scene tracking, which can manifest as <strong>registration errors</strong> between the graphics and the physical world, leading to ambiguity in interaction with virtual objects.
 			This can be overcome by propagating geometric uncertainty throughout the scene graph of the rendered scene, improving estimates of the locations of objects in real time (<a href="https://doi.org/10.1145/1095034.1095052">Coelho et al. 2005</a>).
 		</p>
 
 		<hr/>
-		
+
 		<p>
-			From the most basic primitive forms of computer animation, to the more advanced mixed reality visions blending the physical and virtual worlds, designing interactive experiences around dynamic output offer great potential for new media, but also great challenges in finding meaningful applications and seamless interactions.
+			From smartphone-based VR, to the more advanced mixed reality visions blending the physical and virtual worlds, designing interactive experiences around 3D output offers great potential for new media, but also great challenges in finding meaningful applications and seamless interactions.
 			Researchers are still hard at work trying to address these challenges, while industry forges ahead on scaling the robust engineering of practical hardware.
 		</p>
-		
+
 		<center><p class="lead"><a href="physical.html">Next chapter: Physical output</a></p></center>
 
 		<h2>Further reading</h2>
+		<p>Rahul Arora, Rubaiat Habib Kazi, Fraser Anderson, Tovi Grossman, Karan Singh, and George Fitzmaurice. 2017. <a href="https://doi.org/10.1145/3025453.3025474">Experimental Evaluation of Sketching on Surfaces in VR</a>. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17). ACM, New York, NY, USA, 5643-5654.</p>
 
 		<p>Azuma, R., Baillot, Y., Behringer, R., Feiner, S., Julier, S., & MacIntyre, B. (2001). <a href="https://doi.org/10.1109/38.963459">Recent advances in augmented reality. IEEE computer graphics and applications, 21(6), 34-47.</p>
 
@@ -188,8 +206,12 @@ That rhetoric has been quite present in recent VR culture, but there are no guar
 
 		<p>Hrvoje Benko, Christian Holz, Mike Sinclair, and Eyal Ofek. 2016. <a href="https://doi.org/10.1145/2984511.2984526">NormalTouch and TextureTouch: High-fidelity 3D Haptic Shape Rendering on Handheld Virtual Reality Controllers</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 717-728.</p>
 
+		<p>Inrak Choi, Heather Culbertson, Mark R. Miller, Alex Olwal, and Sean Follmer. 2017. <a href="https://doi.org/10.1145/3126594.3126599">Grabity: A Wearable Haptic Interface for Simulating Weight and Grasping in Virtual Reality</a>. In Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology (UIST '17). ACM, New York, NY, USA, 119-130.</p>
+
+		<p>Cimen, G., Yuan, Y., Sumner, R. W., Coros, S., & Guay, M. 2017. Interacting with Intelligent Characters in AR. Workshop on Artificial Intelligence Meets Virtual and Augmented Worlds (AIVRAR)</p>
+
 		<p>Enylton Machado Coelho, Blair MacIntyre, and Simon J. Julier. 2005. <a href="http://dx.doi.org/10.1145/1095034.1095052">Supporting interaction in augmented reality in the presence of uncertain spatial knowledge</a>. In Proceedings of the 18th annual ACM symposium on User interface software and technology (UIST '05). ACM, New York, NY, USA, 111-114.</p>
-		
+
 		<p>Bay-Wei Chang and David Ungar. 1993. <a href="https://doi.org/10.1145/168642.168647">Animation: from cartoons to the user interface</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 45-55.</p>
 
 		<p>Jan Gugenheimer, David Dobbelstein, Christian Winkler, Gabriel Haas, and Enrico Rukzio. 2016. <a href="https://doi.org/10.1145/2984511.2984576">FaceTouch: Enabling Touch Interaction in Display Fixed UIs for Mobile Virtual Reality</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 49-60.</p>
@@ -197,12 +219,20 @@ That rhetoric has been quite present in recent VR culture, but there are no guar
 		<p>Jan Gugenheimer, Dennis Wolf, Eythor R. Eiriksson, Pattie Maes, and Enrico Rukzio. 2016. <a href="https://doi.org/10.1145/2984511.2984535">GyroVR: Simulating Inertia in Virtual Reality using Head Worn Flywheels</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 227-232.</p>
 
 		<p>Chris Harrison, Gary Hsieh, Karl D.D. Willis, Jodi Forlizzi, and Scott E. Hudson. 2011. <a href="https://doi.org/10.1145/1978942.1979232">Kineticons: using iconographic motion in graphical user interface design</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '11). ACM, New York, NY, USA, 1999-2008.</p>
-		
+
+		<p>Yi-Ta Hsieh, Antti Jylhä, Valeria Orso, Luciano Gamberini, and Giulio Jacucci. 2016. <a href="https://doi.org/10.1145/2858036.2858436">Designing a Willing-to-Use-in-Public Hand Gestural Interaction Technique for Smart Glasses</a>. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI '16). ACM, New York, NY, USA, 4203-4215.</p>
+
 		<p>Scott E. Hudson and John T. Stasko. 1993. <a href="https://doi.org/10.1145/168642.168648">Animation support in a user interface toolkit: flexible, robust, and reusable abstractions</a>. In Proceedings of the 6th annual ACM symposium on User interface software and technology (UIST '93). ACM, New York, NY, USA, 57-67.</p>
 
 		<p>Akira Ishii, Ippei Suzuki, Shinji Sakamoto, Keita Kanai, Kazuki Takazawa, Hiraku Doi, and Yoichi Ochiai. 2016. <a href="https://doi.org/10.1145/2984511.2984545">Optical Marionette: Graphical Manipulation of Human's Walking Direction</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 705-716.</p>
-		
+
+		<p>P. Lensing and W. Broll, <a href="https://doi.org/10.1109/ISMAR.2012.6402547">"Instant indirect illumination for dynamic mixed reality scenes,"</a> 2012 IEEE International Symposium on Mixed and Augmented Reality (ISMAR), Atlanta, GA, 2012, pp. 109-118.</p>
+
+		<p>Yuki Kon, Takuto Nakamura, and Hiroyuki Kajimoto. 2017. <a href="https://doi.org/10.1145/3084822.3084842">HangerOVER: HMD-embedded haptics display with hanger reflex</a>. In ACM SIGGRAPH 2017 Emerging Technologies (SIGGRAPH '17). ACM, New York, NY, USA, Article 11, 2 pages.</p>
+
 		<p>Johnny C. Lee, Jodi Forlizzi, and Scott E. Hudson. 2002. <a href="https://doi.org/10.1145/571985.571997">The kinetic typography engine: an extensible system for animating expressive text</a>. In Proceedings of the 15th annual ACM symposium on User interface software and technology (UIST '02). ACM, New York, NY, USA, 81-90.</p>
+
+		<p>Benjamin Long, Sue Ann Seah, Tom Carter, and Sriram Subramanian. 2014. <a href="http://dx.doi.org/10.1145/2661229.2661257">Rendering volumetric haptic shapes in mid-air using ultrasound</a>. ACM Trans. Graph. 33, 6, Article 181 (November 2014).</p>
 
 		<p>Brad A. Myers, Robert C. Miller, Rich McDaniel, and Alan Ferrency. 1996. <a href="http://dx.doi.org/10.1145/237091.237109">Easily adding animations to interfaces using constraints</a>. In Proceedings of the 9th annual ACM symposium on User interface software and technology (UIST '96). ACM, New York, NY, USA, 119-128.</p>
 
@@ -212,13 +242,20 @@ That rhetoric has been quite present in recent VR culture, but there are no guar
 
 		<p>Pan, Z., Cheok, A. D., Yang, H., Zhu, J., & Shi, J. (2006). <a href="https://doi.org/10.1016/j.cag.2005.10.004">Virtual reality and mixed reality for virtual learning environments</a>. Computers & Graphics, 30(1), 20-28.</p>
 
+		<p>Samuel B. Schorr and Allison M. Okamura. 2017. <a href="https://doi.org/10.1145/3025453.3025744">Fingertip Tactile Devices for Virtual Object Manipulation and Exploration</a>. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17). ACM, New York, NY, USA, 3115-3119.</p> DOI:
+
 		<p>Sito, T. (2013). Moving innovation: a history of computer animation. MIT Press.</p>
 
 		<p>Bruce H. Thomas and Paul Calder. 1995. <a href="http://dx.doi.org/10.1145/215585.215628">Animating direct manipulation interfaces</a>. In Proceedings of the 8th annual ACM symposium on User interface and software technology (UIST '95). ACM, New York, NY, USA, 3-12.</p>
 
+		<p>T. Richter-Trummer, D. Kalkofen, J. Park and D. Schmalstieg, <a href="https://doi.org/10.1109/ISMAR.2016.18">"Instant Mixed Reality Lighting from Casual Scanning,"</a> 2016 IEEE International Symposium on Mixed and Augmented Reality (ISMAR), Merida, 2016, pp. 27-36.</p>
+
+		<p>Eric Whitmire, Mohit Jain, Divye Jain, Greg Nelson, Ravi Karkar, Shwetak Patel, and Mayank Goel. 2017. <a href="https://doi.org/10.1145/3130978">DigiTouch: Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays</a>. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 1, 3, Article 113 (September 2017), 21 pages.</p>
+
+		<p>Andre Zenner and Antonio Kruger. 2017. <a href="https://doi.org/10.1109/TVCG.2017.2656978">Shifty: A Weight-Shifting Dynamic Passive Haptic Proxy to Enhance Object Perception in Virtual Reality</a>. IEEE Transactions on Visualization and Computer Graphics 23, 4 (April 2017), 1285-1294.</p>
+
 		<p>Zyda, M. (2005). <a href="https://doi.org/10.1109/MC.2005.297">From visual simulation to virtual reality to games</a>. Computer, 38(9), 25-32.</p>
 
 	</body>
-	
-</html>
 
+</html>
