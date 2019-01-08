@@ -61,7 +61,7 @@
 
 		<p>
 			Why are we talking about programming in a book about user interfaces?
-			Well, programming interfaces <em>are</em> user interfaces.
+			Well, declarative interfaces <em>are</em> user interfaces.
 			They're just user interfaces that have very different properties than the interactive user interfaces we're all familiar with.
 			Clearly, all of the properties above come with great cost: no immediate feedback, having to learn a programming language, and having to think abstractly are all much more difficult than having to learn a graphical user interface.
 			But with all of that additional learning also comes great power.
@@ -75,7 +75,7 @@
 
 
 		<p>
-			What are programming interfaces?
+			What are declarative interfaces?
 			Ultimately, they're software that <em>translate</em> some expression of a program (a text file with code in it, or a hierarchical tree of language constructs in <a href="https://developers.google.com/blockly/">block-based editor</a>) into a representation a computer can execute, usually some series of instructions that consist of low level operations such as arithmetic, reading and writing data values in memory, and jumping to other instructions.
 			In textual languages, there are lexers, which decompose code into <em>tokens</em>, which are then parsed according to a formal grammar into an <em>abstract syntax tree</em>.
 			In the case of block-based editors, users use an editor to directly manipulate an abstract syntax tree.
@@ -86,7 +86,7 @@
 
 		<p>
 			However, this distance, conceptually, is no different from any other user interface.
-			Because programming interfaces are user interfaces, they also have <a href="theory.html">gulfs of evaluation and execution, and affordances and feedback that bridge them</a>.
+			Because declarative interfaces are user interfaces, they also have <a href="theory.html">gulfs of evaluation and execution, and affordances and feedback that bridge them</a>.
 			Their gulfs are just much larger because of translation.
 			Because textual programs are parsed according to a formal grammar, there are numerous ways to violate the grammar, requiring a user to know the rules of the grammar to write correct programs.
 			Because the functional affordances in a programming language can be combined in infinite ways, there are an <em>infinite</em> number of programs that can exist.
@@ -109,7 +109,7 @@
 		</p>
 
 		<p>
-			This vast range of domains in which programming interfaces can be applied has lead to an abundance of unique programming interfaces.
+			This vast range of domains in which declarative interfaces can be applied has lead to an abundance of unique declarative interfaces.
 			For example, several researchers have explored ways to automate interaction with user interfaces, to take repetitive tasks and automate them.
 			One such system is Sikuli (above), which allows users to use screenshots of user interfaces to write scripts that automate interactions (<a href="#yeh">Yeh et al. 2009</a>).
 			Similar systems have used similar ideas to allow users to write simple programs to automate web tasks.
@@ -163,7 +163,7 @@
 		</p>
 
 		<p>
-			The vast majority of innovations for programming interfaces have focused on bridging the gulf of execution.
+			The vast majority of innovations for declarative interfaces have focused on bridging the gulf of execution.
 			Fewer systems have focused on bridging gulfs of evaluation by supporting, testing, and debugging behaviors a user is trying to understand.
 			One from my own research was a system called the Whyline (see the video above), which allowed users to ask "why" and "why not" questions when their program did something they didn't expect, bridging a gulf of evaluation.
 			It identified questions by scanning the user's program for all possible program outputs, and answered questions by precisely trying the cause of every operation in the program, reasoning backwards about the chain of causality that caused an unwanted behavior or prevented a desired behavior.
