@@ -56,6 +56,8 @@
 			<center>All the widgets, narrated by Brad Myers</center>
 		</p>
 
+		<h2>Windows, icons, menus, and pointers</h2>
+		
 		<p>
 			The first big idea is <strong>windows</strong>.
 			The fundamental problem that windows solve is <em>how to provide visual access to a potentially infinite amount of content larger than the size of a screen on a fixed size display</em>.
@@ -125,14 +127,31 @@
 		<p>
 			What about sliders, check boxes, text boxes, radio buttons, drop down menus, and all of the other <strong>widgets</strong> that make up graphical user interfaces?
 			These solve the problem of enabling users to provide specific types of user input efficiently and without errors.
-			Sliders provide continuous values with a clear minimum and maximum.
-			Checkboxes provide binary values.
-			Text boxes provide strings.
-			Radio buttons and drop down menus provide categorical values.
-			Each one of these widgets, as portrayed in the "All the widgets" video earlier, has been carefully designed to allow rapid, error-free input of each of these data types.
+		<p>
+			
+		<ul>
+			<li><strong>Sliders></strong> provide a control for specifying continuous numeric values within a numeric range.</li>
+			<li><strong>Checkboxes</strong> provide an error-free mechanism for specifying binary values (and sometimes tertiary values, which are often represented by a dash).</li>
+			<li><strong>Text boxes</strong> provide an interface for specifying string values, often with sophisticated error-prevention mechanisms such as form validation and user efficiency features such as auto-complete</li>
+			<li><strong>Radio buttons</strong> and <strong>drop down menus</strong> provide error-preventing interfaces for specifying categorical values.</li>
+		</ul>
+			
+		<p>
+			Each one of these widgets, as portrayed in the "All the widgets" video earlier, has been carefully designed to allow rapid, error-free, efficient input of each of these data types.
 			Of course, since these early widgets were invented, researchers have discovered many other types of widgets designed for data types that don't map well onto this small set of primitive widgets.
 			For example, some researchers have designed widgets for selecting time values on non-linear scales (<a href="#koike">Koike et al. 1997</a>).
 		</p>
+
+		<p>
+			Another big idea in WIMP interfaces is the idea of <strong>copy and paste</strong>.
+			This idea solves the basic problem of moving data from one place to another when that data is not stored in a file, or not stored in a file accessible to the user.
+			As you probably know, copy and paste is actually one of the most critical features of user interfaces, allowing users to move information regardless of where it comes from.
+			Researchers have explored many ways to improve the power of this feature, including techniques that have greater semantic awareness of the content being copied, allowing it to be parsed and pasted in more intelligent ways (<a href="#stylos">Stylos et al. 2004</a>).
+			Others have explored ways of moving data between different machines by giving copied data identity (<a href="#rekimoto">Rekimoto 1997</a>) or by synchronizing clipboards across devices (<a href="#miller">Miller & Myers 1999</a>).
+			Some of these features are now mainstream; for example, iOS supports a cloud-based synchronized keyboard that enables pasting content between different devices logged into the same iCloud account.
+		</p>
+
+		<h2>Direct manipulation</h2>
 
 		<p>
 			Another central paradigm of WIMP interfaces is <strong>direct manipulation</strong> (<a href="#hutchins">Hutchins et al. 1985</a>).
@@ -153,22 +172,16 @@
 			More recently, researchers have applied techniques from programming languages and machine learning to support automatically converting sketches into scalable vector graphics suitable for the web (<a href="#hempel">Hempel & Chugh 2017</a>), to define the layout of data visualizations (<a href="#hottelier">Hottelier et al. 2014</a>), and to manipulate speech music and other audio more directly (<a href="#rubin">Rubin et al. 2013.</a>).
 			All of these leverage the same basic paradigm of explicit representation and manipulation of an object.
 		</p>
-
-		<p>
-			One of the last big ideas in WIMP interfaces is the idea of <strong>copy and paste</strong>.
-			This idea solves the basic problem of moving data from one place to another when that data is not stored in a file, or not stored in a file accessible to the user.
-			As you probably know, copy and paste is actually one of the most critical features of user interfaces, allowing users to move information regardless of where it comes from.
-			Researchers have explored many ways to improve the power of this feature, including techniques that have greater semantic awareness of the content being copied, allowing it to be parsed and pasted in more intelligent ways (<a href="#stylos">Stylos et al. 2004</a>).
-			Others have explored ways of moving data between different machines by giving copied data identity (<a href="#rekimoto">Rekimoto 1997</a>) or by synchronizing clipboards across devices (<a href="#miller">Miller & Myers 1999</a>).
-			Some of these features are now mainstream; for example, iOS supports a cloud-based synchronized keyboard that enables pasting content between different devices logged into the same iCloud account.
-		</p>
-
+		
+		<h2>WIMP isn't natural, its invented</h2>
+			
 		<p>
 			While all of the interactive interface ideas above are probably deeply familiar to you, it is important to remember that they are not natural in any way.
 			They are entirely invented, artificial designs that solve very specific problems of presenting information to users, getting data from users, and supporting command invocation.
 			The only reason they <em>feel</em> natural is because we practice using them so frequently.
 			In designing interfaces, it's reasonable to leverage everyone's long history of practice with these old ideas.
-			However, it's also reasonable to question  them when dealing with new types of data or interaction.</p>
+			However, it's also reasonable to question  them when dealing with new types of data or interaction.
+		</p>
 
 		<center class="lead"><a href="architecture.html">Next chapter: Architecture</a></center>
 	
