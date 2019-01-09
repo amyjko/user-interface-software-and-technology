@@ -98,6 +98,51 @@
 		</p>
 
 		<p>
+			Early in my research career, I set out to document some of the major categories of gulfs of execution and evaluationin declaractive interfaces.
+			I found six (<a href="ko04">Ko et al. 2004</a>):
+		</p>
+		
+		<ul>
+			<li>
+				<strong>Design barriers</strong>.
+				Declarative interfaces each have their own distinct things that can be easily expressed. 
+				Deciding <em>what</em> to express therefore depends on knowledge of what <em>can</em> be expressed.
+				People have to bridge this gulf of execution by learning the expressive possibilities before they can decide what they want to express.
+			</li>
+			<li>
+				<strong>Selection barriers</strong>.
+				Once someone knows what they want to express, finding the abstractions that are most helpful in expressing it is another challenge.
+				which parts of a programming language and API are most useful in expressing some computation?
+				People have to bridge this gulf of execution before writing any code.
+			</li>
+			<li>
+				<strong>Use barriers</strong>.
+				Once someone finds some abstractions that are useful for expressing what they want, they have to learn how to <em>use</em> these abstractions.
+				For example, when using a function in an API, they might have to learn what kinds of arguments to send to the function, and what that function might return.
+				People have to bridge this gulf of execution to know what code to write.
+			</li>
+			<li>
+				<strong>Coordination barriers</strong>.
+				Once someone finds what abstractions are relevant, they have to learn how to compose them together to do what they want.
+				This is because different abstractions in a declaractive interface can interact with each other, requiring knowledge of these interactions.
+				People have to bridge this gulf of execution to know what code to write.
+			</li>
+			<li>
+				<strong>Understanding barriers</strong>.
+				Once someone has written some code, it's probably not exactly right, which means they will have to generate explanations of what might be wrong with their program.
+				Generating these possibilities requires learning what <em>can</em> go wrong in a program.
+				People have to bridge this gulf of evaluation before they can fix defects in their code.
+			</li>
+			<li>
+				<strong>Information barriers</strong>.
+				Once someone has an idea of what <em>might</em> be wrong in their program, they have to gather information about how the program executed to check their guess.
+				Getting this information requires learning how to use things like testing and debugging tools, which pose their own set of gulfs.
+			</li>
+		</ul>
+		
+		<p>These various barriers reveal why learning to code is so challenging and requires so much learning relative to graphical user interfaces.</p>
+		
+		<p>
 			While there is a vast literature on programming languages and tools, and much of it focuses on bridging gulfs of execution and evaluation, in this chapter, we'll focus on the contributions that HCI researchers have made to solving these problems, as they demonstrate the rich, under-explored design space of ways that people can program computers beyond using general purpose languages.
 			Much of this work can be described as supporting <em>end-user programming</em>, which is any programming that someone does as a means to accomplishing some other goal (<a href="#ko">Ko et al. 2011</a>).
 			For example, a teacher writing formulas in a spreadsheet to compute grades, a child using <a href="https://scratch.mit.edu/">Scratch</a> to create an animation, or a data scientist writing a Python script to wrangle some data&mdash;none of these people are writing code for the code itself (as professional software engineers do), they're writing code for the output their program will produce (the teacher wants the grades, the child wants the animation, the data scientist wants the wrangled data).
@@ -203,8 +248,10 @@
 
 		<p id="kelleher">Caitlin Kelleher and Randy Pausch. 2005. <a href="http://dx.doi.org/10.1145/1089733.1089734">Lowering the barriers to programming: A taxonomy of programming environments and languages for novice programmers</a>. ACM Comput. Surv. 37, 2 (June 2005), 83-137.</p>
 
+		<p id="ko04">Andrew J. Ko, Brad A. Myers, Htet Htet Aung (2004). <a href="https://doi.org/10.1109/VLHCC.2004.47">Six learning barriers in end-user programming systems</a>. IEEE Symposium on Visual Languages-Human Centric Computing, 199-206</p>
+		
 		<p id="ko">Andrew J. Ko, Robin Abraham, Laura Beckwith, Alan Blackwell, Margaret Burnett, Martin Erwig, Chris Scaffidi, Joseph Lawrance, Henry Lieberman, Brad Myers, Mary Beth Rosson, Gregg Rothermel, Mary Shaw, and Susan Wiedenbeck. 2011. <a href="http://dx.doi.org/10.1145/1922649.1922658">The state of the art in end-user software engineering</a>. ACM Comput. Surv. 43, 3, Article 21 (April 2011), 44 pages.</p>
-
+		
 		<p id="kulesza">Todd Kulesza, Weng-Keen Wong, Simone Stumpf, Stephen Perona, Rachel White, Margaret M. Burnett, Ian Oberst, and Andrew J. Ko. 2009. <a href="http://dx.doi.org/10.1145/1502650.1502678">Fixing the program my computer learned: barriers for end users, challenges for the machine</a>. In Proceedings of the 14th international conference on Intelligent user interfaces (IUI '09). ACM, New York, NY, USA, 187-196.</p>
 
 		<p id="lau">Tessa Lau, Julian Cerruti, Guillermo Manzato, Mateo Bengualid, Jeffrey P. Bigham, and Jeffrey Nichols. 2010. <a href="https://doi.org/10.1145/1866029.1866067">A conversational interface to web automation</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 229-238.</p>
