@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Translating research into practice</title>
+
+	</head>
+	<body>
+
+		<p><a href="index.html">Back to table of contents</a></p>
+
+		<img src="images/TBD.jpg" class="img-responsive" alt="TBD" />
+		<small>TBD</small>
+
+		<h1>Translating research into practice</h1>
+		<div class="lead">Andrew J. Ko</div>
+    
+    <p>
+      I love doing research on interfaces.
+      There's nothing like imagining an entirely new way of interacting with a computer, creating it, and then showing it to the world.
+      But if the inventions researchers like myself create never impact the interfaces we all use every day, what's the point?
+      The answer, of course, is more complex than just a binary notion of an invention's impact.
+    </p>
+    
+    <p>
+      First, much of what you've read about in this book has <em>already</em> impacted other researchers.
+      This type of research impact is critical: it shapes what other inventors think is possible, provides them with new ideas to pursue, and can sometimes catalyze entirely new genres.
+      Think back, for example, to Vannevar Bush's Memex.
+      No one actually made a Memex as described, nor did they need to; instead, other inventors selected some of their favorite ideas from his vision, combined them with other ideas, and manifested them in entirely unexpected ways.
+      The result was more than just more research ideas, but eventually products and entire networks of computers that have begun to reshape society.
+    </p>
+    
+    <p>
+      How then, do research ideas <em>indirectly</em> lead to impact?
+      I would argue, based on both experience, and historical records of interface innovation, that there are three essential events that musst occur.
+    </p>
+    
+    <ul>
+      <li>
+        <strong>Researchers must demonstrate feasibility</strong>.
+        Until we know that something works, that it works well, and that it works consistently, it just doesn't matter how exciting the idea is.
+        It took Xerox PARC years to make the GUI feel like something that could be a viable product.
+      </li>
+      <li>
+        <strong>Someone must take an entreprenurial risk</strong>.
+        It doesn't matter how much evidence researchers gather about the viability of an interface idea.
+        At some point, someone in an organization is going to have to see some opportunity in bringing that interface to the world at scale.
+        Even if the interface is fully proven (which it never is), scale is its own risk.
+      </li>
+      <li>
+        <strong>The interface has to win in the market</strong>.
+        Even if an organization perfectly executes an interface at scale, and is fully committed to seeing it in the world, it only lives on if the timing is right for people to want it relative to other interfaces.
+        Consider Google's many poorly timed innnovations: Google Glass, Google Wave, Google Buzz, Google Video; all of these were compelling new interface innovations, but none of them found a market.       
+    </ul>
+
+		<center><p class="lead"><a href="index.html">Back to table of contents</a></p></center>
+
+		<h2>Further reading</h2>
+
+		<p>Richard A. Bolt. 1980. <a href="http://dx.doi.org/10.1145/800250.807503">"Put-that-there": Voice and gesture at the graphics interface</a>. In Proceedings of the 7th annual conference on Computer graphics and interactive techniques (SIGGRAPH '80). ACM, New York, NY, USA, 262-270.</p>
+
+		<p>Xiang 'Anthony' Chen and Yang Li. 2016. <a href="https://doi.org/10.1145/2984511.2984541">Bootstrapping User-Defined Body Tapping Recognition with Offline-Learned Probabilistic Representation</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 359-364.</p>
+
+		<p>Gabe Cohn, Daniel Morris, Shwetak Patel, and Desney Tan. 2012. <a href="http://dx.doi.org/10.1145/2207676.2208330">Humantenna: using the body as an antenna for real-time whole-body interaction</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '12). ACM, New York, NY, USA, 1901-1910.</p>
+
+		<p>Tong Gao, Mira Dontcheva, Eytan Adar, Zhicheng Liu, and Karrie G. Karahalios. 2015. <a href="https://doi.org/10.1145/2807442.2807478">DataTone: Managing Ambiguity in Natural Language Interfaces for Data Visualization</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 489-500.</p>
+
+		<p>Mayank Goel, Chen Zhao, Ruth Vinisha, and Shwetak N. Patel. 2015. <a href="https://doi.org/10.1145/2702123.2702591">Tongue-in-Cheek: Using Wireless Signals to Enable Non-Intrusive and Flexible Facial Gestures Detection</a>. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI '15). ACM, New York, NY, USA, 255-258.</p>
+
+		<p>Sean Gustafson, Daniel Bierwirth, and Patrick Baudisch. 2010. <a href="https://doi.org/10.1145/1866029.1866033">Imaginary interfaces: spatial interaction with empty hands and without visual feedback</a>. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 3-12.</p>
+
+		<p>Susumu Harada, Jacob O. Wobbrock, and James A. Landay. 2007. <a href="http://dx.doi.org/10.1145/1296843.1296850">Voicedraw: a hands-free voice-driven drawing application for people with motor impairments</a>. In Proceedings of the 9th international ACM SIGACCESS conference on Computers and accessibility (Assets '07). ACM, New York, NY, USA, 27-34.</p>
+
+		<p>Anthony J. Hornof and Anna Cavender. 2005. <a href="http://dx.doi.org/10.1145/1054972.1054995">EyeDraw: enabling children with severe motor impairments to draw with their eyes</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '05). ACM, New York, NY, USA, 161-170.</p>
+
+		<p>Konstantin Klamka, Andreas Siegel, Stefan Vogt, Fabian Göbel, Sophie Stellmach, and Raimund Dachselt. 2015. <a href="http://dx.doi.org/10.1145/2818346.2820751">Look & Pedal: Hands-free Navigation in Zoomable Information Spaces through Gaze-supported Foot Input</a>. In Proceedings of the 2015 ACM on International Conference on Multimodal Interaction (ICMI '15). ACM, New York, NY, USA, 123-130.</p>
+
+		<p>Manu Kumar and Terry Winograd. 2007. <a href="https://doi.org/10.1145/1294211.1294249">Gaze-enhanced scrolling techniques</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 213-216.</p>
+
+		<p>Christian Lander, Sven Gehring, Antonio Krüger, Sebastian Boring, and Andreas Bulling. 2015. <a href="https://doi.org/10.1145/2807442.2807479">GazeProjector: Accurate Gaze Estimation and Seamless Gaze Interaction Across Multiple Displays</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 395-404.</p>
+
+		<p>Christof Lutteroth, Moiz Penkar, and Gerald Weber. 2015. <a href="https://doi.org/10.1145/2807442.2807461">Gaze vs. Mouse: A Fast and Accurate Gaze-Only Click Alternative</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 385-394.</p>
+
+		<p>Elizabeth D. Mynatt and W. Keith Edwards. 1992. <a href="https://doi.org/10.1145/142621.142629">Mapping GUIs to auditory interfaces</a>. In Proceedings of the 5th annual ACM symposium on User interface software and technology (UIST '92). ACM, New York, NY, USA, 61-70.</p>
+
+		<p>Masa Ogata, Yuta Sugiura, Yasutoshi Makino, Masahiko Inami, and Michita Imai. 2013. <a href="http://dx.doi.org/10.1145/2501988.2502039">SenSkin: adapting skin as a soft interface</a>. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 539-544.</p>
+
+		<p>Shwetak N. Patel and Gregory D. Abowd. 2007. <a href="https://doi.org/10.1145/1294211.1294250">Blui: low-cost localized blowable user interfaces</a>. In Proceedings of the 20th annual ACM symposium on User interface software and technology (UIST '07). ACM, New York, NY, USA, 217-220.</p>
+
+		<p>Ken Pfeuffer and Hans Gellersen. 2016. <a href="https://doi.org/10.1145/2984511.2984514">Gaze and Touch Interaction on Tablets</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 301-311.</p>
+
+		<p>T. Scott Saponas, Daniel Kelly, Babak A. Parviz, and Desney S. Tan. 2009. <a href="https://doi.org/10.1145/1622176.1622209">Optically sensing tongue gestures for computer input</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 177-180.</p>
+
+		<p>T. Scott Saponas, Desney S. Tan, Dan Morris, Ravin Balakrishnan, Jim Turner, and James A. Landay. 2009. <a href="https://doi.org/10.1145/1622176.1622208">Enabling always-available input with muscle-computer interfaces</a>. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 167-176.</p>
+
+		<p>Vidya Setlur, Sarah E. Battersby, Melanie Tory, Rich Gossweiler, and Angel X. Chang. 2016. <a href="https://doi.org/10.1145/2984511.2984588">Eviza: A Natural Language Interface for Visual Analysis</a>. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 365-377.</p>
+
+		<p>Ronit Slyper, Jill Lehman, Jodi Forlizzi, and Jessica Hodgins. 2011. <a href="https://doi.org/10.1145/2047196.2047210">A tongue input device for creating conversations</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 117-126.</p>
+
+		<p>Nicole Yankelovich, Gina-Anne Levow, and Matt Marx. 1995. <a href="http://dx.doi.org/10.1145/223904.223952">Designing SpeechActs: issues in speech user interfaces</a>. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '95), Irvin R. Katz, Robert Mack, Linn Marks, Mary Beth Rosson, and Jakob Nielsen (Eds.). ACM Press/Addison-Wesley Publishing Co., New York, NY, USA, 369-376.</p>
+
+		<script type="text/javascript">
+		
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-10917999-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		
+		</script>
+
+	</body>
+
+</html>
