@@ -99,23 +99,24 @@
 			A nearly ubiquitous way to implement these state machines is to follow a <strong>model-view-controller</strong> architecture.
 			This architecture divides a user interface into three parts:
 		</p>
-		
+
+		<img src="images/mvc.png" class="img-responsive" alt="An MVC architecture for a web form, showing a model that stores the username and password being entered, the controller that decides when to activate the login button, and the view, which displays the form data and buttons, and listens for clicks."/>
+
 		<ul>
 			<li>
 				The <strong>model</strong> stores the <em>data</em> that a user interface is presenting.
-				For example, a scroll bar's data is its position within a window of content that is currently visible, a Facebook post's data is the text you're typing into it's text box, and a bar chart's data is its underlying data set.
+				For example, in the figure above, the model stores the username and password a user is currently entering.
+				(In many user interface toolits, this wouldn't be stored in a separate database, but in the text field object in memory).
 			</li>
 			<li>
 				The <strong>view</strong> visualizes the data in the model.
-				The scroll bar's view consists of the "trough" that spans the entire length of the window and the scroll bar "handle", where the handle visualizes scroll bar's the portion of the window content that is currently visible (it's model).
-				The Facebook post's view consists of the text box, all of the widgets for inserting emojis, stickers, photos, and gifs, and the picture of your face just to the left of the text box.
-				A bar chart's view consists of all of the bars, the axes, the axis labels, and potentially other metadata like bar data labels, all rendering the underlying data set.
+				For example, in the figure above, the view is the form itself and the controls on it, including the text fields and login button.
+				The view's job is to render the controls, listen for input from the user (e.g., clicking the login button), and display any output the controller decides to provide (e.g., form validation feedback).
 			</li>
 			<li>
-				The <strong>controller</strong> manages the state machine, transitioning to states in response to events, modifying the model, and executing commands based on the logic of the user interface.
-				A scroll bar's controller, for example, manages the dragging of the scroll bar handle and clicks on the trough, updating the window position accordingly.
-				The Facebook post's controller responds to every character you insert or delete into the text box and responds to the press of the "enter" key to submit a post.
-				The bar chart's controller, if it's a completely non-interactive chart, may do nothing, or it may manage mouse hover feedback, searching and filtering, or other features that might be added to it.
+				The <strong>controller</strong> mediates implements the logic of the user interface.
+				In our login form example above, that includes validating the username and password (e.g., neither can be empty), and submitting the information when the login button is pressed.
+				The controller gets and stores data when necessary, and tells the view to update itself as the model changes.
 			</li>
 		</ul>
 		
