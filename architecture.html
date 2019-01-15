@@ -163,10 +163,19 @@
 				As with mouse events, if the component with focus does not handle a keyboard event, it may be propagated to its ancestors and handled by one of them.
 				For example, when you press the escape key when a confirmation dialog is in focus, the button that has focus will ignore it, but the dialog window may interpret the escape key press as a "cancel".
 			</li>
+			<li>
+				A <strong>touch screen</strong> emits a stream of touch events, segmented by start, move, and end events.
+				Other events include touch cancel events, such as when you slide your finger off of a screen to indicate you no longer want to touch.
+				This low-level stream of events is converted by operating systems and applications into touch gestures.
+				Most operating systems recognize a class of gestures and emit events for them as well, allowing user interface controls to respond to them.
+			</li>
 		</ul>
 		
 		<p>
-			Touch screens, scroll wheels, voice assistants, and the numerous other types of input devices, all follow similar event handling architectures.
+			Even speech interfaces emit events. For example, digital voice assistants are continuously listening for activation commands such as "Hey Siri" or "Alexa."
+			After these are detected, they begin converting speech into text, which is then matched to one or more commands.
+			Applications that expose a set of commands then receive events that trigger the application to process the command.
+			Therefore, the notion of input events isn't inherently tactile; it's more generally about translating low-level inputs into high-level commands.
 		</p>
 		
 		<h2>Advances in User Interface Architecture</h2>
