@@ -83,7 +83,8 @@
 		<p>
 			Of course, graphical user interface buttons in modern operating systems are actually much more complex.
 			Consider, for example, what happens if the button is in a down state, but the mouse cursor moves outside the boundary of the button and <em>then</em> a mouse up event occurs.
-			In this case, it transitions to the mouse up state, but does <em>not</em> execute the button's command.
+			When this happens, it transitions to the mouse up state, but does <em>not</em> execute the button's command.
+			(Try this on a touchscreen: tap on a button, slide your finger away from it, then release, and you'll see the button's command isn't executed).
 			If the button can be disabled, then there's an entirely different state of disabled in which the button never changes states in response to events.
 			If the button supports touch input, then a button's state machine also needs to handle touch events.
 			All of these additional behaviors add more complexity to a button's state machine, but ultimately, it is still state machine.
