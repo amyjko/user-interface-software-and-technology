@@ -82,6 +82,8 @@
 		<h2>Discrete input</h2>
 		
 		<p>
+			Discrete text input involves entering a single character or word at a time.
+			We refer to them as discrete because of the lack of ambiguity in input: either a button is pressed and a character or word is generated, or it is not.
 			The most common and familiar forms of discrete text entry are keyboards.
 			Keyboards come in numerous shapes and sizes, both physical and virtual, and these properties shape the speed, accuracy, learnability, and comfort of each.
 		</p>
@@ -127,13 +129,13 @@
 		<p>
 			Some keyboards are eyes-free.
 			For example, long used in courtrooms, stenographers who transcribe human speech in shorthand have used chorded keyboards called stenotypes:
-			</p>
-		
-		<p>
-			<img src="images/stenotype.jpg" class="img-responsive center-block" alt="A user typing on a stenotype device" />
-			<center><em>A stenotype, often used in courtrooms for rapid chorded text entry</em></center>
 		</p>
-
+		
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/egLLsM9wN50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<center><em>A video demonstrating how a stenotype works, often used in courtrooms for rapid chorded text entry</em></center>
+		</p>
+		
 		<p>
 			With 2-4 years of training, some stenographers can reach 225 words per minute.
 			Researchers have adapted these techniques to other encodings, such as braille, to support non-visual text entry for people who are blind or low-vision (<a href="https://dl.acm.org/citation.cfm?id=2305297">Azenkot et al. 2012</a>)
@@ -150,6 +152,11 @@
 			Other approaches have studied how users conceptualize touch input, allowing for more accurate target acquisition (<a href="https://doi.org/10.1145/1978942.1979308">Holz and Baudisch 2011</a>).
 		</p>
 
+		<p>
+			<img src="images/onscreen-keyboard.jpg" class="img-responsive center-block" alt="A user typing on an iPad on-screen keyboard" />
+			<center><em>On-screen keyboards are now ubiquitious in mobile devices.</em></center>
+		</p>		
+
 		<h2>Continuous input</h2>
 
 		<p>
@@ -159,7 +166,8 @@
 		</p>
 		
 		<p>
-			Continuous input can avoid some of these limitations, at the expense of speed or accuracy.
+			Continuous input is an alternative to discrete input, which involves providing a stream of data as input, which the computer than translates into characters or words.
+			This helps avoid some of the limitations above, but often at the expense of speed or accuracy.
 			For example, popular in the late 1990's, the Palm Pilot used a unistroke gesture alphabet for text entry.
 			It did not require a physical keyboard, nor did it require space on screen for a virtual keyboard.
 			Instead, users learned a set of gestures for typing letters, numbers, and punctuation.
@@ -237,10 +245,19 @@
 		<h2>The future of text entry</h2>
 			
 		<p>
-			Our brief tour through the history of text entry reveals a few important trends.
-			First, there are <em>many</em> ways to enter text into computers and they all have speed-accuracy tradeoffs.
-			Second, the vast majority of techniques focus on speed and accuracy, and not on the other experiential factors in text entry, such as comfort or accessibility.
+			Our brief tour through the history of text entry reveals a few important trends:
+		</p>
+			
+		<ul>
+			<li>There are <em>many</em> ways to enter text into computers and they all have speed-accuracy tradeoffs.</li>
+			<li>The vast majority of techniques focus on speed and accuracy, and not on the other experiential factors in text entry, such as comfort or accessibility.</li>
+			<li>There are many text entry methods that are inefficient, and yet ubiquitious (e.g., QWERTY); adoption therefore isn't purely a function of speed and accuracy, but many other factors in society andhistory.</li>
+		</ul>
+
+		<p>
 			As the world continues to age, and computing moves into every context of our lives, text entry will have to adapt to these shifting contexts and abilities.
+			For example, we will have to figure out how to efficiently enter text in augmented and virtual realities, which may require require more sophisticated and efficient ways of correcting errors in speech recognition.
+			Therefore, while text entry may <em>seem</em> like a well-explored area of user interfaces, every new interface we invent demands new forms of text input.
 		</p>
 
 		<center class="lead"><a href="hands.html">Next chapter: Hands</a></center>
