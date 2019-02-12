@@ -36,22 +36,22 @@
 		</p>
 
 		<p>
-			But screens alone were not enough.
+			But display hardware alone were not enough to support the visual interfaces we used today.
 			There was an entire set of new concepts that needed to be invented to make use of screens, ranging from graphics, typography, images, visualization, and animated versions of all of these media.
 			And researchers continue to innovate in these spaces, including in screen technology itself.
 			In this chapter, we'll review screen technology, and then discuss how these media were translated to computer screens and further enhanced.
 		</p>
 
-		<h2>Screens</h2>
+		<h2>Displays</h2>
 
 		<p>
 			To begin, let's consider screens themselves.
-			Some of the earliest screen technology used something called a CRT (Cathode Ray Tube).
+			Some of the earliest screen technology used something called a CRT (Cathode Ray Tube), seen below in the image.
 			This was a vacuum tube with an electron gun and a phosphorescent screen.
 			The device moves the electron gun in a repetitive pattern called a "raster" scan across the two dimensions of the screen, causing the phosphorescent material to glow at whatever points it was active.
 			To make color CRTs, three electron guns are used, one for red, green, and blue color.
 			To determine what to draw on screen, computers stored in memory a long list of color values, and then hardware translated those color values at high frequency during the raster to determine when the electron guns were on and off.
-			When this happens at a high frequency (generally 24 times a second or faster), we get the interactive screens we're used to today.
+			When this happens at a high frequency (generally 24 times a second or faster), we get the interactive screens we are used to today.
 		</p>
 
 		<p>
@@ -62,20 +62,27 @@
 		<p>
 			The problem with CRTs was that they were <em>huge and heavy</em>, making them practical only for desktop use.
 			Display technology evolved to solve these problems, with liquid crystal displays (LCDs) making the next leap.
-			LCDs, which are still quite common in devices today, are big grids of red, green, and blue <em>liquid crystals</em>.
+			LCDs, which are still quite common in devices today, are grids of red, green, and blue <em>liquid crystals</em>.
 			Liquid crystals are a state of matter between liquid and solid with varying optical qualities.
 			By placing this grid of liquid crystals on top of a big backlight, these crystals filter light in red, green, and blue at different intensities based on the current running through the liquid.
+			(The video below shows in more detail exactly which materials are used to display varying colors).
 			These crystals are tiny, allowing for screens that were flat and with much lower energy consumption than CRTs.
 			This allowed for entirely new mobile devices like laptops and phones.
 		</p>
-
-		<p>
-			The latest technology, <strong>light emitting diode</strong> displays, are grids of diodes that individually emit their own light when activated.
-			By not requiring a backlight, they can be even thinner and use even less energy, making them practical for even tinier devices, such as smartwatches, head-mounted displays for VR, and other devices with small, battery-powered displays.
+		
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/0B79dGR19Tg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<center>How a liquid crystal display works.</center>
 		</p>
 
 		<p>
-			While all of these advances in display quality might appear only to affect the quality of a picture, they have had dramatic effects on user interfaces.
+			The latest display technology, <strong>light emitting diode</strong> displays, are grids of diodes that individually emit their own light when activated.
+			By not requiring a backlight, they can be even thinner and use even less energy.
+			This makes them practical for even smaller devices, such as smartwatches, head-mounted displays for VR, and other devices with small, battery-powered displays.
+		</p>
+
+		<p>
+			While these advances in display quality might appear only to affect the quality of a picture, they have had dramatic effects on interfaces.
 			For example, none of the mobile devices in use today would be possible with CRT technology.
 			Screens would be far too big and far too inefficient to make mobile interaction possible.
 			And some sizes of devices, like smartwatches, are only possible with LEDs: their thinness and energy efficiency make room for more battery, which is the critical limiting factor for such small devices.
@@ -107,20 +114,28 @@
 		</p>
 
 		<p>
-			These display innovations promise to lead to entirely new product categories, just as all prior display innovations have removed constraints on the form and function of user interfaces.
+			When we step back and consider the role that displays have played in shaping interfaces, the trend has fundamentally been in creating new <em>forms</em> of devices.
+			Form, after all, dictates many things.
+			Large CRTs were heavy and risky to move, and so people designed desks and workstations around which people sat to do work.
+			Smaller LCD displays were fundamental to making mobile devices possible, and so we designed interfaces and interaction techniques that could be used sitting, standing, and even moving, like the tablets and smartphones many of us use today.
+			More energy-efficient LED displays have allowed us to place computing on our wrists, faces, and feet, resulting in new categories of interactions.
+			And the displays being invented in research promise to bring computing even closer to our bodies and our environments, perhaps even <em>in</em> our bodies and environments, via implants.
+			This trend is clearly one of deep integration between visual displays of digital information, our built environment, and ourselves.
 		</p>
 
 		<h2>Graphics</h2>
 
 		<p>
-			While screens themselves can allow for new form factors, and therefore new experiences, the content on that screen is just as important (if not more).
-			One fundamental type of content is computer graphics. Graphics can be anything from basic graphical primitives like lines, rectangles, circles, polygons, and other shapes, to sophisticated simulations like the ones you see in 3D animated movies.
+			While displays themselves can enable new interfaces, the content on displays is just as if not more important.
+			The basis of all content in displays is <em>computer graphics</em>.
+			Graphics can be anything from basic graphical primitives like lines, rectangles, circles, polygons, and other shapes.
+			In a way, all computer graphics are simulations, reconstructing complex visual scenes out of more primitive shapes, from powerful windowed operating systems to photorealistic scenes computer generated animated movies.
 		</p>
 
 		<p>
 			Despite all of this complexity, computer graphics have simple foundations.
-			Because screens are organized as 2-dimensional arrays of pixels, graphical rendering is all about <strong>coordinate systems</strong>, just like in math.
-			There's an x-axis, a y-axis, and at each point in a matrix of pixels, a color.
+			Because displays are organized as 2-dimensional arrays of pixels, graphical rendering is all about <strong>coordinate systems</strong>.
+			Coordinate systems have an x-axis, a y-axis, and at each point in a matrix of pixels, a color.
 			Rendering a graphical primitive means specifying a location and color for that shape (and often whether that shape should be filled, or just an outline).
 		</p>
 
@@ -130,9 +145,29 @@
 		</p>
 
 		<p>
-			Where this gets interesting is in <em>sequences</em> of graphical operations that are overlaid on top of each other.
-			<strong>Compositing</strong> entails layering shapes atop each other in a particular order, so that we can get buttons with backgrounds, scroll bars with depth and texture, windows with drop shadows.
-			Compsiting is what allows us to create entire virtual worlds such as desktop interfaces or interactive 3D worlds.
+			To create more complex visual scenes, computer graphics involves <strong>compositing</strong>, which entails layering graphical primitives in a particular order.
+			Much like painting, compositing uses layers to construct objects with backgrounds, foregrounds, and other texture.
+			This is what allows us to render buttons with backgrounds and text labels, scroll bars with depth and texture, and windows with drop shadows.
+		</p>
+		
+		<p>
+			Operating systems are typically in charge of orchestrating the interface compositing process.
+			They begin with a blank canvas, and then, from back to front, render everything in a recursive object-oriented manner:
+		</p>
+		
+		<ul>
+			<li>The operating system first renders the background, such as a desktop wallpaper.</li>
+			<li>Next, the operating system iterates through visible windows, asking each window to render its contents.</li>
+			<li>Each window recursively traverses the hierarchy of user interface element, with each element responsible for compositing its visual appearance.</li>
+			<li>After windows are rendered, the operating system composites its own system-wide interface controls, such as task bars, application switcher interfaces.</li>
+			<li>Finally, the operating system renders the mouse cursor last, so that it is always visible.</li>
+			<li>After everything is done rendering, the entire scene is rendered all at once on the display, so that the person viewing the display doesn't see the scene partially rendered.</li>
+		</ul>
+		
+		<p>
+			This entire compositing process happens anywhere from 30 to 120 times per second depending on the speed of the computer's graphics hardware and the refresh rate of the display.
+			The result is essentially the same as any animation, displaying one frame at a time, with each frame making minor adjustments to create the illusion of motion.
+			Computer graphics therefore relies on our human ability to perceive graphical shapes as persistent objects over time.
 		</p>
 
 		<p>
@@ -157,7 +192,8 @@
 		<h2>Typography</h2>
 
 		<p>
-			While graphics matter, text might matter more. A huge part of even being able to operate user interfaces are the words we use to explain the semantics of user interface behavior.
+			While graphical primitives are the foundation of visual scenes, text are the basis of most information in interfaces.
+			A huge part of even being able to operate user interfaces are the words we use to explain the semantics of user interface behavior.
 			In the early days of command line interfaces, typography was rudimentary: just like screens were grids of pixels, text was presented as a grid of characters.
 			This meant that the entire visual language of print, such as fonts, font size, and other dimensions of typography, were fixed and inflexible:
 		</p>
@@ -251,7 +287,17 @@
 
 		<hr>
 
-		<p>While the 2000's saw 3D begin to dominate games and movies, 2D rendering is still at the heart of interactions with user interfaces. While much of the research in this space has moved on to interactive 3D experiences, the foundations built over the past fifty years remain with us, sitting out the foundation of operating systems, graphic design, and the internet.</p>
+		<p>
+			While the 2000's saw 3D begin to dominate games and movies, 2D rendering is still at the heart of interactions with user interfaces.
+			While much of the research in this space has moved on to interactive 3D experiences, the foundations built over the past fifty years remain with us.
+			Will 2D always be the foundation of interfaces, or will we eventually all shift to pure 3D interfaces?
+			In some sense, this question is less about technology and more about media.
+			Print, film, animation, games, and other genres of content have often shaped the types of experiences we have on computers.
+			There is no sign that these diverse genres of media are going away; rather, we just continue to invent new media, and add it to an already complex array of visual content.
+			For example, one could imagine a world that was more universally accessible, in which auditory content become more ubiquitous.
+			Podcasts and increasing support for screen readers are one sign that while visual displays may reign, we may begin to broaden the senses we use to interact with computers.
+		</p>
+
 
 		<center><p class="lead"><a href="3D.html">Next chapter: 3D output</a></p></center>
 
