@@ -30,29 +30,29 @@
 
 		<p>
 			In our <a href="theory.html">discussion of theory</a> at the beginning of this book, I made the case that a precondition of <em>using</em> an interface is <em>learning</em> the interface.
-			One way to make this required learning seamless is to minimize gulfs of execution and evaluation.
-			A good designer ensures this by understanding what people want and need to do with interfaces, and making the mapping between those things and interface actions as tight as possible.
+			One way to make this learning seamless is to minimize gulfs of execution and evaluation.
+			A good designer minimizes gulfs by understanding what people want and need to do with interfaces, and making the mapping between those things and interface actions as tight as possible.
 			Another way that designers achieve this is by simplifying designs, so there's simply less to learn.
 		</p>
 
 		<p>
 			Sometimes, however&mdash;let's be honest, most of the time&mdash;the mapping from goals to action in interfaces isn't so tight.
 			Interfaces introduce new concepts and users have to learn them.
-			Sometimes things go wrong, and to recover from an error, users need to acquire a more nuanced model of how the interface works.
+			Sometimes things go wrong, and to recover from an error, people need to acquire a more nuanced model of how the interface works.
 			And sometimes, interfaces are just irreducibly complex, offering great power that requires instruction and practice to fully harness.
-			3D printing, tangible interfaces, sensor-based interactions, new techniques for pointing and text, and the countless other paradigms we've discussed all require some learning to use successfully.
+			And interfaces are only getting more complex: 3D printing, tangible interfaces, sensor-based interactions, new techniques for pointing and text, and the countless other new media we've discussed all require some learning to use successfully.
 		</p>
 
 		<p>
 			One way to support this learning is to <strong>train</strong> people.
 			Apple Stores offer classes on how to use Apple software.
-			Purveyors of augmented and virtual reality offer demos that help people acclimate to gestures and heads up displays.
-			Community colleges offer classes on ubiquitous software programs, helping people who aren't comfortable tinkering with interfaces to get explicit guidance on their use.
-			YouTube is now full of millions of tutorial videos demonstrating how to use interfaces.
+			Purveyors of augmented and virtual reality devices offer demos that help people acclimate to gestures and heads up displays.
+			Community colleges offer classes on ubiquitous software programs like Microsoft Office, helping people who aren't comfortable tinkering with interfaces to get explicit guidance on their use.
+			YouTube is now full of millions of tutorial videos demonstrating how to use popular interfaces.
 		</p>
 
 		<p>
-			The holy grail of interface learning, however, is for <strong>interfaces to teach themselves</strong> to users.
+			The holy grail of interface learning, however, is for <strong>interfaces to teach themselves</strong> to people.
 			What kinds of help interfaces can be layered on to interfaces to facilitate rapid independent learning?
 			From tooltips to tutorials, in this chapter we'll discuss these approaches, and speculate about the future of help.
 		</p>
@@ -79,10 +79,13 @@
 			All of these are failures to bridge gulfs of evaluation.
 		</p>
 
-		<p>Breakdowns are usually followed by a question. There are many types of questions, each corresponding to the help above (<a href="https://doi.org/10.1016/B978-0-08-051574-8.50073-X">Sellen and Nicol 1995</a>), such as "What kinds of things can I do with this application?", "What is this?", "How do I achieve this goal?", "What does this output mean?", "Where am I?".
-
 		<p>
-			Actually providing answers to these questions usually requires natural language.
+			Breakdowns are usually followed by a question.
+			There are many types of questions, each corresponding to the help above (<a href="https://doi.org/10.1016/B978-0-08-051574-8.50073-X">Sellen and Nicol 1995</a>), such as "What kinds of things can I do with this application?", "What is this?", "How do I achieve this goal?", "What does this output mean?", "Where am I?".
+		</p>
+			
+		<p>
+			Providing answers to these questions usually requires natural language.
 			For example, labeling a button appropriately can help a user learn what a button does or adding a header might help a learner understand the flow of interaction in an application.
 			Choosing good words and phrases is therefore key to learnability.
 			There's just one problem: research shows that there is rarely a best word or phrase.
@@ -101,13 +104,16 @@
 		</p>
 
 		<p>
-			This trend of high variability of expected words suggests that any <em>one</em> rarely going to be sufficient for learning, and therefore interfaces will have to do a lot more than just label or index functionality with just one phrase.
+			This trend of high variability of expected words suggests that any <em>one</em> rarely going to be sufficient for learning.
+			Therefore interfaces will have to do a lot more than just label or index functionality with just one phrase.
+			For example, they may need to index documentation with multiple different descriptions of the same content.
+			They might also have to teach terminology to people so that they know how to find relevant functionality.
 		</p>
 
 		<h2>Searching for help</h2>
 
 		<p>
-			Perhaps the earliest form of user interface help was to write technical documentation and interface for browsing it.
+			Perhaps the earliest form of interface help was to write documentation and provide an interface for browsing it.
 			This approach involves titled articles, help topics, or question and answer pairs.
 			In modern technical support platforms, you might find them called knowledge bases or technical support forums.
 			These platforms vary in whether the <em>designer</em> authors the content or whether the content is <em>crowdsourced</em> from users of the software.
@@ -125,10 +131,19 @@
 		</p>
 
 		<ul>
-			<li>They require users to leave the interface they are learning and interact with a separate help interface.</li>
-			<li>They require a user to express a query or browse, requiring them to know the right terminology to find help. This imposes the vocabulary problem described earlier.</li>
-			<li>The answer may not have been written yet.</li>
-			<li>With user-generated content, answers may be wrong or out of date</p>
+			<li>
+				They require users to leave the interface they are learning and interact with a separate help interface.
+			</li>
+			<li>
+				They require a user to express a query or browse, requiring them to know the right terminology to find help. 
+				This imposes the vocabulary problem described earlier.
+			</li>
+			<li>
+				The answer may not have been written yet.
+			</li>
+			<li>
+				With user-generated content, answers may be wrong or out of date.
+			</li>
 		</ul>
 
 		<p>
@@ -160,16 +175,35 @@
 
 		<p>
 			My lab worked on a variation on contextual help that tried to address the problem of static tooltip content.
-			Instead of attaching fixed content to an element, the <strong>Lemonaid</strong> system allowed users to click on an arbitrary element in a user interface to identify the <em>subject</em> of help (<a href="http://dx.doi.org/10.1145/2207676.2208620">Chilana et al. 2012</a>).
+			Instead of attaching fixed content to an element, the <strong>Lemonaid</strong> system (seen below) allowed users to click on an arbitrary element in a user interface to identify the <em>subject</em> of help (<a href="http://dx.doi.org/10.1145/2207676.2208620">Chilana et al. 2012</a>).
 			It then extracted features of the selection such as its labels, position, and current interface state as a query into a database of Q&A that was indexed by these features.
 			This retrieval algorithm returned multiple possible Q&A related to the element, each with an answer authored by the designer.
 			Over time, the system learned associations between which help content was relevant to which elements of a user interface based on what questions users viewed.
-			It also allowed users to submit questions when they could not find a relevant want, crowdsourcing a mapping between user interface elements and questions:
+			It also allowed users to submit questions when they could not find a relevant want, crowdsourcing a mapping between user interface elements and questions.
+			This crowdsourced model was quite effective at both identifying gaps in content, but also creating a tight mapping between where people expected to find help and where help appeared in an interface.
 		</p>
-
+		
 		<p>
 			<img src="images/lemonaid.jpg" class="img-responsive center-block" alt="Clicking on an object, retrieving questions related to the object, and viewing an answer." />
 			<center><em>Lemonaid's selection-based help (<a href="http://dx.doi.org/10.1145/2207676.2208620">Chilana et al. 2012</a>).</em></center>
+		</p>
+
+		<p>
+			In a rare effort to directly commercialize a help system, my collaborators and I co-founded a company called AnswerDash based on this idea.
+			As with any commercialization effort, our product evolved well beyond the initial idea, incorporating page-specific popular questions and other crowdsourced help features.
+			AnswerDash joined a much broader ecosystem of services built on older ideas, such as knowledge bases, tooltip, and tutorials.
+			You can see some of AnswerDash's interactive features in this promotional video:
+		</p>
+
+		<p class="embed-responsive embed-responsive-16by9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/NMrbJY51aT4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<center>AnswerDash, a product evolved from Lemonaid's crowdsourced contextual help.</center>
+		</p>
+		
+		<p>
+			While many newer products have begun to explore the use of digital voice assistants to provide help, they are not essentially different from all of the help retrieval systems above.
+			The only difference is that rather than a person typing a query to a system, the speak it.
+			That query then gets evaluated using all of the same retrieval mechanisms that have existed over the past several decades, relying on content written by technical writers or other users with answers.
 		</p>
 
 		<h2>Recommending help</h2>
@@ -239,20 +273,33 @@
 			<img src="images/crystal.jpg" class="img-responsive center-block" alt="A Crystal answer, highlighting the autocorrect checkbox as the cause of a word being auto-corrected." />
 			<center><em>A Crystal explanation.</em></center>
 		</p>
-
+		
+		<p>
+			While these attempts to generate help automatically can be quite powerful when they work, they are limited.
+			It's not yet possible to generate answers to any question, for example.
+			And it's not clear the answers generated are always comprehensible to people.
+			There needs to be significantly more research on these before they are likely to reach widespread use.
+		</p>
 
 		<hr/>
 
 		<p>
 			Despite the diversity of help interfaces that try to enable interfaces to teach themselves, there's still a lingering question about whether just how good a help interface can be.
 			Will the gold standard always be having another person&mdash;a teacher, essentially&mdash;to explain how an interface works?
-			Or is this moot, because there are never enough people with the right expertise at the right time? Or is it possible to just design interfaces that are so learnable, separate help interfaces won't be necessary?
+			Or is this moot, because there are never enough people with the right expertise at the right time?
+			Or is it possible to just design interfaces that are so learnable, separate help interfaces won't be necessary?
 		</p>
 
 		<p>
 			I suspect that interfaces will always require help systems.
 			They are too artificial and change too much to ever eliminate the need for learning, and that means that something or someone will have to do the teaching.
 			If anything, it's people that will adapt, becoming more accustomed to the constant learning necessary to use new interfaces.
+		</p>
+		
+		<p>
+			And yet, help has never been more necessary.
+			With the rapid expansion of new interface modalities, new types of sensor-based input, and new experiences being designed around these platforms, explicitly teaching how to use interfaces is becoming a central challenge.
+			Industry has yet to place this teaching at the center of its design processes, instead still viewing as restricted to unboxing or later technical support.
 		</p>
 
 		<center><p class="lead"><a href="property.html">Next chapter: Intellectual property</a></p></center>
