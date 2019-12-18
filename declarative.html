@@ -73,7 +73,6 @@
 			<center>An explanation of programming language translators</center>
 		</p>
 
-
 		<p>
 			What are declarative interfaces?
 			Ultimately, they're software that <em>translate</em> some expression of a program (a text file with code in it, or a hierarchical tree of language constructs in <a href="https://developers.google.com/blockly/">block-based editor</a>) into a representation a computer can execute, usually some series of instructions that consist of low level operations such as arithmetic, reading and writing data values in memory, and jumping to other instructions.
@@ -84,11 +83,13 @@
 			This translation process is what makes programming languages so hard to learn: it creates great distance between notational expressions of what a user wants and the eventual behavior of the compiled program and its output.
 		</p>
 
+		<h2>Why are declarative interfaces hard to learn?</h2>
+		
 		<p>
 			However, this distance, conceptually, is no different from any other user interface.
 			Because declarative interfaces are user interfaces, they also have <a href="theory.html">gulfs of evaluation and execution, and affordances and feedback that bridge them</a>.
 			Their gulfs are just much larger because of translation.
-			Because textual programs are parsed according to a formal grammar, there are numerous ways to violate the grammar, requiring a user to know the rules of the grammar to write correct programs.
+			Because textual programs are parsed according to a grammar (like in natural languages, but more strict), there are numerous ways to violate the grammar, requiring a user to know the rules of the grammar to write correct programs.
 			Because the functional affordances in a programming language can be combined in infinite ways, there are an <em>infinite</em> number of programs that can exist.
 			How can one figure out which program will achieve a user's goal?
 			Code examples, documentation, Stack Overflow, design patterns, software architecture skills, and other media are key to bridging this gulf.
@@ -96,7 +97,7 @@
 			That's a big gulf of evaluation, and programs mostly provide no feedback about <em>how</em> they execute.
 			Testing, debugging, and monitoring tools help bridge this gulf by providing data and explanations about how a program executed in response to input.
 		</p>
-
+		
 		<p>
 			Early in my research career, I set out to document some of the major categories of gulfs of execution and evaluation in declarative interfaces.
 			I found six (<a href="#ko04">Ko et al. 2004</a>):
@@ -176,6 +177,10 @@
 			The learning barriers above interact with these dimensions of notations.
 			Languages that avoid premature commitment might be more error-prone, and may require more learning, for example.
 			Languages that make some dependencies hidden might reveal others, shifting what someone has to learn.		
+		</p>
+		
+		<h2>How can declarative interfaces be made easier to use?</h2>
+			
 		<p>
 			While there is a vast literature on programming languages and tools, and much of it focuses on bridging gulfs of execution and evaluation, in this chapter, we'll focus on the contributions that HCI researchers have made to solving these problems, as they demonstrate the rich, under-explored design space of ways that people can program computers beyond using general purpose languages.
 			Much of this work can be described as supporting <em>end-user programming</em>, which is any programming that someone does as a means to accomplishing some other goal (<a href="#ko">Ko et al. 2011</a>).
@@ -249,6 +254,8 @@
 			More recent systems have provided similar debugging and program comprehension support for understanding web pages (<a href="#burg">Burg et al. 2015</a>, <a href="#hibschman">Hibschman and Zhang 2015</a>), machine learned classifiers (<a href="#patel">Patel et al. 2010</a>, <a href="#kulesza">Kulesza et al. 2009</a>), and even embedded systems that use a combination of hardware and software to define a user interface (<a href="#strasnick">Strasnick et al. 2017</a>, <a href="#mcgrath">McGrath et al. 2017</a>).
 		</p>
 
+		<hr/>
+		
 		<p>
 			One way to think about all of these innovations is as trying to bring all of the benefits of graphical user interfaces&mdash;immediate feedback, direct manipulation, and concreteness&mdash;to notations that inherently don't have those properties, by augmenting programming <em>environments</em> with these features.
 			This progress is blurring the distinction between declarative interfaces and interactive interfaces, bringing the power of programming to broader and more diverse audiences.
