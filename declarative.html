@@ -98,7 +98,7 @@
 		</p>
 
 		<p>
-			Early in my research career, I set out to document some of the major categories of gulfs of execution and evaluation in declaractive interfaces.
+			Early in my research career, I set out to document some of the major categories of gulfs of execution and evaluation in declarative interfaces.
 			I found six (<a href="#ko04">Ko et al. 2004</a>):
 		</p>
 		
@@ -140,8 +140,42 @@
 			</li>
 		</ul>
 		
-		<p>These various barriers reveal why learning to code is so challenging and requires so much learning relative to graphical user interfaces.</p>
+		<p>
+			These various barriers reveal why learning to code is so challenging and requires so much learning relative to graphical user interfaces.
+		</p>
 		
+		<p>
+			Another way to understand the complexities of declarative interfaces is to understand how they vary.
+			The Cognitive Dimensions of Notations framework (<a href="#green">Green et al. 1996</a>) described several dimensions along with notations, and particularly programming notations, vary.
+			Here are a few notable examples:
+		</p>
+		
+		<ul>
+			<li>
+				<strong>Error-proneness</strong>. 
+				Some notations are more error prone than others. 
+				For example, in the JavaScript programming language, the symbol "+", when preceded by a variable storing a text string, automatically converts the value after the plus to a string. 
+				That means that programmers can accidentally end up with text values when they intended to have a numerical value.
+				The Java programming language, in contrast, identifies these type errors before a program runs, making them impossible.
+			</li>
+			<li>
+				<strong>Hidden dependencies</strong>.
+				Some notations hide the underlying structure of a program more than others.
+				For example, in most modern imperative programming languages, the sequence in which a function in a program will execute is pretty clear, since they execute in order.
+				But things get less clear once functions start invoking other functions: this creates a network of function calls that cannot be easily seen from a program's text.
+			</li>
+			<li>
+				<strong>Premature commitment</strong>
+				Some notations require a user to make several decisions before they have the information they need, others provide flexibility.
+				For example, Excel is quite good at letting users type in a bunch of data, later add formulas on top of that data as needed, regardless of how the data is organized in a spreadsheet.
+				In contrast, doing the same calculations in Python requires data to be organized and formatted before it can be read in, long before a user is allowed to explore the data with code.
+			</li>
+		</ul>
+		
+		<p>
+			The learning barriers above interact with these dimensions of notations.
+			Languages that avoid premature commitment might be more error-prone, and may require more learning, for example.
+			Languages that make some dependencies hidden might reveal others, shifting what someone has to learn.		
 		<p>
 			While there is a vast literature on programming languages and tools, and much of it focuses on bridging gulfs of execution and evaluation, in this chapter, we'll focus on the contributions that HCI researchers have made to solving these problems, as they demonstrate the rich, under-explored design space of ways that people can program computers beyond using general purpose languages.
 			Much of this work can be described as supporting <em>end-user programming</em>, which is any programming that someone does as a means to accomplishing some other goal (<a href="#ko">Ko et al. 2011</a>).
@@ -240,6 +274,8 @@
 
 		<p id="mcdaniel">Richard G. McDaniel and Brad A. Myers. 1997. <a href="http://dx.doi.org/10.1145/263407.263515">Gamut: demonstrating whole applications</a>. In Proceedings of the 10th annual ACM symposium on User interface software and technology (UIST '97). ACM, New York, NY, USA, 81-82.</p>
 
+		<p id="green">Green, T. R. G., & Petre, M. (1996). <a href="https://www.sciencedirect.com/science/article/pii/S1045926X96900099">Usability Analysis of Visual Programming Environments: A 'Cognitive Dimensions' Framework</a>. Journal of visual languages and computing, 7(2), 131-174.</p>
+		
 		<p id="guo">Philip J. Guo, Sean Kandel, Joseph M. Hellerstein, and Jeffrey Heer. 2011. <a href="https://doi.org/10.1145/2047196.2047205">Proactive wrangling: mixed-initiative end-user programming of data transformation scripts</a>. In Proceedings of the 24th annual ACM symposium on User interface software and technology (UIST '11). ACM, New York, NY, USA, 65-74.</p>
 
 		<p id="hibschman">Joshua Hibschman and Haoqi Zhang. 2015. <a href="https://doi.org/10.1145/2807442.2807468">Unravel: Rapid Web Application Reverse Engineering via Interaction Recording, Source Tracing, and Library Detection</a>. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 270-279.</p>
