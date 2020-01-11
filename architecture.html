@@ -97,8 +97,13 @@
 		</p>
 		
 		<p>
-			A nearly ubiquitous way to implement these state machines is to follow a <strong>model-view-controller</strong> architecture.
-			This architecture divides a user interface into three parts:
+			A nearly ubiquitous way to implement these state machines is to follow a <strong>model-view-controller</strong> (MVC) architecture.
+			One can think of MVC as a division of responsibilities between storing data, showing data, and manging the interaction between the storage and the display.
+			For example, think about the signs that are often displayed on gas station or movie theaters.
+			Someone is responsible for writing and storing the content that will be shown on the signs.
+			Someone else is responsible for putting the content on the signs.
+			And someone is in charge of managing the communication between the two, such as a manager, who listens  decides when the sign will change.
+			In the same way, MVC architectures in user interfaces take an individual component of an interface (e.g., a button, a form, a progress bar, or some other widget) and divide its implementation into three parts:
 		</p>
 
 		<img src="images/mvc.jpg" class="img-responsive" alt="An MVC architecture for a web form, showing a model that stores the username and password being entered, the controller that decides when to activate the login button, and the view, which displays the form data and buttons, and listens for clicks."/>
