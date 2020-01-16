@@ -46,12 +46,11 @@
 		
 		<p>
 			Pointing is not strictly related to interface design.
-			In fact, back in the early 1950's, Paul M. Fitts was very interested in modeling human performance of pointing.
+			In fact, back in the early 1950s, Paul M. Fitts was very interested in modeling human performance of pointing.
 			He began developing predictive models about pointing in order to help design dashboards, cockpits, and other industrial designs for manufacturing.
 			His focus was on "aimed" movements, in which a person has a <strong>target</strong> they want to indicate and must move their pointing device (originally, their hand) to indicate that target.
-			This is an example of a "closed loop" motion, in which a system can react to its evolving state.
-			The system in this case is a human, perceiving their motion toward a target. 
-			Their reaction is the continuous correction of their trajectory as they move toward a target.
+			This kind of pointing is an example of a "closed loop" motion, in which a system (e.g., the human) can react to its evolving state (e.g., here the human's finger is in space relative to its target).
+			A person's reaction is the continuous correction of their trajectory as they move toward a target.
 			Fitts began measuring this closed loop movement toward targets, searching for a pattern that fit the data, and eventually found this law, which we call <strong>Fitts' Law</strong>:
 		</p>
 		
@@ -84,11 +83,12 @@
 		<p>
 			But there are some other interesting implications for user interface design in the algebraic extremes.
 			For example, what if the target size is <em>infinite</em>?
-			An example of this is the command menu in Apple OS X applications, which is always placed at the very top of a screen.
+			An example of this is the command menu in Apple Mac OS applications, which is always placed at the very top of a screen.
 			The target in this case is the top of the screen, which is effectively infinite in size, because no matter how far past the top of the screen you point with a mouse, the operating system always constrains the mouse position to be within the screen boundaries.
 			This makes the top of the screen (and really any side of the screen) a target of infinite size.
-			And according to Fitts' Law, infinite target size means effectively zero movement time.
-			That's why it's so quick to reach the command menu on OS X: you can't miss, at least on the vertical axis.
+			A similar example is the Windows Start button, anchored to the corner of the screen.
+			And according to Fitts' Law, these infinite target sizes means effectively zero movement time.
+			That's why it's so quick to reach the menu on Mac OS and the Start button on Windows: you can't miss.
 		</p>
 		
 		<p>
@@ -99,7 +99,7 @@
 		<p>
 			What's surprising about Fitts' Law is that, as far as we know, it applies to any kind of pointing: using a mouse, using a touch screen, using a trackball, using a trackpad, or reaching for an object in the physical world.
 			That's conceptually powerful because it means that you can use the idea of large targets and short distance to design interfaces that are efficient to use.
-			As an mathematical model used for prediction, it's less powerful: to really predict exactly how long a motion will take, you'd need to estimate a distribution of those <strong>a</strong> and <strong>b</strong> coefficients for a large group of possible users and devices.
+			As a mathematical model used for prediction, it's less powerful: to really predict exactly how long a motion will take, you'd need to estimate a distribution of those <strong>a</strong> and <strong>b</strong> coefficients for a large group of possible users and devices.
 			Researchers carefully studying motion might use it to do precise modeling, but for designers, the concepts it uses are more important.
 		</p>
 
@@ -108,7 +108,7 @@
 			There are so many kinds: mice, styluses, touch screens, touch pads, joysticks, trackballs, and many other devices.
 			Some of these devices are <strong>direct pointing</strong> devices (e.g., touch screens), in which input and output occur in the same physical place (e.g., a screen or some other surface).
 			In contrast, <strong>indirect pointing</strong> devices (e.g., a mouse, a touchpad, a trackball) provide input in a different physical place from where output occurs (e.g., input on a device, output on a non-interactive screen).
-			Each has their limitations: direct pointing results in <strong>occlusion</strong> where a person's hand obscures output, and indirect pointing requires a person to attend to two different places.
+			Each has their limitations: direct pointing can result in <strong>occlusion</strong> where a person's hand obscures output, and indirect pointing requires a person to attend to two different places.
 		</p>
 			
 		<p>
@@ -129,7 +129,7 @@
 			Others have invented new types of pointing devices altogether, such as the LightRing (see in the video below), which involves sensing of infrared proximity between a finger and a surface to point (<a href="https://doi.org/10.1145/2642918.2647376">Kienzle and Hinckley 2014</a>).
 			Some devices have been invented for 3D pointing using magnetic field sensing (<a href="http://dx.doi.org/10.1145/2501988.2502035">Chen et al. 2013</a>).
 			Other techniques have tried to detect individual fingers on touchscreens, enabling multiple independent streams of pointing input (<a href="https://doi.org/10.1145/2984511.2984557">Gupta et al. 2016</a>).
-			All of these device manipulations seek to decrease pointing time by increasing throughput and reducing the time to start a motion.
+			All of these device manipulations seek to decrease pointing time by increasing how much input a person can provide, while decreasing effort.
 		</p>
 
 		<p class="embed-responsive embed-responsive-16by9">
