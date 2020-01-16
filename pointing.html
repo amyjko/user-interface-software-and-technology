@@ -141,8 +141,10 @@
 			Other innovations focus on software, and aim to increase target size or reduce travel distance.
 			Many of these ideas are <strong>target-agnostic</strong> approaches that have no awareness about what a user might be pointing <em>to</em>.
 			Some target-agnostic techniques include things like mouse pointer acceleration, which is a feature that makes the pointer move faster if it determines the user is trying to travel a large distance (<a href="http://www.tandfonline.com/doi/abs/10.1080/07370020802278163">Casiez 2008</a>).
+			This technique is target-agnostic because it doesn't know where the mouse is moving to, it just knows that the pointer is moving fast.
 			Another example is the Angle Mouse, which analyzes the angles of movement trajectory, reducing gain when a user is trying to "turn," effectively making the target larger by slowing down the mouse, making it easier to reach (<a href="https://doi.org/10.1145/1518701.1518912">Wobbrock et al. 2009</a>).
-			These ideas are powerful because the operating system does not need any awareness of the targets on the screen, making it easier to implement user interfaces.
+			This technique is target-agnostic because it doesn't know where the user is turning to, just that the pointer is turning.
+			These ideas are powerful because the operating system does not need any awareness of the things a user is trying to point to in a user interface, making it easier those interfaces easier to implement.
 		</p>
 		
 		<p>
