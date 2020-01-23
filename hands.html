@@ -128,6 +128,8 @@
 		<p>
 			In addition to fingers, many researchers have explored the unique benefits of pen-based interactions to support handwriting, sketching, diagramming, or other touch-based interactions.
 			These leverage the skill of grasping a pen or pencil that many are familiar with from manual writing.
+			Pens are similar to using a mouse as a pointing device in that they both involve pointing, but pens are critically different in that they involve direct physical contact with targets of interest.
+			This directness requires different sensing technologies, provide more degrees of freedom for movement and input, and rely more fully on the hand's complex musculature.
 		</p>
 		
 		<p>
@@ -172,14 +174,14 @@
 		<h2>Gestures</h2>
 
 		<p>
-			Whereas touch and pens involve traditional <a href="pointing.html">pointing</a>, gesture-based interactions involve recognizing patterns in hand position or movement.
+			Whereas touch and pens involve traditional <a href="pointing.html">pointing</a>, gesture-based interactions involve recognizing patterns in hand movement.
 			Some gestures still recognize a gesture from a time-series of points in a 2-dimensional plane, such as the type of multi-touch gestures such as pinching and dragging on a touchscreen, or symbol recognition in handwriting or text entry.
 			This type of gesture recognition can be done with a relatively simple recognition algorithm (<a href="https://doi.org/10.1145/1294211.1294238">Wobbrock et al. 2007</a>).
 		</p>
 
 		<p>
 			Other gestures rely on 3-dimensional input about the position of fingers and hands in space.
-			Some recognition algorithms seek to recognize single hand positions, such as when the user brings their thumb and forefinger together (a pinch gesture) (<a href="https://doi.org/10.1145/1166253.1166292">Wilson 2006</a>).
+			Some recognition algorithms seek to recognize discrete hand positions, such as when the user brings their thumb and forefinger together (a pinch gesture) (<a href="https://doi.org/10.1145/1166253.1166292">Wilson 2006</a>).
 			Researchers have developed tools to make it easier for developers to build applications that respond to in-air hand gestures (<a href="https://doi.org/10.1145/3025453.3025508">Krupka et al. 2017</a>).
 			Other techniques try to model hand gestures using alternative techniques such as Electrical Impedance Tomography (EIT) (<a href="https://doi.org/10.1145/2807442.2807480">Zhang and Harrison 2015</a>), radio frequencies (<a href="https://doi.org/10.1145/2984511.2984565">Wang et al. 2016</a>), the electromagnetic field pulsed by GSM in a phone (<a href="https://doi.org/10.1145/2642918.2647380">Zhao et al. 2014</a>),  or full machine vision of in-air hand gestures (<a href="https://doi.org/10.1145/2642918.2647373">Colaço et al. 2013</a>, <a href="https://doi.org/10.1145/2642918.2647373">Song et al. 2014</a>).
 			Some researchers have leveraged wearables to simplify recognition and increase recognition accuracy. These have included sensors mounted on fingers (<a href="https://doi.org/10.1145/2984511.2984558">Gupta et al. 2016</a>), movement of a smartwatch through wrist rotations (<a href="https://doi.org/10.1145/2984511.2984574">Zhang et al. 2016</a>), while walking (<a href="ttps://doi.org/10.1145/2984511.2984563">Gong et al. 2016</a>), or while being tapped or scratched (<a href="https://doi.org/10.1145/2984511.2984582">Laput et al. 2016</a>).
@@ -206,8 +208,8 @@
 		</center>
 		<p>
 			Gesture-based systems look at patterns in hand motion to recognize a set of discrete poses or gestures.
-			This is often appropriate when the user wants to trigger some action, but what about tasks in 3D that require pointing or spatial manipulation?
-			Hand tracking systems are better suited for these tasks because they treat the hand as a continuous input device and estimate the hand’s real-time position and orientation.
+			This is often appropriate when the user wants to trigger some action, but it does not offer the fidelity to support continuous hand-based actions, such as physical manipulation tasks in 3D space that require continuous tracking of hand and finger positions over time.
+			Hand tracking systems are better suited for these tasks because they treat the hand as a continuous input device, rather than a gesture as a discrete event, estimating in real-time the hand’s position and orientation.
 		</p>
 
 		<p>
