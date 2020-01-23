@@ -55,12 +55,25 @@
 			Only after decades of progress on speech recognition, spanning the early 1950's at Bell Labs, to continued research today in academia, did voice interfaces become reliable enough for interaction.
 			Before the ubiquitous digital voice assistants on smartphones and smartspeakers, there were speech recognition programs that dictated text and phone-based interfaces that listened to basic commands and numbers.
 		</p>
+		
+		<p>
+			The general process for speech recognition begins with an audio sample.
+			The computer records some speech, encoded as raw sound waves, just like that recorded in a voice memo application.
+			Before speech recognition algorithms even try to recognize speech, they apply several techniques to "clean" the recording, trying to distinguish between background and foreground sound, removing background sound.
+			They segment sound into utterances separated by silence, which can be more easily classified.
+			They rely on large databases of phonetic patterns, which define the kinds of sounds that are used in a particular natural language.
+			They use machine learning techniques to try to classify these phonetic utterances.
+			And then finally, once these phonemes are classified, they try to recognize sequences of phonentic utterances as particular words.
+			More advanced techniques used in modern speech recognition may also analyze an entire sequence of phonetic utterances to try to infer the most likely possible nouns, noun phrases, and other parts of sentences, based on the rest of the content of the sentence.
+		</p>
 
 		<p>
+			Of course, technologies for recognizing speech are insufficient on their own to be useful.
 			Early HCI research explored how to translate graphical user interfaces into speech-based interfaces to make GUIs accessible to people who were blind or low vision (<a href="https://doi.org/10.1145/142621.142629">Mynatt and Edwards 1992</a>).
 			The project that finally pushed voice interactions into the mainstream was the DARPA-funded <a href="http://www.ai.sri.com/project/CALO">CALO research project</a>, which, as described by it's acronym, "Cognitive Assistant that Learns and Organizes," sought to create intelligent digital assistants using the latest advances in artificial intelligence.
 			One branch of this project at SRI International spun out some of the speech recognition technology, building upon decades of advances to support real-time speech command recognition by applying advances in deep learning from the late 1990's.
 			The eventual result was assistants like Siri, Alexa, and OK Google, which offer simple command libraries, much like a menu in a graphical user interface, but accessed with voice instead of a pointing device.
+			Speech in these systems was merely the input device; they still required careful designs of commands, error-recovery, and other aspects of user interface design to be usable.
 		</p>
 
 		<p>
