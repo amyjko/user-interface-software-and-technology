@@ -23,7 +23,7 @@
 		<p><a href="index.html">Back to table of contents</a></p>
 
 		<img src="images/pong.png" class="img-responsive" alt="A screenshot of the original Pong video game with two paddles, a ball, and scores." />
-		<small>Pong, one of the earliest arcade video games.</small>
+		<small>Pong, one of the earliest arcade video games was also one of the first software applications to use graphics.</small>
 
 		<h1>2D Output</h1>
 
@@ -130,7 +130,7 @@
 			While displays themselves can enable new interfaces, the content on displays is just as if not more important.
 			The basis of all content in displays is <em>computer graphics</em>.
 			Graphics can be anything from basic graphical primitives like lines, rectangles, circles, polygons, and other shapes.
-			In a way, all computer graphics are simulations, reconstructing complex visual scenes out of more primitive shapes, from powerful windowed operating systems to photorealistic scenes computer generated animated movies.
+			In a way, all computer graphics are simulations, reconstructing complex visual scenes out of more primitive shapes, from powerful windowed operating systems to photorealistic scenes in computer generated animated movies.
 		</p>
 
 		<p>
@@ -181,8 +181,14 @@
 
 		<p>
 			There are many techniques from computer graphics that ensure a high-level of graphical fidelity.
-			Color models, transparency, anti-aliasing, sub-pixels, double-buffering, interpolation, GPUs, or other strategies for ensuring precise, high-fidelity, high-performance of <a href="https://en.wikipedia.org/wiki/Computer_graphics">computer graphics</a> ultimately help people focus on content rather than pixels.
+			<strong>Transparency</strong> is the idea of allowing colors to blend with each other, allowing some of an image to appear behind another.
+			<strong>Anti-aliasing</strong> is the idea of smoothing the ragged edges of the 2D grid of pixels by making some pixels lighter, creating the illusion of a straight line.
+			<strong>Sub-pixel rendering</strong> is a way of drawing images on a screen that leverages the physical properties of LCD screens to slightly increase resolution.
+			<strong>Double-buffering</strong> is a technique of rendering a complete graphical scene off screen, then copying it all at once to the screen, to avoid flickering.
+			<strong>Graphics processing units</strong> (GPUs) take common advanced graphics techniques and move them to hardware so that graphics are high-performance. 
+			All of these techniques and more are the foundation of <a href="https://en.wikipedia.org/wiki/Computer_graphics">computer graphics</a>, helping ensure that people can focus on content on their screens rather than the pixels that make them up.
 			These concepts do become important, however, if you're responsible for the graphic design portion of a user interface.
+			Then, the pixels are something you need to design around, requiring deeper knowledge of how images are rendered on screens.
 		</p>
 
 		<center>
@@ -196,7 +202,7 @@
 			While graphical primitives are the foundation of visual scenes, text are the basis of most information in interfaces.
 			A huge part of even being able to operate user interfaces are the words we use to explain the semantics of user interface behavior.
 			In the early days of command line interfaces, typography was rudimentary: just like screens were grids of pixels, text was presented as a grid of characters.
-			This meant that the entire visual language of print, such as fonts, font size, and other dimensions of typography, were fixed and inflexible:
+			This meant that the entire visual language of print, such as typefaces, fonts, font size, and other dimensions of typography, were fixed and inflexible:
 		</p>
 
 		<center>
@@ -207,8 +213,8 @@
 		<p>
 			Two things changed this.
 			First, Xerox PARC, in its envisioning of graphical user interfaces, brought typography to the graphical user interface.
-			The conduit for this was primarily its vision of word processing, which attempted to translate the ideas from print to the screen, bringing fonts, font families, font sizes, font weights, font styles, ligature, kerning, baselines, ascents, descents, and other ideas to graphical user interfaces.
-			These concepts from typography had been long developed in print, and were directly adapted to screen.
+			The conduit for this was primarily its vision of word processing, which attempted to translate the ideas from print to the screen, bringing typefaces, fonts, font families, font sizes, font weights, font styles, ligature, kerning, baselines, ascents, descents, and other ideas to graphical user interfaces.
+			Concepts like typefaces&mdash;the visual design&mdash;and fonts&mdash;a particular size and weight of a typeface&mdash;had been long developed in print, and were directly adapted to screen.
 			This required answering questions about how take ideas optimized for ink and paper and translate them to discrete 2-dimensional grids of pixels. Ideas like anti-aliasing and sub-pixel rendering mentioned above, which smooth the harsh edges of pixels, were key to achieving readability.
 		</p>
 
@@ -225,7 +231,7 @@
 
 		<center>
 			<img src="images/mac-fonts.png" class="img-responsive" alt="The original Mac fonts, including Chicago, Monaco, Geneva, Los Angeles, New York, San Francisco, Toronto, Venice, Geneva, and Chicago." />
-			The original Mac fonts. Credit: Unknown.
+			The original Mac typefaces. Credit: Susan Kare 1983.
 		</center>
 
 		<p>
@@ -237,27 +243,9 @@
 		<p>
 			Research on the <em>technology</em> of typography often focuses on readability.
 			For example, Microsoft, including researchers from Microsoft Research, developed a sub-pixel font rendering algorithm called ClearType, which they found significantly decreased average reading time (<a href="https://doi.org/10.1145/1124772.1124849">Dillon et al. 2006</a>).
+			Since this work, research on fonts has been limited, with most progress on bringing the full power of fonts in desktop publishing to the web.
+			This has created a much more vibrant marketplace of typeface design.
 		</p>
-
-		<h2>Data</h2>
-
-		<p>In our modern age of massive data sets, and our keen interest in using that data to answer questions, data visualization has become nearly important as graphics, images, and text. This has provoked questions about how to best render and interact with data sets. The field of data visualization (also known as information visualization) has explored these questions, building upon data visualization efforts in print (<a href=" https://doi.org/10.1007/s00371-013-0892-3">Liu et al. 2014</a>).</p>
-
-		<p>The foundations of data visualization are relatively stable:</p>
-
-		<center>
-			<img src="images/viz-pipeline.png" class="img-responsive" alt="A flow from data collection, to data transformation and analsysis, filtering, mapping, rendering, and user interaction through UI controls." />
-			The visualization pipeline. Credit: <a href="https://doi.org/10.1007/s00371-013-0892-3">Liu et al. 2014</a>).
-		</center>
-
-		<p>Each of these phases has its own interactive complexities. Data transformation often requires interaction in order to "wrangle" data into a structure suitable for visualization (<a href="http://journals.sagepub.com/doi/abs/10.1177/1473871611415994">Kandel et al. 2011)</a>. Filtering involves selecting data for view. Mapping involves taking data values and translating them into things like color, shape, space, size, proximity, and other features of visual information. And then there are a wide array of interaction techniques for seeing relationships between data, including selection, filtering, brushing, linking, focus, and facets.</p>
-
-		<p>Because of the complexity of this pipeline, actually rendering data visualizations has required more direct toolkit support for abstracting away some of the low-level complexities of these phases. Toolkits like <a href="http://mbostock.github.io/protovis/">Protovis</a> (<a href="https://doi.org/10.1109/TVCG.2009.174">Bostock and Heer 2009</a>), <a href="https://d3js.org/">D3</a> (<a href="https://doi.org/10.1109/TVCG.2011.185">Bostock et al. 2011</a>), and <a href="https://vega.github.io/vega/">Vega</a> (<a href="https://doi.org/10.1109/TVCG.2016.2599030">Satyanarauyan et al. 2017</a>) all offer abstractions that reduce this complexity, making it easier to create both static and interactive data visualizations.</p>
-
-		<center>
-			<img src="images/d3example.png" class="img-responsive" alt="A grid of factorization visualizations, showing groups and sets of circles of different combinations." />
-			A <a href="https://d3js.org/">D3</a> example. Credit: <a href="https://www.jasondavies.com/factorisation-diagrams/">Jason Davies</a>).
-		</center>
 
 		<h2>Animation</h2>
 
@@ -283,9 +271,44 @@
 		</p>
 
 		<p>
-			All of these research ideas are now ubiquitous in toolkits like Apple's <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html">Core Animation</a>, which make it easy to express animation states without having to manage low-level details of user interface rendering.
+			All of these research ideas are now ubiquitous in toolkits like Apple's <a target="_blank" href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html">Core Animation</a> and Google's <a target="_blank" href="https://material.io/design/">Material Design</a>, which make it easy to express animation states without having to manage low-level details of user interface rendering.
 		</p>
 
+		<h2>Data</h2>
+
+		<p>
+			All of the techniques in the prior section come together in many complex 2D visualizations.
+			One domain in particular that has leveraged displays, graphics, typography, and animation is data visualization.
+			This has provoked questions about how to best render and interact with data sets.
+			The field of data visualization (also known as information visualization) has explored these questions, building upon data visualization efforts in print (<a href=" https://doi.org/10.1007/s00371-013-0892-3">Liu et al. 2014</a>).
+		</p>
+
+		<p>The foundations of data visualization are relatively stable:</p>
+
+		<center>
+			<img src="images/viz-pipeline.png" class="img-responsive" alt="A flow from data collection, to data transformation and analsysis, filtering, mapping, rendering, and user interaction through UI controls." />
+			The visualization pipeline. Credit: <a href="https://doi.org/10.1007/s00371-013-0892-3">Liu et al. 2014</a>).
+		</center>
+
+		<p>
+			Each of these phases has its own interactive complexities. 
+			Data transformation often requires interaction in order to "wrangle" data into a structure suitable for visualization (<a href="http://journals.sagepub.com/doi/abs/10.1177/1473871611415994">Kandel et al. 2011)</a>. 
+			Filtering involves selecting data for view. 
+			Mapping involves taking data values and translating them into things like color, shape, space, size, proximity, and other features of visual information. 
+			And then there are a wide array of interaction techniques for seeing relationships between data, including selection, filtering, brushing, linking, focus, and facets.
+		</p>
+
+		<p>
+			Because of the complexity of this pipeline, actually rendering data visualizations has required more direct toolkit support for abstracting away some of the low-level complexities of these phases. 
+			Toolkits like <a href="http://mbostock.github.io/protovis/">Protovis</a> (<a href="https://doi.org/10.1109/TVCG.2009.174">Bostock and Heer 2009</a>), <a href="https://d3js.org/">D3</a> (<a href="https://doi.org/10.1109/TVCG.2011.185">Bostock et al. 2011</a>), and <a href="https://vega.github.io/vega/">Vega</a> (<a href="https://doi.org/10.1109/TVCG.2016.2599030">Satyanarauyan et al. 2017</a>) all offer abstractions that reduce this complexity, making it easier to create both static and interactive data visualizations.
+		</p>
+
+		<center>
+			<img src="images/d3example.png" class="img-responsive" alt="A grid of factorization visualizations, showing groups and sets of circles of different combinations." />
+			A <a href="https://d3js.org/">D3</a> example. Credit: <a href="https://www.jasondavies.com/factorisation-diagrams/">Jason Davies</a>).
+		</center>
+
+		
 		<hr>
 
 		<p>
