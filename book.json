@@ -21,7 +21,7 @@
         ["2D Visual Output", "2D","pong.png", "A screenshot of the original Pong video game with two paddles, a ball, and scores.", "Pong, one of the earliest arcade video games was also one of the first software applications to use graphics." ],
         ["3D Visual Output", "3D", "hololens.jpg", "A screenshot of Microsoft's Hololens Minecraft experience", "Microsoft's HoloLens", "Microsoft"],
         ["Physical Output", "physical", "makerbot.jpg", "A Makerbot 3D printer printing a nested dodecahedron.", "Some computer output is tangible.", "CC0 Public Domain"],
-        ["Help", "Help", "frustration.png", "A stick figure man looking frustrated at a computer screen.", "Things fall apart.", "CC0 Creative Commons"],
+        ["Help", "help", "frustration.png", "A stick figure man looking frustrated at a computer screen.", "Things fall apart.", "CC0 Creative Commons"],
         ["Intellectual Property", "ip", "applevmicrosoft.jpg", "Legal paperwork with Apple and Microsoft logos", "A few small cases have shaped U.S. case law on interfaces.", "ACM"],
         ["Translation", "translation", "comotion.jpg", "The front desk of the University of Washington's CoMotion, which supports technology transfer from research.", "Gaps between research and practice are numerous, but many things can help.", "University of Washington"],
         ["Interface Ethics", "ethics", "ring.jpg", "A photograph of a Ring Doorbell mounted on a brick wall.", "Interfaces are not neutral.", "Ring"]
