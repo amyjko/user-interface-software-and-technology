@@ -3,7 +3,7 @@
 	"authors": ["[Amy J. Ko|https://faculty.washington.edu/ajko/"],
 	"contributors": ["[Eric Whitmire|https://www.ericwhitmire.com]", "[Jacob O. Wobbrock|https://faculty.washington.edu/wobbrock/]"],
 	"license": "[Creative Commons Attribution-NoDeriviatives 4.0|https://creativecommons.org/licenses/by-nd/4.0/]",
-	"cover": ["cover.jpg", "An illustration of 1's and 0's with a stick figure sitting on one, reading.", "Software engineering is inherently social.", "Amy J. Ko"],
+	"cover": ["cover.jpg", "An illustration of 1's and 0's with a stick figure sitting on one, reading.", "User interfaces are were people and technology meet.", "Amy J. Ko"],
 	"unknown": ["error.gif", "An animated gif of television noise.", "Uh oh, something went wrong.", "Blackworker (GIFER)"],
 	"description": "The HCI community has a long history of innovation in user interface software and technologies, but there are few surveys or review of all of this research. This book attempts to summarize much of this knowledge, providing a living online textbook for UX designers, researchers, and design-literate developers to learn from and leverage this ever-expanding body of knowledge.\n\nI hope you enjoy! If not, please file an [issue|https://github.com/amyjko/user-interface-software-and-technology/issues/new] on the [the book's GitHub repository|https://github.com/amyjko/user-interface-software-and-technology/]",
 	"chapters": [
