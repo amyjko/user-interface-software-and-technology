@@ -1,7 +1,7 @@
 {
 	"title": "User Interface Software and Technology",
-	"authors": ["Amy J. Ko"],
-	"contributors": ["Eric Whitmire", "Jacob O. Wobbrock"],
+	"authors": ["[Amy J. Ko|https://faculty.washington.edu/ajko/"],
+	"contributors": ["[Eric Whitmire|https://www.ericwhitmire.com]", "[Jacob O. Wobbrock|https://faculty.washington.edu/wobbrock/]"],
 	"license": "[Creative Commons Attribution-NoDeriviatives 4.0|https://creativecommons.org/licenses/by-nd/4.0/]",
 	"cover": ["cover.jpg", "An illustration of 1's and 0's with a stick figure sitting on one, reading.", "Software engineering is inherently social.", "Amy J. Ko"],
 	"unknown": ["error.gif", "An animated gif of television noise.", "Uh oh, something went wrong.", "Blackworker (GIFER)"],
