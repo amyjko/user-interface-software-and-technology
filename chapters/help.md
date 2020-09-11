@@ -9,7 +9,7 @@ From tooltips to tutorials, in this chapter we'll discuss these approaches, and 
 
 # Theories of help
 
-There are several basic concepts in software help that are&hellip;helpful&hellip;to know about when understanding the vast range of ideas that have been explored. For instance, applications need to help with many distinct things even to just bridge gulfs of execution<grossman09>:
+There are several basic concepts in software help that are...helpful...to know about when understanding the vast range of ideas that have been explored. For instance, applications need to help with many distinct things even to just bridge gulfs of execution<grossman09>:
 
 
 * Improving users' understanding of task flow in an application
