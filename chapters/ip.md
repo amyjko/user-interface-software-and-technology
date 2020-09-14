@@ -4,11 +4,11 @@ There are stakeholders other than users, however. There are the inventors of tec
 
 This concern of ownership raises broad questions about interface ideas:
 
-* What are interface ideas?* 
-* Should ideas be owned?* 
-* Can ideas be owned?* 
-* Can _interface_ ideas be owned?* 
-* What is the effect of ownership on innovation?* 
+* What are interface ideas?
+* Should ideas be owned?
+* Can ideas be owned?
+* Can _interface_ ideas be owned?
+* What is the effect of ownership on innovation?
 
 In this chapter, we'll discuss these questions, and review some of the more notable precedent in copyright and patent law in the United States.
 

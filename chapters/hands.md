@@ -3,7 +3,8 @@ Thus far, we have discussed two forms of input to computers: [pointing|pointing]
 One of the central motivations for exploring hand-based input came from new visions of interactive computing. For instance, in 1991, Mark Weiser, who at the time was head of the very same Xerox PARC that led to the first GUI, wrote in Scientific American about a vision of _ubiquitous computing_<weiser91>. In this vision, computing would disappear, become invisible, and become a seamless part of everyday tasks:
 
 "
-Hundreds of computers in a room could seem intimidating at first, just as hundreds of volts coursing through wires in the walls did at one time. But like the wires in the walls, these hundreds of computers will come to be invisible to common awareness. People will simply use them unconsciously to accomplish everyday tasks... There are no systems that do well with the diversity of inputs to be found in an embodied virtuality. " Weiser<weiser91>
+Hundreds of computers in a room could seem intimidating at first, just as hundreds of volts coursing through wires in the walls did at one time. But like the wires in the walls, these hundreds of computers will come to be invisible to common awareness. People will simply use them unconsciously to accomplish everyday tasks... There are no systems that do well with the diversity of inputs to be found in an embodied virtuality.
+" Weiser<weiser91>
 
 Within this vision, input must move beyond the screen, supporting a wide range of embodied forms of computing. We'll begin by focusing on input techniques that rely on hands, just as pointing and text-entry largely have: physically touching a surface, using a pen-shaped object to touch a surface, and moving the hand or wrist to convey a gesture. Throughout, we will discuss how each of these forms of interaction imposes unique gulfs of execution and evaluation. 
 
