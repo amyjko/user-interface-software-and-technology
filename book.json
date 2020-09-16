@@ -17,7 +17,7 @@
         ["Pointing", "pointing", "wearable.jpg", "A photograph of a person touching an Apple Watch screen", "A wearable device with particularly small targets", "fancycrave1, Pixabay"],
         ["Text Entry", "text", "keyboard.jpg", "A photograph of a kitten sitting on a computer keyboard.", "A standard text entry device and it's avid user.", "Flickr/dougewoods"],
         ["Hand-Based Input", "hands", "human-hands.jpg", "Two human hands in the sun facing a blue sky","Hands are versatile tools for input.", "Luisfi (Own work) [CC BY-SA 3.0] via Wikimedia Commons"],
-        ["Body-Based Intput", "body", "kinect.jpg", "A man and a woman playing XBox Kinect game.", "A man and a woman playing XBox Kinect game with their bodies.", "Sergey Galyonkin, Flickr"],
+        ["Body-Based Input", "body", "kinect.jpg", "A man and a woman playing XBox Kinect game.", "A man and a woman playing XBox Kinect game with their bodies.", "Sergey Galyonkin, Flickr"],
         ["2D Visual Output", "2D","pong.png", "A screenshot of the original Pong video game with two paddles, a ball, and scores.", "Pong, one of the earliest arcade video games was also one of the first software applications to use graphics." ],
         ["3D Visual Output", "3D", "hololens.jpg", "A screenshot of Microsoft's Hololens Minecraft experience", "Microsoft's HoloLens", "Microsoft"],
         ["Physical Output", "physical", "makerbot.jpg", "A Makerbot 3D printer printing a nested dodecahedron.", "Some computer output is tangible.", "CC0 Public Domain"],
