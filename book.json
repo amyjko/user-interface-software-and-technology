@@ -247,6 +247,13 @@
                         "#UIST",
                         "http://dx.doi.org/10.1145/2501988.2502026"
                 ],
+                "ahmetovic20": [
+                        "Dragan Ahmetovic, Daisuke Sato, Uran Oh, Tatsuya Ishihara, Kris Kitani, and Chieko Asakawa",
+                        2020,
+                        "ReCog: Supporting Blind People in Recognizing Personal Objects",
+                        "#CHI",
+                        "https://doi.org/10.1145/3313831.3376143"
+                ],
                 "akers09": [
                         "David Akers, Matthew Simpson, Robin Jeffries, Terry Winograd",
                         2009,
