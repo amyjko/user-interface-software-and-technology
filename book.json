@@ -284,15 +284,15 @@
                         "http://dx.doi.org/10.1145/800250.807503"
                 ],
                 "bostock09": [
-                        "Michael Bostock and Jeffrey Heer", 2009,
+                        "Michael Bostock and Jeffrey Heer 2009",
                         "Protovis: A Graphical Toolkit for Visualization",
                         "IEEE Transactions on Visualizations and Computer Graphics",
                         "https://doi.org/10.1109/TVCG.2009.174"
                 ],
                 "bostock11": [
-                        "Michael Bostock, Vadim Ogievetsky, Jeffrey Heer", 2011,
+                        "Michael Bostock, Vadim Ogievetsky, Jeffrey Heer",
                         "D³ data-driven documents",
-                        "IEEE Transactions on Visualization and Computer Graphics",
+                        "IEEE transactions on visualization and computer graphics 17, no. 12 (2011): 2301-2309",
                         "https://doi.org/10.1109/TVCG.2011.185"
                 ],
                 "brich17": [
@@ -539,7 +539,7 @@
                         "http://dx.doi.org/10.1145/2207676.2208734"
                 ],
                 "dourish10": [
-                        "Paul Dourish", 2010,
+                        "Dourish, P. (2010).  ",
                         "HCI and environmental sustainability: the politics of design and the design of politics",
                         "In Proceedings of the 8th ACM conference on designing interactive systems",
                         "https://doi.org/10.1145/1858171.1858173"
@@ -588,7 +588,7 @@
                         "http://dx.doi.org/10.1145/154425.154426"
                 ],
                 "farooq16": [
-                        "Umer Farooq, Jonathan Grudin", 2016,
+                        "Farooq, U., & Grudin, J. (2016).  ",
                         "Human-computer integration",
                         "#interactions",
                         "https://dl.acm.org/doi/pdf/10.1145/3001896"
@@ -616,7 +616,7 @@
                 ],
                 "freed95": "Freed, L., & Ishida, S. (1995). History of computers. Ziff-Davis Publishing Co",
                 "friedman96": [
-                        "Batya Friedman", 1996,
+                        "Friedman, B. (1996).  ",
                         "Value-sensitive design",
                         "#interactions",
                         "https://dl.acm.org/doi/pdf/10.1145/242485.242493"
@@ -644,7 +644,7 @@
                         "https://doi.org/10.1145/1294211.1294253"
                 ],
                 "gandy14": [
-                        "Gandy, M., & MacIntyre, B.", 2014,
+                        "Gandy, M., & MacIntyre, B. (2014, October)",
                         "Designer's augmented reality toolkit, ten years later: implications for new media authoring tools",
                         "In Proceedings of the 27th annual ACM symposium on User interface software and technology (pp. 627-636)",
                         "https://doi.org/10.1145/2642918.2647369"
@@ -1564,7 +1564,6 @@
                 ],
                 "myers97": [
                         "Myers, Brad A., Richard G. McDaniel, Robert C. Miller, Alan S. Ferrency, Andrew Faulring, Bruce D. Kyle, Andrew Mickish, Alex Klimovitski, Patrick Doane",
-                        1997,
                         "The Amulet environment: New models for effective user interface software development",
                         "IEEE Transactions on Software Engineering",
                         "https://doi.org/10.1109/32.601073"
@@ -1717,8 +1716,7 @@
                         "https://doi.org/10.1016/j.cag.2005.10.004"
                 ],
                 "pane02": [
-                        "J. F. Pane, B. A. Myers and L. B. Miller",
-                        2002,
+                        "J. F. Pane, B. A. Myers and L. B. Miller, ",
                         "Using HCI techniques to design a more usable programming system",
                         "#VLHCC",
                         "http://doi.org/10.1109/HCC.2002.1046372"
@@ -1795,7 +1793,6 @@
                 ],
                 "richtertrummer16": [
                         "T. Richter-Trummer, D. Kalkofen, J. Park and D. Schmalstieg,",
-                        2016,
                         "Instant Mixed Reality Lighting from Casual Scanning",
                         "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
                         "https://doi.org/10.1109/ISMAR.2016.18"
@@ -2239,8 +2236,7 @@
                         "https://doi.org/10.1145/3173574.3174230"
                 ],
                 "wu17": [
-                        "Wu, P. C., Wang, R., Kin, K., Twigg, C., Han, S., Yang, M. H., & Chien, S. Y.",
-                        2017,
+                        "Wu, P. C., Wang, R., Kin, K., Twigg, C., Han, S., Yang, M. H., & Chien, S. Y. (2017, October)",
                         "DodecaPen: Accurate 6DoF tracking of a passive stylus",
                         "#UIST",
                         "https://doi.org/10.1145/3126594.3126664"
