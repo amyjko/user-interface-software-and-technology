@@ -2223,6 +2223,13 @@
                         "#UIST",
                         "https://doi.org/10.1145/1294211.1294238"
                 ],
+                "wobbrock08": [
+                        "Jacob O. Wobbrock, Edward Cutrell, Susumu Harada, and I. Scott MacKenzie",
+                        2008,
+                        "An error model for pointing based on Fitts' law",
+                        "#CHI",
+                        "https://doi.org/10.1145/1357054.1357306"
+                ],
                 "wobbrock09": [
                         "Jacob O. Wobbrock, James Fogarty, Shih-Yen (Sean) Liu, Shunichi Kimuro, Susumu Harada",
                         2009,
