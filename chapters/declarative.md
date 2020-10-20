@@ -63,4 +63,4 @@ The vast majority of innovations for declarative interfaces have focused on brid
  
 ---
 
-One way to think about all of these innovations is as trying to bring all of the benefits of graphical user interfaces--immediate feedback, direct manipulation, and concreteness--to notations that inherently don't have those properties, by augmenting programming _environments_ with these features. This progress is blurring the distinction between declarative interfaces and interactive interfaces, bringing the power of programming to broader and more diverse audiences.
+One way to think about all of these innovations is as trying to bring all of the benefits of graphical user interfaces--direct manipulation, no notation, and concreteness--to notations that inherently don't have those properties, by augmenting programming _environments_ with these features. This progress is blurring the distinction between declarative interfaces and interactive interfaces, bringing the power of programming to broader and more diverse audiences.
