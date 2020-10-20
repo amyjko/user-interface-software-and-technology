@@ -31,7 +31,7 @@ Early in my research career, I set out to document some of the major categories 
 
 These various barriers reveal why learning to code is so challenging and requires so much learning relative to graphical user interfaces.
  
-Another way to understand the complexities of declarative interfaces is to understand how they vary. The Cognitive Dimensions of Notations framework<green96> described several dimensions along with notations, and particularly programming notations, vary. Here are a few notable examples:
+Another way to understand the complexities of declarative interfaces is to understand how they vary. The Cognitive Dimensions of Notations framework<green96> described several dimensions along which notations--and particularly programming notations--vary. Here are a few notable examples:
  
 * *Error-proneness*.  Some notations are more error prone than others.  For example, in the JavaScript programming language, the symbol "+", when preceded by a variable storing a text string, automatically converts the value after the plus to a string.  That means that programmers can accidentally end up with text values when they intended to have a numerical value. The Java programming language, in contrast, identifies these type errors before a program runs, making them impossible.
 * *Hidden dependencies*. Some notations hide the underlying structure of a program more than others. For example, in most modern imperative programming languages, the sequence in which a function in a program will execute is pretty clear, since they execute in order. But things get less clear once functions start invoking other functions: this creates a network of function calls that cannot be easily seen from a program's text. 
