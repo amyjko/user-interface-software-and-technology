@@ -25,7 +25,7 @@ Researchers have exploited gaze detection as a form of hands-free interaction, u
 
 |https://www.youtube.com/embed/K_BzewnB06c|Gaze and Touch Interaction on Tablets|Combining gaze and touch for multimodal interactions.|Pfeuffer et al.<pfeuffer16>|
 
-Unfortunately, designing for gaze can require sophisticated knowledge of constraints on human perception. For example, one effort to design a hands-free, gaze-based drawing tool for people with motor disabilities ended up requiring the careful of commands to avoid frustrating error handling and disambiguation controls<hornof05>. Like other forms of recognition-based input, without significant attention to supporting recovery from recognition error, people will face challenges trying to perform the action they want efficiently and correctly. 
+Unfortunately, designing for gaze can require sophisticated knowledge of constraints on human perception. For example, one effort to design a hands-free, gaze-based drawing tool for people with motor disabilities ended up requiring the careful of commands to avoid frustrating error handling and disambiguation controls<hornof05>. Other work has explored peripheral awareness as a component of gaze, and found that it is feasible to detect degrees of awareness, but that incorporating feedback about awareness into designs can lead to dramatic, surreal, and even scary experiences<andres20>. Like other forms of recognition-based input, without significant attention to supporting recovery from recognition error, people will face challenges trying to perform the action they want efficiently and correctly. 
 
 # Limbs
 
