@@ -1,6 +1,6 @@
 In the [last chapter|hands], I introduced Weiser's vision of ubiquitous computing, and argued that part of fulfilling it was fully exploiting the versatility of our hands. In this chapter, we explore all of the sources of human action other than hands and the range of ways this action has been channeled as input to computers. As we shall see, many of the same gulfs of execution and evaluation arise with body-based input as does with hands. Part of this is that all body-based input is based in probabilistically recognizing the actions of muscles. When we speak or make other sounds, we use the muscles in our throat, mouth, and face. When we look with our eyes, we use muscles to shift our gaze, to blink, to squint, and keep our eyes closed. We use our muscles to move and arrange our limbs. Perhaps the only action we perform that isn't driven by muscles is thought. Our brain drives our muscles through electrical signals, which are detectable through our skin through techniques such as EMG and EEG. All of these forms of action are central to our existence in a physical world. Researchers have explored how to leverage these muscle-based signals to act in virtual worlds.
 
-|https://www.youtube.com/embed/yxxRAHVtafI|Behind the Mic: The Science of Talking with Computers|A basic overview of advanced speech recognition.|Google, Inc.|
+|https://www.youtube.com/embed/AWWjN1QqoYY|Voice Recognition as Fast as Possible|A broad, but not very deep explanation of speech recognition technology.|Tech Quickie|
 
 # Speech
 
