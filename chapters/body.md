@@ -33,9 +33,11 @@ Whereas our hands, voices, and eyes are all very specialized for social interact
 
 Other ideas focused on the movement of the tongue muscles using optical sensors and a mouth retainer<saponas09a> and tongue joysticks for menu navigation<slyper11>. Some focused on the breath, localizing where a person was blowing at a microphone installed on a laptop or computer screen<patel07>. Others have defined entire gesture sets for tongue movement that can be detected non-invasively through wireless X-band Doppler movement detection<goel15>.
 
-While these explorations of limb-based interactions have all been demonstrated to be feasible to agree, as with many new interactions, they impose many gulfs of execution and evaluation that have not yet been explored. How can users learn what a system is trying to recognize about limb movement?
-How much will users be willing to train the machine learned classifiers used to recognize movement?
-And when errors inevitably occur, how can we support people in recovering from error, but also improving classification in the future?
+While these explorations of limb-based interactions have all been demonstrated to be feasible to agree, as with many new interactions, they impose many gulfs of execution and evaluation that have not yet been explored. 
+
+* How can users learn what a system is trying to recognize about limb movement? 
+* How much will users be willing to train the machine learned classifiers used to recognize movement? 
+* When errors inevitably occur, how can we support people in recovering from error, but also improving classification in the future?
 
 # Body
 
