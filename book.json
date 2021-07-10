@@ -1,31 +1,33 @@
 {
         "title": "User Interface Software and Technology",
         "authors": [
-                "[Amy J. Ko|https://faculty.washington.edu/ajko/]"
+                { "id": "ajko", "name": "Amy J. Ko", "url": "https://faculty.washington.edu/ajko/" },
+                { "id": "wobbrock", "name": "Jacob O. Wobbrock", "url": "https://faculty.washington.edu/wobbrock" },
+                { "id": "whitmire", "name": "Eric Whitmire", "url": "https://www.ericwhitmire.com]" }
         ],
         "license": "[Creative Commons Attribution-NoDeriviatives 4.0|https://creativecommons.org/licenses/by-nd/4.0/]",
         "cover": "|cover.jpg|An illustration of 1's and 0's with a stick figure sitting on one, reading.|User interfaces are where people and technology meet.|[Amy J. Ko|https://faculty.washington.edu/ajko/]|",
         "unknown": "|error.gif|An animated gif of television noise.|Uh oh, something went wrong.|Blackworker (GIFER)|",
         "description": "The HCI community has a long history of innovation in user interface software and technologies, but there are few surveys or review of all of this research. This book attempts to summarize much of this knowledge, providing a living online textbook for UX designers, researchers, design-literate developers to learn from and leverage this ever-expanding body of knowledge.\n\nI hope you enjoy! If not, please file an [issue|https://github.com/amyjko/user-interface-software-and-technology/issues/new] on the [the book's GitHub repository|https://github.com/amyjko/user-interface-software-and-technology/].",
         "chapters": [
-                { "id": "history", "title": "A History of Interfaces", "image": "|mouse.jpg|A photograph of the original computer mouse.|User interfaces have always evolved.|Michael Hicks|" },
-                { "id": "theory", "title": "A Theory of Interfaces", "image": "|theory.jpg|An illustration showing a person with models in their head and an interface with functions.|What is an interface?|Amy J. Ko|" },
-                { "id": "mediation", "title": "What Interfaces Mediate", "image": "|library.jpg|A photograph of a library in Gothenberg, Sweden|Interfaces mediate information, among other things, just like libraries.|Marcus Hansson|" },
-                { "id": "declarative", "title": "Declarative Interfaces", "image": "|commandline.png|An icon of a command line interface.|Programming was the first user interface.|CC0 Creative Commons|" },
-                { "id": "interactive", "title": "Interactive Interfaces", "image": "|xerox-star.jpg|A screenshot of the Xerox star user interface and it's word processing application and desktop|Graphical user interfaces did not have to be this way.|Xerox|" },
-                { "id": "architecture", "title": "Interface Architecture", "image": "|angola.jpg|A modern architecture of an apartment building, figuratively resembling software architecture.|Architecture is how interface implementations are organized.|Costa Lopes|" },
-                { "id": "accessibility", "title": "Accessibility", "image": "|braille.jpg|A braille numeric keypad|Some access technologies are a bandage for inaccessible designs|CC BY 2.0, via Wikimedia Commons|" },
-                { "id": "pointing", "title": "Pointing", "contributors": ["[Jacob O. Wobbrock|https://faculty.washington.edu/wobbrock/]"], "image": "|wearable.jpg|A photograph of a person touching an Apple Watch screen|A wearable device with particularly small targets|fancycrave1, Pixabay|" },
-                { "id": "text", "title": "Text Entry", "contributors": ["[Jacob O. Wobbrock|https://faculty.washington.edu/wobbrock/]"], "image": "|keyboard.jpg|A photograph of a kitten sitting on a computer keyboard.|A standard text entry device and it's avid user.|Flickr/dougewoods|" },
-                { "id": "hands", "title": "Hand-Based Input", "image": "|human-hands.jpg|Two human hands in the sun facing a blue sky|Hands are versatile tools for input.|Luisfi CC BY-SA 3.0 via Wikimedia Commons|" },
-                { "id": "body", "title": "Body-Based Input", "image": "|kinect.jpg|A man and a woman playing XBox Kinect game.|A man and a woman playing XBox Kinect game with their bodies.|Sergey Galyonkin, Flickr|" },
-                { "id": "2D", "title": "2D Visual Output", "image": "|pong.png|A screenshot of the original Pong video game with two paddles, a ball, and scores.|Pong, one of the earliest arcade video games was also one of the first software applications to use graphics|Unknown|" },
-                { "id": "3D", "title": "3D Visual Output", "contributors": ["[Eric Whitmire|https://www.ericwhitmire.com]"], "image": "|hololens.jpg|A screenshot of Microsoft's Hololens Minecraft experience|Microsoft's HoloLens|Microsoft|" },
-                { "id": "physical", "title": "Physical Output", "image": "|makerbot.jpg|A Makerbot 3D printer printing a nested dodecahedron.|Some computer output is tangible.|CC0 Public Domain|" },
-                { "id": "help", "title": "Help", "image": "|frustration.png|A stick figure man looking frustrated at a computer screen.|Things fall apart.|CC0 Creative Commons|" },
-                { "id": "ip", "title": "Intellectual Property", "image": "|applevmicrosoft.jpg|Legal paperwork with Apple and Microsoft logos|A few small cases have shaped U.S. case law on interfaces.|ACM|" },
-                { "id": "translation", "title": "Translation", "image": "|comotion.jpg|The front desk of the University of Washington's CoMotion, which supports technology transfer from research.|Gaps between research and practice are numerous, but many things can help.|University of Washington|" },
-                { "id": "ethics", "title": "Interface Ethics", "image": "|ring.jpg|A photograph of a Ring Doorbell mounted on a brick wall.|Interfaces are not neutral.|Ring|" }
+                { "id": "history", "title": "A History of Interfaces", "authors": ["ajko"], "image": "|mouse.jpg|A photograph of the original computer mouse.|User interfaces have always evolved.|Michael Hicks|" },
+                { "id": "theory", "title": "A Theory of Interfaces", "authors": ["ajko"], "image": "|theory.jpg|An illustration showing a person with models in their head and an interface with functions.|What is an interface?|Amy J. Ko|" },
+                { "id": "mediation", "title": "What Interfaces Mediate", "authors": ["ajko"], "image": "|library.jpg|A photograph of a library in Gothenberg, Sweden|Interfaces mediate information, among other things, just like libraries.|Marcus Hansson|" },
+                { "id": "declarative", "title": "Declarative Interfaces", "authors": ["ajko"], "image": "|commandline.png|An icon of a command line interface.|Programming was the first user interface.|CC0 Creative Commons|" },
+                { "id": "interactive", "title": "Interactive Interfaces", "authors": ["ajko"], "image": "|xerox-star.jpg|A screenshot of the Xerox star user interface and it's word processing application and desktop|Graphical user interfaces did not have to be this way.|Xerox|" },
+                { "id": "architecture", "title": "Interface Architecture", "authors": ["ajko"], "image": "|angola.jpg|A modern architecture of an apartment building, figuratively resembling software architecture.|Architecture is how interface implementations are organized.|Costa Lopes|" },
+                { "id": "accessibility", "title": "Accessibility", "authors": ["ajko"], "image": "|braille.jpg|A braille numeric keypad|Some access technologies are a bandage for inaccessible designs|CC BY 2.0, via Wikimedia Commons|" },
+                { "id": "pointing", "title": "Pointing", "authors": ["ajko", "wobbrock"], "image": "|wearable.jpg|A photograph of a person touching an Apple Watch screen|A wearable device with particularly small targets|fancycrave1, Pixabay|" },
+                { "id": "text", "title": "Text Entry", "authors": ["ajko", "wobbrock"], "image": "|keyboard.jpg|A photograph of a kitten sitting on a computer keyboard.|A standard text entry device and it's avid user.|Flickr/dougewoods|" },
+                { "id": "hands", "title": "Hand-Based Input", "authors": ["ajko"], "image": "|human-hands.jpg|Two human hands in the sun facing a blue sky|Hands are versatile tools for input.|Luisfi CC BY-SA 3.0 via Wikimedia Commons|" },
+                { "id": "body", "title": "Body-Based Input", "authors": ["ajko"], "image": "|kinect.jpg|A man and a woman playing XBox Kinect game.|A man and a woman playing XBox Kinect game with their bodies.|Sergey Galyonkin, Flickr|" },
+                { "id": "2D", "title": "2D Visual Output", "authors": ["ajko"], "image": "|pong.png|A screenshot of the original Pong video game with two paddles, a ball, and scores.|Pong, one of the earliest arcade video games was also one of the first software applications to use graphics|Unknown|" },
+                { "id": "3D", "title": "3D Visual Output", "authors": ["ajko", "whitmire"], "image": "|hololens.jpg|A screenshot of Microsoft's Hololens Minecraft experience|Microsoft's HoloLens|Microsoft|" },
+                { "id": "physical", "title": "Physical Output", "authors": ["ajko"], "image": "|makerbot.jpg|A Makerbot 3D printer printing a nested dodecahedron.|Some computer output is tangible.|CC0 Public Domain|" },
+                { "id": "help", "title": "Help", "authors": ["ajko"], "image": "|frustration.png|A stick figure man looking frustrated at a computer screen.|Things fall apart.|CC0 Creative Commons|" },
+                { "id": "ip", "title": "Intellectual Property", "authors": ["ajko"], "image": "|applevmicrosoft.jpg|Legal paperwork with Apple and Microsoft logos|A few small cases have shaped U.S. case law on interfaces.|ACM|" },
+                { "id": "translation", "title": "Translation", "authors": ["ajko"], "image": "|comotion.jpg|The front desk of the University of Washington's CoMotion, which supports technology transfer from research.|Gaps between research and practice are numerous, but many things can help.|University of Washington|" },
+                { "id": "ethics", "title": "Interface Ethics", "authors": ["ajko"], "image": "|ring.jpg|A photograph of a Ring Doorbell mounted on a brick wall.|Interfaces are not neutral.|Ring|" }
         ],
         "revisions": [
                 [
