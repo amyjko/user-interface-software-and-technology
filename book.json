@@ -6,8 +6,6 @@
                 { "id": "whitmire", "name": "Eric Whitmire", "url": "https://www.ericwhitmire.com]" }
         ],
         "license": "[Creative Commons Attribution-NoDeriviatives 4.0|https://creativecommons.org/licenses/by-nd/4.0/]",
-        "cover": "|cover.jpg|An illustration of 1's and 0's with a stick figure sitting on one, reading.|User interfaces are where people and technology meet.|[Amy J. Ko|https://faculty.washington.edu/ajko/]|",
-        "unknown": "|error.gif|An animated gif of television noise.|Uh oh, something went wrong.|Blackworker (GIFER)|",
         "images": {
                 "cover": "|cover.jpg|An illustration of 1's and 0's with a stick figure sitting on one, reading.|User interfaces are where people and technology meet.|[Amy J. Ko|https://faculty.washington.edu/ajko/]|",
                 "unknown": "|error.gif|An animated gif of television noise.|Uh oh, something went wrong.|Blackworker (GIFER)|"
