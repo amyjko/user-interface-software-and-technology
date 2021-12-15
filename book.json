@@ -2374,5 +2374,47 @@
                         "Computer, 38(9), 25-32",
                         "https://doi.org/10.1109/MC.2005.297"
                 ]
+        },
+        "glossary": {
+		"affordance": {
+                        "phrase": "affordance",
+                        "definition": "The potential for action in an interface, ultimately defined by what underlying functionalty it has been designed and engineered to support."
+                },
+                "breakdown": {
+                        "phrase": "breakdown",
+                        "definition": "Mistakes and confusion that occur because a user's mental model is inconsistent with an interface's actual functionality."
+                },
+                "convention": {
+                        "phrase": "convention",
+                        "definition": "A widely-used and widely-learned interface design pattern (e.g., a web form, a login screen, a hamburger menu on a mobile website)."
+                },
+                "feedback": {
+                        "phrase": "feedback",
+                        "definition": "Output from a computer program intended to explain what action a computer took in response to a user's input (e.g., confirmation messages, error messages, or visible updates)."
+                },
+                "function": {
+			"phrase": "function",
+			"definition": "An idea from mathematics of using algorithms to map some input (e.g., numbers, text, or other data), to some output. Functions can be as simple as basic arithmetic (e.g., _multiply_, which takes two numbers and computes their product), or as complex as machine vision (_object recognition_, which takes an image and a machine learned classifier trained on millions of images and produces a set of text descriptions of objects in the image."
+                },
+                "mentalmodel": {
+                        "phrase": "mental model",
+                        "definition": "A person's beliefs about an interface's affordances and how to operate them."
+                },
+                "signifier": {
+                        "phrase": "signifier",
+                        "definition": "Any indicator of an affordance in an interface."
+                },
+                "ui": {
+                        "phrase": "user interface",
+                        "definition": "A special kind of software designed to map human activities in the physical world (clicks, presses, taps, speech, etc.) to functions defined in a computer program."
+                },
+                "gulfofex": {
+                        "phrase": "gulf of execution",
+                        "definition": "Everything a person must learn in order to acheive their goal with an interface, including learning what the interface is and is not capable of and how to operate it correctly."
+                },
+                "gulfofeval": {
+                        "phrase": "gulf of evaluation",
+                        "definition": "Everything a person must learn in order to understand the effect of their action on an interface, including understanding error messages or a lack of response from an interface."
+                }
         }
 }
