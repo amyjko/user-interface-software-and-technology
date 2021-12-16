@@ -14,7 +14,7 @@
         "chapters": [
                 { "id": "history", "title": "A History of Interfaces", "authors": ["ajko"], "image": "|mouse.jpg|A photograph of the original computer mouse.|User interfaces have always evolved.|Michael Hicks|" },
                 { "id": "theory", "title": "A Theory of Interfaces", "authors": ["ajko"], "image": "|theory.jpg|A very close subpixel image of a mouse cursor.|What is an interface?|[Umberto|https://unsplash.com/photos/deb2EnbWPr8]|" },
-                { "id": "mediation", "title": "What Interfaces Mediate", "authors": ["ajko"], "image": "|library.jpg|A photograph of a library in Gothenberg, Sweden|Interfaces mediate information, among other things, just like libraries.|Marcus Hansson|" },
+                { "id": "mediation", "title": "What Interfaces Mediate", "authors": ["ajko"], "image": "|mediation.jpg|A top down photograph of three people using one laptop, all with arms reached out to point.|Interfaces are between us and computation, information, and other people.|[John Schnobrich|https://unsplash.com/photos/2FPjlAyMQTA]|" },
                 { "id": "declarative", "title": "Declarative Interfaces", "authors": ["ajko"], "image": "|commandline.png|An icon of a command line interface.|Programming was the first user interface.|CC0 Creative Commons|" },
                 { "id": "interactive", "title": "Interactive Interfaces", "authors": ["ajko"], "image": "|xerox-star.jpg|A screenshot of the Xerox star user interface and it's word processing application and desktop|Graphical user interfaces did not have to be this way.|Xerox|" },
                 { "id": "architecture", "title": "Interface Architecture", "authors": ["ajko"], "image": "|angola.jpg|A modern architecture of an apartment building, figuratively resembling software architecture.|Architecture is how interface implementations are organized.|Costa Lopes|" },
@@ -2380,9 +2380,17 @@
                         "phrase": "affordance",
                         "definition": "The potential for action in an interface, ultimately defined by what underlying functionalty it has been designed and engineered to support."
                 },
+                "api": {
+                        "phrase": "application programming interface (API)",
+                        "definition": "A collection of code used for computing particular things, designed for reuse by others without having to understand the details of the computation. For example, an API might mediate access to facial recognition algorithms, date arithmetic, or trigonometric functions."
+                },
                 "breakdown": {
                         "phrase": "breakdown",
                         "definition": "Mistakes and confusion that occur because a user's mental model is inconsistent with an interface's actual functionality."
+                },
+                "ccc": {
+                        "phrase": "computer-mediated communication",
+                        "definition": "Any form of communication that is conducted through some computational device, such as a phone, tablet, laptop, desktop, smart speaker, etc."
                 },
                 "convention": {
                         "phrase": "convention",
@@ -2396,9 +2404,17 @@
 			"phrase": "function",
 			"definition": "An idea from mathematics of using algorithms to map some input (e.g., numbers, text, or other data), to some output. Functions can be as simple as basic arithmetic (e.g., _multiply_, which takes two numbers and computes their product), or as complex as machine vision (_object recognition_, which takes an image and a machine learned classifier trained on millions of images and produces a set of text descriptions of objects in the image."
                 },
+                "infoarch": {
+                        "phrase": "information architecture",
+                        "definition": "The study and practice of organizing information and inferfaces to support searching, browsing, and sensemaking."
+                },
                 "mentalmodel": {
                         "phrase": "mental model",
                         "definition": "A person's beliefs about an interface's affordances and how to operate them."
+                },
+                "metadata": {
+                        "phrase": "metadata",
+                        "definition": "Data about data; for example, metadata about a digital photograph might include where it was taken, who took it, and a description of what is in the image."
                 },
                 "signifier": {
                         "phrase": "signifier",
