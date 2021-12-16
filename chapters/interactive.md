@@ -9,7 +9,11 @@ Because of their ubiquity, it's important to understand what problems WIMP was t
 WIMP interfaces have four key elements, but have grown to include much more. We'll discuss each of these elements, then the things that have been added on since.
 
 ## Windows: an infinite screen
-The first big idea is *windows*. The fundamental problem that windows solve is _how to provide visual access to a potentially infinite amount of content larger than the size of a screen on a fixed size display_. Closely related to windows are scroll bars, which solve the problem of how to _navigate_ this content. In the "All the Widgets" video above, you can see a wide range of alternatives for how windows and scroll bars could work. Some were just directional, instructing the window to move up or down a content area, much like the swiping gestures we use on touchscreens today to scroll. Others used a scroll bar "knob" to control what part of a larger document the window would show, where the size of the knob was proportional to the amount of content visible in the window (this is the idea that we see in operating systems today). Researchers have since explored many more advanced techniques for windows and scrolling, including forms of scrolling that are aware of the underlying content to support non-linear navigation paths<ishak06>, hardware input devices such as "scroll rings" to support movement through documents<moscovich04>, and techniques for intelligently collapsing content in displays to help a user focus on the content most relevant to their task<baudisch04>. _Responsive web design_ shares similar ideas to these content aware techniques, in that it aims to automatically lay out content on a screen to fit the physical dimensions of different screen sizes<marcotte10>. All of these techniques involve linking metadata about the content to the layout and navigation of that content.
+The first big idea is *windows*. The fundamental problem that windows solve is _how to provide visual access to a potentially infinite amount of content larger than the size of a screen on a fixed size display_. Closely related to windows are scroll bars, which solve the problem of how to _navigate_ this content. In this "All the Widgets" video, you can see a wide range of alternatives for how windows and scroll bars could work:
+
+|https://www.youtube.com/embed/9qtd8Hc90Hw|All the widgets|User interface widgets are invented.|Brad Myers|
+
+Some were just directional, instructing the window to move up or down a content area, much like the swiping gestures we use on touchscreens today to scroll. Others used a scroll bar "knob" to control what part of a larger document the window would show, where the size of the knob was proportional to the amount of content visible in the window (this is the idea that we see in operating systems today). Researchers have since explored many more advanced techniques for windows and scrolling, including forms of scrolling that are aware of the underlying content to support non-linear navigation paths<ishak06>, hardware input devices such as "scroll rings" to support movement through documents<moscovich04>, and techniques for intelligently collapsing content in displays to help a user focus on the content most relevant to their task<baudisch04>. _Responsive web design_ shares similar ideas to these content aware techniques, in that it aims to automatically lay out content on a screen to fit the physical dimensions of different screen sizes<marcotte10>. All of these techniques involve linking metadata about the content to the layout and navigation of that content.
 		
 |tiled.png|A diagram of a window tiling arrangement.|Windows didn't always work the way they do now.|Brad Myers<myers88>|
 
@@ -35,16 +39,14 @@ The power of this idea becomes apparent when we consider interfaces without poin
 
 ## Widgets: expanding the palette
 
-One _can_ build entire interfaces out of windows, icons, menus, and pointers. However, applcation designers quickly realized that users need to do more than just open files, folders, and programs: they also need to provide input. *Widgets* are how we do this: sliders, check boxes, text boxes, radio buttons, drop down menus, and the many other controls found in graphical user interfaces are generally designed to make it possible to precisely specify an input within a certain set of constraints:
+One _can_ build entire interfaces out of windows, icons, menus, and pointers. However, application designers quickly realized that users need to do more than just open files, folders, and programs: they also need to provide input. *Widgets* are how we do this: sliders, check boxes, text boxes, radio buttons, drop down menus, and the many other controls found in graphical user interfaces are generally designed to make it possible to precisely specify an input within a certain set of constraints:
 
 * *Sliders* provide a control for specifying continuous numeric values within a numeric range.
 * *Check boxes* provide an error-free mechanism for specifying binary values (and sometimes tertiary values, which are often represented by a dash).
 * *Text boxes* provide an interface for specifying string values, often with sophisticated error-prevention mechanisms such as form validation and user efficiency features such as auto-complete.
 * *Radio buttons* and *drop down menus* provide error-preventing interfaces for specifying categorical values.
 
-Each one of these widgets has been carefully designed to allow rapid, error-free, efficient input of each of these data types, and none were immediately obvious. For example, skim this video, which portrays the many variations of widgets that researchers considered before settling on the designs we all use today:
-
-|https://www.youtube.com/embed/9qtd8Hc90Hw|All the widgets|User interface widgets are invented.|Brad Myers|
+Each one of these widgets has been carefully designed to allow rapid, error-free, efficient input of each of these data types, and none were immediately obvious.
 
 Of course, since these early widgets were invented, researchers have discovered many other types of widgets designed for data types that don't map well onto this small set of primitive widgets. For example, some researchers have designed widgets for selecting time values on non-linear scales<koike97>.
 
