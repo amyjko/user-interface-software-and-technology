@@ -18,7 +18,7 @@ There are many levels at which designers might want to understand user interface
 
 To illustrate this notion of architecture, let's return to the example of a graphical user interface button. We've all used buttons, but rarely do we think about exactly how they work. Here is the architecture of a simple button, depicted diagrammatically:
 
-|button-architecture.jpg|A diagram of two modes of a simple button: up and down, with a state transition on mouse down and a state transition on mouse up.|A _state machine_ representing a simple graphical user interface button|Amy J. Ko|
+|state-machine.jpg|A diagram of two modes of a simple button: up and down, with a state transition on mouse down and a state transition on mouse up.|A _state machine_ representing a simple graphical user interface button|Amy J. Ko|
 
 Computer scientists call this diagram a *state machine*, which is an abstract representation of different ~state~state that a computer program might be in. State machines also indicate the inputs that the can receive that cause them to move between different states. The button state machine above has two possible states: _up_ (on the left) and _down_ (on the right). In this state machine, there are two inputs that can cause changes in states. In user interface toolkits, these inputs are usually call ~events~event, because they are things that users do at a particular point in time. The first event is when the button receives a _mouse down_ event, after a user clicks a mouse button while the pointer is over the button. This event causes the state machine to transition from the _up_ state to the _down_ state. The button stays in this state until it later receives a _mouse up_ event from the user, when they release the mouse button; this causes the button to transition to the _up_ state and also executes its command. This is about as simple as button statement machines get.
 
@@ -96,7 +96,7 @@ If every individual widget in a user interface is its own self-contained model-v
 
 First, all user interfaces are structured as *hierarchies* in which one widget can contain zero or more other "child" widgets, and each widget has a parent, except for the "root" widget (usually a window). For instance, here's the Facebook post UI we were discussing earlier and its corresponding hierarchy:
 
-|ui-hierarchy.jpg|A diagram mapping the Facebook post user interface to the component hierarchy it is composed of, including a post, an avatar icon, an editor, a text box, a label, and an emoticon and photo upload widget|Component hierarchies|Amy J. Ko|
+|hierarchy.jpg|A diagram mapping the Facebook post user interface to the view hierarchy it is composed of, including a post, an avatar icon, an editor, a text box, a label, and an emoticon and photo upload widget|View hierarchies compose together widgets into trees of elements determining layout and event propagation.|Amy J. Ko|
 
 Notice how there are some components in the tree above that aren't visible in the UI (the "post", the "editor", the "special input" container). Each of these are essentially containers that group components together. These containers are used to give widgets a *layout*, in which the children of each component are organized spatially according to some layout rule. For example, the special input widgets are laid out in a horizontal row within the special inputs container and the special inputs container itself is laid out right aligned in the "editor" container. Each component has its own layout rules that govern the display of its children.
 
