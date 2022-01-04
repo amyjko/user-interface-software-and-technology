@@ -2403,6 +2403,10 @@
                         "phrase": "convention",
                         "definition": "A widely-used and widely-learned interface design pattern (e.g., a web form, a login screen, a hamburger menu on a mobile website)."
                 },
+                "event": {
+                        "phrase": "event",
+                        "definition": "A user input such as a mouse click, tap, drag, or verbal utterance that may trigger a state change in a user interface's state."
+                },
                 "eup": {
                         "phrase": "end-user programming",
                         "definition": "Any programming done as a means to accomplish some other goal (in contrast to software engineering, which is done for the sole purpose of creating software for others to use)."
@@ -2427,9 +2431,17 @@
                         "phrase": "metadata",
                         "definition": "Data about data; for example, metadata about a digital photograph might include where it was taken, who took it, and a description of what is in the image."
                 },
+                "mvc": {
+                        "phrase": "model-view-controller",
+                        "definition": "A way of organizing a user interface implementation to separate how data is stored (the model), how data is presented (the view), and how data is changed in response to user input (the controller)."
+                },
                 "signifier": {
                         "phrase": "signifier",
                         "definition": "Any indicator of an affordance in an interface."
+                },
+                "state": {
+                        "phrase": "state",
+                        "definition": "A particular mode or configuration of a user interface that can be changed through user input. For example, a button might be hovered over or not, or user on a web page might be logged in or not."
                 },
                 "ui": {
                         "phrase": "user interface",
