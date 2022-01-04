@@ -82,13 +82,17 @@ The dominant way to implement these aspects of widgets, along with the state mac
 
 To illustrate how the architecture works, let's consider a non-user interface example. Think about the signs that are often displayed on gas station or movie theaters. Something is responsible for storing the content that will be shown on the signs; perhaps this is a piece of paper with a message, or a particularly organized gas station owner has a list of ideas for sign messages stored in a notebook. Whatever the storage medium, this is the *model*. Someone else is responsible for putting the content on the signs based on whatever is in the model; this is the &*view* responsibility. And, of course, someone is in charge of deciding when to retrieve a new message from the *model* and telling the person in charge of the view to update the sign. This person is the *controller*. 
 
-In the same way as in the example above, MVC architectures in user interfaces take an individual part of an interface (e.g., a button, a form, a progress bar, or even some complex interactive data visualization on a news website) and divide its implementation into these three parts:
-
-* The *model* stores the _data_ that a user interface is presenting. For example, in the figure below, the model stores the username and password a user is currently entering.
-* The *view* visualizes the data in the model. For example, in the figure below, the view is the form itself and the controls on it, including the text fields and login button. The view's job is to render the controls, listen for input from the user (e.g., clicking the login button), and display any output the controller decides to provide (e.g., form validation feedback).
-* The *controller* makes decisions about how to handle user input and how to update the model. In our login form example below, that includes validating the username and password (e.g., neither can be empty), and submitting the information when the login button is pressed. The controller gets and set data in the model when necessary and tells the view to update itself as the model changes.
+In the same way as in the example above, MVC architectures in user interfaces take an individual part of an interface (e.g., a button, a form, a progress bar, or even some complex interactive data visualization on a news website) and divide its implementation into these three parts. For example, consider the example below of a post on a social media site like Facebook:
 
 |mvc.jpg|An MVC architecture for a web form, showing a model that stores the username and password being entered, the controller that decides when to activate the login button, and the view, which displays the form data and buttons, and listens for clicks.|Model-view-controller architecture|Amy J. Ko|
+
+In this interface:
+
+* The *model* stores the _data_ that a user interface is presenting. For example, in the figure above, this would be the comment that someone is typing and posting. In the case of social media, the model might include both the part of memory storing the comment being typed, but also the database stored on Facebook's servers that persists the comment for later display. 
+
+* The *view* visualizes the data in the model. For example, in the figure above, this includes the text field for the comment, but also the profile image, the privacy drop down menu, and the name. The view's job is to render these controls, listen for input from the user (e.g., pressing the _post_ button to submit the comment), and display any output the controller decides to provide (e.g., feedback about links in the post).
+
+* The *controller* makes decisions about how to handle user input and how to update the model. In our comment example above, that includes validating the comment (e.g., it can't be empty), and submitting the comment when the user presses enter or the _post_ button. The controller gets and set data in the model when necessary and tells the view to update itself as the model changes.
 
 # View Hierarchies
 
