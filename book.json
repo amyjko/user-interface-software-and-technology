@@ -2383,6 +2383,18 @@
                 ]
         },
         "glossary": {
+                "abilitybaseddesign": {
+                        "phrase": "ability-based design",
+                        "definition": "Interface designs that adapt to the abilities of their users."
+                },
+                "accesstech": {
+                        "phrase": "access technology",
+                        "definition": "Interfaces that are used in tadem with other intefaces to improve their poor accessibility."
+                },
+                "accessibility": {
+                        "phrase": "accessibility",
+                        "definition": "A quality of user interfaces that determines what abilities are required to use an interface. Accessible interfaces include people regardless of ability; inaccessible interfaces exclude people with particular abilities."
+                },
 		"affordance": {
                         "phrase": "affordance",
                         "definition": "The potential for action in an interface, ultimately defined by what underlying functionalty it has been designed and engineered to support."
@@ -2446,6 +2458,10 @@
                 "ui": {
                         "phrase": "user interface",
                         "definition": "A special kind of software designed to map human activities in the physical world (clicks, presses, taps, speech, etc.) to functions defined in a computer program."
+                },
+                "universal": {
+                        "phrase": "universal design",
+                        "definition": "Interfaces that are accessible to any person, regardless of their abilities."
                 },
                 "gulfofex": {
                         "phrase": "gulf of execution",
