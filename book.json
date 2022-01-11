@@ -13,9 +13,9 @@
         "description": "The HCI community has a long history of innovation in user interface software and technologies, but there are few surveys or review of all of this research. This book attempts to summarize much of this knowledge, providing a living online textbook for UX designers, researchers, design-literate developers to learn from and leverage this ever-expanding body of knowledge.\n\nI hope you enjoy! If not, please file an [issue|https://github.com/amyjko/user-interface-software-and-technology/issues/new] on the [the book's GitHub repository|https://github.com/amyjko/user-interface-software-and-technology/].",
         "chapters": [
                 { "id": "history", "title": "A History of Interfaces", "authors": ["ajko"], "image": "|mouse.jpg|A photograph of the original computer mouse.|User interfaces have always evolved.|Michael Hicks|" },
-                { "id": "theory", "title": "A Theory of Interfaces", "authors": ["ajko"], "image": "|theory.jpg|An illustration showing a person with models in their head and an interface with functions.|What is an interface?|Amy J. Ko|" },
-                { "id": "mediation", "title": "What Interfaces Mediate", "authors": ["ajko"], "image": "|library.jpg|A photograph of a library in Gothenberg, Sweden|Interfaces mediate information, among other things, just like libraries.|Marcus Hansson|" },
-                { "id": "declarative", "title": "Declarative Interfaces", "authors": ["ajko"], "image": "|commandline.png|An icon of a command line interface.|Programming was the first user interface.|CC0 Creative Commons|" },
+                { "id": "theory", "title": "A Theory of Interfaces", "authors": ["ajko"], "image": "|theory.jpg|A very close subpixel image of a mouse cursor.|What is an interface?|[Umberto|https://unsplash.com/photos/deb2EnbWPr8]|" },
+                { "id": "mediation", "title": "What Interfaces Mediate", "authors": ["ajko"], "image": "|mediation.jpg|A top down photograph of three people using one laptop, all with arms reached out to point.|Interfaces are between us and computation, information, and other people.|[John Schnobrich|https://unsplash.com/photos/2FPjlAyMQTA]|" },
+                { "id": "programming", "title": "Programming Interfaces", "authors": ["ajko"], "image": "|programming.jpg|A close up shot of a code editor showing some Python code.|Programming languages are the most powerful and least usable of computer interfaces.|[Chris Ried|https://unsplash.com/photos/ieic5Tq8YMk]|" },
                 { "id": "interactive", "title": "Interactive Interfaces", "authors": ["ajko"], "image": "|xerox-star.jpg|A screenshot of the Xerox star user interface and it's word processing application and desktop|Graphical user interfaces did not have to be this way.|Xerox|" },
                 { "id": "architecture", "title": "Interface Architecture", "authors": ["ajko"], "image": "|angola.jpg|A modern architecture of an apartment building, figuratively resembling software architecture.|Architecture is how interface implementations are organized.|Costa Lopes|" },
                 { "id": "accessibility", "title": "Accessibility", "authors": ["ajko"], "image": "|braille.jpg|A braille numeric keypad|Some access technologies are a bandage for inaccessible designs|CC BY 2.0, via Wikimedia Commons|" },
@@ -1142,6 +1142,13 @@
                         "Six learning barriers in end-user programming systems",
                         "#VLHCC",
                         "https://doi.org/10.1109/VLHCC.2004.47"
+                ],
+                "ko04b": [
+                        "Amy J. Ko, Brad A. Myers",
+                        2004,
+                        "Designing the Whyline: A Debugging Interface for Asking Questions About Program Failures",
+                        "#CHI",
+                        "https://doi.org/10.1145/985692.985712"
                 ],
                 "ko05": [
                         "Amy J. Ko and Brad A. Myers",
@@ -2374,5 +2381,79 @@
                         "Computer, 38(9), 25-32",
                         "https://doi.org/10.1109/MC.2005.297"
                 ]
+        },
+        "glossary": {
+		"affordance": {
+                        "phrase": "affordance",
+                        "definition": "The potential for action in an interface, ultimately defined by what underlying functionalty it has been designed and engineered to support."
+                },
+                "api": {
+                        "phrase": "application programming interface (API)",
+                        "definition": "A collection of code used for computing particular things, designed for reuse by others without having to understand the details of the computation. For example, an API might mediate access to facial recognition algorithms, date arithmetic, or trigonometric functions."
+                },
+                "breakdown": {
+                        "phrase": "breakdown",
+                        "definition": "Mistakes and confusion that occur because a user's mental model is inconsistent with an interface's actual functionality."
+                },
+                "ccc": {
+                        "phrase": "computer-mediated communication",
+                        "definition": "Any form of communication that is conducted through some computational device, such as a phone, tablet, laptop, desktop, smart speaker, etc."
+                },
+                "convention": {
+                        "phrase": "convention",
+                        "definition": "A widely-used and widely-learned interface design pattern (e.g., a web form, a login screen, a hamburger menu on a mobile website)."
+                },
+                "event": {
+                        "phrase": "event",
+                        "definition": "A user input such as a mouse click, tap, drag, or verbal utterance that may trigger a state change in a user interface's state."
+                },
+                "eup": {
+                        "phrase": "end-user programming",
+                        "definition": "Any programming done as a means to accomplish some other goal (in contrast to software engineering, which is done for the sole purpose of creating software for others to use)."
+                },
+                "feedback": {
+                        "phrase": "feedback",
+                        "definition": "Output from a computer program intended to explain what action a computer took in response to a user's input (e.g., confirmation messages, error messages, or visible updates)."
+                },
+                "function": {
+			"phrase": "function",
+			"definition": "An idea from mathematics of using algorithms to map some input (e.g., numbers, text, or other data), to some output. Functions can be as simple as basic arithmetic (e.g., _multiply_, which takes two numbers and computes their product), or as complex as machine vision (_object recognition_, which takes an image and a machine learned classifier trained on millions of images and produces a set of text descriptions of objects in the image."
+                },
+                "infoarch": {
+                        "phrase": "information architecture",
+                        "definition": "The study and practice of organizing information and inferfaces to support searching, browsing, and sensemaking."
+                },
+                "mentalmodel": {
+                        "phrase": "mental model",
+                        "definition": "A person's beliefs about an interface's affordances and how to operate them."
+                },
+                "metadata": {
+                        "phrase": "metadata",
+                        "definition": "Data about data; for example, metadata about a digital photograph might include where it was taken, who took it, and a description of what is in the image."
+                },
+                "mvc": {
+                        "phrase": "model-view-controller",
+                        "definition": "A way of organizing a user interface implementation to separate how data is stored (the model), how data is presented (the view), and how data is changed in response to user input (the controller)."
+                },
+                "signifier": {
+                        "phrase": "signifier",
+                        "definition": "Any indicator of an affordance in an interface."
+                },
+                "state": {
+                        "phrase": "state",
+                        "definition": "A particular mode or configuration of a user interface that can be changed through user input. For example, a button might be hovered over or not, or user on a web page might be logged in or not."
+                },
+                "ui": {
+                        "phrase": "user interface",
+                        "definition": "A special kind of software designed to map human activities in the physical world (clicks, presses, taps, speech, etc.) to functions defined in a computer program."
+                },
+                "gulfofex": {
+                        "phrase": "gulf of execution",
+                        "definition": "Everything a person must learn in order to acheive their goal with an interface, including learning what the interface is and is not capable of and how to operate it correctly."
+                },
+                "gulfofeval": {
+                        "phrase": "gulf of evaluation",
+                        "definition": "Everything a person must learn in order to understand the effect of their action on an interface, including understanding error messages or a lack of response from an interface."
+                }
         }
 }
