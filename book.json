@@ -2387,6 +2387,10 @@
                         "phrase": "ability-based design",
                         "definition": "Interface designs that adapt to the abilities of their users."
                 },
+                "absolutepointing": {
+                        "phrase": "absolute pointing",
+                        "definition": "Pointing devices in which the physical coordinates of input are mapped directly onto the interface coordinate system (e.g., touchscreens)."
+                },
                 "accesstech": {
                         "phrase": "access technology",
                         "definition": "Interfaces that are used in tadem with other intefaces to improve their poor accessibility."
@@ -2415,6 +2419,10 @@
                         "phrase": "convention",
                         "definition": "A widely-used and widely-learned interface design pattern (e.g., a web form, a login screen, a hamburger menu on a mobile website)."
                 },
+                "directpointing": {
+                        "phrase": "direct pointing",
+                        "definition": "Pointing devices in which the input for pointing and the corresponding feedback in response occur in the same physical place (e.g., a touchscreen)."
+                },
                 "event": {
                         "phrase": "event",
                         "definition": "A user input such as a mouse click, tap, drag, or verbal utterance that may trigger a state change in a user interface's state."
@@ -2431,6 +2439,10 @@
 			"phrase": "function",
 			"definition": "An idea from mathematics of using algorithms to map some input (e.g., numbers, text, or other data), to some output. Functions can be as simple as basic arithmetic (e.g., _multiply_, which takes two numbers and computes their product), or as complex as machine vision (_object recognition_, which takes an image and a machine learned classifier trained on millions of images and produces a set of text descriptions of objects in the image."
                 },
+                "indirectpointing": {
+                        "phrase": "indirect pointing",
+                        "definition": "Pointing devices in which the input for pointing and the corresponding feedback in response occur in different physical places (e.g., a mouse and a screen)."      
+                },
                 "infoarch": {
                         "phrase": "information architecture",
                         "definition": "The study and practice of organizing information and inferfaces to support searching, browsing, and sensemaking."
@@ -2446,6 +2458,10 @@
                 "mvc": {
                         "phrase": "model-view-controller",
                         "definition": "A way of organizing a user interface implementation to separate how data is stored (the model), how data is presented (the view), and how data is changed in response to user input (the controller)."
+                },
+                "relativepointing": {
+                        "phrase": "relative pointing",
+                        "definition": "Pointing devices in which changes in the physical coordinates of input device are mapped directly _changes_ to the current position in an interface coordinate system (e.g., mice)."
                 },
                 "signifier": {
                         "phrase": "signifier",
