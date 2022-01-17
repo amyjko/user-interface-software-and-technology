@@ -2415,6 +2415,10 @@
                         "phrase": "computer-mediated communication",
                         "definition": "Any form of communication that is conducted through some computational device, such as a phone, tablet, laptop, desktop, smart speaker, etc."
                 },
+                "continuoustextentry": {
+                        "phrase": "continuous text entry",
+                        "definition": "Providing some ambiguous source of text (e.g., speech, gesture) and having an interface translate it into text."
+                },
                 "convention": {
                         "phrase": "convention",
                         "definition": "A widely-used and widely-learned interface design pattern (e.g., a web form, a login screen, a hamburger menu on a mobile website)."
@@ -2422,6 +2426,10 @@
                 "directpointing": {
                         "phrase": "direct pointing",
                         "definition": "Pointing devices in which the input for pointing and the corresponding feedback in response occur in the same physical place (e.g., a touchscreen)."
+                },
+                "discretetextentry": {
+                        "phrase": "discrete text entry",
+                        "definition": "Explicitly and unambiguously selecting characters, words, and phrases for entry (e.g., with a keyboard)."
                 },
                 "event": {
                         "phrase": "event",
@@ -2458,6 +2466,10 @@
                 "mvc": {
                         "phrase": "model-view-controller",
                         "definition": "A way of organizing a user interface implementation to separate how data is stored (the model), how data is presented (the view), and how data is changed in response to user input (the controller)."
+                },
+                "predictivetextentry": {
+                        "phrase": "predictive text entry",
+                        "definition": "Providing input that suggests the desired text and having the interface predict what input might be intended."
                 },
                 "relativepointing": {
                         "phrase": "relative pointing",

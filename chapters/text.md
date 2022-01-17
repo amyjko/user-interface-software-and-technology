@@ -8,7 +8,7 @@ What underlies these strong opinions? A large set of hidden complexities. Text e
 
 The history of text entry interfaces predates computers (Silfverberg 2007). For example, typewriters like the Jewett No. 4 shown above had to solve the same problem as modern computer keyboards, but rather than storing the sequence of characters in computer memory, they were stored on a piece of paper with ink. Typewriters like the Jewett No. 4 and their QWERTY keyboard layout emerged during the industrial revolution when the demand for text increased.
 
-Of course, the difference between mechanical text entry and computer text entry is that computers can do so much more to ensure fast, accurate, and comfortable experiences. Researchers have spent several decades exploiting computing to do exactly this. This research generally falls into three categories: techniques that leverage *discrete* input, like the pressing of a physical or virtual key, techniques that leverage *continuous* input, like gestures or speech, and statistical techniques that attempt to *predict* the text someone is typing to _automate_ text entry.
+Of course, the difference between mechanical text entry and computer text entry is that computers can do so much more to ensure fast, accurate, and comfortable experiences. Researchers have spent several decades exploiting computing to do exactly this. This research generally falls into three categories: techniques that leverage ~discrete~discretetextentry input, like the pressing of a physical or virtual key, techniques that leverage ~continuous~continuoustextentry input, like gestures or speech, and statistical techniques that attempt to ~predict~predictivetextentry the text someone is typing to _automate_ text entry.
 
 |keyboards.jpg|A photograph of many piles of many computer keyboards.|Standard keyboards|Zinneke CC BY-SA 3.0|
 
@@ -40,17 +40,17 @@ With 2-4 years of training, some stenographers can reach 225 words per minute. R
 
 On-screen virtual keyboards like those found in modern smartphones introduce some degree of ambiguity into the notion of a discrete set of keys, because touch input can be ambiguous. Some researchers have leveraged additional sensor data to disambiguate which key is being typed, such as which finger is typically used to type a key<choi15>. Other approaches have studied how users conceptualize touch input, allowing for more accurate target acquisition<holz11>.
 
+The primary benefit of the discrete input techniques above is that they can achieve relatively fast speeds and low errors because input is reliable: when someone presses a key, they probably meant to. But this is not always true, especially for people with motor impairments that reduce stability of motion. Moreover, there are many people that cannot operate a keyboard comfortably or at all, many contexts in which there simply isn't physical or virtual space for keys, and many people who do not want to learn an entire new encoding for entering text.
+
 |onscreen-keyboard.jpg|A user typing on an iPad on-screen keyboard|On-screen keyboards are now ubiquitous in mobile devices.|Unknown|
 
 # Continuous input
 
-The primary benefit of the discrete input techniques above is that they can achieve relatively fast speeds and low errors because input is reliable: when someone presses a key, they probably meant to. But this is not always true, especially for people with motor impairments that reduce stability of motion. Moreover, there are many people that cannot operate a keyboard comfortably or at all, many contexts in which there simply isn't physical or virtual space for keys, and many people who do not want to learn an entire new encoding for entering text.
+Continuous input is an alternative to discrete input, which involves providing a stream of data as input, which the computer then translates into characters or words. This helps avoid some of the limitations above, but often at the expense of speed or accuracy. For example, popular in the late 1990's, the Palm Pilot, seen in the video below, used a unistroke gesture alphabet for text entry. It did not require a physical keyboard, nor did it require space on screen for a virtual keyboard. Instead, users learned a set of gestures for typing letters, numbers, and punctuation.
 
-Continuous input is an alternative to discrete input, which involves providing a stream of data as input, which the computer then translates into characters or words. This helps avoid some of the limitations above, but often at the expense of speed or accuracy. For example, popular in the late 1990's, the Palm Pilot used a unistroke gesture alphabet for text entry. It did not require a physical keyboard, nor did it require space on screen for a virtual keyboard. Instead, users learned a set of gestures for typing letters, numbers, and punctuation.
+|https://www.youtube.com/embed/QE4zOJqe4eQ|A photograph of a young person holding a Palm Pilot|Teens in the 2020's reacting to the portable computers of the 1999's.|REACT Media|
 
-|graffiti.png|A diagrm of the Palm Pilot's Graffiti 2 gesture set.|The Palm Pilot's Graffiti 2 gesture set.|Palm, Inc.|
-
-This wasn't particularly fast or error-free, but it was relatively learnable and kept the Palm Pilot small.
+As the video shows, this wasn't particularly fast or error-free, but it was relatively learnable and kept the Palm Pilot small.
 
 Researchers envisioned other improved unistroke alphabets. Most notably, the EdgeWrite system was designed to stabilize the motion of people with motor impairments by defining gestures that traced around the edges and diagonals of a square<wobbrock03>. This way, even if someone had motor tremors that prevented fine motor control, they could still accurately enter text. EdgeWrite has been tested on desktops, mobile devices, joysticks, and even tiny vibrotactile displays like smartwatches<liao16>.
 
@@ -84,4 +84,4 @@ Our brief tour through the history of text entry reveals a few important trends:
 * The vast majority of techniques focus on speed and accuracy, and not on the other experiential factors in text entry, such as comfort or accessibility. 
 * There are many text entry methods that are inefficient, and yet ubiquitious (e.g., QWERTY); adoption therefore isn't purely a function of speed and accuracy, but many other factors in society and history. 
 
-As the world continues to age, and computing moves into every context of our lives, text entry will have to adapt to these shifting contexts and abilities. For example, we will have to figure out how to efficiently enter text in augmented and virtual realities, which may require require more sophisticated and efficient ways of correcting errors in speech recognition. Therefore, while text entry may _seem_ like a well-explored area of user interfaces, every new interface we invent demands new forms of text input.
+As the world continues to age, and computing moves into every context of our lives, text entry will have to adapt to these shifting contexts and abilities. For example, we will have to design new ways of efficiently entering text in augmented and virtual realities, which may require more sophisticated ways of correcting errors from speech recognition. Therefore, while text entry may _seem_ like a well-explored area of user interfaces, every new interface we invent demands new forms of text input.
