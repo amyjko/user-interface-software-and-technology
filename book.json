@@ -2419,6 +2419,14 @@
                         "phrase": "continuous text entry",
                         "definition": "Providing some ambiguous source of text (e.g., speech, gesture) and having an interface translate it into text."
                 },
+                "compositing": {
+                        "phrase": "compositing",
+                        "definition": "Layering visual imagery and filters, from top to bottom, to construct scenes from individual layers of graphics."
+                },
+                "constraint": {
+                        "phrase": "constraint",
+                        "definition": "A technique of software development in which the value of one thing is made to always be equal to some transofrmation of another value (e.g., the left edge of this square should always be aligned horizontally with the right edge of this circle.)"
+                },
                 "convention": {
                         "phrase": "convention",
                         "definition": "A widely-used and widely-learned interface design pattern (e.g., a web form, a login screen, a hamburger menu on a mobile website)."
@@ -2446,6 +2454,10 @@
                 "function": {
 			"phrase": "function",
 			"definition": "An idea from mathematics of using algorithms to map some input (e.g., numbers, text, or other data), to some output. Functions can be as simple as basic arithmetic (e.g., _multiply_, which takes two numbers and computes their product), or as complex as machine vision (_object recognition_, which takes an image and a machine learned classifier trained on millions of images and produces a set of text descriptions of objects in the image."
+                },
+                "graphics": {
+                        "phrase": "graphics",
+                        "definition": "The use of computer hardware to create static, dynamic, and interactive two and three dimensional imagery."
                 },
                 "indirectpointing": {
                         "phrase": "indirect pointing",
