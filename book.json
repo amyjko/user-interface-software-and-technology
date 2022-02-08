@@ -2407,6 +2407,10 @@
                         "phrase": "application programming interface (API)",
                         "definition": "A collection of code used for computing particular things, designed for reuse by others without having to understand the details of the computation. For example, an API might mediate access to facial recognition algorithms, date arithmetic, or trigonometric functions."
                 },
+                "ar": {
+                        "phrase": "augumented reality",
+                        "definition": "An interface that layers on interactive virtual content into the physical world."
+                },
                 "breakdown": {
                         "phrase": "breakdown",
                         "definition": "Mistakes and confusion that occur because a user's mental model is inconsistent with an interface's actual functionality."
@@ -2459,6 +2463,18 @@
                         "phrase": "graphics",
                         "definition": "The use of computer hardware to create static, dynamic, and interactive two and three dimensional imagery."
                 },
+                "gulfofex": {
+                        "phrase": "gulf of execution",
+                        "definition": "Everything a person must learn in order to acheive their goal with an interface, including learning what the interface is and is not capable of and how to operate it correctly."
+                },
+                "gulfofeval": {
+                        "phrase": "gulf of evaluation",
+                        "definition": "Everything a person must learn in order to understand the effect of their action on an interface, including understanding error messages or a lack of response from an interface."
+                },
+                "immersion": {
+                        "phrase": "immersion",
+                        "definition": "The illusory experience of interacting with virtual content for what represents, as opposed to the low-level light, sound, haptics and other sensory information from whic it is composed."
+                },
                 "indirectpointing": {
                         "phrase": "indirect pointing",
                         "definition": "Pointing devices in which the input for pointing and the corresponding feedback in response occur in different physical places (e.g., a mouse and a screen)."      
@@ -2483,6 +2499,10 @@
                         "phrase": "predictive text entry",
                         "definition": "Providing input that suggests the desired text and having the interface predict what input might be intended."
                 },
+                "presence": {
+                        "phrase": "presence",
+                        "definition": "The sense of being physically located in a place and space."
+                },
                 "relativepointing": {
                         "phrase": "relative pointing",
                         "definition": "Pointing devices in which changes in the physical coordinates of input device are mapped directly _changes_ to the current position in an interface coordinate system (e.g., mice)."
@@ -2503,13 +2523,9 @@
                         "phrase": "universal design",
                         "definition": "Interfaces that are accessible to any person, regardless of their abilities."
                 },
-                "gulfofex": {
-                        "phrase": "gulf of execution",
-                        "definition": "Everything a person must learn in order to acheive their goal with an interface, including learning what the interface is and is not capable of and how to operate it correctly."
-                },
-                "gulfofeval": {
-                        "phrase": "gulf of evaluation",
-                        "definition": "Everything a person must learn in order to understand the effect of their action on an interface, including understanding error messages or a lack of response from an interface."
+                "vr": {
+                        "phrase": "virtual reality",
+                        "definition": "Interfaces that attempt to achieve immersion and presence through audio, vidoe, and tactile illusion."
                 }
         }
 }
