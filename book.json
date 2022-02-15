@@ -1171,7 +1171,13 @@
                         "ACM Computing Surveys",
                         "http://dx.doi.org/10.1145/1922649.1922658"
                 ],
-                "ko17": "Ko, A. J. (2017). [A three-year participant observation of software startup software evolution|https://doi.org/10.1109/ICSE-SEIP.2017.29. IEEE International Conference on Software Engineering: Software Engineering in Practice Track.]",
+                "ko17": [
+                        "Amy J. Ko",
+                        2017,
+                        "A three-year participant observation of software startup software evolution",
+                        "IEEE International Conference on Software Engineering, Software Engineering in Practice Track",
+                        "https://doi.org/10.1109/ICSE-SEIP.2017.29"
+                ],
                 "kobayashi07": [
                         "Masatomo Kobayashi and Takeo Igarashi",
                         2007,
