@@ -1108,6 +1108,13 @@
                         "#UIST",
                         "https://doi.org/10.1145/2642918.2647401"
                 ],
+                "kim17": [
+                        "Jeeeun Kim, Anhong Guo, Tom Yeh, Scott E. Hudson, and Jennifer Mankoff",
+                        2017,
+                        "Understanding Uncertainty in Measurement and Accommodating its Impact in 3D Modeling and Printing",
+                        "ACM Conference on Designing Interactive Systems (DIS)",
+                        "https://doi.org/10.1145/3064663.3064690"
+                ],
                 "kin12": [
                         "Kenrick Kin, Bjoern Hartmann, Tony DeRose, Maneesh Agrawala",
                         2012,
