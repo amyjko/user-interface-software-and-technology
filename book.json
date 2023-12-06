@@ -36,6 +36,12 @@
       "image": "|mediation.jpg|A top down photograph of three people using one laptop, all with arms reached out to point.|Interfaces are between us and computation, information, and other people.|[John Schnobrich|https://unsplash.com/photos/2FPjlAyMQTA]|"
     },
     {
+      "id": "accessibility",
+      "title": "Accessibility",
+      "authors": ["[Amy J. Ko|https://amyjko.com]"],
+      "image": "|braille.jpg|A braille numeric keypad|Some access technologies are a bandage for inaccessible designs|CC BY 2.0, via Wikimedia Commons|"
+    },
+    {
       "id": "programming",
       "title": "Programming Interfaces",
       "authors": ["[Amy J. Ko|https://amyjko.com]"],
@@ -52,12 +58,6 @@
       "title": "Interface Architecture",
       "authors": ["[Amy J. Ko|https://amyjko.com]"],
       "image": "|angola.jpg|A modern architecture of an apartment building, figuratively resembling software architecture.|Architecture is how interface implementations are organized.|Costa Lopes|"
-    },
-    {
-      "id": "accessibility",
-      "title": "Accessibility",
-      "authors": ["[Amy J. Ko|https://amyjko.com]"],
-      "image": "|braille.jpg|A braille numeric keypad|Some access technologies are a bandage for inaccessible designs|CC BY 2.0, via Wikimedia Commons|"
     },
     {
       "id": "pointing",
